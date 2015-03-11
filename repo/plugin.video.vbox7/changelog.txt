@@ -1,0 +1,60 @@
+[B]*** 0.3.5 ***[/B]
+- Added option for tree/flat menu
+- Added video duration
+
+[B]*** 0.3.4 ***[/B]
+- Added new functionality to view videos by their ID
+- Added Easter egg in the addon
+- Added settings check for functions, requiring username setting
+
+[B]*** 0.3.3 ***[/B]
+- Fix in collections searching
+- Removed deprecated fanart completely
+- Added bulgarian localization
+
+[B]*** 0.3.2 ***[/B]
+- Fix in UTF8 text encoding
+
+[B]*** 0.3.1 ***[/B]
+- Fix in playing protected for embedding content
+- Fix in subtitle encoding
+
+[B]*** 0.3.0 ***[/B]
+- Removed search-remember function
+- Added more video categories
+- Added support of accounts and subscriptions
+
+[B]*** 0.2.3 ***[/B]
+- Bug fixes in search function
+- Fixed PlayVid function
+
+[B]*** 0.2.2 ***[/B]
+- New maintainer
+- Complete rewrite
+- Support of XBMC 13 and up
+- Changes in index function for parsing correctly video from vbox7.com.
+- Support for external subtitles has been added
+- Removed subscriptions function until resolved
+
+[B]*** 0.2.1 ***[/B]
+- Changes in PlayVid function for parsing correctly video from vbox7.com.
+- Bug fix for item "Subscriptions" and "Favorites" in MainMenu(send empty value in parameter "name" of function addFolderListItem).
+
+[B]*** 0.2.0 ***[/B]
+- Added new functionality to browse your personal Subscriptions.
+- Added new functionality to browse your personal Favorites.
+- Existing functionality is extended to be able to browse more than one page with videos.
+- Added a section "Setting" to set your username in www.vbox7.com for browsing your personal Subscriptins and Favorites. This username is not used for login.
+- PlayVid function is changed to enable XBMC to handle watched video status.
+
+[B]*** 0.1.3 ***[/B]
+- Small change in "def Categories()" to parse correctly vbox7 category.
+
+[B]*** 0.1.2 ***[/B]
+- Modify thumbnail and icon image in addFolderListItem and addActionListItem for XBMC 11.0 and XBMC 12.0-Alpha7.
+
+[B]*** 0.1.1 ***[/B]
+- Workaround vbox7's js and cookie requirements
+
+[B]*** 0.0.1 ***[/B]
+- Initial release

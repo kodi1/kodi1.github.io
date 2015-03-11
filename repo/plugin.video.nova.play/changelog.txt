@@ -1,0 +1,15 @@
+[B]*** 0.1.1 ***[/B]
+- Fixed tv show listing by reverting some optimisations
+
+[B]*** 0.1.0 ***[/B]
+- Fixed CoverArt displaying for categories,shows and episodes
+- Added episode number, season and duration
+- Added show search function
+- Speedup improvements when browsing
+- Fixed some small bugs
+
+[B]*** 0.0.2 ***[/B]
+- First public release
+
+[B]*** 0.0.1 ***[/B]
+- Initial release

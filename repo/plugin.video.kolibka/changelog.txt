@@ -1,0 +1,19 @@
+[B]*** 0.0.10 ***[/B]
+- Fixes SPMC
+- Add order options
+- More movie info added
+- Add to movies - enable media view
+
+[B]*** 0.0.9 ***[/B]
+- Fixed CoverArt images
+- Added sorting and filtering in addon settings
+
+[B]*** 0.0.3 ***[/B]
+- Fixed timeout exceptions in some cases
+
+[B]*** 0.0.2 ***[/B]
+- Fixes in subtitle downloading
+- Fixed encoding issues
+
+[B]*** 0.0.1 ***[/B]
+- Initial release

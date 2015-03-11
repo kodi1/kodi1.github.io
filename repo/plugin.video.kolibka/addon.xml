@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.kolibka" name="KOLIBKA" version="0.0.10" provider-name="Majide">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>kolibka video plugin - more info</summary>
+	<summary lang="en">Addon for watching documental movies from kolibka.com</summary>
+	<description lang="bg">При отварянето на филмите може да забележите определено забавяне. Това не е дефект и се дължи на форматът на самите файлове, който не е предназначен за онлайн стрийминг. Наименованията на видеата, изписвани на български език към този момент не могат да се декодират правилно и излизат на "маймунки", но по обложката можете горе-долу да се ориентирате какво да очаквате.</description>
+	<description lang="en">At the opening of the movies may notice a certain delay. This is not a defect and is due to the format of the files itself, not intended for online streaming. The names of the videos, written in Bulgarian language at the moment can not be decoded correctly and are shown as gibberish, but you can see what to expect by the covers.</description>
+	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпронява под GPL3 лиценз.</disclaimer>
+	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+	<language>bg,en</language>
+	<platform>all</platform>
+	<forum></forum>
+	<website></website>
+	<email></email>
+  </extension>
+</addon>

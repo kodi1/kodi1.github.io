@@ -1,0 +1,4 @@
+[B]Change log:[/B]
+  - Don't show cleanup ok notification - josdion
+  - Improving search for tvshows - jconxtc
+  - git log add - kodi1

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.vbox7" name="VBOX7" version="0.3.5" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на видео от vbox7.com</summary>
+  	<summary lang="en">Addon for watching videos from vbox7.com</summary>
+  	<description lang="bg">От бутон Конфигурация, можете да въведете валидно потребителско име (VBOX7 акаунт) за да се активират опциите "Клипове, Колекции и Абонаменти на потребител". При търсене на колекции използвайте самостоятелната търсачка на колекции. Маркирайте желаната от вас колекция в резултатите и извикайте контекстното меню върху нея (десен бутон на мишката/дистанционното) и изберете опция "Добави към любимите". Всичко, което добавите към любимите (отделни клипове или цели колекции), ще откриете на началния екран на Kodi, в звездата до бутона за изключване (това важи за скин по подразбиране Confluence).</description>
+  	<description lang="en">From the configuration button, you can enter a valid user name (VBOX7 account) to enable the "Videos, Collections and User subscriptions". In searching collections, use alone collections finder. Highlight the desired collection in the results and call the context menu on it (right mouse button / remote) and select "Add to favorites". Everything you add to your favorites (individual clips or entire collections) can be found on the home screen of Kodi, the star button next to the power button (this applies to the default skin Confluence)</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на MTG. Приставката се разпронява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum></forum>
+  	<website></website>
+  	<email></email>
+  </extension>
+</addon>
