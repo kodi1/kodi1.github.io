@@ -1,0 +1,5 @@
+[B]*** 0.1.1 ***[/B]
+- Fix order options
+- More movie info added
+[B]*** 0.1.0 ***[/B]
+- Завършена поддръжка на Android

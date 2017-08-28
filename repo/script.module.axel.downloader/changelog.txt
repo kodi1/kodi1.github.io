@@ -1,0 +1,22 @@
+[B]Version 0.2.2[/B]
+- Added to the Program addon screen.
+- Custom Window: Status Page Url.
+- Custom Window: Status message.
+- Custom Window: Exit button.
+- Custom Window: Refresh button.
+- Custom Window: Progrss Bar per item.
+- Custom Window: Label per item with Filename and percent text.
+- Custom Window: Stop button, currently hidden.  Functionality not setup yet.
+- Custom Window: Stop button, not fully tested.  Might work.
+- Custom Window: Browser button.  Launches the URL into the Operating System's default browser.
+- Custom Window: Now does a refresh after attempting to stop a download.  Not tested yet to see if a delay might be needed.
+- Custom Window: Added a background that's color can be changed in coding.
+
+[B]Version 0.2.1[/B]
+- Correct import failures in Helix, explicitly state lib folder
+
+[B]Version 0.2.0[/B]
+- Bug fix update
+
+[B]Version 0.1.0[/B]
+- Initial Release.

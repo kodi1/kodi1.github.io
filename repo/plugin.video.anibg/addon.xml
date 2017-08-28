@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.anibg" name="ANIBG" version="0.0.3" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.urlresolver"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на анимета от anibg.info</summary>
+  	<summary lang="en">Addon for watching animes from anibg.info</summary>
+	<description lang="bg">Приставка за гледане на анимета от anibg.info. Какъвто си е редът, повечето са с оригиналния дублаж на японски и български субтитри. Има и изключения като такива с български дублаж или изобщо без локализация на български (със субтитри или дублаж на английски). Според вашите предпочитания, можете да избирате между отделните налични категории.</description>
+  	<description lang="en">Addon for watching animes from anibg.info. As it the default order is, most are with original Japanese dubbing and Bulgarian subtitles. There are exceptions such as with Bulgarian dubbing or no Bulgarian localization at all (subtitled or dubbed in English only). According to your preference, you can choose between the available categories.</description>
+  	<disclaimer lang="bg">Приставката е разработена с писмено разрешение от администрацията на сайта и се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">The addon is developed with permission from administration (site owner) and is distributed under GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-62.html</forum>
+  	<website>http://anibg.info</website>
+  	<news>Визуални подобрения в интеграцията към различни скинове. Добавено е и описание на аниметата.</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/fanart.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

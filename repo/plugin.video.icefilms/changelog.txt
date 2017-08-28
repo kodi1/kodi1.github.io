@@ -1,0 +1,521 @@
+[B]v1.23.0 (Wednesday, 27 January 2016):[/B]
+  - Updated Real-Debrid client to use Icefilms own (should have no affects)
+  - Rolled back changes to HugeFiles to 1.18.0 version, working again
+  
+[B]v1.22.0 (Wednesday, 20 January 2016):[/B]
+  - Added KingFiles resolver
+  - Updated Real-Debrid resolver to use new api
+
+[B]v1.21.0 (Monday, 11 January 2016):[/B]
+  - Fixed encoding error
+  
+[B]v1.20.0 (Wednesday, 23 December 2015):[/B]
+  - Added UploadX resolver
+
+[B]v1.19.0 (Friday, 19 December 2015):[/B]
+  - Fixed HugeFiles resolver
+  - Fixed Upload.af resolver
+
+[B]v1.18.0 (Tuesday, 24 November 2015):[/B]
+  - Fixed HugeFiles resolver
+  
+[B]v1.17.0 (Tuesday, 24 November 2015):[/B]
+  - Fixed small bug with Recently Added lists
+  - Fixed ClicknUpload resolver
+  - Added new Upload.af resolver
+  - Added indicators for hosts that Real-Debrid supports, shown by a yellow *RD next to the host name
+  - Temporarily removed the main screen Recently Added, Latest Releases, Watching Now sections, don't worry they will be back very soon
+
+[B]v1.16.0 (Monday, 19 October 2015):[/B]
+  - Adjusted resume support, hopefully makes the resume more fluid
+  - Added Recently Watched support, enable/disable in the addon settings
+  - Added Watch Queue support, similar to Netflix, queue items to watch later, when you finish watching they are removed from the list
+  - Fixed 180Upload resolver issue when the captcha is needed
+  - Fixed HD and DVD tags not correctly showing
+
+[B]v1.15.0 (Tuesday, 06 October 2015):[/B]
+  - Added resume support
+  - Fixed HugeFile resolver
+  - Fixed issue (hopefully) with occasional error (_getitem_) when loading list of sources
+
+[B]v1.14.0(Friday, 02 October 2015):[/B]
+  - Small fix to catch and bypass errors encountered with ad's
+
+[B]v1.13.0(Friday, 25 September 2015):[/B]
+  - Fixed ClicknUpload resolver
+  - Fixed 180Uploads resolver
+  - Small bug fix in tv show episodes listing
+
+[B]v1.12.0(Friday, 11 September 2015):[/B]
+  - Small update to help fix Ice Ads
+
+[B]v1.11.0(Tuesday, 8 September 2015):[/B]
+  - Fixed syntax error with MySQL table creation
+  - Added referrer when grabbing Icefilms ads to ensure impressions are hit
+
+[B]v1.10.0(Wednesday, 2 September 2015):[/B]
+  - Fixed final source link scraping
+  - Added test for Icefilms advertisements - this displays a quick ad from the Icefilms site to support them, this is testing how the system works, will be changed as we progress
+  
+[B]v1.9.1(Monday, 24 August 2015):[/B]
+  - Again fixed issue with getting final source link, Icefilms site keeps changing
+  
+[B]v1.9.0(Friday, 21 August 2015):[/B]
+  - Fixed issue with no hosts working, Icefilms site had changed
+
+[B]v1.8.7(Wednesday, 8 July 2015):[/B]
+  - Fixed downloads with various resolvers, should now save to proper filename
+  - Fixed small bug with mysql syntax
+
+[B]v1.8.6(Friday, 19 June 2015):[/B]
+  - Fixed Resolvers:
+    - MightyUpload
+  - Added Resolvers:
+    - 24Uploading
+    - XVidStage
+
+[B]v1.8.5(Monday, 15 June 2015):[/B]
+  - Fixed Resolvers:
+    - TusFiles
+    - ClicknUpload
+    - 180Uploads
+    - VidPlay
+
+[B]v1.8.4(Wednesday, 15 April 2015):[/B]
+  - Changed Favourites to sort properly - ignore 'The', 'A' etc.
+  - Fixed 180Upload
+  - Fixed HugeFiles
+  - New Resolvers:
+    - TusFiles
+    - XFileLoad
+    - ClicknUpload
+    - MightyUpload
+
+[B]v1.8.3(Monday, 23 February 2015):[/B]
+  - Fixed Favourites migration issue duplicating favourite entries
+  
+[B]v1.8.2(Friday, 20 February 2015):[/B]
+  - Fixed HugeFiles captcha problems
+  - Converted Favourites to SQL database
+  
+[B]v1.8.1(Tuesday, 10 February 2015):[/B]
+  - Fixed yet another issue with favourites, was failing to create sub-folders on some systems
+  - Small code cleanups from new changes
+
+[B]v1.8.0(Monday, 09 February 2015):[/B]
+  - Fixed (hopefully) all issues with favourites
+  - Added new Icefilms own cache DB
+    - Currently only allows for web page caching, this will help speed up navigation
+    - Future will move favourites to the cache DB, as well as include resume support
+    - Includes MySQL database support
+  - Reworked code for fetching sources, should see a good speed increase here
+  
+[B]v1.7.2(Thursday, 05 February 2015):[/B]
+  - Fixed error in adding Movie favourites - any favourites added since 1.7.0 will need to be deleted and re-added
+  - Removed dependency on pyxbmct to allow Frodo users to continue using
+
+[B]v1.7.1(Tuesday, 03 February 2015):[/B]
+  - Corrected issue loading sources when meta data is turned off
+  - Fixed search function that wasn't using user entered Icefilms URL
+  
+[B]v1.7.0(Tuesday, 03 February 2015):[/B]
+  - Fixed MovReel resolver
+  - Fixed BillionUploads resolver
+  - Switch to use xbmcvfs to allow network file operations - downloads
+  - Removed need to download meta data image packs, only database file is required for meta data now
+  - Code optimizations
+  - Shrink images to reduce addon zip by 70%
+  - Remove images for sources, now displays movie/tvshow meta data & poster
+  - Correct downloads to use original file extension instead of always changing to .avi (legacy code)
+
+[B]v1.6.0(Tuesday, 11 November 2014):[/B]
+  - Fixed HugeFiles resolver
+  - Added 360gig resolver
+  - Fixed 180Upload resolver to attempt captcha bypass
+
+[B]v1.5.1(Sunday, 06 June 2014):[/B]
+  - Fixed error in xml
+
+[B]v1.5.0(Saturday, 06 June 2014):[/B]
+  - Fixed bug on Watch & Download function
+  - Added Panda Planet source
+  - Fixed download via jDownloader
+  - Fixed Recently Added and Latest Releases main menu sections
+  - Fixed local meta pack install
+  - Added new Help menu option and info screen
+  - Added !!BETA!! Axel Downloader support - enable via Addon Settings -> Downloads menu
+
+[B]v1.4.2(Wednesday, 11 March 2014):[/B]
+  - Fixed bug on small notification box, adding favourites
+  - Added check on resolvers with captchas for entering wrong captcha, will notify you and let you retry
+
+[B]v1.4.1(Tuesday, 11 March 2014):[/B]
+  - Updated 180Upload resolver, added check for Google recaptcha
+  - Fixed various bugs from last code update, msg boxes, hugefiles resolver
+  - More code cleanup and optimizations
+  
+[B]v1.4.0(Saturday, 8 March 2014):[/B]
+  - Added VidPlay resolver
+  - Added MegaFiles resolver
+  - Fixed bug where new unsupported sources would cause script errors
+  - Lots of internal code cleanups
+  
+[B]v1.3.1(Sunday, 2 March 2014):[/B]
+  - Fixed HugeFiles resolver
+
+[B]v1.3.0 (Saturday, 1 March 2014):[/B]
+  - Fixed BillionUploads resolvers
+  - Fixed TV Show download location and hopefully all tv show script errors
+  - Added new option to Addon Settings to set the meta data zip pack download location
+  
+[B]v1.2.1 (Monday, 30 December 2013):[/B]
+  - Fixed BillionUploads and HugeFiles resolvers
+  
+  [B]v1.2.0 (Wednesday, 20 November 2013):[/B]
+  - Added search for similar movies - highlight movie and open context menu
+  
+  [B]v1.1.41 (Thursday, 14 November 2013):[/B]
+  - Fixed EpicShare resolver
+  - Fixed TV Show subtitles script error
+  - Added quality tags to source listings
+  
+  [B]v1.1.40 (Tuesday, 12 November 2013):[/B]
+  - Fixed BillionUploads resolver
+  - Removed HD/DVD/etc source subfolders
+  - Updated Real-Debrid support
+  - Fixed bug when browsing to tv shows
+  
+  [B]v1.1.37 (Saturday, 02 November 2013):[/B]
+  - Fixed 180Uploads resolver
+
+  [B]v1.1.36 (Friday, 01 November 2013):[/B]
+  - Fixed BillionUploads resolver
+  - Fixed Movreel resolver
+  - Added option to hide folders in Recently Added, Popular sections
+  - Removed 'Homepage' option and moved sections to main listing
+
+  [B]v1.1.35 (Saturday, 07 September 2013):[/B]
+  - Fixed BillionUploads resolver (the-one)
+  - Added new check on 180Uploads resolver - alternate captcha image
+  - Fixed item meta data being set on player, enable trakt to properly scrobble (minipretzel)
+  - Minor resolver updates
+
+  [B]v1.1.34 (Saturday, 27 July 2013):[/B]
+  - Fixed http 403 errors by updating user agent and adding Accept 
+  
+  [B]v1.1.33 (Tuesday, 16 July 2013):[/B]
+  - Updated MegaRelease and LemUploads resolvers for captcha support
+  
+  [B]v1.1.32 (Wednesday, 10 July 2013):[/B]
+  - Added new resolver: DoneVideo
+  - Updated MegaRelease and LemUploads resolvers
+  - Added captcha check to HugeFiles resolver
+  - Cleaned/Optimized a lot of code - hopefully some slight speed ups on small devices
+  
+  [B]v1.1.31 (Sunday, 26 May 2013):[/B]
+  - Added 4 new resolvers:
+         - LemUploads
+         - MegaRelease
+         - EntroUpload
+         - HugeFiles
+  
+  [B]v1.1.30 (Sunday, 12 May 2013):[/B]
+  - Fixed 180Upload resolver again - switched to SolveMedia captcha
+  - Updated EpicShare resolver with same SolveMedia solution
+  
+  [B]v1.1.29 (Thursday, 09 May 2013):[/B]
+  - Fixed 180Upload resolver - now uses captcha
+  - Disabled EpicShare resolver until solution can be found
+  - Corrected download folders
+  
+  [B]v1.1.28 (Tuesday, 09 April 2013):[/B]
+  - Fixed script error when adding HD items to favourites
+  - Added ability to enable/disable Next Aired in addon settings
+  - Updated VidHog resolver
+  - Added EpicShare resolver
+
+  [B]v1.1.27 (Tuesday, 19 February 2013):[/B]
+  - Fixed BillionUploads - Changed to check for captcha
+
+  [B]v1.1.26 (Sunday, 03 February 2013):[/B]
+  - Fixed BillionUploads - Now has captcha
+  - Added full support for MovReel premium accounts
+
+  [B]v1.1.25 (Friday, 18 January 2013):[/B]
+  - Fixed 2Shared links not getting picked up into Real-Debrid
+  - Optimized getting metadata for movie/tvshow lists, should speed up low power devices
+
+  [B]v1.1.24 (Tuesday, 15 January 2013):[/B]
+  - Moved metadata zips to new host (thanks tuxen!)
+  
+  [B]v1.1.23 (Friday, 28 December 2012):[/B]
+  - Fixed 2Shared sources - now has strict download limits
+  - Fixed search function failing, reverted back to original code
+  - Added Movreel login support
+
+  [B]v1.1.22 (Wednesday, 12 December 2012):[/B]
+  - Fix for no sources again! Stopped using commoncache for mirror page source
+ 
+  [B]v1.1.21 (Wednesday, 12 December 2012):[/B]
+  - Fix for no sources problem - common cache was loading a blank entry for the 'mirror' link
+  - Fixed search function that was returning bad url's for results
+  - Fixed error in search results where an episode was returning a different naming format
+  - Added MovReel download limit exceeded error check
+
+  [B]v1.1.20 (Monday, 26 November 2012):[/B]
+  - Small update to fix errors using Frodo Beta 1 when entering TV Episodes
+
+  [B]v1.1.19 (Saturday, 17 November 2012):[/B]
+  - Changed regex on grabbing sec value for sources, updated to reflect site changes
+
+  [B]v1.1.18 (Wednesday, 10 October 2012):[/B]
+  - Fixed MovReel & GlumboUploads resolvers
+  
+  [B]v1.1.17 (Monday, 17 September 2012):[/B]
+  - Fixed BillionUploads resolver
+  - Fixed Metadata downloads
+  
+  [B]v1.1.16 (Tuesday, 11 August 2012):[/B]
+  - Fixed 180Uploads resolver
+
+  [B]v1.1.15 (Thursday, 09 August 2012):[/B]
+  - Fixed BillionUploads resolver (again)
+
+  [B]v1.1.14 (Thursday, 09 August 2012):[/B]
+  - Fixed BillionUploads resolver
+
+  [B]v1.1.13 (Wednesday, 08 August 2012):[/B]
+  - Fixed 180Upload resolver
+  - Changed to use PLAYER_CORE_AUTO instead of PLAYER_CORE_DVDPLAYER so that it picks up default player
+  - Fixed Recently Added, Popular, Rating, Release lists where movies were missing
+
+  [B]v1.1.12 (Wednesday, 20 June 2012):[/B]
+  - Fixed minus.com resolver for metadata zips
+
+  [B]v1.1.11 (Tuesday, 19 June 2012):[/B]
+  - Added ShareBees user login support - does not detect free user vs premium as of now
+  - Fixed ShareBees resolver for site changes
+  - Fixed JumboFile resolver
+  - Updated VidHog resolver to check for 'server in maintenance mode' msgs
+  - Disabled 'Video Seeking' option, not needed for current sources and has been causing problems
+
+  [B]v1.1.10 (Wednesday, 30 May 2012):[/B]
+  - Fixed small format change for meta zip files
+  
+  [B]v1.1.9 (Monday, 28 May 2012):[/B]
+  - Fixed ShareBees resolver - again
+  - Fixed movie HD tags that accidently got removed on last release
+  - Added BillionUploads image
+
+  [B]v1.1.8 (Tuesday, 22 May 2012):[/B]
+  - Fixed ShareBees resolver
+  - Added tags for Popular, Rated, Latest, Recently Added lists
+  - Added *HD* tags for TV Episodes
+
+  [B]v1.1.7 (Thursday, 17 May 2012):[/B]
+  - Added source pics for new hosts
+  - Added new host - BillionUploads
+  - Corrected no sources showing for Colbert Report and Daily Show episodes
+
+  [B]v1.1.6 (Friday, 04 May 2012):[/B]
+  - Added 3 new hosts - GlumboUploads, JumboFiles, Movreel
+  - Removed many remaining MegaUpload references
+  - Updated ShareBees resolver to handle any file type
+  - Added check on UploadOrb resolver for links reporting 'maintenance mode'
+  - Added *HD* tags to Homepage categories and made all HD tags colored red
+
+  [B]v1.1.5 (Thursday, 29 March 2012):[/B]
+  - Corrected VidHog for site changes
+    
+  [B]v1.1.4 (Wednesday, 28 March 2012):[/B]
+  - Added new host - ShareBees
+  - Corrected bug in downloadinbackground.py that was introduced in previous version
+  
+  [B]v1.1.3 (Tuesday, 20 March 2012):[/B]
+  - Added new hosts - VidHog, UploadOrb
+  - Spitting out error messages to users on failed sources
+  - Some small bug fixes here and there that came up from adding the last couple updates
+  - Updated downloadinbackground.py as it was using deprecated os.cwd() call
+  - Better checking on Real-Debrid valid hosts
+ 
+ [B]v1.1.2 (Wednesday, 14 March 2012):[/B]
+  - Bug fix for users with Real-Debrid accounts getting errors on 180Upload sources
+  
+ [B]v1.1.1 (Wednesday, 14 March 2012):
+  - Added support for 180Upload and SpeedyShare sources
+  - Corrected Download option where it was streaming instead of downloading
+  - Corrected Default Play Action - was not being used in all scenarios
+
+ [B]v1.1.0 (Friday, 02 March 2012):[/B]
+  - Major Release!
+  - Added FULL meta data for all movies & tvshows, includes many new features and information
+  - Ability to mark watched/unwatched, also auto-watch flagging of videos you watch
+  - Download & Watch functionality
+  - Video Seeking - useful for free accounts, allows you to fast forward & rewind while watching a video
+  - Silent Downloads - download a video in the background while continuing to use XBMC
+  - TV Show Next Aired for Favorites - view tv schedule for tv shows in your favorites folder
+  - Skin Auto-View - sets view modes automatically based on content type
+  - Stacked Parts support - Will automatically play all parts of multi-part videos
+  - Better search results and configurable # of results per page
+ 
+ v1.0.25 (Monday, 06 February 2012):
+  - Updated RapidShare, premium account fixed, faster api calls
+
+v1.0.24 (Thursday, 26 January 2012):
+  - Added RapidShare sources support
+  
+v1.0.23 (Friday, 20 January 2012):
+  - Disabled (temporarily) MegaUpload login check on startup
+  - Disabled (temporarily) metadata install on startup
+  
+v1.0.22 (Thursday, 19 January 2012):
+  - Enabled 2Shared links
+  
+v1.0.21 (Monday, 2 January 2012):
+  - Fix for MegaUpload removing (temporarily?) wait time on free accounts
+  
+v1.0.20 (Wednesday, 21 December 2011):
+  - Bug fix for premium/platinum acts with direct downloads turned on
+
+v1.0.19 (Wednesday, 21 December 2011):
+  - Added automatic MegaUpload wait time check for free user accounts
+  - Added MegaUpload Platinum user support
+  
+v1.0.18 (Monday, 05 December 2011):
+  - Small fix for those receiving 409 errors on Home Page categories
+  - Fixes for MegaUpload site changes, new login check and 60 second wait time for free user accounts
+
+v1.0.17 (Monday, 21 November 2011):
+  - Home page categories fix for recent site html change
+  - Fix for music section throwing script error - cookie was not found
+  - Added forward slash '/' to list of allowed characters in download folder/file names
+  - Search update to allow more results (spoyser)
+  
+v1.0.16 (Wednesday, 19 October 2011):
+  - Quick fix to correct screwup on a-z listings
+
+v1.0.15 (Wednesday, 19 October 2011):
+  - Fixed TV Show download errors - extra space in season name from previous fixed caused invalid folder names in Windows
+  - Fixed bad Windows folders/filenames due to invalid characters
+  - put try/except block on a piece of code in LOADMIRRORS that was causing a script error when sources could not be loaded
+  - lower cased two icons for letter m and g, they were uppercase and would not show on XBMC Live due to case sensitivity, changed code to use lower case letters
+
+v1.0.14 (Sunday, 09 October 2011):
+  - correct issues with Colbert Report, Daily Show and others not showing all seasons
+
+v1.0.13 (Saturday, 08 October 2011):
+  - fix for tv shows after site change
+
+v1.0.12 (Monday, 29 August 2011):
+  - added new addon setting to specify url of icefilms site (wesada)
+
+v1.0.11 (Thursday, 7 July 2011):
+  - update script to new movie list page
+
+v1.0.10 (Saturday, 2 July 2011):
+  - add Movie Information context menu item
+  - more favourites fixes
+  - fix script error in lists containing items with missing IMDB IDs
+
+v1.0.9 (Saturday, 2 July 2011):
+  - fix favourites
+  - fix 2shared sources
+
+v1.0.8 (Friday, 1 July 2011):
+  - fix broken sources introduced by IceFilms site update
+  - separate folders for TV and movie favourites
+
+v1.0.7 (Saturday, 4 June 2011):
+  - fix script errors introduced by IceFilms site update
+  - favourites fix
+
+v1.0.6 (Tuesday, 15 March 2011):
+  - added source type art
+  - failures of phantom meta getters no longer impede streaming
+
+v1.0.5 (Thursday, 10 March 2011):
+  - fixed unicode errors
+  - fixed weird characters
+  - backported new login code from videoresolvers.
+    this is faster, and doesn't need the mechanize module.
+
+v1.0.4 (Friday, 4 March 2011):
+  - fixes for favourites handling
+  - possible speed-ups
+
+v1.0.(2,3) (Thursday, 3 March 2011):
+  - fixed Black Swan and King's Speech error
+  - fixed unicode metadata error
+  - added download with jDownloader context menu option for sources.
+    (requires jDownloader xbmc plugin installed)
+
+v1.0.1 (Wednesday, 16 February 2011):
+  - updated megaroutines (supports premium direct downloads)
+  - replaced time.sleep with xbmc.sleep for waiting times
+  - removed offending sqlite line (should now work unlatched on ATV2)
+  - player code now force sets DVD_PLAYER (good for xbox users)
+  - added 3 sec waiting time for premium users, might help them...
+  - added ndeshmukh's youtube patch (now play trailers for items with metadata)
+
+v1.0.0 (Sunday, 13 February 2011):
+  - support for megaupload changes
+  - context menus full of functions
+  - library mode
+  - source images for megaupload and 2shared
+  - cool new fanart and sub-category images made by HTPC Guy
+  - tv show seasons directories
+  - new settings pane with more options
+  - option to download file, with nice folder hierarchy
+  - optimized addon code
+  - favourite items support
+  - improved search
+  - download limit checker
+  - movie metadata support, and container support
+  - megaup now handled by Megaroutines classes
+
+v0.6.1 (Monday, 27 December 2010):
+  - updated icons and fanart
+  - fixed an issue whereby the icons were not being loaded
+  - requires a fresh install of xbmc for the changes to be visible.
+
+v0.6.0 (Monday, 27 December 2010):
+  - reCaptcha passthrough (enables more tv shows)
+  - browse by genre for all categories
+  - HD720p category for Movies
+  - mirror pages are now only scraped once per view
+  - mechanize is now a separate addon
+  - flatten megaupload enabled by default
+
+v0.5.(1,2,3) (Thursday, 23 December 2010):
+  - fixed error on first login with no account
+  - fixed some bugs related to login notifications
+  - tidied the login code
+
+v0.5.0 (Thursday, 23 December 2010):
+  - search function won't return error if it cant find search
+  - support for megaupload free (tested) and premium (untested)
+  - notifications for logins
+  - art is now loaded from disk, not scraped from photobucket
+  - cookies, cookies, cookies
+
+v0.4.0 (Monday, 20 December 2010):
+  - added search function
+  - added Homepage category (and option to disable)
+  - removed flatten A-Z directories (avoid overloading icefilms)
+
+v0.3.1 (Sunday, 19 December 2010):
+  - fanart included
+  - now hosted on this svn repository, for easy updates
+  - renamed Default.py to default.py to avoid XBMC Live issues
+
+v0.3 (Thursday, 17 December 2010):
+  - added settings panel and options to flatten certain menus
+  - added pictures for main categories
+
+v0.2 (December 2010):
+  - mirrors now sorted by type, source and part
+  - added categories Popular, Latest Releases etc.
+  - whether a film is HD or not is now visible
+
+v0.1 (November 2010) :
+  - initial release

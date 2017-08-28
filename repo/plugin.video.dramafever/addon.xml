@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.dramafever" name="DRAMAFEVER" version="0.4.3" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="en">Watch asian dramas</summary>
+  	<description lang="en">DramaFever is video streaming service that offers on-demand streaming of Asian dramas, series, movies and TV shows with subtitles. Distribution rights in your country determine what part of the catalog will be available for you. Videos provided by this addon are with professional subtitles and the premium service is not supported.</description>
+  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Warner Bros.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-79.html</forum>
+  	<website>https://www.dramafever.com</website>
+  	<news>Fixed: Loading subtitles; Cant Fix: Video Seeking is turned off in F4mProxy by design</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

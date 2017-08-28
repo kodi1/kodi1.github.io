@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.tubi" name="TUBITV" version="0.1.2" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="en">Watch free TV shows and movies from tubitv.com</summary>
+  	<description lang="en">Tubi TV offers free popular movies and TV series streaming to you in full HD. Unlike Netflix and Hulu, Tubi TV is absolutely free. You don’t have to spend a dime. You don’t have to register with your credit card. Unlike cable, you can watch it anywhere, anytime and on any device, so grab your popcorn and enjoy! Free shows and movies are added every week, so you’ll never run out of entertainment on the go. Watch new movies, action flicks, documentaries, Korean dramas, anime, horror and so much more, without ever paying a subscription fee! Tubi TV has the largest library of free and legal TV shows and movies to choose from, whenever and wherever you want!</description>
+  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by movie studios.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-223.html</forum>
+  	<website>https://tubitv.com</website>
+  	<news>Increased number of listed titles in categories</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>
