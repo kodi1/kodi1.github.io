@@ -1,0 +1,10 @@
+1.0.4
+нов домейн
+1.0.3
+нов домейн
+1.0.2
+fixed title for better finding subtitles
+fixd description to show
+1.0.1
+removed desc
+fixed title

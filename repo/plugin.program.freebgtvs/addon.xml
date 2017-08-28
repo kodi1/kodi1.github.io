@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.3.4" provider-name="harrygg">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.garepobg" version="0.1.3"/>
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py"/>
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+        <summary>Watch free TVs from Bulgaria</summary>
+        <summary lang="en">Free BG TVs Playlist Generator</summary>
+        <description lang="en">The service will generate an m3u playlist of all free channels from Bulgaria. The playlist can be loaded in Simple PVR client</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>http://kodibg.org/forum</forum>
+        <website>https://github.com/harrygg/plugin.program.freebgtvs</website>
+  </extension>
+</addon>

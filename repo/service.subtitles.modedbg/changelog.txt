@@ -1,0 +1,12 @@
+[B]0.0.2[/B]
+Change log:
+  - Added external unrar library, users need to pick unrar form settings path and choose their os
+Промени:
+  - Добавена е външна библиотека за рар, потребителят трябва да избере пътят до него и съответната операционна система
+[B]Change log:[/B]
+  - Fix for some video addons
+  - Use html5lib parser
+  - Better error handling
+  - Folder restructuring
+  - Don't show cleanup ok notification - josdion
+  - Improving search for tvshows - jconxtc

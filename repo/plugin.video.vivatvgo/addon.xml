@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.5" provider-name="HarryDoubleG">
+  <requires>
+  	<import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.garepobg" version="0.1.4"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.kodibgcommon" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на IPTV от Виваком</summary>
+  	<summary lang="en">Addon for watching IPTV from Vivacom</summary>
+  	<disclaimer lang="bg">За да използвате приставката се нуждаете от валиден и платен абонамент за Vivacom TV GO. Приставката предоставя достъп до каналите за които имате валиден абонамент и които така или иначе може да гледате с ТВ ГО приложението. Приставката е неофициална и няма нищо общо с Vivacom. Made for fun!</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/</forum>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon>

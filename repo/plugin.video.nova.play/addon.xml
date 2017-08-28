@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.3.3" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на видео от play.nova.bg</summary>
+  	<summary lang="en">Addon for watching videos from play.nova.bg</summary>
+  	<description lang="bg">Приставка за гледане на видео по заявка от услугата NOVA PLAY, собственост на Modern Times Group - България. Препоръчително е използването на широколентова интернет връзка!</description>
+  	<description lang="en">Addon for watching on demand videos from NOVA PLAY service, property of Modern Times Group - Bulgaria. Broadband internet connection is recomended!</description>
+  	<description>Plugin for watching on demand videos from Modern Times Group - Bulgaria</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на MTG. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-14.html</forum>
+  	<website>http://play.nova.bg</website>
+  	<news>Добавката е пренаписана според изискванията на Коди 17 и по-нови версии; Добавена поддръжка на сезони при сериалите; Вътрешни поправки и оптимизации</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

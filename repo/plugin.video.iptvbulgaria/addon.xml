@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.iptvbulgaria" name="IPTV Bulgaria" version="1.0" provider-name="zynobg [at] gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+   <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
+   <summary lang="en">Video plugin for www.iptvbulgaria.com http://www.iptvbulgaria.com/.</summary>
+   <language>en</language>
+   <description lang="en">Video plugin for http://www.iptvbulgaria.com/. </description>
+   <disclaimer lang="en">This plugin provides access to tv streams from http://www.iptvbulgaria.com/. </disclaimer>
+   <website>http://www.iptvbulgaria.com/</website>
+   <platform>all</platform>
+   <source>https://github.com/zinobg/plugin.video.iptvbulgaria</source>
+  </extension>
+</addon>

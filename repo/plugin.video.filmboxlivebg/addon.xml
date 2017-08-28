@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.filmboxlivebg" name="FILMBOX LIVE Bulgaria" version="0.0.4" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Абонаментна VOD услуга на SPI International</summary>
+    <summary lang="en">Subscription service of SPI International</summary>
+  	<description lang="bg">Във filmboxlive.com само с един единствен абонамент, може да се наслаждавате на стотици филми и развлекателни канали. От драми до трилъри, от екшъни до комедии, от награждавани продукции до филми за цялото семейство. Гледайте където и когато пожелаете – не само на компютъра си, а също и на смарт телевизора си вкъщи, на таблета си през почивката, на смартфона си по време на пътуване. Не е нужно да плащате допълнително, за да гледате едно и също съдържание на повече от едно устройство. С правата си за достъп можете да гледате съответното съдържание на всички устройства. Визуалното качество на съдържанието автоматично се настройва според скоростта на вашата интернет връзка и вида на използваното устройство.</description>
+    <description lang="en">In filmboxlive.com with only a single subscription you can enjoy great movies and exciting TV channels. From drama to thriller, action to comedy, award-winning productions to the ones you can watch with all your family. Watch anywhere and anytime you want - not only on your computer, but also on your smart TV at home, on your tablet during the break, on your smartphone while on the go. You do not need to pay again to watch the content on more than one device. With the same access credentials you can watch our content in all devices. Visual quality of our content is set automatically according to your internet speed and the devices you use.</description>
+  	<disclaimer lang="bg">Това не е официално приложение! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Името, логото и предлаганото съдържание са запазена търговска марка на SPI International и обект на запазеното авторско право и сродните на него права. Коди приставката се разпространява под GPL2 лиценз.</disclaimer>
+    <disclaimer lang="en">This is not an official addon! If an official app is available for your platform, use it instead of this addon. The name and the logo are a trademark of SPI International and the available content is subject to copyright and related rights. This Kodi addon is distributed under the GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/</forum>
+  	<website>http://www.filmboxlive.com/bg/</website>
+  	<news>Първа бета версия; Търсачката, разлистването по категории и пускането на филми работят! Известни проблеми:ТВ каналите не функционират засега; превъртането/seeking-а също не функционира</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

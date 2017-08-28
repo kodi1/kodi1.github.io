@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.brigada" name="BRIGADA" version="0.3.29" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.feedparser"/>
+	<import addon="plugin.video.youtube"/>
+	<import addon="plugin.video.vimeo"/>
+    <import addon="script.module.urlresolver"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Български филми, ТВ, радио, приказки, уроци и подкасти</summary>
+  	<summary lang="en">Bulgarian movies, TV, radios, stories, leasons and podcasts</summary>
+  	<description lang="bg">Приставка за гледане на съдържание по заявка на потребителя (VOD) от различни легални източници. Всички използвани връзки и линкове са публично достъпни от съответните сайтове. Приставката BRIGADA осигурява улеснен достъп до свободните за гледане онлайн български филми (класически и модерни), телевизии лицензирани от СЕМ с излъчване на програмното им съдържание през официалния им сайт, радиопрограми с музика и новини на български език, детски приказки, уроци и подкасти.</description>
+  	<description lang="en">Addon for viewing content on demand (VOD) from different legal sources. All the connections and links are publicly available from the relevant sites. BRIGADA addon provides easier access to free viewing online Bulgarian movies (classical and modern), televisions licensed by the EMU with broadcasting content through their official website, radios with music and news on bulgarian language, children's stories, leasons and podcasts.</description>
+  	<disclaimer lang="bg">Ако забележите материали-обект на неуредени авторски права, сигнализирайте собствениците на сайта в който те са публикувани! Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">If you notice materials-object outstanding copyright, alert the site owners in which they are published! The addon is licensed under the GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-10.html</forum>
+  	<news>Поправен е разделът за български филми от BGTV2</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

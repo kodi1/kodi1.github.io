@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="2.2" provider-name="zynobg [at] gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+   <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
+   <summary lang="en">Video plugin for www.seirsanduk.com http://www.seirsanduk.com/.</summary>
+   <language>en</language>
+   <description lang="en">Video plugin for http://www.seirsanduk.com/.  A free account is required.</description>
+   <disclaimer lang="en">This plugin provides access to tv streams from http://www.seirsanduk.com/. A free account is required.</disclaimer>
+   <website>http://www.seirsanduk.com/</website>
+   <platform>all</platform>
+   <source>https://github.com/zinobg/plugin.video.seirsanduk.r1</source>
+  </extension>
+</addon>

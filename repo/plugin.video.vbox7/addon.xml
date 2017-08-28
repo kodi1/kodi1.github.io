@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.vbox7" name="VBOX7" version="0.3.16" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на видео от vbox7.com</summary>
+  	<summary lang="en">Addon for watching videos from vbox7.com</summary>
+  	<description lang="bg">От бутон Конфигурация, можете да въведете валидни потребителски имена (VBOX7 акаунти) за да се активират опциите "Клипове, Плейлисти и Абонаменти на потребител". Приставката за гледане на видео по заявка от услугата VBOX7 e собственост на Modern Times Group - България. Препоръчително е използването на широколентова интернет връзка!</description>
+  	<description lang="en">From the configuration button, you can enter a valid user names (VBOX7 accounts) to enable the "Videos, Playlists and User subscriptions". The Addon for watching on demand videos from VBOX7 service is a property of Modern Times Group - Bulgaria. Broadband internet connection is recomended!</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на MTG. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-12.html</forum>
+  	<website>http://vbox7.com</website>
+  	<news>Поправени са няколко дребни бъга; Добавено е частично описание на видеата, които разполагат с такова</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.kidamom"
+       name="[COLOR FFff20146C]Kida[/COLOR][COLOR FFffEE0937]mom[/COLOR][COLOR FFff20146C][/COLOR]"
+       version="1.0.1"
+       provider-name="Johnie">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             provides="video"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>https://kidamom.com/</summary>
+    <description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]Ако нямате платен абонамент изберете безплатен достъп от настройките.
+</description>
+    <description lang="en">[B][COLOR red]Before use, set your account in the addon settings![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]If you dont have subscription choose free access from settings.
+</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
+use it instead of this addon. All rights on content are reserved by Kidamom.</disclaimer>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Kidamom.</disclaimer>
+    <platform>all</platform>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon>

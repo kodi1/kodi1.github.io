@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.zamunda" name="Zamunda Magnet Video" version="0.0.1l" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.garepobg" version="0.1.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.html5lib" version="0.999.0" optional="false"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+        <summary>Play Zamunda.net 'magnet' links via quasar</summary>
+        <summary lang="en">Addon for watching video from Zamunda.net</summary>
+        <description lang="en">It is not official addon from Zamunda.net</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum></forum>
+        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+        <website>https://github.com/plugin.video.zamunda</website>
+  </extension>
+</addon>

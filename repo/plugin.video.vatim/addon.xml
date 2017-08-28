@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.vatim" name="VATIM" version="0.0.1" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на детски сериали от vatim.xyz</summary>
+  	<summary lang="en">Addon for watching kids shows from vatim.xyz</summary>
+	<description lang="bg">Приставка за гледане на детски сериали от vatim.xyz. Повечето са с дублаж на български език. Според вашите предпочитания, можете да избирате между отделните налични заглавия.</description>
+  	<description lang="en">Addon for watching kids shows from vatim.xyz. The most are with bulgarian dubbing. According to your preference, you can choose between the available titles.</description>
+  	<disclaimer lang="bg">Приставката е неофициална и се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">The addon is not official and is distributed under GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-596.html</forum>
+  	<website>http://anibg.info</website>
+  	<news>Първа публична версия</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

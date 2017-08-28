@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.pvrtools"
+       name="PVR Tools"
+      version="1.0.0"
+      provider-name="enen92">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">A simple PVR tools addon for kodi (iptv simple)</summary>
+        <summary lang="pt">Um simples addon de ferramentas pvr para o kodi (iptv simple)</summary>
+         <description lang="en">This addon allows you to download, extract and merge xmltv files to make a single xmltv file for XBMC PVR. It supports internet files compressed in gzip format (or plain xml). The same is applied to different m3u lists (local or hosted on the web)</description>
+         <description lang="pt">Este addon permite juntar vários ficheiros xmltv de forma a construir um xmltv único para a secção PVR do XBMC. Suporta ficheiros alojados na web comprimidos em gzip (ou simples xml). Também permite juntar várias listas m3u (locais ou da web). </description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    </extension>
+</addon>

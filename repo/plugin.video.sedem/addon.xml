@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.1.1" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.urlresolver"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на документални филми</summary>
+  	<summary lang="en">Addon for watching documental movies</summary>
+  	<description lang="bg">Гледайте документални филми от различни източници. [B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Категориите от различните източници се визуализират разделно.Търсенето също се осъществява през (две) отделни търсачки.</description>
+  	<description lang="en">Watch documentaries from various sources. [B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] The categories from the different sources are displayed separately. Searching is also done through (two) separate search engines.</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-13.html</forum>
+  	<website></website>
+  	<news>Първа публична версия; Може да се инсталира паралелно с популярната приставка за документални филми: КОЛИБКА.</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>

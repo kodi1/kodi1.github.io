@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.backlight.led" name="LED backlight control" version="0.0.3" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pil" version="1.1.7"/>
+    <import addon="script.module.garepobg" version="0.1.0"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Wifi based Led control for kodi</summary>
+    <summary lang="en">Wifi conrol RGB led strips</summary>
+    <description lang="en">Additional hardware is required and WS2812 RGB LED strips.</description>
+    <disclaimer lang="en">I'm not responsible for any possible damage done to your devices.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>https://github.com/kodi1/service.backlight.led</website>
+  </extension>
+</addon>
