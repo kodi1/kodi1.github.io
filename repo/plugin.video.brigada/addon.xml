@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.brigada" name="BRIGADA" version="0.3.26" provider-name="Majide">
+<addon id="plugin.video.brigada" name="BRIGADA" version="0.3.27" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.feedparser"/>
@@ -19,7 +19,7 @@
   	<language>bg</language>
   	<platform>all</platform>
   	<forum>https://kodibg.org/forum/thread-10.html</forum>
-  	<news>Премахнати са schoolpedia и ucha.se заради Иван и Дарин. Според първия, сайта "свърши работата за която бе направен. Имате си softuni, за какво са ви разни сайтчета като това?" За другия образованието е право на всички, но привилегия само за платежоспособните!</news>
+  	<news>Добавени са Дарк Радио и Тракия вижън подкаст; поправено е зареждането на ТВ канали</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
