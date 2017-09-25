@@ -533,7 +533,7 @@ Turns your XBMC into an instant free on-demand media-center. Stream and download
   </extension>
 </addon>
 
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.0" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.4.1" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   	<import addon="script.module.urlresolver"/>
@@ -553,7 +553,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
   	<platform>all</platform>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: MPEG-DASH playing; Feature Update: 1080p streams can be played without inputstream.adaptive; Update: Internal optimisations. MPEG-DASH and HLS-M3U8 quality profiles are recomended; SD 360p quality is now by default. VIKI® addon replace the quality of video streams when needed! Fan channels and most old movies/tv shows are not playable in debug mode!</news>
+  	<news>Fixed: Video playing; Update: HLS-M3U8 quality profile is no longer available; SD 360p quality is now by default. VIKI® addon replace the quality of video streams when needed! Fan channels and most old movies/tv shows are not playable in debug mode!</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
