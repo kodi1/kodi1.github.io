@@ -131,7 +131,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.4.3" provider-name="RESU OBH">
+<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.4.4" provider-name="RESU OBH">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="inputstream.adaptive" version="2.1.0"/>
@@ -147,7 +147,7 @@
   	<platform>all</platform>
   	<forum>https://kodibg.org/forum/</forum>
   	<website>https://www.hbogo.bg</website>
-  	<news>първа публична версия</news>
+  	<news>Информацията за достъпността на заглавията вече се добавя в края на описанията; Външните субтитри (когато има такива) се задават преди отваряне на видеото, а не секунди след това; Известни дефекти в InputStream Adaptive: 1.некоректна поддръжка на https://www.w3.org/TR/ttaf1-dfxp/ субтитри; 2.Пропускане/неразкодиране на кадри при Mic®o$oft Smooth Streaming;</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
