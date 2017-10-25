@@ -1,22 +1,19 @@
-[B]Version 4.0.07 (Oct 03, 2017)[/B]
+[B]Version 4.0.08 (Oct 22, 2017)[/B]
 - Code Base Changes:
-    - Updated jsunpack
+    - Pairing added for vshare.eu
+    - Fix for auto_update with non UTF-8 characters
+    - Raise ResolverError on CountdownDialog cancellation and expiration
 - Resolvers Added:
-    - vidstreaming.io
-    - lolzor.com
-    - mycollection.net
-    - adhqmedia.com
-    - gagomatic.com
-    - funblr.com
-    - favour.me
-    - vidbaba.com
-    - likeafool.com
+    - rapidgator
+    - mehlizmovies.com
+    - vidics.tv
+    - videohost2.com
+    - hdvid.tv
 - Resolvers Fixed/Updated:
-    - XvidStage
-    - Vid.me
-    - Speedvid (will now auto-update)
-    - GriftHost
-    - FlashX
-    - MyCloud
-- Languages Added
-    - Hebrew Translation
+    - flashx
+    - speedvid
+    - Speedvideo
+    - vodlock
+    - megamp4
+- Languages Added/Updated
+    - Updated Croatian language
