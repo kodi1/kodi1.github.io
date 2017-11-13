@@ -65,6 +65,7 @@ addons_url_list = [
     "https://andromeda.eu.org/kodipermalink/script.module.urlresolver.zip",
     "https://andromeda.eu.org/kodipermalink/service.subtitles.bukvibg.zip",
     "https://andromeda.eu.org/kodipermalink/plugin.video.hbogobg.zip",
+    "https://andromeda.eu.org/kodipermalink/plugin.video.sedem.zip",
     "https://github.com/Eldorados/script.module.axel.downloader/archive/master.zip",
     "https://github.com/Eldorados/eldorado-xbmc-addons/raw/master/repo/plugin.video.icefilms/plugin.video.icefilms-1.23.0.zip",
     "https://github.com/DJZONEHOUSERADIO/djzone.house.radio/archive/master.zip",
