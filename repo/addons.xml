@@ -780,7 +780,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="4.0.08" provider-name="Eldorado, tknorris, jsergio">
+<addon id="script.module.urlresolver" name="URLResolver" version="4.0.10" provider-name="Eldorado, tknorris, jsergio">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" optional="true" />

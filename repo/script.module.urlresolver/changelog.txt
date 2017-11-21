@@ -1,19 +1,15 @@
-[B]Version 4.0.08 (Oct 22, 2017)[/B]
+[B]Version 4.0.09 (Nov 08, 2017)[/B]
 - Code Base Changes:
-    - Pairing added for vshare.eu
-    - Fix for auto_update with non UTF-8 characters
-    - Raise ResolverError on CountdownDialog cancellation and expiration
+    - Pairing added for flashx.tv
 - Resolvers Added:
-    - rapidgator
-    - mehlizmovies.com
-    - vidics.tv
-    - videohost2.com
-    - hdvid.tv
+    - vidstore.me
+    - ocloud.stream
 - Resolvers Fixed/Updated:
     - flashx
     - speedvid
-    - Speedvideo
-    - vodlock
-    - megamp4
+    - oload
+    - mcloud
+    - vidtodo
+    - gvideo
 - Languages Added/Updated
-    - Updated Croatian language
+    - None
