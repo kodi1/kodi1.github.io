@@ -62,7 +62,7 @@ addons_url_list = [
     "https://andromeda.eu.org/kodipermalink/plugin.video.dramafever.zip",
     "https://andromeda.eu.org/kodipermalink/plugin.video.vikir.zip",
     "https://andromeda.eu.org/kodipermalink/plugin.video.tubi.zip",
-    #"https://andromeda.eu.org/kodipermalink/script.module.urlresolver.zip",
+    "https://andromeda.eu.org/kodipermalink/script.module.urlresolver.zip",
     "https://andromeda.eu.org/kodipermalink/service.subtitles.bukvibg.zip",
     "https://andromeda.eu.org/kodipermalink/plugin.video.hbogobg.zip",
     "https://andromeda.eu.org/kodipermalink/plugin.video.sedem.zip",
