@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.1" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.4.2" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   	<import addon="script.module.urlresolver"/>
@@ -10,8 +10,8 @@
   <extension point="xbmc.addon.metadata">
   	<summary lang="bg">VIKI.COM Глобална ТВ за фенове</summary>
   	<summary lang="en">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
-  	<description lang="bg">Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
-  	<description lang="en">In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
+  	<description lang="bg">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
+  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
   	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
   	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
 use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
@@ -19,7 +19,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
   	<platform>all</platform>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: Video playing; Update: HLS-M3U8 quality profile is no longer available; SD 360p quality is now by default. VIKI® addon replace the quality of video streams when needed! Fan channels and most old movies/tv shows are not playable in debug mode!</news>
+  	<news>Fixed: Video profiles again; Update: HD quality profiles are no longer available; Debug mode is no longer supported for video playing! Please switch it OFF!</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
