@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vbox7" name="VBOX7" version="0.3.16" provider-name="Majide">
+<addon id="plugin.video.vbox7" name="VBOX7" version="0.3.17" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -15,9 +15,10 @@
   	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
   	<language>bg</language>
   	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
   	<forum>https://kodibg.org/forum/thread-12.html</forum>
   	<website>http://vbox7.com</website>
-  	<news>Поправени са няколко дребни бъга; Добавено е частично описание на видеата, които разполагат с такова</news>
+  	<news>Оптимизации в зареждането на субтитри и автоматично избиране на най-високото качество; Подготовка за въвеждане на InputStream.Adaptive Addon; Преаранжиране настройките, фенарта и скрийншотите на приставката; Пълно описание на видеата, които разполагат с такова</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>

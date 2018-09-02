@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.dramafever" name="DRAMAFEVER" version="0.5.3" provider-name="Majide">
+<addon id="plugin.video.dramafever" name="DRAMAFEVER" version="0.5.5" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -15,7 +15,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-79.html</forum>
   	<website>https://www.dramafever.com</website>
-  	<news>Fixed: Video opening; Fixed: Video seeking for the most titles; The addon remains dependent on script.video.F4mProxy-2.8.7 for one more version! Stay tuned.</news>
+  	<news>Fixed: Browsing episode lists</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>

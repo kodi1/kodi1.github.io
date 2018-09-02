@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.brigada" name="BRIGADA" version="0.3.29" provider-name="Majide">
+<addon id="plugin.video.brigada" name="BRIGADA" version="0.3.30" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.feedparser"/>
@@ -21,7 +21,7 @@
   	<platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-10.html</forum>
-  	<news>Поправен е разделът за български филми от BGTV2</news>
+  	<news>Премахнати са неработещите раздели; Добавена е възможност за актуализиране разделите за радиа, подкасти и приказки, без нужда от ъпдейтване на добавката.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.tvbulsatcomv2" name="[COLOR orange]TV[/COLOR] [COLOR red]BULSATCOM[/COLOR] V2" version="2.0.1" provider-name="Johnie">
+<addon id="plugin.video.tvbulsatcomv2" name="[COLOR orange]TV[/COLOR] [COLOR red]BULSATCOM[/COLOR] V2" version="2.0.1d" provider-name="Johnie">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>

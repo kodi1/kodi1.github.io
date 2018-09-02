@@ -1,3 +1,168 @@
+[B]Version 5.0.22 (August 21, 2018)[/B]
+- Code Base Changes:
+    - jsunpack
+    - common
+- Resolvers Added:
+    - unitplay
+    - tocloud
+    - videozupload
+- Resolvers Fixed/Updated:
+	- anyfiles
+	- daclips
+	- ecostream
+	- fileweed
+	- hugefiles
+	- movpod
+	- mp4stream
+	- openload
+    - powvideo
+    - putvid
+    - rapidvideocom
+    - teramixer
+    - uptobox
+    - vk
+- Resolvers Removed
+    - rapidvideo
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.21 (August 08, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - vidorg
+    - gofile
+- Resolvers Fixed/Updated:
+    - vidup.me
+    - waaw
+    - estream
+    - streamango
+    - flashx
+    - thevideo
+	- youtube
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.20 (June 09, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - alldebrid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.19 (June 09, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - icdrama
+    - videobug
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.18 (June 08, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - loadvid
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.17 (June 08, 2018)[/B]
+- Code Base Changes:
+    - Update User-Agents
+- Resolvers Added:
+    - videobug
+    - vidcloud
+- Resolvers Fixed/Updated:
+    - vidto
+    - thevideo
+    - premiumize
+    - streamango
+    - openload
+    - gamovideo
+    - streamable
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.16 (May 27, 2018)[/B]
+- Code Base Changes:
+    - Common user agent changed to Chrome only 
+    - Removed IE from random user agents
+- Resolvers Added:
+    - loadvid
+    - putvid
+    - gounlimited
+    - upfiles
+- Resolvers Fixed/Updated:
+    - vidlox
+    - thevideo
+    - dailymotion
+    - premiumize
+    - flashx
+    - streamplay
+    - powvideo
+    - estream
+    - thevid
+    - gorrilavid
+    - waaw
+- Resolvers Removed
+    - vidup_org
+- Languages Added/Updated
+	- None
+	
+[B]Version 5.0.15 (Apr 29, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - streamapi
+- Resolvers Fixed/Updated:
+    - none
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.14 (Apr 24, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - nxload
+- Resolvers Fixed/Updated:
+    - thevid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.12 (Apr 22, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - thevid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
 [B]Version 5.0.11 (Apr 21, 2018)[/B]
 - Code Base Changes:
     - None

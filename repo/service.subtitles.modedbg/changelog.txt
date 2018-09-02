@@ -1,3 +1,7 @@
+[B]0.0.4[/B]
+  - Some sab.bz subtitles are in rar, added extraction only for kodi version 18, its under unacsfiles in settings
+[B]0.0.3[/B]
+  - Added unacsfiles
 [B]0.0.2[/B]
 Change log:
   - Added external unrar library, users need to pick unrar form settings path and choose their os
