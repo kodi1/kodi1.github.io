@@ -17,12 +17,11 @@ import requests
 import traceback
 import addons_xml_generator as gen
 from lxml import etree
+from packaging import version
 
 file_skip = [
               re.compile(r'\.git*'),
-#              re.compile(r'LICENSE*'),  #Removed as license files need to be included in addons
               re.compile(r'README*'),
-#              re.compile(r'.*\.txt'), #Removed as it prevents changelog.txt from being included
               re.compile(r'.*\.zip'),
               re.compile(r'VERSION'),
               re.compile(r'Makefile'),
@@ -79,50 +78,85 @@ def transfer_it(dest, src):
 
   print "Get ", os.listdir(dest)
 
-def get_remote_addon_version(repo_id, addon_id):
-  try:
-    url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
-    res = requests.get(url)
-    xml = etree.fromstring( res.content )
-    version = xml.get('version')
-    return version
+andromeda_addons = []
 
-  except:
-    return None
+def get_remote_addon_version(repo_id, addon_id):
+
+  global andromeda_addons
+  ver = None
+
+  try:
+
+    if repo_id == 'andromeda':
+      # get the addon versions from the list of versions on the website
+      if len(andromeda_addons) == 0:
+        url = 'https://andromeda.eu.org/xbmc/'
+        print ("Getting list of Andromeda addons and versions (done only once)")
+        source = requests.get(url).text
+        # extract the addon name and version i.e. <a href="plugin.video.anibg-0.0.1.zip">
+        andromeda_addons = re.compile('href="(.+?)-(.+?)\.zip').findall(source)
+
+      # iterate through all addons and find out the latest version for the current addon_id
+      versions = [] #addon for addon in andromeda_addons if addon_id == addon[0]]
+      for addon in andromeda_addons:
+        if addon_id == addon[0]:
+          versions.append(version.parse(addon[1]))
+      versions.sort(reverse=True)
+      ver = versions[0]
+
+    else:
+
+      url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
+      res = requests.get(url)
+      xml = etree.fromstring( res.content )
+      ver = version.parse(xml.get('version'))
+
+  except Exception as ex:
+    print (ex)
+
+  return ver
 
 def get_local_addon_version(addon_id):
   try:
     path = os.path.join(addon_id, 'addon.xml')
     xml = etree.parse( path )
-    version = xml.getroot().get('version')
-    return version
+    ver = xml.getroot().get('version')
+    return version.parse(ver)
 
   except:
     return None
 
 def is_addon_updated(url):
+  print ("**************************************************************************")
   try:
-    # Check only github based addons
-    matches = re.compile("github\.com/(.*?)/(.+?)/archive").findall(url)
-
-    repo_id = matches[0][0]
-    addon_id = matches[0][1]
-
-    local_addon_version = get_local_addon_version(addon_id)
-    remote_addon_version = get_remote_addon_version(repo_id, addon_id)
-
-    if local_addon_version != remote_addon_version:
-      print "Addon %s has been updated. New version is %s" % (addon_id, remote_addon_version)
-      return True
-    print "Addon %s has not been updated and will not be downloaded. Version is %s" % (addon_id, local_addon_version)
-    return False
-
+    # Check github based addons
+    try:
+      matches = re.compile("github\.com/(.+?)/(.+?)/archive").findall(url)
+      repo_id = matches[0][0]
+      addon_id = matches[0][1]
+    except:
+      # Check andromeda based addons
+      matches = re.compile('kodipermalink/(.+?).zip').findall(url)
+      addon_id = matches[0]
+      repo_id = 'andromeda'
   except:
-    print "Not able to verify if addon was updated. Downloading it anyway."
+    print "Not able to verify if there is a new version of the addon."
     return True
 
+  print ("Checking if addon %s is updated" % addon_id.upper())
+
+  local_addon_version = get_local_addon_version(addon_id)
+  remote_addon_version = get_remote_addon_version(repo_id, addon_id)
+
+  if local_addon_version < remote_addon_version:
+    print "Local version is %s, remote version is %s. Addon will be updated!" % (local_addon_version, remote_addon_version)
+    return True
+
+  print "Local version is %s, remote versions is %s. Skipping addon update!" % (local_addon_version, remote_addon_version)
+  return False
+
+
 def download_addon(url):
-  #print 'Get url: %s' % url
   try:
     r = requests.get(url, timeout=30, headers={'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0'})
     rh = r.headers.get('content-disposition')
@@ -148,7 +182,6 @@ def download_addons(urls):
       if not download_addon(url):
         print 'Download failed! Retrying...'
         download_addon(url)
-    print "*********************************"
 
 
 if ( __name__ == "__main__" ):
