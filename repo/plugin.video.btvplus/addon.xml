@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.btvplus" name="Btv Plus" version="1.0.6" provider-name="HarryGG">
+<addon id="plugin.video.btvplus" name="Btv Plus" version="1.0.7" provider-name="HarryGG">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
 		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
 		<import addon="script.module.html5lib" version="0.999.0"/>
 		<import addon="script.module.pytz" version="2014.2"/>
-        <import addon="script.module.garepobg" version="0.1.4"/>
+    <import addon="script.module.garepobg" version="0.1.4"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
