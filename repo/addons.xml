@@ -1017,7 +1017,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.btvplus" name="Btv Plus" version="1.0.7" provider-name="HarryGG">
+<addon id="plugin.video.btvplus" name="Btv Plus" version="1.0.8" provider-name="HarryGG">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
