@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.7.1" provider-name="RESU OBH">
+<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.7.2" provider-name="RESU OBH">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="inputstream.adaptive" version="2.1.0"/>
@@ -11,8 +11,8 @@
   <extension point="xbmc.addon.metadata">
   	<summary lang="bg">HBO GO. Това е HBO. Навсякъде.</summary>
     <summary lang="en">HBO GO. This is HBO. Everywhere.</summary>
-  	<description lang="bg">Гледайте хитови филми и сериали, HBO оригинални продукции, документални заглавия, концерти и още на вашето Коди устройство! Абонаментна услуга, ЕКСКЛУЗИВНО за HBO абонати на следните оператори: Blizoo, HBO GO Vip/Club Bulgaria, M SAT CABLE EAD, Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. Код за регистрация/клиентски номер ще получите от вашия телеком оператор.</description>
-    <description lang="en">Watch hit movies and serials, HBO original productions, documentary titles, concerts and more on your Kodi device! Subscription service, EXCLUSIVE for HBO subscribers of the following operators: Blizoo, HBO GO Vip / Club Bulgaria, M SAT CABLE EAD, Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. You will receive a registration / customer ID number from your telecom operator.</description>
+  	<description lang="bg">Гледайте хитови филми и сериали, HBO оригинални продукции, документални заглавия, концерти и още на вашето Коди устройство! Абонаментна услуга, ЕКСКЛУЗИВНО за HBO абонати на следните оператори: HBO GO Vip/Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. Код за регистрация/клиентски номер ще получите от вашия телеком оператор.</description>
+    <description lang="en">Watch hit movies and serials, HBO original productions, documentary titles, concerts and more on your Kodi device! Subscription service, EXCLUSIVE for HBO subscribers of the following operators: HBO GO Vip / Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. You will receive a registration / customer ID number from your telecom operator.</description>
   	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от HBO® Europe.</disclaimer>
     <disclaimer lang="en">This is not an official plug-in! If an official app is available for your platform, use it instead of this plugin. All rights in the content are reserved by HBO® Europe.</disclaimer>
   	<language>bg</language>
@@ -20,7 +20,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-504.html</forum>
   	<website>https://www.hbogo.bg</website>
-  	<news>Добавена възможност за лесно инсталиране на Widewine DRM, ако липсва в системата ви (изисква вашето потвърждение)</news>
+  	<news>Добавена възможност за вписване през оператори: Telenor Promo и HBO Bulgaria (за плащащите директен абонамент). Добавено конктексно меню на видеата за детайлна "Информация".</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
