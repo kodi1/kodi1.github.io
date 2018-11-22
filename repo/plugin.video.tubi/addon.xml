@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.tubi" name="TUBITV" version="0.1.2" provider-name="Majide">
+<addon id="plugin.video.tubi" name="TUBITV" version="0.1.3" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -12,9 +12,10 @@
   	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by movie studios.</disclaimer>
   	<language>en</language>
   	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-223.html</forum>
   	<website>https://tubitv.com</website>
-  	<news>Increased number of listed titles in categories</news>
+  	<news>Small fixes in metadata visualization, video descriptions and order. The addon support continues for USA users. The EU users cannot use TUBI anymore, because GDPR.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
