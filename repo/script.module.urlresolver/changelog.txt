@@ -1,3 +1,32 @@
+[B]Version 5.0.25 (November 27, 2018)[/B]
+- Code Base Changes:
+    - option to globally disable hosts that use popups
+    - better handling of disabling resolvers that use popups
+    - aadecode
+- Resolvers Added:
+    - vevio
+    - cloudvideo
+    - vkspeed
+    - superitu
+    - irshare
+- Resolvers Fixed/Updated:
+    - vidboom
+    - vidcloud
+    - openload
+    - thevid
+    - rapidvideo
+    - streamango
+    - streamable
+    - vivosx
+    - vidtodo
+    - premiumize
+- Resolvers Removed
+    - thevideo.me
+    - many dead hosts
+- Languages Added/Updated
+    - English
+    - English(US)
+
 [B]Version 5.0.24 (October 22, 2018)[/B]
 - Code Base Changes:
     - jsunpack
