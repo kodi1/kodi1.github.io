@@ -1,4 +1,4 @@
-[B]Version 5.0.25 (November 27, 2018)[/B]
+[B]Version 5.0.26 (November 27, 2018)[/B]
 - Code Base Changes:
     - option to globally disable hosts that use popups
     - better handling of disabling resolvers that use popups
