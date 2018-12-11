@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="2.3" provider-name="zinobg@gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="3.0" provider-name="zinobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift" version="0.2.0"/>    
@@ -11,10 +11,10 @@
     <platform>all</platform>
 	<license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
     <language>en</language>
-    <summary lang="en">Video plugin for bgtv-on.com http://www.bgtv-on.com/</summary>
+    <summary lang="en">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
     <description lang="en">This plugin provides access to tv streams from http://www.bgtv-on.com/.
 Note: http://www.bgtv-on.com/ account is required.</description>   
-    <disclaimer lang="en">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams</disclaimer>
+    <disclaimer lang="en">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
     <website>http://www.bgtv-on.com/</website>
     <source>https://github.com/zinobg/plugin.video.bgtvon</source>
     <email></email>
