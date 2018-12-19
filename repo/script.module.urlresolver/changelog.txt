@@ -1,10 +1,24 @@
-[B]Version 5.0.27 (December 09, 2018)[/B]
+[B]Version 5.0.28 (December 18, 2018)[/B]
+- Code Base Changes:
+    - torrent and magnet link support using Premiumize (experimental)
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - English
+    - English(US)
+
+[B]Version 5.0.27 (December 13, 2018)[/B]
 - Code Base Changes:
     - new sorting method
 - Resolvers Added:
     - fembed
     - fileholic
     - movierulz
+    - kupload
 - Resolvers Fixed/Updated:
     - mehlizmovies
     - premiumize
