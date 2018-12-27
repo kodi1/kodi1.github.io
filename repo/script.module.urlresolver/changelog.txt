@@ -1,3 +1,15 @@
+[B]Version 5.0.30 (December 26, 2018)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.29 (December 22, 2018)[/B]
 - Code Base Changes:
     - magnet link support using Real-Debrid (experimental)
