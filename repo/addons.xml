@@ -778,7 +778,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
  </extension>
 </addon>
 
-<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.4">
+<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.5">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -1295,10 +1295,11 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
   </extension>
 </addon>
 
-<addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.3.6" provider-name="harrygg">
+<addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.3.7" provider-name="harrygg">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.garepobg" version="0.1.3"/>
+    <import addon="script.module.kodibgcommon" version="1.0.0"/>
   </requires>
   <extension point="xbmc.python.script" library="exec.py"/>
   <extension point="xbmc.service" library="service.py" start="start" />
