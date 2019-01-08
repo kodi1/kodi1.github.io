@@ -275,7 +275,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 
 <addon id="plugin.video.mtelnow"
        name="[COLOR FFffEE0937]MTEL NOW[/COLOR]"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -425,9 +425,10 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
  </extension>
 </addon>
 
-<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.4.0" provider-name="Majide">
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.4.1" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.requests" version="2.19.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -444,7 +445,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-14.html</forum>
   	<website>http://play.nova.bg</website>
-  	<news>Добавката е пренаписана изцяло, след мигрането към новата платформа NeuLion. В момента гледането на Nova TV на живо, не работи нито в FFMpeg, нито в Kodi с или без InputStream.Adaptive addon. Последният е добавен като зависимост именно заради гледането на Nova TV. Очаквайте въпросния недостатък да бъде поправен в следващите версии на приставката.</news>
+  	<news>Поправено е гледането на Nova TV на живо през добавката. Още дребни поправки...</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
