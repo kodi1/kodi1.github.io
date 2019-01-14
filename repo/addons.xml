@@ -302,7 +302,7 @@ use it instead of this addon. All rights on content are reserved by MTEL.</discl
   </extension>
 </addon>
 
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.4" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.4.5" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   	<import addon="script.module.urlresolver" version="2.10.0"/>
@@ -323,7 +323,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: loading videos</news>
+  	<news>Added: Video indicator for played status of videos. Already Kodi skin will choose how to visualize the content lists, not you!</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -425,7 +425,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
  </extension>
 </addon>
 
-<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.4.1" provider-name="Majide">
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.4.2" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.requests" version="2.19.0"/>
@@ -445,7 +445,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-14.html</forum>
   	<website>http://play.nova.bg</website>
-  	<news>Поправено е гледането на Nova TV на живо през добавката. Още дребни поправки...</news>
+  	<news>Добавен е индикатор/маркер за изгледаните видеа. Вече скинът на Коди ще избира, как да се визуалират списъците със съдържание, а не вие!</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -1266,7 +1266,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
  </extension>
 </addon>
 
-<addon id="plugin.video.vbox7" name="VBOX7" version="0.3.17" provider-name="Majide">
+<addon id="plugin.video.vbox7" name="VBOX7" version="0.4.0" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1285,7 +1285,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
   	<forum>https://kodibg.org/forum/thread-12.html</forum>
   	<website>http://vbox7.com</website>
-  	<news>Оптимизации в зареждането на субтитри и автоматично избиране на най-високото качество; Подготовка за въвеждане на InputStream.Adaptive Addon; Преаранжиране настройките, фенарта и скрийншотите на приставката; Пълно описание на видеата, които разполагат с такова</news>
+  	<news>Добавен е индикатор/маркер за изгледаните видеа. Вече скинът на Коди ще избира, как да се визуалират списъците със съдържание, а не вие!</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
