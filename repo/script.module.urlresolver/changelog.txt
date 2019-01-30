@@ -1,3 +1,19 @@
+[B]Version 5.0.31 (January 29, 2019)[/B]
+- Code Base Changes:
+    - settings to allow cached torrents only
+    - fixes for torrents with samples larger than 75 MB
+    - premiumize now uses device authorization same as RD(you must re-auth)
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - English
+    - English(US)
+
 [B]Version 5.0.30 (December 26, 2018)[/B]
 - Code Base Changes:
     - none
