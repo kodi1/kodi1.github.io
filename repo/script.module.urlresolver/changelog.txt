@@ -1,3 +1,17 @@
+[B]Version 5.0.32 (February 03, 2019)[/B]
+- Code Base Changes:
+    - roll back progress dialog window changes
+    - RESET FUNCTION CACHE IN URLRESOLVER SETTINGS!!!!
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.31 (January 29, 2019)[/B]
 - Code Base Changes:
     - settings to allow cached torrents only
