@@ -779,7 +779,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
  </extension>
 </addon>
 
-<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.5">
+<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.6">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
