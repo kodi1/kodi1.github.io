@@ -1111,7 +1111,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.8" provider-name="HarryDoubleG">
+<addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.9" provider-name="HarryDoubleG">
   <requires>
   	<import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.garepobg" version="0.1.4"/>
