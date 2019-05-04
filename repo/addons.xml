@@ -1296,7 +1296,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
   </extension>
 </addon>
 
-<addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.3.9" provider-name="harrygg">
+<addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.5.0" provider-name="harrygg">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.garepobg" version="0.1.3"/>
