@@ -65,7 +65,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="3.3" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="3.4" provider-name="zinobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift" version="0.2.0"/>
@@ -197,7 +197,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
  </extension>
 </addon>
 
-<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.1.1" provider-name="Majide">
+<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.2.1" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.urlresolver"/>
@@ -214,9 +214,10 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
   	<language>bg</language>
   	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
   	<forum>https://kodibg.org/forum/thread-13.html</forum>
   	<website></website>
-  	<news>Първа публична версия; Може да се инсталира паралелно с популярната приставка за документални филми: КОЛИБКА.</news>
+  	<news>Добавен е нов източник на филми: ПЕШАКОФ СТУДИО - може да го разрешите от настройките на приставката. За него не се предлага търсачка и наличните заглавия са събрани в една обща категория на главното меню; Добавено е маркиране на заглавията като изгледани/неизгледани; Имплементиран е фиксът на vankogt за ресурса Колибка, решаващ екзотичния проблем със зареждане на недиректни, относителни адреси изпълняващи пренасочвания.</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -227,26 +228,27 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.36" provider-name="tvaddons">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="plugin.video.youtube" optional="true" />
-		<import addon="script.module.python.twitch" optional="true" />
-		<import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-		<import addon="plugin.video.gdrive" optional="true" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-		<summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-		<summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-		<description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-		<forum>https://www.tvaddons.co/forums</forum>
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.38" provider-name="tvaddons">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+        <import addon="plugin.video.gdrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <forum>https://www.tvaddons.co/forums</forum>
         <website>https://www.tvaddons.co</website>
-	</extension>
+    </extension>
 </addon>
 
 <addon id="service.subtitles.modedbg"
@@ -302,7 +304,7 @@ use it instead of this addon. All rights on content are reserved by MTEL.</discl
   </extension>
 </addon>
 
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.5" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.4.6" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   	<import addon="script.module.urlresolver" version="2.10.0"/>
@@ -323,7 +325,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Added: Video indicator for played status of videos. Already Kodi skin will choose how to visualize the content lists, not you!</news>
+  	<news>Update: All original user content not provided by Viki's employees is now removed and unavailable for viewing on their platform. Now are modern times - end-to-end encryption and the iPhone is standard.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
