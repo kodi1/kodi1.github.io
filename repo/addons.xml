@@ -304,10 +304,9 @@ use it instead of this addon. All rights on content are reserved by MTEL.</discl
   </extension>
 </addon>
 
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.6" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.4.7" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
-  	<import addon="script.module.urlresolver" version="2.10.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -325,7 +324,9 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Update: All original user content not provided by Viki's employees is now removed and unavailable for viewing on their platform. Now are modern times - end-to-end encryption and the iPhone is standard.</news>
+  	<news>Updated: The addon icon and fanart;
+Changed: Now all queries are encrypted;
+Not fixed: Playback via MPEG DASH is not working because of SSL/TLS errors. Use MP4 Progressive Download for now.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
