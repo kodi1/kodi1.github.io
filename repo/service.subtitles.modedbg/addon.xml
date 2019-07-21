@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="service.subtitles.modedbg"
        name="Bulgarian Subs"
-       version="0.0.5"
+       version="0.0.6"
        provider-name="kodi1 moded by Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -14,7 +14,7 @@
              library="service.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Bulgarian Subtitle Service</summary>
-    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net and yavka.net Thanks to josdion and jconxtc</description>
+    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net and yavka.net and bukvi.bg</description>
     <language>en</language>
     <platform>all</platform>
     <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
