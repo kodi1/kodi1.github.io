@@ -252,8 +252,8 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 </addon>
 
 <addon id="service.subtitles.modedbg"
-       name="Bulgarian Subs"
-       version="0.0.7"
+       name="[B]B[/B]ulgarian [B]Subs[/B]"
+       version="0.0.8"
        provider-name="kodi1 moded by Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -459,7 +459,7 @@ Not fixed: Playback via MPEG DASH is not working because of SSL/TLS errors. Use 
   </extension>
 </addon>
 
-<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.3" provider-name="stanislav-m(sTa)">
+<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.4" provider-name="stanislav-m(sTa)">
   <requires>
   	<import addon="xbmc.python" version="2.14.0"/>
 	<import addon="script.module.beautifulsoup4" version="4.3.2"/>
