@@ -275,7 +275,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 
 <addon id="service.subtitles.modedbg"
        name="[B]B[/B]ulgarian [B]Subs[/B]"
-       version="0.0.10"
+       version="0.0.11"
        provider-name="kodi1 moded by Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
