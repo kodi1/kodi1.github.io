@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.7.3" provider-name="RESU OBH">
+<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.8.0" provider-name="RESU OBH">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="inputstream.adaptive" version="2.1.0"/>
     <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    <import addon="script.module.requests" version="2.22.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -20,7 +21,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-504.html</forum>
   	<website>https://www.hbogo.bg</website>
-  	<news>Направена е оптимизация на кода. Добавен е раздел в настройките за активиране на родителски контрол (подробни указания ще намерите в първи пост на официалната тема в Коди Фен Форум).</news>
+  	<news>Коригирана е грешка, сочеща липсата на python библиотеката requests. Добавката е превключена към осма версия на системното API.</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>

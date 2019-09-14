@@ -114,7 +114,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.4" provider-name="stanislav-m(sTa)">
+<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.5" provider-name="stanislav-m(sTa)">
   <requires>
   	<import addon="xbmc.python" version="2.14.0"/>
 	<import addon="script.module.beautifulsoup4" version="4.3.2"/>
@@ -250,7 +250,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.38" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.39" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
@@ -275,7 +275,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 
 <addon id="service.subtitles.modedbg"
        name="[B]B[/B]ulgarian [B]Subs[/B]"
-       version="0.0.11"
+       version="0.0.12"
        provider-name="kodi1 moded by Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -299,10 +299,12 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 
 <addon id="plugin.video.mtelnow"
        name="[COLOR FFffEE0937]MTEL NOW[/COLOR]"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="Johnie">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="inputstream.adaptive" version="2.1.0"/>
+    <import addon="script.module.inputstreamhelper" version="0.3.3"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              provides="video"
@@ -1008,11 +1010,12 @@ stanislav-m">
  </extension>
 </addon>
 
-<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.7.3" provider-name="RESU OBH">
+<addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.8.0" provider-name="RESU OBH">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="inputstream.adaptive" version="2.1.0"/>
     <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    <import addon="script.module.requests" version="2.22.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -1029,7 +1032,7 @@ stanislav-m">
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-504.html</forum>
   	<website>https://www.hbogo.bg</website>
-  	<news>Направена е оптимизация на кода. Добавен е раздел в настройките за активиране на родителски контрол (подробни указания ще намерите в първи пост на официалната тема в Коди Фен Форум).</news>
+  	<news>Коригирана е грешка, сочеща липсата на python библиотеката requests. Добавката е превключена към осма версия на системното API.</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
