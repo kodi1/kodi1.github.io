@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.2.1" provider-name="Majide">
+<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.2.2" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.urlresolver"/>
@@ -19,7 +19,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
   	<forum>https://kodibg.org/forum/thread-13.html</forum>
   	<website></website>
-  	<news>Добавен е нов източник на филми: ПЕШАКОФ СТУДИО - може да го разрешите от настройките на приставката. За него не се предлага търсачка и наличните заглавия са събрани в една обща категория на главното меню; Добавено е маркиране на заглавията като изгледани/неизгледани; Имплементиран е фиксът на vankogt за ресурса Колибка, решаващ екзотичния проблем със зареждане на недиректни, относителни адреси изпълняващи пренасочвания.</news>
+  	<news>Поправен: Модулът за видеа от ПЕШАКОФ СТУДИО;</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
