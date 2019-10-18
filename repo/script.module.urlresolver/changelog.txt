@@ -1,3 +1,27 @@
+[B]Version 5.0.41 (October 17, 2019)[/B]
+- Code Base Changes:
+    - hmf fix
+- Resolvers Added:
+    - bitchute
+    - streamty
+    - watchshare
+    - sendvid
+    - dailynotion
+    - vlaretv
+    - speedwatch
+- Resolvers Fixed/Updated:
+    - fembed
+    - videostreaming
+    - xstreamcdn
+    - verystream
+    - rapidvideocom
+    - tusfiles
+    - vivosx
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - greek
+
 [B]Version 5.0.39 (August 18, 2019)[/B]
 - Code Base Changes:
     - headers fix
