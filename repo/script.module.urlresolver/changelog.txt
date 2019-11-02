@@ -1,3 +1,26 @@
+[B]Version 5.0.42 (November 1, 2019)[/B]
+- Code Base Changes:
+    - hmf improvement
+- Resolvers Added:
+    - uqload
+    - videobin
+    - idup.to
+- Resolvers Fixed/Updated:
+    - onlystream
+    - thevid
+    - gofile
+    - fembed
+    - uqload
+    - videoapne
+    - vidorg
+    - speedwatch
+- Resolvers Removed
+    - rapidvideocom
+    - openload
+    - streamango
+- Languages Added/Updated
+    - norwegian
+
 [B]Version 5.0.41 (October 17, 2019)[/B]
 - Code Base Changes:
     - hmf fix
