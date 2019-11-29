@@ -1,3 +1,17 @@
+[B]Version 5.0.45 (November 28, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - streamz
+- Resolvers Fixed/Updated:
+    - cloudvideo
+    - vidlox
+    - vidoza
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.44 (November 17, 2019)[/B]
 - Code Base Changes:
     - input improvement
