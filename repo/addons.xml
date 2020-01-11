@@ -250,7 +250,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.46" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.48" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
@@ -622,7 +622,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="2.3" provider-name="zynobg [at] gmail.com">
+<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="3.6" provider-name="zynobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift" version="0.2.0"/>
@@ -633,11 +633,11 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   <extension point="xbmc.addon.metadata">
    <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
-   <summary lang="en">Video plugin for www.seirsanduk.com http://www.seirsanduk.com/.</summary>
+   <summary lang="en"></summary>
    <language>en</language>
-   <description lang="en">Video plugin for http://www.seirsanduk.com/.  A free account is required.</description>
-   <disclaimer lang="en">This plugin provides access to tv streams from http://www.seirsanduk.com/. A free account is required.</disclaimer>
-   <website>http://www.seirsanduk.com/</website>
+   <description lang="en">www.SEIRSANDUK.com</description>
+   <disclaimer lang="en">www.SEIRSANDUK.com</disclaimer>
+   <website>www.SEIRSANDUK.com</website>
    <platform>all</platform>
    <source>https://github.com/zinobg/plugin.video.seirsanduk.r1</source>
   </extension>

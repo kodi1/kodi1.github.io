@@ -1,3 +1,33 @@
+[B]Version 5.0.48 (January 2, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - brighteon
+    - prostream
+    - supervideo
+    - truhd
+    - upstream
+- Resolvers Fixed/Updated:
+    - fembed
+    - mixdrop
+- Resolvers Removed
+    - streamcloud
+    - streamcloudco
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.47 (December 18, 2019)[/B]
+- Code Base Changes:
+    - removed dependency
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - mixdrop
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.46 (December 12, 2019)[/B]
 - Code Base Changes:
     - none
