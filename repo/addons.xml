@@ -65,10 +65,10 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="3.4" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="4.0" provider-name="zinobg [at] gmail.com">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.xbmcswift" version="0.2.0"/>
+    <import addon="xbmc.python" version="2.1.0" />
+	<import addon="script.module.xbmcswift2" version="1.1.1" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -250,7 +250,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.54" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.55" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
