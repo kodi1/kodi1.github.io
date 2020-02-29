@@ -65,7 +65,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="4.0" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="4.1" provider-name="zinobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.xbmcswift2" version="1.1.1" />
@@ -620,10 +620,10 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.0" provider-name="zynobg [at] gmail.com">
+<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.1" provider-name="zynobg [at] gmail.com">
   <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-    <import addon="script.module.xbmcswift2" version="2.5.1"/>
+    <import addon="xbmc.python" version="2.1.0" />
+	<import addon="script.module.xbmcswift2" version="1.1.1" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
