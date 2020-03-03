@@ -65,25 +65,36 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="4.1" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="4.2.2" provider-name="zinobg [at] gmail.com">
   <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-	<import addon="script.module.xbmcswift2" version="1.1.1" />
+    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="script.module.xbmcswift2" version="1.1.1" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
+    <license>GPL-3.0</license>
     <language>en</language>
-    <summary lang="en">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
-    <description lang="en">This plugin provides access to tv streams from http://www.bgtv-on.com/.
+    <summary lang="en_GB">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
+    <description lang="en_GB">This plugin provides access to tv streams from http://www.bgtv-on.com/.
 Note: http://www.bgtv-on.com/ account is required.</description>
-    <disclaimer lang="en">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
+    <disclaimer lang="en_GB">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
+    <email>zinobg@gmail.com</email>
     <website>http://www.bgtv-on.com/</website>
     <source>https://github.com/zinobg/plugin.video.bgtvon</source>
-    <email></email>
+    <news>v4.2.2 (02/03/2020)
+      [new] The plugin is re-written using xbmcswift2 plugin, which provides some new features.
+      [fix] Some fixes into addon.xml file.
+    </news>
+    <assets>
+      <icon>resources/png/icon.png</icon>
+      <fanart>resources/png/fanart.jpg</fanart>
+      <banner></banner>
+      <clearlogo></clearlogo>
+      <screenshot></screenshot>
+    </assets>
   </extension>
 </addon>
 
@@ -620,24 +631,36 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.1" provider-name="zynobg [at] gmail.com">
+<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.1.2" provider-name="zynobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
-	<import addon="script.module.xbmcswift2" version="1.1.1" />
+    <import addon="script.module.xbmcswift2" version="1.1.1" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-   <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
-   <summary lang="en"></summary>
-   <language>en</language>
-   <description lang="en">www.SEIRSANDUK.com</description>
-   <disclaimer lang="en">www.SEIRSANDUK.com</disclaimer>
-   <website>www.SEIRSANDUK.com</website>
-   <platform>all</platform>
-   <source>https://github.com/zinobg/plugin.video.seirsanduk.r1</source>
+    <summary lang="en_GB"></summary>
+    <description lang="en_GB">www.SEIRSANDUK.com</description>
+    <disclaimer lang="en_GB"></disclaimer>
+    <language>en</language> <!-- the language of the videos or other content the plugin provides, may be omitted in case the addon does not provide any content -->
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <forum></forum> <!-- may be omitted  -->
+    <website>http://www.SEIRSANDUK.com</website> <!-- the url of the website that contains the videos (or the official website of your plugin). May be omitted.  -->
+    <email>zinobg@gmail.com</email> <!-- may be left omitted  -->
+    <source>http://github.com/zinobg/plugin.video.seirsanduk.r1</source>
+    <news>v4.1.1 (02/03/2020)
+        - Using another way of playing channels with xbmcswift2 plugin.
+        - TV channels open with one click
+    </news>
+    <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.jpg</fanart>
+        <banner></banner>
+        <clearlogo></clearlogo>
+        <screenshot></screenshot>
+    </assets>
   </extension>
 </addon>
 
