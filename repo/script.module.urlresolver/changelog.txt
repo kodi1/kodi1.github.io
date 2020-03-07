@@ -1,3 +1,15 @@
+[B]Version 5.0.56 (March 6, 2020)[/B]
+- Code Base Changes:
+    - version bump
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - none
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.55 (February 27, 2020)[/B]
 - Code Base Changes:
     - get_dom fix
