@@ -1,3 +1,19 @@
+[B]Version 5.0.59 (March 24, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - dailymotion
+    - entervideo
+    - jetload
+    - streamwire
+    - uptobox
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 [B]Version 5.0.58 (March 20, 2020)[/B]
 - Code Base Changes:
     - none
