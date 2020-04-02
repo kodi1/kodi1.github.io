@@ -1,3 +1,50 @@
+[B]Version 5.0.61 (April 2, 2020)[/B]
+- Code Base Changes:
+    - strings
+- Resolvers Added:
+    - primevideos
+- Resolvers Fixed/Updated:
+    - aliez
+    - cda
+    - chromecast
+    - clicknupload
+    - clipwatching
+    - cloudb
+    - cloudmailru
+    - datemule
+    - gounlimited
+    - uptobox
+    - waaw
+- Resolvers Removed
+    - anyfiles
+    - bestream
+    - daclips
+    - estream
+    - gorillavid
+    - h265
+    - idtbox
+    - mehlizmovies
+    - movpod
+    - videoapne
+    - watchshare
+- Languages Added/Updated
+    - croatian
+    - czech
+    - dutch
+    - english (us)
+    - english
+    - galician
+    - german
+    - greek
+    - hebrew
+    - hungarian
+    - italian
+    - norwegian
+    - romanian
+    - slovak
+    - spanish
+    - swedish
+
 [B]Version 5.0.60 (March 27, 2020)[/B]
 - Code Base Changes:
     - none
