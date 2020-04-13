@@ -8,6 +8,8 @@
     <!-- <setting type="sep"/> -->
 		<setting id="append_ua" type="bool" label="Имперсонирай ExoPlayer при възпроизвеждане" default="true" />
     <setting type="sep"/>
+		<setting id="refresh_interval" type="number" label="Време за обновяване на списъка с каналите (часове)" default="1"/>
+    <setting type="sep"/>
 		<setting id="rebuild_cache" type="bool" label="Изчисти кеш с ТВ каналите:" />
     <setting type="sep"/>
 		<setting id="rebuild_user_data" type="bool" label="Изчисти кеш с потребителскитете данни:" />

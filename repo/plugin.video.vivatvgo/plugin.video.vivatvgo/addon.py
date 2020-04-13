@@ -7,6 +7,8 @@ if settings.rebuild_user_data or not settings.guid:
   settings.username = ""
   settings.password = ""
   settings.rebuild_user_data = False
+  # The refresh interval in hours 
+  settings.refresh_interval = 1
   settings.open()
   settings.guid = uuid.uuid4()
 
