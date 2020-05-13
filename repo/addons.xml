@@ -266,7 +266,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.65" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.66" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
