@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.4.7" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.18.4.8" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -19,9 +19,9 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Updated: The addon icon and fanart;
-Changed: Now all queries are encrypted;
-Not fixed: Playback via MPEG DASH is not working because of SSL/TLS errors. Use MP4 Progressive Download for now.</news>
+  	<news>Fixed: Subtitle support for Chinese and Taiwanese languages;
+Changed: Loading subtitles via other "modern" method. This should help with some devices with problems;
+Not fixed: Playback via MPEG DASH is still not working because of SSL/TLS errors. Use MP4 Progressive Download for now.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
