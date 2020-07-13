@@ -1,3 +1,17 @@
+[B]Version 5.1.3 (July 12, 2020)[/B]
+- Code Base Changes:
+    - possible Fix for settings.xml writing on XBox
+- Resolvers Added:
+    - megogo
+    - oogly
+    - videoapne
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
 [B]Version 5.1.1 (June 21, 2020)[/B]
 - Code Base Changes:
     - none
