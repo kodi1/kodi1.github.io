@@ -236,7 +236,7 @@ Note: http://www.bgtv-on.com/ account is required.</description>
  </extension>
 </addon>
 
-<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.2.2" provider-name="Majide">
+<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.2.4" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.urlresolver"/>
@@ -253,10 +253,10 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
   	<language>bg</language>
   	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007; ISC License for rarfile</license>
   	<forum>https://kodibg.org/forum/thread-13.html</forum>
   	<website></website>
-  	<news>Поправен: Модулът за видеа от ПЕШАКОФ СТУДИО;</news>
+  	<news>Поправен: Модулът за зареждане на субтитри rarfile. Модулът вече е включен в самата добавка, защото лицензът за разпространение ISC го позволява. Използва се неактуална(стара) версия на модулът, защото най-новата вече не поддържа python2 и би могла да се използва само в Коди 19 и следващи версии. Накратко: ако инсталирате unrar в системния път(PATH) няма нужда да правите или настройвате нищо за да имате субтитри. Ако инсталирате unrar на друго място, трябва да отворите rarfile.py и на 170-ти ред да укажете точният път до unrar.</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
