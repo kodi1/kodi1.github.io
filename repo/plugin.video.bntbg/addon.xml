@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.bntbg" name="БНТ" version="2.1.0" provider-name="BatVani">
+<addon id="plugin.video.bntbg" name="БНТ" version="2.1.1" provider-name="BatVani">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
@@ -16,8 +16,7 @@
     <language>bg</language>
     <description>Kodi addon for BNT</description>
     <assets>
-	    <icon>recources/icon.png</icon>
-      <screenshot>recources/screenshot_1.png</screenshot>
+	    <icon>icon.png</icon>
 	  </assets>
   </extension>
 </addon>
