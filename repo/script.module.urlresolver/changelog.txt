@@ -1,3 +1,17 @@
+Version 5.1.5 (August 12, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - streamtape
+    - cloud9
+    - aparat
+- Resolvers Fixed/Updated:
+    - playtube
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 Version 5.1.4 (July 29, 2020)
 - Code Base Changes:
     - additional encoding fixes for settings.xml
