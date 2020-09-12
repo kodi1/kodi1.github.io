@@ -1,3 +1,17 @@
+Version 5.1.8 (September 11, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - premiumize
+    - cloud9
+    - gounlimited
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 Version 5.1.6 (August 31, 2020)
 - Code Base Changes:
     - none
