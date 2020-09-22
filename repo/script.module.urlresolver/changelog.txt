@@ -1,3 +1,16 @@
+Version 5.1.9 (September 21, 2020)
+- Code Base Changes:
+    - add referer to final url for embeds without referer
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - linksnappy
+    - playtube
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - all supported languages for additional strings required by linksnappy resolver
+
 Version 5.1.8 (September 11, 2020)
 - Code Base Changes:
     - none
