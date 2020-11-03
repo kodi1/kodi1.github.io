@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.18.5.1" provider-name="Majide">
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.18.5.2" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.requests" version="2.19.0"/>
@@ -19,7 +19,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-14.html</forum>
   	<website>https://play.nova.bg</website>
-  	<news>Пренаписана е изцяло добавката, като резултат от миграцията към друг Back-End на VOD доставчика. За момента търсачката не работи и ще бъде поправена в бъдещ ъпдейт. Възможно е видеата (стриймовете) да ви зареждат бавно или чак от втория опит за отваряне. Това се дължи на капсулацията на плейлисти вътре в други плейлисти и т.н. което създава въпросното времезакъснение в Коди, винаги търсещ най-доброто качество, когато има избор.</news>
+  	<news>Поправени са търсачката и разлистването на видеа пльоснати някъде без никакво планиране, подредба или каквато и да било умисъл. Възможно е видеата (стриймовете) да ви зареждат бавно или чак от втория опит за отваряне. Това се дължи на капсулацията на плейлисти вътре в други плейлисти и т.н. което създава въпросното времезакъснение в Коди, винаги търсещ най-доброто качество, когато има избор. Само новодобавените предавания са в 1080p резолюция. Последна версия - съвместима с Kodi 18.X</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
