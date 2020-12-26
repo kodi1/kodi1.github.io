@@ -31,11 +31,11 @@ file_skip = [
               ]
 
 tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
-print "Using temp path %s" % tmp_path
+print ( "Using temp path %s" % tmp_path)
 cwd = os.getcwd()
 files = ['changelog.txt', 'icon.*', 'addon.xml', 'fanart.*']
 addons_urls_list = json.load(open('addons.json'))
-print "Loaded list of %s addon urls" % len(addons_urls_list)
+print ( "Loaded list of %s addon urls" % len(addons_urls_list))
 
 def mk_repo_trget_name(name):
   return re.sub( r"(-\w+\.zip|-[\d.]*\.zip|\.zip)", "", os.path.basename(os.path.basename(name)))
@@ -64,19 +64,19 @@ def transfer_it(dest, src):
       shutil.copyfile(a, os.path.join(dest, os.path.basename(a)))
 
   addon_xml = os.path.join(src, 'addon.xml')
-  print "Parsing addon xml file:" + addon_xml
+  print("Parsing addon xml file: %s" % addon_xml)
   try:
     tree = etree.parse(addon_xml)
     tree.getroot().get('version')
     name_zip = '%s-%s.zip' % (os.path.basename(dest), tree.getroot().get('version'))
     name_zip = os.path.join(dest, name_zip)
-    print name_zip
+    print (name_zip)
     make_zipfile(name_zip, src)
   except Exception as er:
-    print "Error parsing file"
-    print str(er)
+    print ("Error parsing file")
+    print (str(er))
 
-  print "Get ", os.listdir(dest)
+  print ("Get ", os.listdir(dest))
 
 andromeda_addons = []
 
@@ -86,7 +86,6 @@ def get_remote_addon_version(repo_id, addon_id):
   ver = None
 
   try:
-
     if repo_id == 'andromeda':
       # get the addon versions from the list of versions on the website
       if len(andromeda_addons) == 0:
@@ -103,9 +102,7 @@ def get_remote_addon_version(repo_id, addon_id):
           versions.append(version.parse(addon[1]))
       versions.sort(reverse=True)
       ver = versions[0]
-
     else:
-
       url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
       res = requests.get(url)
       xml = etree.fromstring( res.content )
@@ -140,7 +137,7 @@ def is_addon_updated(url):
       addon_id = matches[0]
       repo_id = 'andromeda'
   except:
-    print "Not able to verify if there is a new version of the addon."
+    print ("Not able to verify if there is a new version of the addon.")
     return True
 
   print ("Checking if addon %s is updated" % addon_id.upper())
@@ -149,10 +146,10 @@ def is_addon_updated(url):
   remote_addon_version = get_remote_addon_version(repo_id, addon_id)
 
   if local_addon_version < remote_addon_version:
-    print "Local version is %s, remote version is %s. Addon will be updated!" % (local_addon_version, remote_addon_version)
+    print ("Local version is %s, remote version is %s. Addon will be updated!" % (local_addon_version, remote_addon_version))
     return True
 
-  print "Local version is %s, remote versions is %s. Skipping addon update!" % (local_addon_version, remote_addon_version)
+  print ("Local version is %s, remote versions is %s. Skipping addon update!" % (local_addon_version, remote_addon_version))
   return False
 
 
@@ -165,12 +162,12 @@ def download_addon(url):
         f_name = os.path.join(tmp_path, rh.split('filename=')[1])
       else:
         f_name = os.path.join(tmp_path, url.split('/')[-1])
-      print "Download: ", f_name
+      print ("Download: ", f_name)
       with open(f_name, "wb") as code:
         code.write(r.content)
     return True
   except:
-    print traceback.format_exc(sys.exc_info())
+    print (traceback.format_exc(sys.exc_info()))
     return False
 
 def download_addons(urls):
@@ -180,7 +177,7 @@ def download_addons(urls):
     if is_addon_updated(url):
       # if first download fails retry once
       if not download_addon(url):
-        print 'Download failed! Retrying...'
+        print ('Download failed! Retrying...')
         download_addon(url)
 
 
@@ -188,6 +185,8 @@ if ( __name__ == "__main__" ):
   # start
   download_addons(addons_urls_list)
 
+  print ("**************************************************************************")
+  print ("Extracting addons that will be updated")
   for a in glob.iglob(os.path.join(tmp_path, '*.zip')):
     name = mk_repo_trget_name(a)
 
@@ -198,24 +197,26 @@ if ( __name__ == "__main__" ):
     zfile.extractall(tmp_path)
 
     if os.path.exists(old_name):
-      print '%s -> %s' % (old_name, new_name,)
+      print ('%s -> %s' % (old_name, new_name,))
       os.rename(old_name, new_name)
 
     transfer_it(os.path.join(cwd, name), os.path.join(tmp_path, name))
 
+  print ("Trying to remove temp directory %s" % tmp_path)
   if os.path.exists(tmp_path):
     try: shutil.rmtree(tmp_path)
     except Exception, er:
-      print str(er)
+      print (str(er))
 
   gen.Generator()
 
+  print ("Generating HTML page")
   parser = etree.HTMLParser()
   tree   = etree.parse(os.path.join('../', 'index.html'), parser)
   for s in tree.getroot().iter('p'):
     if s.text:
       if s.text.split(':')[0] == 'Last update':
         s.text = 'Last update: %s' % time.strftime("%H:%M:%S - %d.%m.%Y")
-        print s.text
+        print (s.text)
 
   tree.write(os.path.join('../', 'index.html'), method="html", pretty_print=True)

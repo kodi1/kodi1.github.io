@@ -194,7 +194,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="5.0.1" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="5.0.3" provider-name="zinobg [at] gmail.com">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
@@ -223,6 +223,8 @@ Note: http://www.bgtv-on.com/ account is required.</description>
 			[new] TBD
 		  v5.0.1 (bugfix)
 		    [fix] a problem with the first login is fixed
+          v5.0.2 (fix)
+            [fix] the problem with recorded videos
     </news>
     <assets>
       <icon>resources/png/icon.png</icon>
@@ -234,9 +236,9 @@ Note: http://www.bgtv-on.com/ account is required.</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.bntbg" name="БНТ" version="2.1.4" provider-name="BatVani">
+<addon id="plugin.video.bntbg" name="БНТ" version="4.0.0" provider-name="BatVani">
   <requires>
-    <import addon="xbmc.python" version="2.1.4"/>
+    <import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
 		<import addon="script.module.html5lib" version="0.999.0"/>
     <import addon="script.module.requests" />
@@ -1162,7 +1164,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
   </extension>
 </addon>
 
-<addon id="plugin.video.vikir" name="VIKI®" version="0.18.4.8" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.18.4.9" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1182,9 +1184,9 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: Subtitle support for Chinese and Taiwanese languages;
-Changed: Loading subtitles via other "modern" method. This should help with some devices with problems;
-Not fixed: Playback via MPEG DASH is still not working because of SSL/TLS errors. Use MP4 Progressive Download for now.</news>
+  	<news>Fixed: Playback via MPEG DASH;
+Not Fixed: MP4 Progressive Download will not working anymore;
+Next changes will require Widewine CDM in combination with InputStream Adaptive, because all provided streams will be DRM encrypted.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -1352,14 +1354,15 @@ stanislav-m">
 </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.12" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.18" provider-name="tvaddons">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
-        <import addon="script.module.six" version="0.0.1"/>
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.python.twitch" optional="true" />
         <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-        <import addon="plugin.video.gdrive" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py" />
