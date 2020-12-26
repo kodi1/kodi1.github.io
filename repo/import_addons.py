@@ -36,6 +36,7 @@ cwd = os.getcwd()
 files = ['changelog.txt', 'icon.*', 'addon.xml', 'fanart.*']
 addons_urls_list = json.load(open('addons.json'))
 print ( "Loaded list of %s addon urls" % len(addons_urls_list))
+readme_text = "Last updated addons:\n"
 
 def mk_repo_trget_name(name):
   return re.sub( r"(-\w+\.zip|-[\d.]*\.zip|\.zip)", "", os.path.basename(os.path.basename(name)))
@@ -146,11 +147,14 @@ def is_addon_updated(url):
   remote_addon_version = get_remote_addon_version(repo_id, addon_id)
 
   if local_addon_version < remote_addon_version:
+    global readme_text
+    readme_text += "%s | updated to %s (previously %s)" % (addon_id, remote_addon_version, local_addon_version)
     print ("Local version is %s, remote version is %s. Addon will be updated!" % (local_addon_version, remote_addon_version))
     return True
 
   print ("Local version is %s, remote versions is %s. Skipping addon update!" % (local_addon_version, remote_addon_version))
   return False
+
 
 
 def download_addon(url):
@@ -220,3 +224,9 @@ if ( __name__ == "__main__" ):
         print (s.text)
 
   tree.write(os.path.join('../', 'index.html'), method="html", pretty_print=True)
+
+  print ("Updating README")
+  with open("../README.md", "w") as w:
+    w.write(readme_text)
+  
+  
