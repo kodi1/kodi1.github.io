@@ -1,2 +1,2 @@
 Last updated addons:
-plugin.video.sedem | updated to 0.18.2.4 (previously 0.2.4)
+plugin.video.vivatvgo | updated to 1.0.12 (previously 1.0.11)plugin.video.vikir | updated to 0.19.4.11 (previously 0.18.4.9)plugin.video.sedem | updated to 0.18.2.4 (previously 0.2.4)plugin.video.mtelnow | updated to 2.1.0 (previously 2.0.0)script.module.urlresolver | updated to 5.1.22 (previously 5.1.18)

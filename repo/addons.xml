@@ -786,10 +786,9 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
 
 <addon id="plugin.video.mtelnow"
        name="A1 Xplore TV GO"
-       version="2.0.0"
+       version="2.1.0"
        provider-name="Johnie">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="inputstream.adaptive" version="2.1.0"/>
     <import addon="script.module.inputstreamhelper" version="0.3.3"/>
     <import addon="script.module.pytz"/>
@@ -1197,7 +1196,7 @@ Next changes will require Widewine CDM in combination with InputStream Adaptive,
   </extension>
 </addon>
 
-<addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.11" provider-name="HarryDoubleG">
+<addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.12" provider-name="HarryDoubleG">
   <requires>
   	<import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.garepobg" version="0.1.4"/>
@@ -1354,7 +1353,7 @@ stanislav-m">
 </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.1.18" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.22" provider-name="tvaddons">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
