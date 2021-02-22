@@ -148,7 +148,7 @@ def is_addon_updated(url):
 
   if local_addon_version < remote_addon_version:
     global readme_text
-    readme_text += "%s | updated to %s (previously %s)" % (addon_id, remote_addon_version, local_addon_version)
+    readme_text += "%s | updated to %s (previously %s)\n" % (addon_id, remote_addon_version, local_addon_version)
     print ("Local version is %s, remote version is %s. Addon will be updated!" % (local_addon_version, remote_addon_version))
     return True
 

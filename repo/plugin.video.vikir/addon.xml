@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.18.4.9" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.13" provider-name="Majide">
   <requires>
-  	<import addon="xbmc.python" version="2.1.0"/>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="inputstream.adaptive" version="2.1.0"/>
+	<import addon="script.module.inputstreamhelper" version="0.3.3"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -19,8 +21,11 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: Playback via MPEG DASH;
-Not Fixed: MP4 Progressive Download will not working anymore;
+  	<news>Fixed: Requests to VIKI API;
+Improvement: Better Error Handling;
+NEW: Added Inputstream Helper for avoiding Inputstream Adaptive related errors;
+Python3 support for Kodi 19 and newer versions. Kodi 18 and previous must use 0.18.4.X addon versions;
+Not Fixed: MP4 Progressive Download will not work anymore;
 Next changes will require Widewine CDM in combination with InputStream Adaptive, because all provided streams will be DRM encrypted.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
