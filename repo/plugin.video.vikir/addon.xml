@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.13" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.14" provider-name="Majide">
   <requires>
 	<import addon="xbmc.python" version="3.0.0"/>
 	<import addon="inputstream.adaptive" version="2.1.0"/>
+	<import addon="script.module.requests" version="2.22.0"/>
 	<import addon="script.module.inputstreamhelper" version="0.3.3"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -21,7 +22,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: Requests to VIKI API;
+  	<news>Fixed: Installing Addon Requirement - Requests;
 Improvement: Better Error Handling;
 NEW: Added Inputstream Helper for avoiding Inputstream Adaptive related errors;
 Python3 support for Kodi 19 and newer versions. Kodi 18 and previous must use 0.18.4.X addon versions;

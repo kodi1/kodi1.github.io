@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.bgtvon" name="BGTV-ON" version="5.0.3" provider-name="zinobg [at] gmail.com">
+<addon id="plugin.video.bgtvon" name="BGTV-ON" version="6.0.1" provider-name="zinobg [at] gmail.com">
   <requires>
-    <import addon="xbmc.python" version="2.14.0"/>  
+    <import addon="xbmc.python" version="2.25.0"/>  
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -17,8 +17,8 @@ Note: http://www.bgtv-on.com/ account is required.</description>
     <email>zinobg@gmail.com</email>
     <website>http://www.bgtv-on.com/</website>
     <source>https://github.com/zinobg/plugin.video.bgtvon</source>
-    <news>v4.2.2 (02/03/2020)
-			[new] The plugin is re-written using xbmcswift2 plugin, which provides some new features. 
+   <news>v4.2.2 (02/03/2020)
+      		[new] The plugin is re-written using xbmcswift2 plugin, which provides some new features.
 			[fix] Some fixes into addon.xml file.
 		  v4.2.3 (10/03/2020)
 			[new] added contextmenu() on the place of select(), for the newer versions of Kodi. Older version will still work with select()
