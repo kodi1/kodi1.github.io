@@ -1245,12 +1245,11 @@ stanislav-m">
   </extension>
 </addon>
 
-<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.5" provider-name="stanislav-m(sTa)">
+<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.1.0" provider-name="stanislav-m(sTa)">
   <requires>
-  	<import addon="xbmc.python" version="2.14.0"/>
 	<import addon="script.module.beautifulsoup4" version="4.3.2"/>
 	<import addon="script.module.requests" version="2.9.1"/>
-	<import addon="script.module.inputstreamhelper" version="0.3.3"/>
+	<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
@@ -1263,7 +1262,14 @@ stanislav-m">
   	<language>bg,en</language>
   	<platform>all</platform>
   	<forum>http://kodibg.org/forum</forum>
-  	<website>http://kodibg.org/forum</website>
+	<website>http://kodibg.org/forum</website>
+	<assets>
+        	<icon>icon.png</icon>
+        	<fanart></fanart>
+        	<banner></banner> <!-- optional -->
+        	<clearlogo></clearlogo> <!-- optional  -->
+        	<screenshot></screenshot> <!-- optional, max 10  -->
+    	</assets>
   </extension>
 </addon>
 
