@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.14" provider-name="Majide">
+<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.15" provider-name="Majide">
   <requires>
 	<import addon="xbmc.python" version="3.0.0"/>
 	<import addon="inputstream.adaptive" version="2.1.0"/>
@@ -22,12 +22,7 @@ use it instead of this addon. All rights on content are reserved by Rakuten.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-209.html</forum>
   	<website>https://www.viki.com</website>
-  	<news>Fixed: Installing Addon Requirement - Requests;
-Improvement: Better Error Handling;
-NEW: Added Inputstream Helper for avoiding Inputstream Adaptive related errors;
-Python3 support for Kodi 19 and newer versions. Kodi 18 and previous must use 0.18.4.X addon versions;
-Not Fixed: MP4 Progressive Download will not work anymore;
-Next changes will require Widewine CDM in combination with InputStream Adaptive, because all provided streams will be DRM encrypted.</news>
+  	<news>Changed: Loading Subtitles function. I did what I could. If it still doesn't work for you, use the official VIKI apps for your platform.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
