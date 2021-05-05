@@ -1,3 +1,28 @@
+Version 6.1.00 (May 4, 2021)
+- Code Base Changes:
+    - update jsunpack to handle non ascii strings
+    - update user agents
+- Resolvers Added:
+    - sendfox
+    - sbembed
+    - rumble
+    - userload
+- Resolvers Fixed/Updated:
+    - userload
+    - aparat
+    - clipwatching
+    - cocoscope
+    - hdvid
+    - lbry
+    - mixdrop
+    - ninjastream
+    - streamz
+    - videobin
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 Version 6.0.01 (April 6, 2021)
 - Code Base Changes:
     - HostedMediaFile add __bool__ for python 3
