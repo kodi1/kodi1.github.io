@@ -1,3 +1,20 @@
+Version 6.1.02 (May 24, 2021)
+- Code Base Changes:
+    - helpers update
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - cocoscope
+    - daxab
+    - googlevideo
+    - lbry
+    - playtube
+    - sbembed
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
 Version 6.1.00 (May 4, 2021)
 - Code Base Changes:
     - update jsunpack to handle non ascii strings
