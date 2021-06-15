@@ -1,3 +1,23 @@
+Version 6.1.03 (June 10, 2021)
+- Code Base Changes:
+    - drop to tls1.1 if necessary for cloudflaressl
+- Resolvers Added:
+    - itemfix
+    - steamcommunity
+    - vidmx
+- Resolvers Fixed/Updated:
+    - clicknupload
+    - cocoscope
+    - daxab
+    - doodstream
+    - k2s
+    - lbry
+    - playtube
+- Resolvers Removed
+    - liveleak
+- Languages Added/Updated
+    - none
+
 Version 6.1.02 (May 24, 2021)
 - Code Base Changes:
     - helpers update
