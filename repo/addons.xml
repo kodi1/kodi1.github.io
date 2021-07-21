@@ -1100,7 +1100,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
   </extension>
 </addon>
 
-<addon id="plugin.video.vatim" name="VATIM" version="0.19.0.7" provider-name="Majide">
+<addon id="plugin.video.vatim" name="VATIM" version="0.19.0.8" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="3.0.0"/>
   	<import addon="inputstream.adaptive" version="2.1.0"/>
@@ -1122,8 +1122,7 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-596.html</forum>
   	<website>http://vatim.xyz</website>
-  	<news>Ново: Добавени много пълнометражни филми в главното меню (гледайте ги оттам, повечето без нужда от регистрация в сайта);
-Поправено: Вътрешни поправки и оптимизации.</news>
+  	<news>Поправено: Разлистването между отделните сезони.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
