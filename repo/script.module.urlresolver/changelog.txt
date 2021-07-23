@@ -1,3 +1,23 @@
+Version 6.1.04 (July 22, 2021)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - upvideo
+    - vupload
+- Resolvers Fixed/Updated:
+    - clicknupload
+    - cocoscope
+    - doodstream
+    - lbry
+    - steamcommunity
+    - streamsb
+    - uptobox
+    - userload
+- Resolvers Removed
+    - sbembed
+- Languages Added/Updated
+    - none
+
 Version 6.1.03 (June 10, 2021)
 - Code Base Changes:
     - drop to tls1.1 if necessary for cloudflaressl
