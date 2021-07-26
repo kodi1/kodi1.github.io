@@ -60,9 +60,9 @@
   </extension>
 </addon>
 
-<addon id="plugin.program.braviacontrol" name="Bravia Control" version="0.0.1b" provider-name="kodi1">
+<addon id="plugin.program.braviacontrol" name="Bravia Control" version="0.0.1c" provider-name="kodi1">
   <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="1.1.0"/>
     <import addon="script.module.garepobg" version="0.1.3"/>
     <import addon="script.module.simplejson" version="3.3.0"/>
@@ -893,7 +893,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
   </extension>
 </addon>
 
-<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.1" provider-name="Majide">
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.2" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="3.0.0"/>
   	<import addon="script.module.requests" version="2.19.0"/>
@@ -913,7 +913,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-14.html</forum>
   	<website>https://play.nova.bg</website>
-  	<news>НОВО: Съвместимост с Коди 19 Матрикс и следващи версии</news>
+  	<news>ПОПРАВЕНО: Гледането на НТВ на живо</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -1327,10 +1327,10 @@ stanislav-m">
 
 <addon id="script.module.garepobg"
        name="garepobg"
-       version="0.1.4"
+       version="0.1.5"
        provider-name="kodi1">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="1.1.0"/>
   </requires>
   <extension point="xbmc.python.module"
@@ -1453,9 +1453,9 @@ stanislav-m">
     </extension>
 </addon>
 
-<addon id="service.screensaver.hooks" name="Screensaver Hooks" version="0.0.1j" provider-name="kodi1">
+<addon id="service.screensaver.hooks" name="Screensaver Hooks" version="0.0.1k" provider-name="kodi1">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.garepobg" version="0.1.0"/>
   </requires>
   <extension point="xbmc.service" library="service.py" start="start" />
@@ -1471,12 +1471,12 @@ stanislav-m">
 </addon>
 
 <addon id="service.sleeptimer"
-      name="Sleep Timer"
-      version="2.0.6b"
+       name="Sleep Timer"
+      version="2.1.7"
       provider-name="enen92, Solo0815">
     <requires>
-            <import addon="xbmc.addon" version="14.0.0"/>
-            <import addon="xbmc.python" version="2.19.0"/>
+		<import addon="xbmc.addon" version="14.0.0"/>
+		<import addon="xbmc.python" version="3.0.0"/>
     </requires>
     <extension point="xbmc.service" library="service.py" start="login"/>
     <extension point="xbmc.addon.metadata">
@@ -1485,9 +1485,9 @@ stanislav-m">
          <description lang="en">This service addon makes Kodi stop any playback if it exceeds a given playback time. If you have that awful habit of leaving Kodi playing live content after you fell asleep, this addon is for you! It gives extended control over the playback time. Step mute the audio, enable the screensaver or run a custom command after the playback is stopped.</description>
          <description lang="pt">Este service addon faz com que o Kodi pare qualquer playback se o seu tempo exceder um valor fornecido. Se tiver o hábito de adormecer enquanto o Kodi está a reproduzir conteúdo multimédia, este addon é para si! Este extende o controlo do tempo de reprodução. Baixe o volume do áudio, active o protector de ecrã ou execute um comando customizado após a reprodução ser interrompida.</description>
          <forum>http://forum.kodi.tv/showthread.php?tid=211971</forum>
-            <source>https://github.com/enen92/service.sleeptimer</source>
+    	    <source>https://github.com/enen92/service.sleeptimer</source>
          <platform>all</platform>
-         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+         <license>GPL-2.0-only</license>
     </extension>
 </addon>
 
