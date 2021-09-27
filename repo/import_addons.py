@@ -101,7 +101,10 @@ def get_remote_addon_version(repo_id, addon_id):
       for addon in andromeda_addons:
         if addon_id == addon[0]:
           versions.append(version.parse(addon[1]))
+          
+      # print (versions)
       versions.sort(reverse=True)
+      # print (versions)
       ver = versions[0]
     else:
       url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
