@@ -1,3 +1,49 @@
+Version 7.0.00 (November 10, 2021)
+- Code Base Changes:
+    - small updates
+- Resolvers Added:
+    - brupload
+    - costv
+    - fastdrive
+    - filerio
+    - gogostream
+    - gamoplayer
+    - pandafiles
+    - peertube
+    - playhd
+    - streamani
+    - streamlare
+    - streamrapid
+    - videooo
+    - videovard
+    - vlalacom
+    - vlalanet
+- Resolvers Fixed/Updated:
+    - cda
+    - daxab
+    - debrid_link
+    - doodstream
+    - evoload
+    - fembed
+    - gamovideo
+    - hdvid
+    - speedostream
+    - steamcommunity
+    - streamsb
+    - streamtape
+    - streamz
+    - upvideo
+    - vidbom
+    - vidcloud9
+    - vidmojo
+    - voesx
+    - vupload
+    - youdbox
+- Resolvers Removed
+    - cocoscope
+- Languages Added/Updated
+    - none
+
 Version 6.1.04 (July 22, 2021)
 - Code Base Changes:
     - none
