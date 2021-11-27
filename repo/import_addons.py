@@ -92,7 +92,7 @@ def get_remote_addon_version(repo_id, addon_id):
       if len(andromeda_addons) == 0:
         url = 'https://andromeda.eu.org/xbmc/'
         print ("Getting list of Andromeda addons and versions (done only once)")
-        source = requests.get(url).text
+        source = requests.get(url, verify=False).text
         # extract the addon name and version i.e. <a href="plugin.video.anibg-0.0.1.zip">
         andromeda_addons = re.compile('href="(.+?)-(.+?)\.zip').findall(source)
 
@@ -108,7 +108,7 @@ def get_remote_addon_version(repo_id, addon_id):
       ver = versions[0]
     else:
       url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
-      res = requests.get(url)
+      res = requests.get(url, verify=False)
       xml = etree.fromstring( res.content )
       ver = version.parse(xml.get('version'))
 
@@ -162,7 +162,7 @@ def is_addon_updated(url):
 
 def download_addon(url):
   try:
-    r = requests.get(url, timeout=30, headers={'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0'})
+    r = requests.get(url, verify=False, timeout=30, headers={'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0'})
     rh = r.headers.get('content-disposition')
     if r.status_code == 200:
       if rh:
