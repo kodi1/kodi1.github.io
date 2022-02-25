@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.19.2.5" provider-name="Majide">
+<addon id="plugin.video.sedem" name="СЕДЕМ" version="0.19.2.6" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="3.0.0"/>
   	<import addon="script.module.requests" version="2.19.0"/>
@@ -20,10 +20,8 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007; ISC License for rarfile</license>
   	<forum>https://kodibg.org/forum/thread-13.html</forum>
   	<website></website>
-  	<news>ПОПРАВЕНО: Съвместимост с Коди 19 и следващи версии;
-Актуализиран е кода на ПешаковСтудио предвид промяната на домейна към ufobg.com. Видеата зареждат (със субтитри), но в списъците излизат и имена на обикновенни статии, които по обясними причини няма как да се заредят в Коди (липсва видео към публикациите);
-НОВО: Преработен е модулът за субтитри в Колибка и вече не изисква библиотеката rarfile. За сметка на това се използва добавката RAR archive support от раздела виртуални файлови системи;
-НАЛИЧНИ БЪГОВЕ: При гледане на втори филм със субтитри в Колибка, зареждат субтитрите от първият. Налага се да бъде рестартиран Коди, преди да гледате друг филм в Колибка.</news>
+  	<news>ПОПРАВЕНО: Зареждането на субтитри при Колибка под Андроид;
+НАЛИЧНИ БЪГОВЕ: При гледане на втори филм със субтитри в Колибка, зареждат субтитрите от първият. Налага се да бъде рестартиран Коди, преди да гледате друг филм със субтитри в Колибка.</news>
   	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
