@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.9">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <summary>KodiBG common addon functions</summary>
+    <description>KodiBG common addon functions</description>
+    <source>https://github.com/harrygg/script.module.kodibgcommons</source>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
+  <news>[B]Version v1.0.0[/B]
+- Initial version</news>
+</extension>
+</addon>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.DJ.Zone.House.Radio" name="DJ Zone House Radio" provider-name="DJ Zone House Radio" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+	</requires>
+	<extension library="addon.py" point="xbmc.python.pluginsource">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_gb">Listen to custom radio streams with station fanart and on-screen track information</summary>
+		<description lang="en_gb"/>
+		<disclaimer lang="en_gb"/>
+		<language/>
+		<platform>all</platform>
+		<license/>
+		<forum/>
+		<website/>
+		<email/>
+		<source/>
+		<news>
+			
+
+			v1.0.0 (2017-02-24)
+			- Initial release
+		</news>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+		</assets>
+	</extension>
+	<extension point="xbmc.addon.repository">
+		<info>http://dev.rocketchilli.com/kodi-repo/addons.xml</info>
+		<checksum>http://dev.rocketchilli.com/kodi-repo/addons.xml.md5</checksum>
+		<datadir zip="true">http://dev.rocketchilli.com/kodi-repo/addons</datadir>
+	</extension>
+</addon>

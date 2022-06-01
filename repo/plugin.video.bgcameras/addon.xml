@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.bgcameras" name="БГ Камерите" version="2.1.0" provider-name="HarryGG">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.garepobg" version="0.1.4"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на онлайн камери</summary>
+  	<summary lang="en">Addon for watching the online cameras</summary>
+		<description lang="bg">Приставка за гледане на онлайн камери.</description>
+		<description lang="en">Addon for watching the online cameras</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-75.html</forum>
+  	<website>https://github.com/harrygg/plugin.video.bgcameras</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon>

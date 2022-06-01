@@ -1,0 +1,7 @@
+[B]Change log:[/B]
+  - Fix for some video addons
+  - Use html5lib parser
+  - Better error handling
+  - Folder restructuring
+  - Don't show cleanup ok notification - josdion
+  - Improving search for tvshows - jconxtc

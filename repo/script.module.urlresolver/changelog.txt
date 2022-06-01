@@ -1,0 +1,1437 @@
+Version 7.0.00 (November 10, 2021)
+- Code Base Changes:
+    - small updates
+- Resolvers Added:
+    - brupload
+    - costv
+    - fastdrive
+    - filerio
+    - gogostream
+    - gamoplayer
+    - pandafiles
+    - peertube
+    - playhd
+    - streamani
+    - streamlare
+    - streamrapid
+    - videooo
+    - videovard
+    - vlalacom
+    - vlalanet
+- Resolvers Fixed/Updated:
+    - cda
+    - daxab
+    - debrid_link
+    - doodstream
+    - evoload
+    - fembed
+    - gamovideo
+    - hdvid
+    - speedostream
+    - steamcommunity
+    - streamsb
+    - streamtape
+    - streamz
+    - upvideo
+    - vidbom
+    - vidcloud9
+    - vidmojo
+    - voesx
+    - vupload
+    - youdbox
+- Resolvers Removed
+    - cocoscope
+- Languages Added/Updated
+    - none
+
+Version 6.1.04 (July 22, 2021)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - upvideo
+    - vupload
+- Resolvers Fixed/Updated:
+    - clicknupload
+    - cocoscope
+    - doodstream
+    - lbry
+    - steamcommunity
+    - streamsb
+    - uptobox
+    - userload
+- Resolvers Removed
+    - sbembed
+- Languages Added/Updated
+    - none
+
+Version 6.1.03 (June 10, 2021)
+- Code Base Changes:
+    - drop to tls1.1 if necessary for cloudflaressl
+- Resolvers Added:
+    - itemfix
+    - steamcommunity
+    - vidmx
+- Resolvers Fixed/Updated:
+    - clicknupload
+    - cocoscope
+    - daxab
+    - doodstream
+    - k2s
+    - lbry
+    - playtube
+- Resolvers Removed
+    - liveleak
+- Languages Added/Updated
+    - none
+
+Version 6.1.02 (May 24, 2021)
+- Code Base Changes:
+    - helpers update
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - cocoscope
+    - daxab
+    - googlevideo
+    - lbry
+    - playtube
+    - sbembed
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 6.1.00 (May 4, 2021)
+- Code Base Changes:
+    - update jsunpack to handle non ascii strings
+    - update user agents
+- Resolvers Added:
+    - sendfox
+    - sbembed
+    - rumble
+    - userload
+- Resolvers Fixed/Updated:
+    - userload
+    - aparat
+    - clipwatching
+    - cocoscope
+    - hdvid
+    - lbry
+    - mixdrop
+    - ninjastream
+    - streamz
+    - videobin
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 6.0.01 (April 6, 2021)
+- Code Base Changes:
+    - HostedMediaFile add __bool__ for python 3
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - cocoscope
+    - fembed
+    - lbry
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 6.0.00 (March 25, 2021)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - cocoscope
+    - lbry
+    - megaupnet
+    - streamoupload
+    - vidmojo
+- Resolvers Fixed/Updated:
+    - debrid_link
+    - evoload
+    - fembed
+    - gofile
+    - ninjastream
+    - streamz
+    - tvlogy
+    - voesx
+    - youtube
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.22 (January 21, 2021)
+- Code Base Changes:
+    - recaptcha fix
+- Resolvers Added:
+    - abcvideo
+    - evoload
+    - gamovideo
+    - speedostream
+    - vidcloud
+    - videossh
+- Resolvers Fixed/Updated:
+    - doodstream
+    - jetload
+    - speedwatch
+    - voesx
+- Resolvers Removed
+    - vidup
+- Languages Added/Updated
+    - none
+
+Version 5.1.20 (January 11, 2021)
+- Code Base Changes:
+    - net
+- Resolvers Added:
+    - k2s
+- Resolvers Fixed/Updated:
+    - streamtape
+    - streamz
+    - tvlogy
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.18 (December 25, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - hdvid
+    - playtube
+    - streamz
+    - upstream
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.17 (December 17, 2020)
+- Code Base Changes:
+    - regression error with PY2
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - dailymotion
+    - fembed
+    - letsupload
+    - vidlox
+    - youdbox
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.15 (November 30, 2020)
+- Code Base Changes:
+    - handle HEAD not allowed
+- Resolvers Added:
+    - videoseyred
+    - ninjastream
+- Resolvers Fixed/Updated:
+    - vidcloud9
+    - mystream
+    - alldebrid
+    - debridlink
+- Resolvers Removed
+    - vidnode
+- Languages Added/Updated
+    - none
+
+Version 5.1.13 (November 9, 2020)
+- Code Base Changes:
+    - captcha_lib improvements
+    - fix some unicode warnings
+    - fix fetching cookies from response headers
+- Resolvers Added:
+    - streamsb
+- Resolvers Fixed/Updated:
+    - googlevideo plugin now uses googledrive addon instead of gdrive
+    - vidoza
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.12 (November 2, 2020)
+- Code Base Changes:
+    - captcha lib
+- Resolvers Added:
+    - elupload
+- Resolvers Fixed/Updated:
+    - mp4upload
+    - vidia
+    - gdrive
+    - vidoza
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.11 (October 21, 2020)
+- Code Base Changes:
+    - xbmc.translatePath deprecated in Matrix
+- Resolvers Added:
+    - newtube
+- Resolvers Fixed/Updated:
+    - gounlimited
+    - upstream
+    - streamtape
+    - fembed
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.10 (October 5, 2020)
+- Code Base Changes:
+    - lognotice deprecated in Matrix
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - linksnappy
+    - gounlimited
+    - jetload
+    - upstream
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.9 (September 21, 2020)
+- Code Base Changes:
+    - add referer to final url for embeds without referer
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - linksnappy
+    - playtube
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - all supported languages for additional strings required by linksnappy resolver
+
+Version 5.1.8 (September 11, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - premiumize
+    - cloud9
+    - gounlimited
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.6 (August 31, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - doodstream
+    - vidup
+    - vidbom
+- Resolvers Fixed/Updated:
+    - vidstreaming
+    - gounlimited
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.5 (August 12, 2020)
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - streamtape
+    - cloud9
+    - aparat
+- Resolvers Fixed/Updated:
+    - playtube
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+Version 5.1.4 (July 29, 2020)
+- Code Base Changes:
+    - additional encoding fixes for settings.xml
+- Resolvers Added:
+    - voe.sx
+- Resolvers Fixed/Updated:
+    - mixdrop
+    - nxload
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+B]Version 5.1.3 (July 12, 2020)[/B]
+- Code Base Changes:
+    - possible Fix for settings.xml writing on XBox
+- Resolvers Added:
+    - megogo
+    - oogly
+    - videoapne
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.1.1 (June 21, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - debrid_link
+    - fembed
+    - wstream
+- Resolvers Removed:
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.1.0 (June 15, 2020)[/B]
+- Code Base Changes:
+    - all code has been updated to work in both py2/py3
+    - kodi matrix compatible
+    - helpers
+- Resolvers Added:
+    - daxab
+    - mailru
+    - ok
+    - playtube
+- Resolvers Fixed/Updated:
+    - filepup
+- Resolvers Removed:
+    - abcvideo
+    - castamp
+    - doodstream
+    - flix555
+    - gamovideo
+    - grifthost
+    - idup
+    - irshare
+    - kupload
+    - movdivx
+    - myviru
+    - oneload
+    - playedto
+    - powvideo
+    - primevideos
+    - prostream
+    - speedvid
+    - ssfiles
+    - streamenet
+    - streammoe
+    - streamplay
+    - syfy
+    - tocloud
+    - tolstd_fel
+    - unitplay
+    - upfiles
+    - usersfiles
+    - ustream
+    - verystream
+    - vidbom
+    - vidcloud
+    - vidtodo
+    - vidmad
+    - vidup
+    - vshare
+    - waaw
+    - zevera
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.67 (May 18, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - abcvideo
+    - viduplayer
+- Resolvers Fixed/Updated:
+    - mystream
+    - streamplay
+    - vidmoly
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.66 (May 12, 2020)[/B]
+- Code Base Changes:
+    - user agents
+- Resolvers Added:
+    - easyload
+- Resolvers Fixed/Updated:
+    - doodstream
+    - hxload
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.65 (May 1, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - vidmoly
+- Resolvers Fixed/Updated:
+    - clipwatching
+    - mailru
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.64 (Apr 28, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - videomega
+    - youdbox
+- Resolvers Fixed/Updated:
+    - doodstream
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.63 (Apr 23, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - debridlink
+    - doodstream
+    - wstream
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.62 (Apr 13, 2020)[/B]
+- Code Base Changes:
+    - Add 15 seconds timeout on urlopen
+    - Add strings for debridlink oauth
+- Resolvers Added:
+    - anavids
+    - liivideo
+    - vidcloud9
+- Resolvers Fixed/Updated:
+    - alldebrid
+    - cda
+    - debridlink
+    - clipwatching
+    - premiumize
+    - upstream
+    - vkprime
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.61 (April 2, 2020)[/B]
+- Code Base Changes:
+    - strings
+- Resolvers Added:
+    - primevideos
+- Resolvers Fixed/Updated:
+    - aliez
+    - cda
+    - chromecast
+    - clicknupload
+    - clipwatching
+    - cloudb
+    - cloudmailru
+    - datemule
+    - gounlimited
+    - uptobox
+    - waaw
+- Resolvers Removed
+    - anyfiles
+    - bestream
+    - daclips
+    - estream
+    - gorillavid
+    - h265
+    - idtbox
+    - mehlizmovies
+    - movpod
+    - videoapne
+    - watchshare
+- Languages Added/Updated
+    - croatian
+    - czech
+    - dutch
+    - english (us)
+    - english
+    - galician
+    - german
+    - greek
+    - hebrew
+    - hungarian
+    - italian
+    - norwegian
+    - romanian
+    - slovak
+    - spanish
+    - swedish
+
+[B]Version 5.0.60 (March 27, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - saruch
+    - sibnet
+    - vidfast
+    - vidspace
+- Resolvers Fixed/Updated:
+    - gamovideo
+    - upstream
+    - videa
+- Resolvers Removed
+    - fileholic
+    - putvid
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.59 (March 24, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - dailymotion
+    - entervideo
+    - jetload
+    - streamwire
+    - uptobox
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.58 (March 20, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - pkspeed
+    - streamwire
+- Resolvers Fixed/Updated:
+    - entervideo
+    - mystream
+    - streamz
+    - waaw
+- Resolvers Removed
+    - dailynotion
+    - megamp4
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.57 (March 15, 2020)[/B]
+- Code Base Changes:
+    - helpers
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - fembed
+    - videa
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.56 (March 6, 2020)[/B]
+- Code Base Changes:
+    - version bump
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - none
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.55 (February 27, 2020)[/B]
+- Code Base Changes:
+    - get_dom fix
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - videa.hu
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.54 (February 21, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - gounlimited
+    - myviru
+- Resolvers Removed
+    - thevideo_me
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.53 (February 11, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - thevideo_me
+- Resolvers Fixed/Updated:
+    - vevio
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.52 (February 6, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - mixdrop
+    - mystream
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.51 (January 23, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - liveleak
+- Resolvers Fixed/Updated:
+    - hxload
+    - mixdrop
+    - mp4upload
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.49 (January 14, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - fembed
+    - gounlimited
+    - prostream
+    - supervideo
+    - upstream
+- Resolvers Removed
+    - blazefile
+    - movierulz
+    - videomega
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.48 (January 2, 2020)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - brighteon
+    - prostream
+    - supervideo
+    - truhd
+    - upstream
+- Resolvers Fixed/Updated:
+    - fembed
+    - mixdrop
+- Resolvers Removed
+    - streamcloud
+    - streamcloudco
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.47 (December 18, 2019)[/B]
+- Code Base Changes:
+    - removed dependency
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - mixdrop
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.46 (December 12, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - pixeldrain
+- Resolvers Fixed/Updated:
+    - chromecast
+    - fembed
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.45 (November 28, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - streamz
+- Resolvers Fixed/Updated:
+    - cloudvideo
+    - vidlox
+    - vidoza
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.44 (November 17, 2019)[/B]
+- Code Base Changes:
+    - input improvement
+- Resolvers Added:
+    - cloudb
+    - videomega
+- Resolvers Fixed/Updated:
+    - clipwatching
+    - mixdrop
+    - jetload
+    - onlystream
+    - gofile
+    - apiurl
+    - fembed
+    - jetload
+    - yandex
+    - vidoza
+    - cloudvideo
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.43 (November 10, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - mixdrop
+- Resolvers Fixed/Updated:
+    - clipwatching
+    - fembed
+    - gounlimited
+    - vidup
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.42 (November 1, 2019)[/B]
+- Code Base Changes:
+    - hmf improvement
+- Resolvers Added:
+    - uqload
+    - videobin
+    - idup.to
+- Resolvers Fixed/Updated:
+    - onlystream
+    - thevid
+    - gofile
+    - fembed
+    - uqload
+    - videoapne
+    - vidorg
+    - speedwatch
+- Resolvers Removed
+    - rapidvideocom
+    - openload
+    - streamango
+- Languages Added/Updated
+    - norwegian
+
+[B]Version 5.0.41 (October 17, 2019)[/B]
+- Code Base Changes:
+    - hmf fix
+- Resolvers Added:
+    - bitchute
+    - streamty
+    - watchshare
+    - sendvid
+    - dailynotion
+    - vlaretv
+    - speedwatch
+- Resolvers Fixed/Updated:
+    - fembed
+    - videostreaming
+    - xstreamcdn
+    - verystream
+    - rapidvideocom
+    - tusfiles
+    - vivosx
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - greek
+
+[B]Version 5.0.39 (August 18, 2019)[/B]
+- Code Base Changes:
+    - headers fix
+- Resolvers Added:
+    - vup
+    - viuclips
+    - vidia
+    - chromecast.video
+- Resolvers Fixed/Updated:
+    - fembed
+    - openload
+    - vidwatch
+    - vidlox
+    - onlystream
+    - verystream
+    - vkprime
+    - vkspeed
+    - ok.ru
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.38 (June 25, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - streamvid
+    - videoz
+- Resolvers Fixed/Updated:
+    - fembed
+    - verystream
+    - linksnappy
+    - videozupload
+    - xstreamcdn
+    - mp4upload
+    - rapidvideocom
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.37 (June 23, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - linksnappy
+    - holavid
+    - onlystream
+- Resolvers Fixed/Updated:
+    - verystream
+    - mp4upload
+    - xstreamcdn
+    - videozupload
+    - videoapne
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - Dutch
+
+[B]Version 5.0.36 (May 18, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - vidtodo
+    - idtbox
+- Resolvers Fixed/Updated:
+    - tunepk
+    - veoh
+    - alldebrid (torrent support)
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.35 (April 27, 2019)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - verystream
+- Resolvers Fixed/Updated:
+    - vidoza
+    - uptobox
+    - vidlox
+- Resolvers Removed
+    - vidtodo
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.34 (April 21, 2019)[/B]
+- Code Base Changes:
+    - common.py
+- Resolvers Added:
+    - hxload
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - fembed
+    - thevid
+    - vidtodo
+- Resolvers Removed
+    - vidzella
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.33 (April 07, 2019)[/B]
+- Code Base Changes:
+    - premiumize api change (you must re-auth)
+- Resolvers Added:
+    - lewdhost
+    - videoapne
+    - xstreamcdn
+- Resolvers Fixed/Updated:
+    - dailymotion
+    - premiumize
+    - rapidvideo
+    - vivosx
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - greek
+
+[B]Version 5.0.32 (February 03, 2019)[/B]
+- Code Base Changes:
+    - roll back progress dialog window changes
+    - RESET FUNCTION CACHE IN URLRESOLVER SETTINGS!!!!
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.31 (January 29, 2019)[/B]
+- Code Base Changes:
+    - settings to allow cached torrents only
+    - fixes for torrents with samples larger than 75 MB
+    - premiumize now uses device authorization same as RD(you must re-auth)
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - English
+    - English(US)
+
+[B]Version 5.0.30 (December 26, 2018)[/B]
+- Code Base Changes:
+    - none
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.29 (December 22, 2018)[/B]
+- Code Base Changes:
+    - magnet link support using Real-Debrid (experimental)
+    - add HTTP DELETE method
+    - new Real-Debrid CLIENT ID (you will need to re-authorize)
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - realdebrid
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.28 (December 18, 2018)[/B]
+- Code Base Changes:
+    - torrent and magnet link support using Premiumize (experimental)
+- Resolvers Added:
+    - none
+- Resolvers Fixed/Updated:
+    - premiumize
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - English
+    - English(US)
+
+[B]Version 5.0.27 (December 13, 2018)[/B]
+- Code Base Changes:
+    - new sorting method
+- Resolvers Added:
+    - fembed
+    - fileholic
+    - movierulz
+    - kupload
+- Resolvers Fixed/Updated:
+    - mehlizmovies
+    - premiumize
+    - rapidvideo
+    - vidup
+- Resolvers Removed
+    - none
+- Languages Added/Updated
+    - none
+
+[B]Version 5.0.26 (November 27, 2018)[/B]
+- Code Base Changes:
+    - option to globally disable hosts that use popups
+    - better handling of disabling resolvers that use popups
+    - aadecode
+- Resolvers Added:
+    - vevio
+    - cloudvideo
+    - vkspeed
+    - superitu
+    - irshare
+- Resolvers Fixed/Updated:
+    - vidboom
+    - vidcloud
+    - openload
+    - thevid
+    - rapidvideo
+    - streamango
+    - streamable
+    - vivosx
+    - vidtodo
+    - premiumize
+- Resolvers Removed
+    - thevideo.me
+    - many dead hosts
+- Languages Added/Updated
+    - English
+    - English(US)
+
+[B]Version 5.0.24 (October 22, 2018)[/B]
+- Code Base Changes:
+    - jsunpack
+- Resolvers Added:
+    - vkprime
+    - myupload
+    - streamcloud
+    - flix555
+    - xclip
+- Resolvers Fixed/Updated:
+    - rapidvideo.com
+    - tunepk
+    - cda
+    - videozoo
+    - gounlimited
+    - tvlogy
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.23 (September 20, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - rapidvideo.com
+    - vidzi
+    - powvideo
+    - nxload
+    - googlevideo
+    - estream
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.22 (August 21, 2018)[/B]
+- Code Base Changes:
+    - jsunpack
+    - common
+- Resolvers Added:
+    - unitplay
+    - tocloud
+    - videozupload
+- Resolvers Fixed/Updated:
+	- anyfiles
+	- daclips
+	- ecostream
+	- fileweed
+	- hugefiles
+	- movpod
+	- mp4stream
+	- openload
+    - powvideo
+    - putvid
+    - rapidvideocom
+    - teramixer
+    - uptobox
+    - vk
+- Resolvers Removed
+    - rapidvideo
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.21 (August 08, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - vidorg
+    - gofile
+- Resolvers Fixed/Updated:
+    - vidup.me
+    - waaw
+    - estream
+    - streamango
+    - flashx
+    - thevideo
+	- youtube
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.20 (June 09, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - alldebrid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.19 (June 09, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - icdrama
+    - videobug
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.18 (June 08, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - loadvid
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.17 (June 08, 2018)[/B]
+- Code Base Changes:
+    - Update User-Agents
+- Resolvers Added:
+    - videobug
+    - vidcloud
+- Resolvers Fixed/Updated:
+    - vidto
+    - thevideo
+    - premiumize
+    - streamango
+    - openload
+    - gamovideo
+    - streamable
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+    - None
+
+[B]Version 5.0.16 (May 27, 2018)[/B]
+- Code Base Changes:
+    - Common user agent changed to Chrome only 
+    - Removed IE from random user agents
+- Resolvers Added:
+    - loadvid
+    - putvid
+    - gounlimited
+    - upfiles
+- Resolvers Fixed/Updated:
+    - vidlox
+    - thevideo
+    - dailymotion
+    - premiumize
+    - flashx
+    - streamplay
+    - powvideo
+    - estream
+    - thevid
+    - gorrilavid
+    - waaw
+- Resolvers Removed
+    - vidup_org
+- Languages Added/Updated
+	- None
+	
+[B]Version 5.0.15 (Apr 29, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - streamapi
+- Resolvers Fixed/Updated:
+    - none
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.14 (Apr 24, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - nxload
+- Resolvers Fixed/Updated:
+    - thevid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.12 (Apr 22, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - thevid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.11 (Apr 21, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - viduptv
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - vidupme
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.10 (Apr 7, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - streamdor
+- Resolvers Fixed/Updated:
+    - None
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.09 (Mar 18, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - realdebrid
+    - streamango
+    - thevideo
+    - vidlox
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.08a (Mar 14, 2018)[/B]
+- Code Base Changes:
+    - None
+- Resolvers Added:
+    - None
+- Resolvers Fixed/Updated:
+    - realdebrid
+- Resolvers Removed
+    - None
+- Languages Added/Updated
+	- None
+
+[B]Version 5.0.08 (Mar 10, 2018)[/B]
+- Code Base Changes:
+    - Fix for testing streams with SSL errors
+    - Fixes for iOS
+    - Include jsunfuck
+    - Fix for SSL Context
+    - Fixes for Python > 2.7.12
+    - Fixes for Xbox One
+    - Support for GDrive (see dmdsoftware.net)
+- Resolvers Added:
+    - ssfiles
+    - vidnode
+    - filebebo
+    - yandex
+    - streamgo
+- Resolvers Fixed/Updated:
+    - streamango
+    - flixtor
+    - vshare
+    - mycloud
+    - premiumize
+    - openload
+    - flashx
+    - tunepk
+    - streamplay
+    - speedvid
+    - thevid
+    - thevideo
+    - userscloud
+    - vidlox
+    - rapidvideocom
+    - alldebrid
+    - uptobox
+    - vidzella
+    - googlevideo
+    - powvideo
+    - vidtodo
+    - xvidstage
+- Resolvers Removed
+    - ol_gmu
+    - divxstage
+    - cloudtime
+    - nosvideo
+    - stagevu
+- Languages Added/Updated
+    - Greek
+    - Italian
+    - Norwegian translation
+    - Croatian strings
+    - Spanish summary
+
+* Testers Needed: https://www.tvaddons.co/urlresolver-testing-kodi/
+* Developers Needed: https://www.tvaddons.co/urlresolver-kodi-addon/

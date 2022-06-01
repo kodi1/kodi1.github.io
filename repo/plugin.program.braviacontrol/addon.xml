@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.program.braviacontrol" name="Bravia Control" version="0.0.1c" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.garepobg" version="0.1.3"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py"/>
+  <extension point="xbmc.addon.metadata">
+        <summary lang="en">Bravia Remote</summary>
+        <description lang="en">Send remote commands to you tv.[CR]Based on: https://github.com/breunigs/bravia-auth-and-remote</description>
+        <disclaimer lang="en">I'm not responsible for any damage on your equipment.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+        <website>https://github.com/kodi1/plugin.program.braviacontrol</website>
+  </extension>
+</addon>

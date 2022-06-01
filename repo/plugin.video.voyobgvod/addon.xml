@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.1.0" provider-name="stanislav-m(sTa)">
+  <requires>
+	<import addon="script.module.beautifulsoup4" version="4.3.2"/>
+	<import addon="script.module.requests" version="2.9.1"/>
+	<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
+  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
+	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
+	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum>http://kodibg.org/forum</forum>
+	<website>http://kodibg.org/forum</website>
+	<assets>
+        	<icon>icon.png</icon>
+        	<fanart></fanart>
+        	<banner></banner> <!-- optional -->
+        	<clearlogo></clearlogo> <!-- optional  -->
+        	<screenshot></screenshot> <!-- optional, max 10  -->
+    	</assets>
+  </extension>
+</addon>

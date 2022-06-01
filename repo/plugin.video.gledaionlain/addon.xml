@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.gledaionlain" name="GledaiOnlain" version="1.0.0" provider-name="Johnie">
+ <requires>
+     <import addon="xbmc.python" version="2.1.0"/>
+     <import addon="script.module.urlresolver" version="2.10.0"/>
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+     <summary lang="bg">Приставка за съдържание при поискване от Gledaionlain</summary>
+     <summary lang="en">Addon for VOD from Gledaionlain</summary>
+    <description lang="bg">Приставка за съдържание при поискване от Gledaionlain. Препоръчително е използването на широколентова интернет връзка!</description>
+     <description lang="en">Addon for watching on demand videos from Gledaionlain. Broadband internet connection is recomended!</description>      
+     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
+     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+     <language>bg</language>
+     <platform>all</platform>
+     <forum></forum>
+     <website></website>
+     <email></email>
+	 <assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+ </extension>
+</addon>

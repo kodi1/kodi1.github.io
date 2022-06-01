@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.17" provider-name="Majide">
+  <requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="inputstream.adaptive" version="2.1.0"/>
+	<import addon="script.module.requests" version="2.22.0"/>
+	<import addon="script.module.inputstreamhelper" version="0.3.3"/>
+	<import addon="script.module.youtube.dl" version="21.303.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">VIKI.COM Глобална ТВ за фенове</summary>
+  	<summary lang="en">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
+  	<description lang="bg">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
+  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
+  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-209.html</forum>
+  	<website>https://www.viki.com</website>
+  	<news>FIXED: Loading Videos and Subtitles;
+CHANGED: Playback is now based on Youtube-dl/yt-dlp;
+KNOWN ISSUES: No Audio is available; Not Easy Configuration: After instalation/update of the addon, you must download this file https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/extractor/viki.py and place it in ...kodi/addons/script.module.youtube.dl/lib/youtube_dl/extractor directory! Youtube-dl has not yet fixed the viki extractor, but the yt-dlp fork is. If after all this addon still doesn't work for you, use the official VIKI apps for your platform.</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon>
