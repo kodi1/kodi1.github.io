@@ -1,73 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<addons><addon id="plugin.DJ.Zone.House.Radio" name="DJ Zone House Radio" provider-name="DJ Zone House Radio" version="1.0.0">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.requests" version="2.9.1" />
-	</requires>
-	<extension library="addon.py" point="xbmc.python.pluginsource">
-		<provides>audio</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_gb">Listen to custom radio streams with station fanart and on-screen track information</summary>
-		<description lang="en_gb" />
-		<disclaimer lang="en_gb" />
-		<language />
-		<platform>all</platform>
-		<license />
-		<forum />
-		<website />
-		<email />
-		<source />
-		<news>
-			
-
-			v1.0.0 (2017-02-24)
-			- Initial release
-		</news>
-		<assets>
-			<icon>resources/media/icon.png</icon>
-		</assets>
-	</extension>
-	<extension point="xbmc.addon.repository">
-		<info>http://dev.rocketchilli.com/kodi-repo/addons.xml</info>
-		<checksum>http://dev.rocketchilli.com/kodi-repo/addons.xml.md5</checksum>
-		<datadir zip="true">http://dev.rocketchilli.com/kodi-repo/addons</datadir>
-	</extension>
-</addon><addon id="plugin.audio.bgradio_online" name="[COLOR FF00FF00]БГ Радиостанции ([/COLOR][COLOR FFFFF000]bgradio-online.com[/COLOR][COLOR FF00FF00])[/COLOR]" version="1.0.0" provider-name="Johnie">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" provides="audio" library="default.py">
-    <provides>audio</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>http://bgradio-online.com/</summary>
-    <description>[COLOR FFFFF000]Онлайн радио България[/COLOR] - слушайте радио онлайн безплатно.
-</description>
-    <platform>all</platform>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-	</assets>
-  </extension>
-</addon><addon id="plugin.program.braviacontrol" name="Bravia Control" version="0.0.1c" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.garepobg" version="0.1.3" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-  </requires>
-  <extension point="xbmc.python.script" library="exec.py" />
-  <extension point="xbmc.addon.metadata">
-        <summary lang="en">Bravia Remote</summary>
-        <description lang="en">Send remote commands to you tv.[CR]Based on: https://github.com/breunigs/bravia-auth-and-remote</description>
-        <disclaimer lang="en">I'm not responsible for any damage on your equipment.</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-        <website>https://github.com/kodi1/plugin.program.braviacontrol</website>
-  </extension>
-</addon><addon id="plugin.program.bscfusion" name="Fusion TV" version="0.0.2w" provider-name="kodi1">
+<addons><addon id="plugin.program.bscfusion" name="Fusion TV" version="0.0.2w" provider-name="kodi1">
   <requires>
     <import addon="xbmc.python" version="2.19.0" />
     <import addon="script.module.requests" version="1.1.0" />
@@ -85,64 +17,34 @@
         <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
         <website>https://github.com/kodi1/plugin.program.bscfusion</website>
   </extension>
-</addon><addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.5.0" provider-name="harrygg">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.garepobg" version="0.1.3" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
-  </requires>
-  <extension point="xbmc.python.script" library="exec.py" />  
-  <extension point="xbmc.service" library="service.py" start="start" />
-  <extension point="xbmc.addon.metadata">
-        <summary>Watch free TVs from Bulgaria</summary>
-        <summary lang="en">Free BG TVs Playlist Generator</summary>
-        <description lang="en">The service will generate an m3u playlist of all free channels from Bulgaria. The playlist can be loaded in Simple PVR client</description>
-        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum>http://kodibg.org/forum</forum>
-        <website>https://github.com/harrygg/plugin.program.freebgtvs</website>
-  </extension>
-</addon><addon id="plugin.program.pvr.playlist.helper" name="PVR Playlist Helper" version="1.0.7" provider-name="HarryDoubleG">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.garepobg" version="0.1.5" />
-    <import addon="script.module.requests" version="2.22.0" />
-    <import addon="script.module.bottle" version="0.12.18" />
-    <import addon="script.module.web-pdb" optional="true" version="1.5.6" />
-  </requires>
-  <extension point="xbmc.python.script" library="exec.py" />
-  <extension point="xbmc.service" library="service.py" start="start" />
-  <extension point="xbmc.addon.metadata">
-        <summary>PVR Playlist Helper</summary>
-        <summary lang="en">PVR Playlist Helper</summary>
-        <description lang="en">Scheduled loading playlist from local or remote resource. 
-        Replaces values in streams with values from predefined map, or adds new values
-        Replaces dynamic stream urls with static ones.</description>
-        <language>en</language>
-        <platform>all</platform>
-        <forum>https://kodibg.org/forum/</forum>
-        <website>https://github.com/harrygg/plugin.program.pvr.playlist.helper</website>
-  </extension>
-</addon><addon id="plugin.program.tvbgpvr.backend" name="TVBG PVR Backend" version="1.5.1" provider-name="HarryDoubleG">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0" />
-    <import addon="script.module.garepobg" version="0.1.3" />
-    <import addon="script.module.requests" version="1.1.0" />
-  </requires>
-  <extension point="xbmc.python.script" library="exec.py" />
-  <extension point="xbmc.service" library="service.py" start="start" />
-  <extension point="xbmc.addon.metadata">
-        <summary>TVBG PVR Backend</summary>
-        <summary lang="en">TVBG PVR Backend</summary>
-        <description lang="en">Autmatically downloads and reorders playlists, adds static IDs, names and logos. 
-        For use with Bulgarian EPGs</description>
-        <disclaimer lang="en">TVBG PVR Backend</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum>https://kodibg.org/forum/thread-407.html</forum>
-        <website>https://github.com/harrygg/plugin.program.tvbgpvr.backend</website>
-  </extension>
+</addon><addon id="plugin.video.gomovies" name="GoMovies" version="1.0.5" provider-name="Johnie">
+ <requires>
+     <import addon="xbmc.python" version="2.1.0" />
+     <import addon="script.module.urlresolver" version="2.10.0" />
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+     <summary lang="bg">Приставка за съдържание при поискване от GoMovies</summary>
+     <summary lang="en">Addon for VOD from GoMovies</summary>
+    <description lang="bg">Приставка за съдържание при поискване от GoMovies. Препоръчително е използването на широколентова интернет връзка!</description>
+     <description lang="en">Addon for watching on demand videos from GoMovies. Broadband internet connection is recomended!</description>      
+     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
+     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+     <language>bg,en</language>
+     <platform>all</platform>
+     <forum>https://kodibg.org/forum/thread-568-post-9831.html</forum>
+     <website>https://gomovies.sc</website>
+     <email />
+	 <assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot01.jpg</screenshot>
+       <screenshot>resources/screenshot02.jpg</screenshot>
+       <screenshot>resources/screenshot03.jpg</screenshot>
+	</assets>
+ </extension>
 </addon><addon id="plugin.video.arenabg" name="ARENABG" version="1.0.6a" provider-name="Johnie">
  <requires>
      <import addon="xbmc.python" version="2.1.0" />
@@ -193,93 +95,6 @@
   	<website>https://github.com/harrygg/plugin.video.bgcameras</website>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.bgtvon" name="BGTV-ON" version="6.0.1" provider-name="zinobg [at] gmail.com">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0" />  
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <license>GPL-3.0</license>
-    <language>en</language>
-    <summary lang="en_GB">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
-    <description lang="en_GB">This plugin provides access to tv streams from http://www.bgtv-on.com/.
-Note: http://www.bgtv-on.com/ account is required.</description>
-    <disclaimer lang="en_GB">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
-    <email>zinobg@gmail.com</email>
-    <website>http://www.bgtv-on.com/</website>
-    <source>https://github.com/zinobg/plugin.video.bgtvon</source>
-   <news>v4.2.2 (02/03/2020)
-      		[new] The plugin is re-written using xbmcswift2 plugin, which provides some new features.
-			[fix] Some fixes into addon.xml file.
-		  v4.2.3 (10/03/2020)
-			[new] added contextmenu() on the place of select(), for the newer versions of Kodi. Older version will still work with select()
-		  v4.2.4 (12/03/2020)
-			[fix] Small bugfixes
-		  v5.0.0 (TBD)
-			[new] TBD
-		  v5.0.1 (bugfix)
-		    [fix] a problem with the first login is fixed
-          v5.0.2 (fix)
-            [fix] the problem with recorded videos
-    </news>
-    <assets>
-      <icon>resources/png/icon.png</icon>
-      <fanart>resources/png/fanart.jpg</fanart>
-      <banner />
-      <clearlogo />
-      <screenshot />
-    </assets>
-  </extension>
-</addon><addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.beautifulsoup4" version="4.3.2" />
-        <import addon="script.module.html5lib" version="0.999.0" />
-        <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
-        <platform>all</platform>
-        <language>bg</language>
-        <description>Kodi addon for BNT</description>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon><addon id="plugin.video.brigada" name="BRIGADA" version="0.19.3.31" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-	<import addon="plugin.video.youtube" />
-	<import addon="plugin.video.vimeo" />
-    <import addon="script.module.urlresolver" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Български филми и сериали</summary>
-  	<summary lang="en">Bulgarian movies and TV shows</summary>
-  	<description lang="bg">Приставка за гледане на свободнo достъпните онлайн български филми (класически и модерни).</description>
-  	<description lang="en">Addon for free viewing online Bulgarian movies (classical and modern).</description>
-  	<disclaimer lang="bg">Ако забележите материали-обект на неуредени авторски права, сигнализирайте собствениците на сайта в който те са публикувани! Приставката се разпространява под GPL2 лиценз.</disclaimer>
-  	<disclaimer lang="en">If you notice materials-object outstanding copyright, alert the site owners in which they are published! The addon is licensed under the GPL2 license.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-10.html</forum>
-  	<news>Най-българската приставка за филми е освободена от оковите на python2 и вече е налична за Коди 19 и следващи версии. Приставката е преродена и се връща към корените си - там откъдето започна възстанието срещу консервативните плеъри и се отвориха очите на хората към възможностите на XBOX MEDIA CENTER&gt;&gt; https://www.youtube.com/watch?v=_AXjqus1r40</news>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-	</assets>
-  </extension>
 </addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.3" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -300,7 +115,458 @@ Note: http://www.bgtv-on.com/ account is required.</description>
     <forum>https://kodibg.org/forum/thread-145.html</forum>
     <website>https://github.com/harrygg/plugin.video.btvplus</website>
   </extension>
-</addon><addon id="plugin.video.dazn" version="1.3.18" name="DAZN" provider-name="Jin, Maven">
+</addon><addon id="plugin.video.vbox7" name="VBOX7" version="0.19.6.0" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="3.0.0" />
+  	<import addon="script.module.requests" version="2.19.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на видео от vbox7.com</summary>
+  	<summary lang="en">Addon for watching videos from vbox7.com</summary>
+  	<description lang="bg">От бутон Конфигурация, можете да въведете валидни потребителски имена (VBOX7 акаунти) за да се активират опциите "Клипове, Плейлисти и Абонаменти на потребител". Приставката за гледане на видео по заявка от услугата VBOX7 e собственост на United Group. Препоръчително е използването на широколентова интернет връзка!</description>
+  	<description lang="en">From the configuration button, you can enter a valid user names (VBOX7 accounts) to enable the "Videos, Playlists and User subscriptions". The Addon for watching on demand videos from VBOX7 service is a property of United Group. Broadband internet connection is recomended!</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на MTG. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+  	<forum>https://kodibg.org/forum/thread-12.html</forum>
+  	<website>https://vbox7.com</website>
+  	<news>Добавена е поддръжка на Коди 19 Матрикс и следващи версии;
+Добавени са повече позиции за VBOX7 акаунти в настройките на добавката;
+Премахнати са неработещите елементи, според новото API на услугата. Предишното API имаше по-голяма функционалност, но явно такава е модата: да се премахват функции, вместо да се добавят такива :(
+</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.kidamom" name="[COLOR FFff20146C]Kida[/COLOR][COLOR FFffEE0937]mom[/COLOR][COLOR FFff20146C][/COLOR]" version="1.0.1" provider-name="Johnie">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>https://kidamom.com/</summary>
+    <description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]Ако нямате платен абонамент изберете безплатен достъп от настройките.
+</description>
+    <description lang="en">[B][COLOR red]Before use, set your account in the addon settings![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]If you dont have subscription choose free access from settings.
+</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
+use it instead of this addon. All rights on content are reserved by Kidamom.</disclaimer>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Kidamom.</disclaimer>
+    <platform>all</platform>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.2.3" provider-name="stanislav-m(sTa)">
+  <requires>
+	<import addon="script.module.beautifulsoup4" version="4.3.2" />
+	<import addon="script.module.requests" version="2.9.1" />
+	<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
+  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
+	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
+	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum>http://kodibg.org/forum</forum>
+	<website>http://kodibg.org/forum</website>
+	<assets>
+        	<icon>icon.png</icon>
+        	<fanart />
+        	<banner /> 
+        	<clearlogo /> 
+        	<screenshot /> 
+    	</assets>
+  </extension>
+</addon><addon id="plugin.video.sedem" name="СЕДЕМ" version="0.19.2.6" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="3.0.0" />
+  	<import addon="script.module.requests" version="2.19.0" />
+    <import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на документални филми</summary>
+  	<summary lang="en">Addon for watching documental movies</summary>
+  	<description lang="bg">Гледайте документални филми от различни източници. [B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Категориите от различните източници се визуализират разделно.Търсенето също се осъществява през отделни търсачки.</description>
+  	<description lang="en">Watch documentaries from various sources. [B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] The categories from the different sources are displayed separately. Searching is also done through separate search engines.</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007; ISC License for rarfile</license>
+  	<forum>https://kodibg.org/forum/thread-13.html</forum>
+  	<website />
+  	<news>ПОПРАВЕНО: Зареждането на субтитри при Колибка под Андроид;
+НАЛИЧНИ БЪГОВЕ: При гледане на втори филм със субтитри в Колибка, зареждат субтитрите от първият. Налага се да бъде рестартиран Коди, преди да гледате друг филм със субтитри в Колибка.</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon><addon id="plugin.program.freebgtvs" name="Free BG TVs Playlist Generator" version="1.5.0" provider-name="harrygg">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0" />
+    <import addon="script.module.garepobg" version="0.1.3" />
+    <import addon="script.module.kodibgcommon" version="1.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py" />  
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+        <summary>Watch free TVs from Bulgaria</summary>
+        <summary lang="en">Free BG TVs Playlist Generator</summary>
+        <description lang="en">The service will generate an m3u playlist of all free channels from Bulgaria. The playlist can be loaded in Simple PVR client</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>http://kodibg.org/forum</forum>
+        <website>https://github.com/harrygg/plugin.program.freebgtvs</website>
+  </extension>
+</addon><addon id="plugin.video.kolibka" name="KOLIBKA" version="0.3.0" provider-name="Majide">
+  <requires>
+  <import addon="xbmc.python" version="2.1.0" />
+  <import addon="script.module.requests" version="1.1.0" />
+  <import addon="script.module.beautifulsoup4" version="4.3.2" />
+  <import addon="script.module.html5lib" version="0.999.0" optional="false" />
+  <import addon="script.module.garepobg" version="0.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на документални филми от kolibka.com</summary>
+  	<summary lang="en">Addon for watching documental movies from kolibka.com</summary>
+  	<description lang="bg">[COLOR 7700FF00]kodi1 мод[/COLOR]При отварянето на филмите може да забележите определено забавяне. Това не е дефект и се дължи на форматът на самите файлове, който не е предназначен за онлайн стрийминг. Наименованията на българските филми към този момент не се изобразяват правилно, но по обложката можете да се ориентирате какво да очаквате.</description>
+  	<description lang="en">[COLOR 7700FF00]kodi1 mod[/COLOR]At the opening of the movies may notice a certain delay. This is not a defect and is due to the format of the files itself, not intended for online streaming. The names of the bulgarian movies at the moment cannot be shown correctly, but you can see what to expect by the covers.</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum />
+  	<website />
+  	<email />
+  </extension>
+</addon><addon id="plugin.video.zamunda" name="Zamunda Magnet Video" version="0.0.1l" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.garepobg" version="0.1.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+        <summary>Play Zamunda.net 'magnet' links via quasar</summary>
+        <summary lang="en">Addon for watching video from Zamunda.net</summary>
+        <description lang="en">It is not official addon from Zamunda.net</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum />
+        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+        <website>https://github.com/plugin.video.zamunda</website>
+  </extension>
+</addon><addon id="plugin.video.misiamoiatdom" name="Мисия Моят Дом" version="1.0.2" provider-name="Johnie">
+ <requires>
+     <import addon="xbmc.python" version="2.1.0" />
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+     <summary lang="bg">Приставка за съдържание при поискване от Мисия моят дом</summary>
+     <summary lang="en">Addon for VOD from Misiqmoqtdom</summary>
+    <description lang="bg">Приставка за съдържание при поискване от MMD. Препоръчително е използването на широколентова интернет връзка!</description>
+     <description lang="en">Addon for watching on demand videos from MMD. Broadband internet connection is recomended!</description>
+     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
+     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+     <language>bg,en</language>
+     <platform>all</platform>
+     <forum>https://kodibg.org/forum/thread-566.html</forum>
+     <website />
+     <email />
+	 <assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot01.jpg</screenshot>
+       <screenshot>resources/screenshot02.jpg</screenshot>
+       <screenshot>resources/screenshot03.jpg</screenshot>
+	</assets>
+ </extension>
+</addon><addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.beautifulsoup4" version="4.3.2" />
+        <import addon="script.module.html5lib" version="0.999.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
+        <platform>all</platform>
+        <language>bg</language>
+        <description>Kodi addon for BNT</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="plugin.video.telenet" name="[COLOR orange]ТЕЛЕНЕТ[/COLOR]" version="1.0.0" provider-name="Johnie">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>http://telenet.bg/</summary>
+	<description lang="en">[B][COLOR red]Before use, set your account in the addon settings![/B][/COLOR] TELENET is a VOD service of the famous Bulgarian telecom operator. The service is subscribtion based and requires a paid monthly fee.</description>
+  	<description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR] ТЕЛЕНЕТ е VOD услуга на известния български телеком оператор. Услугата е абонаментна и изисква платена месечна такса или безплатна до 12 канала</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Telenet.</disclaimer>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Теленет.</disclaimer>
+  	<language>bg</language>
+    <platform>all</platform>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon><addon id="plugin.program.braviacontrol" name="Bravia Control" version="0.0.1c" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.garepobg" version="0.1.3" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py" />
+  <extension point="xbmc.addon.metadata">
+        <summary lang="en">Bravia Remote</summary>
+        <description lang="en">Send remote commands to you tv.[CR]Based on: https://github.com/breunigs/bravia-auth-and-remote</description>
+        <disclaimer lang="en">I'm not responsible for any damage on your equipment.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+        <website>https://github.com/kodi1/plugin.program.braviacontrol</website>
+  </extension>
+</addon><addon id="plugin.video.neterratv" name="Neterra.TV" version="3.0.1" provider-name="mr.olix@gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.xbmcswift" version="0.2.0" />    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <language>de</language>
+    <summary lang="en">Video plugin for Neterra.TV http://www.neterra.tv/</summary>
+    <summary lang="de">Video plugin für Neterra.TV http://www.neterra.tv/</summary>
+    <description lang="en">
+    This plugin provides access to tv videos streams from Neterra.TV.
+    Note: Neterra.TV account is required.</description>   
+    <description lang="de">
+    Dieses plugin bietet Zugriff auf alle Videos Streams from Neterra.TV.
+    Note: Neterra.TV Benutzer ist erforderlich.</description>   
+    <disclaimer lang="en">You have to sign up and pay to access Neterra.TV TV streams</disclaimer>
+    <website />
+    <source>git://github.com/mrolix/plugin.video.neterratv.git</source>
+    <email>mr.olix@gmail.com</email>
+  </extension>
+</addon><addon id="plugin.video.vatim" name="VATIM" version="0.19.0.11" provider-name="Majide">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="inputstream.adaptive" version="2.1.0" />
+    <import addon="script.module.requests" version="2.22.0" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="bg">Приставка за гледане на детски сериали от vatim.xyz</summary>
+    <summary lang="en">Addon for watching kids shows from vatim.xyz</summary>
+    <description lang="bg">Приставка за гледане на детски сериали от vatim.xyz. Повечето са с дублаж на български език. Според вашите предпочитания, можете да избирате между отделните налични заглавия. Необходима е регистрация в уебсайта: vatim.xyz</description>
+    <description lang="en">Addon for watching kids shows from vatim.xyz. The most are with bulgarian dubbing. According to your preference, you can choose between the available titles. Website registration is required: vatim.xyz</description>
+    <disclaimer lang="bg">Приставката е неофициална и се разпространява под GPL2 лиценз.</disclaimer>
+    <disclaimer lang="en">The addon is not official and is distributed under GPL2 license.</disclaimer>
+    <language>bg</language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <email>no-reply@dev.null</email>
+    <source>https://andromeda.eu.org/addons/matrix/plugin.video.vatim</source>
+    <forum>https://kodibg.org/forum/thread-596.html</forum>
+    <website>https://vatim.xyz</website>
+    <news>ПОПРАВЕНО: Пренаписана е добавката, за да отрази всички промени в обновения уебсайт. Старите акаунти в сайта са изтрити и е необходимо да се регистрирате отново - Препоръчвам ви да използвате същите Email и Парола, които използвахте досега. По този начин, няма да се налага да ги въвеждате отново в конфигурацията на тази Коди добавка! Списъкът с пълнометражни филми е актуализиран.</news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+    </assets>
+    <size>783821</size>
+    <path>plugin.video.vatim/plugin.video.vatim-0.19.0.11.zip</path>
+  </extension>
+</addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.4" provider-name="stanislav-m(sTa)">
+  <requires>
+  	<import addon="xbmc.python" version="2.14.0" />
+	<import addon="script.module.beautifulsoup4" version="4.3.2" />
+	<import addon="script.module.requests" version="2.9.1" />
+	<import addon="script.module.inputstreamhelper" version="0.3.3" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
+  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
+	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
+	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum>http://kodibg.org/forum</forum>
+  	<website>http://kodibg.org/forum</website>
+  </extension>
+</addon><addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.7" provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+  </extension>
+
+
+    
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Proxy for f4m</summary>
+    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+  </extension>
+</addon><addon id="plugin.program.pvr.playlist.helper" name="PVR Playlist Helper" version="1.0.7" provider-name="HarryDoubleG">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.garepobg" version="0.1.5" />
+    <import addon="script.module.requests" version="2.22.0" />
+    <import addon="script.module.bottle" version="0.12.18" />
+    <import addon="script.module.web-pdb" optional="true" version="1.5.6" />
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py" />
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+        <summary>PVR Playlist Helper</summary>
+        <summary lang="en">PVR Playlist Helper</summary>
+        <description lang="en">Scheduled loading playlist from local or remote resource. 
+        Replaces values in streams with values from predefined map, or adds new values
+        Replaces dynamic stream urls with static ones.</description>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>https://kodibg.org/forum/</forum>
+        <website>https://github.com/harrygg/plugin.program.pvr.playlist.helper</website>
+  </extension>
+</addon><addon id="plugin.program.tvbgpvr.backend" name="TVBG PVR Backend" version="1.5.1" provider-name="HarryDoubleG">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0" />
+    <import addon="script.module.garepobg" version="0.1.3" />
+    <import addon="script.module.requests" version="1.1.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="exec.py" />
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+        <summary>TVBG PVR Backend</summary>
+        <summary lang="en">TVBG PVR Backend</summary>
+        <description lang="en">Autmatically downloads and reorders playlists, adds static IDs, names and logos. 
+        For use with Bulgarian EPGs</description>
+        <disclaimer lang="en">TVBG PVR Backend</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>https://kodibg.org/forum/thread-407.html</forum>
+        <website>https://github.com/harrygg/plugin.program.tvbgpvr.backend</website>
+  </extension>
+</addon><addon id="plugin.video.filmi2k" name="Filmi2k.com" version="1.0.5" provider-name="Johnie">
+ <requires>
+     <import addon="xbmc.python" version="2.1.0" />
+     <import addon="script.module.urlresolver" version="2.10.0" />
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+     <summary lang="bg">Приставка за съдържание при поискване от Filmi2k.com</summary>
+     <summary lang="en">Addon for VOD from Filmi2k.com</summary>
+    <description lang="bg">Приставка за съдържание при поискване от Filmi2k.com. Препоръчително е използването на широколентова интернет връзка!След като пуснете филм е необходимо да се оторизирате в https://olpair.com от друго мобилно устройство!</description>
+     <description lang="en">Addon for watching on demand videos from Filmi2k.com. Broadband internet connection is recomended!After you lunch movie you need to autorise device to https://olpair.com from another device!</description>      
+     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
+     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+     <language>bg,en</language>
+     <platform>all</platform>
+     <forum />
+     <website />
+     <email />
+	 <assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+ </extension>
+</addon><addon id="plugin.video.filmboxlivebg" name="FILMBOX LIVE Bulgaria" version="0.0.4" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Абонаментна VOD услуга на SPI International</summary>
+    <summary lang="en">Subscription service of SPI International</summary>
+  	<description lang="bg">Във filmboxlive.com само с един единствен абонамент, може да се наслаждавате на стотици филми и развлекателни канали. От драми до трилъри, от екшъни до комедии, от награждавани продукции до филми за цялото семейство. Гледайте където и когато пожелаете – не само на компютъра си, а също и на смарт телевизора си вкъщи, на таблета си през почивката, на смартфона си по време на пътуване. Не е нужно да плащате допълнително, за да гледате едно и също съдържание на повече от едно устройство. С правата си за достъп можете да гледате съответното съдържание на всички устройства. Визуалното качество на съдържанието автоматично се настройва според скоростта на вашата интернет връзка и вида на използваното устройство.</description>
+    <description lang="en">In filmboxlive.com with only a single subscription you can enjoy great movies and exciting TV channels. From drama to thriller, action to comedy, award-winning productions to the ones you can watch with all your family. Watch anywhere and anytime you want - not only on your computer, but also on your smart TV at home, on your tablet during the break, on your smartphone while on the go. You do not need to pay again to watch the content on more than one device. With the same access credentials you can watch our content in all devices. Visual quality of our content is set automatically according to your internet speed and the devices you use.</description>
+  	<disclaimer lang="bg">Това не е официално приложение! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Името, логото и предлаганото съдържание са запазена търговска марка на SPI International и обект на запазеното авторско право и сродните на него права. Коди приставката се разпространява под GPL2 лиценз.</disclaimer>
+    <disclaimer lang="en">This is not an official addon! If an official app is available for your platform, use it instead of this addon. The name and the logo are a trademark of SPI International and the available content is subject to copyright and related rights. This Kodi addon is distributed under the GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/</forum>
+  	<website>http://www.filmboxlive.com/bg/</website>
+  	<news>Първа бета версия; Търсачката, разлистването по категории и пускането на филми работят! Известни проблеми:ТВ каналите не функционират засега; превъртането/seeking-а също не функционира</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.dazn" version="1.3.26" name="DAZN" provider-name="Jin, Maven">
     <requires>
         <import addon="xbmc.python" version="2.26.0" />
         <import addon="script.module.inputstreamhelper" version="0.5.0" />
@@ -315,8 +581,26 @@ Note: http://www.bgtv-on.com/ account is required.</description>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <news>
-- request timeout to 30s
-- play live events from the beginning (context menu)
+V1.3.26
+- improved package permission detection
+- use the ia property to play a buffered live stream from the beginning
+V1.3.25
+- colored display of unplayable streams (package permission)
+V1.3.24
+- fixed wrong function calls
+- fixed login
+V1.3.23
+- fixed lowercase error for "Start from beginning" feature
+V1.3.22
+- generation of a UUID for Android version 11 and higher, since "Network.MacAddress" returns an empty string
+- reset device id on logout
+- fix ListItem properties deprecations
+- show additional error message
+- dynamically determine the maximum number of devices that can be registered
+- fixed "Start from beginning" for live events
+V1.3.21
+- fixed missing PIN prompt when starting a stream via "Start from Beginning" context menu
+- fixed error when adding stream infos on kodi 18 and 19
         </news>
         <assets>
             <icon>resources/icon.png</icon>
@@ -373,57 +657,173 @@ Quando vuoi. Dove vuoi.
         <website>https://www.dazn.com</website>
         <source>https://github.com/Maven85/plugin.video.dazn</source>
     </extension>
-</addon><addon id="plugin.video.detskifilmi" name="[COLOR red]ДЕТСКИ[/COLOR] ФИЛМИ" version="1.0.0" provider-name="Johnie">
- <requires>
-     <import addon="xbmc.python" version="2.1.0" />
-     <import addon="script.module.urlresolver" version="2.10.0" />
-	 <import addon="plugin.video.youtube" />
- </requires>
- <extension point="xbmc.python.pluginsource" library="default.py">
-     <provides>video</provides>
- </extension>
- <extension point="xbmc.addon.metadata">
-     <summary lang="bg">Приставка за съдържание при поискване от http://detskifilmi.dechica.com/</summary>
-     <summary lang="en">Addon for VOD from http://detskifilmi.dechica.com/</summary>
-    <description lang="bg">Приставка за съдържание при поискване от http://detskifilmi.dechica.com/. Препоръчително е използването на широколентова интернет връзка!</description>
-     <description lang="en">Addon for watching on demand videos from http://detskifilmi.dechica.com/. Broadband internet connection is recomended!</description>      
-     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
-     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-     <language>bg</language>
-     <platform>all</platform>
-     <forum />
-     <website />
-     <email />
-	 <assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-	</assets>
- </extension>
-</addon><addon id="plugin.video.dramafever" name="DRAMAFEVER" version="0.18.5.6" provider-name="Majide">
+</addon><addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.17" provider-name="Majide">
   <requires>
-  	<import addon="xbmc.python" version="2.1.0" />
+	<import addon="xbmc.python" version="3.0.0" />
+	<import addon="inputstream.adaptive" version="2.1.0" />
+	<import addon="script.module.requests" version="2.22.0" />
+	<import addon="script.module.inputstreamhelper" version="0.3.3" />
+	<import addon="script.module.youtube.dl" version="21.303.0+matrix.1" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-  	<summary lang="en">Watch asian dramas</summary>
-  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] DramaFever is video streaming service that offers on-demand streaming of Asian dramas, series, movies and TV shows with subtitles. Distribution rights in your country determine what part of the catalog will be available for you. Videos provided by this addon are with professional subtitles and the premium service is not supported.</description>
-  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Warner Bros.</disclaimer>
+  	<summary lang="bg">VIKI.COM Глобална ТВ за фенове</summary>
+  	<summary lang="en">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
+  	<description lang="bg">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
+  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
+  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
   	<language>en</language>
   	<platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-79.html</forum>
-  	<website>https://www.dramafever.com</website>
-  	<news>Discontinued addon development</news>
-  	<assets>
+  	<forum>https://kodibg.org/forum/thread-209.html</forum>
+  	<website>https://www.viki.com</website>
+  	<news>FIXED: Loading Videos and Subtitles;
+CHANGED: Playback is now based on Youtube-dl/yt-dlp;
+KNOWN ISSUES: No Audio is available; Not Easy Configuration: After instalation/update of the addon, you must download this file https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/extractor/viki.py and place it in ...kodi/addons/script.module.youtube.dl/lib/youtube_dl/extractor directory! Youtube-dl has not yet fixed the viki extractor, but the yt-dlp fork is. If after all this addon still doesn't work for you, use the official VIKI apps for your platform.</news>
+	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
        <screenshot>resources/screenshot-01.jpg</screenshot>
        <screenshot>resources/screenshot-02.jpg</screenshot>
        <screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
-  	<broken lang="en">DramaFever is no longer available. Check out the official site.</broken>
+  </extension>
+</addon><addon id="plugin.video.mytv_bg" name="MyTV.BG" version="2.0.5" provider-name="jordan@mytv.bg">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.requests" version="2.7.0" /> 
+		<import addon="script.module.xbmcswift" version="0.0.1" />
+		<import addon="script.module.pyxbmct" version="1.1.4" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<language>bg</language>
+		<license>The MIT License (MIT)</license>
+		<summary lang="bg">Видео плъгин за MyTV.bg https://mytv.bg/</summary>
+		<summary lang="en">Video addon for MyTV.bg https://mytv.bg/</summary>
+		<description lang="bg">
+			Този адон предлага достъп до стриймовете на MyTV.BG (канали на живо и сериали).
+			За да го ползвате е нужна активна MyTV.bg регистрация.
+		</description>
+		<description lang="en">
+			This addon provides access to streams of MyTV.BG (channels live and series).
+			To use it is necessary active MyTV.bg registration.
+		</description>
+		<disclaimer lang="bg">
+			Нужни са активни потребителско име и парола.
+			Може да се ползва само извън България. За детайли виж http://mytv.bg/countries
+		</disclaimer>
+		<website>https://mytv.bg/</website>
+		<email>jordan@mytv.bg</email>
+	</extension>
+</addon><addon id="plugin.video.tubi" name="TUBITV" version="0.19.6.4" provider-name="Majide">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="2.19.0" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Watch free TV shows and movies from tubitv.com</summary>
+    <description lang="en">Tubi TV offers free popular movies and TV series streaming to you in full HD. Unlike Netflix and Hulu, Tubi TV is absolutely free. You don’t have to spend a dime. You don’t have to register with your credit card. Unlike cable, you can watch it anywhere, anytime and on any device, so grab your popcorn and enjoy! Free shows and movies are added every week, so you’ll never run out of entertainment on the go. Watch new movies, action flicks, documentaries, Korean dramas, anime, horror and so much more, without ever paying a subscription fee! Tubi TV has the largest library of free and legal TV shows and movies to choose from, whenever and wherever you want!</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by movie studios.</disclaimer>
+    <language>ен</language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <email>no-reply@dev.null</email>
+    <source>https://andromeda.eu.org/addons/matrix/plugin.video.tubi</source>
+    <forum>https://therenosuch.place</forum>
+    <website>https://tubitv.com</website>
+    <news>NEW: Compatability with Kodi 19 Matrix and next versions</news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+    </assets>
+    <size>783821</size>
+    <path>plugin.video.tubi/plugin.video.tubi-0.19.6.4.zip</path>
+  </extension>
+</addon><addon id="plugin.video.mtelnow" name="A1 Xplore TV GO" version="2.1.0" provider-name="Johnie">
+  <requires>
+    <import addon="inputstream.adaptive" version="2.1.0" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    <import addon="script.module.pytz" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>https://a1xploretv.bg</summary>
+    <description lang="bg">Преди употреба, въведете акаунта си в настройките!</description>
+    <description lang="en">Before use, set your account in the addon settings!</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by A1 Bulgaria.</disclaimer>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от A1 България.</disclaimer>
+    <platform>all</platform>
+	<assets>
+	   <icon>resources/icon.png</icon>
+     <fanart>resources/fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.iptvbulgaria" name="IPTV Bulgaria" version="1.0" provider-name="zynobg [at] gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.xbmcswift" version="0.2.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+   <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
+   <summary lang="en">Video plugin for www.iptvbulgaria.com http://www.iptvbulgaria.com/.</summary>
+   <language>en</language>
+   <description lang="en">Video plugin for http://www.iptvbulgaria.com/. </description>
+   <disclaimer lang="en">This plugin provides access to tv streams from http://www.iptvbulgaria.com/. </disclaimer>
+   <website>http://www.iptvbulgaria.com/</website>
+   <platform>all</platform>
+   <source>https://github.com/zinobg/plugin.video.iptvbulgaria</source>
+  </extension>
+</addon><addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.8.0" provider-name="RESU OBH">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="inputstream.adaptive" version="2.1.0" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    <import addon="script.module.requests" version="2.22.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">HBO GO. Това е HBO. Навсякъде.</summary>
+    <summary lang="en">HBO GO. This is HBO. Everywhere.</summary>
+  	<description lang="bg">Гледайте хитови филми и сериали, HBO оригинални продукции, документални заглавия, концерти и още на вашето Коди устройство! Абонаментна услуга, ЕКСКЛУЗИВНО за HBO абонати на следните оператори: HBO GO Vip/Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. Код за регистрация/клиентски номер ще получите от вашия телеком оператор.</description>
+    <description lang="en">Watch hit movies and serials, HBO original productions, documentary titles, concerts and more on your Kodi device! Subscription service, EXCLUSIVE for HBO subscribers of the following operators: HBO GO Vip / Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. You will receive a registration / customer ID number from your telecom operator.</description>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от HBO® Europe.</disclaimer>
+    <disclaimer lang="en">This is not an official plug-in! If an official app is available for your platform, use it instead of this plugin. All rights in the content are reserved by HBO® Europe.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-504.html</forum>
+  	<website>https://www.hbogo.bg</website>
+  	<news>Коригирана е грешка, сочеща липсата на python библиотеката requests. Добавката е превключена към осма версия на системното API.</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+       <screenshot>resources/screenshot-04.jpg</screenshot>
+	</assets>
   </extension>
 </addon><addon id="plugin.video.elementaltv" name="[COLOR blue]ЕЛЕМЕНТАЛ ТВ[/COLOR]" version="1.0.0" provider-name="Johnie">
   <requires>
@@ -465,6 +865,407 @@ Quando vuoi. Dove vuoi.
        <fanart>resources/fanart.jpg</fanart>
 	</assets>
   </extension>
+</addon><addon id="plugin.video.bgtvon" name="BGTV-ON" version="6.1.0" provider-name="zinobg [at] gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />  
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <language>en</language>
+    <summary lang="en_GB">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
+    <description lang="en_GB">This plugin provides access to tv streams from http://www.bgtv-on.com/.
+Note: http://www.bgtv-on.com/ account is required.</description>
+    <disclaimer lang="en_GB">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
+    <email>zinobg@gmail.com</email>
+    <website>http://www.bgtv-on.com/</website>
+    <source>https://github.com/zinobg/plugin.video.bgtvon</source>
+   <news>v4.2.2 (02/03/2020)
+      		[new] The plugin is re-written using xbmcswift2 plugin, which provides some new features.
+			[fix] Some fixes into addon.xml file.
+		  v4.2.3 (10/03/2020)
+			[new] added contextmenu() on the place of select(), for the newer versions of Kodi. Older version will still work with select()
+		  v4.2.4 (12/03/2020)
+			[fix] Small bugfixes
+		  v5.0.0 (TBD)
+			[new] TBD
+		  v5.0.1 (bugfix)
+		    [fix] a problem with the first login is fixed
+          v5.0.2 (fix)
+            [fix] the problem with recorded videos
+          v6.1.0
+            [new] Python3 compatible
+    </news>
+    <assets>
+      <icon>resources/png/icon.png</icon>
+      <fanart>resources/png/fanart.jpg</fanart>
+      <banner />
+      <clearlogo />
+      <screenshot />
+    </assets>
+  </extension>
+</addon><addon id="service.subtitles.modedbg" name="[B]B[/B]ulgarian [B]Subs[/B]" version="0.0.12" provider-name="kodi1 moded by Johnie">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.subtitle.module" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Bulgarian Subtitle Service</summary>
+    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net and yavka.net and bukvi.bg and easternspirit.org</description>
+    <language>en</language>
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>http://forum.kodi.tv/showthread.php?tid=195322</website>
+    <email />
+    </extension>
+</addon><addon id="plugin.DJ.Zone.House.Radio" name="DJ Zone House Radio" provider-name="DJ Zone House Radio" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.requests" version="2.9.1" />
+	</requires>
+	<extension library="addon.py" point="xbmc.python.pluginsource">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_gb">Listen to custom radio streams with station fanart and on-screen track information</summary>
+		<description lang="en_gb" />
+		<disclaimer lang="en_gb" />
+		<language />
+		<platform>all</platform>
+		<license />
+		<forum />
+		<website />
+		<email />
+		<source />
+		<news>
+			
+
+			v1.0.0 (2017-02-24)
+			- Initial release
+		</news>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+		</assets>
+	</extension>
+	<extension point="xbmc.addon.repository">
+		<info>http://dev.rocketchilli.com/kodi-repo/addons.xml</info>
+		<checksum>http://dev.rocketchilli.com/kodi-repo/addons.xml.md5</checksum>
+		<datadir zip="true">http://dev.rocketchilli.com/kodi-repo/addons</datadir>
+	</extension>
+</addon><addon id="plugin.video.detskifilmi" name="[COLOR red]ДЕТСКИ[/COLOR] ФИЛМИ" version="1.0.0" provider-name="Johnie">
+ <requires>
+     <import addon="xbmc.python" version="2.1.0" />
+     <import addon="script.module.urlresolver" version="2.10.0" />
+	 <import addon="plugin.video.youtube" />
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+     <summary lang="bg">Приставка за съдържание при поискване от http://detskifilmi.dechica.com/</summary>
+     <summary lang="en">Addon for VOD from http://detskifilmi.dechica.com/</summary>
+    <description lang="bg">Приставка за съдържание при поискване от http://detskifilmi.dechica.com/. Препоръчително е използването на широколентова интернет връзка!</description>
+     <description lang="en">Addon for watching on demand videos from http://detskifilmi.dechica.com/. Broadband internet connection is recomended!</description>      
+     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
+     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+     <language>bg</language>
+     <platform>all</platform>
+     <forum />
+     <website />
+     <email />
+	 <assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+	</assets>
+ </extension>
+</addon><addon id="plugin.video.tvbulsatcomv2" name="[COLOR orange]TV[/COLOR] [COLOR red]BULSATCOM[/COLOR] V2" version="2.0.1d" provider-name="Johnie">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">ТЕЛЕВИЗИЯ Булсатком</summary>
+    <description lang="en">[B][COLOR red]Before use, set your account in the addon settings[/B][/COLOR] FUSION of Bulsatcom is a VOD service of the famous Bulgarian telecom operator. The service is subscribtion based and requires a paid monthly fee for satellite TV or IPTV.</description>
+  	<description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR] FUSION на Булсатком е VOD услуга на известния български телеком оператор. Услугата е абонаментна и изисква платена месечна такса за сателитна или IP телевизия.</description>
+    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
+use it instead of this addon. All rights on content are reserved by Bulsatcom.</disclaimer>
+  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Булсатком.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-565.html</forum>
+  	<website>http://bulsat.com</website>
+  	<news>Първа публична версия</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.dramafever" name="DRAMAFEVER" version="0.18.5.6" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="en">Watch asian dramas</summary>
+  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] DramaFever is video streaming service that offers on-demand streaming of Asian dramas, series, movies and TV shows with subtitles. Distribution rights in your country determine what part of the catalog will be available for you. Videos provided by this addon are with professional subtitles and the premium service is not supported.</description>
+  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Warner Bros.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-79.html</forum>
+  	<website>https://www.dramafever.com</website>
+  	<news>Discontinued addon development</news>
+  	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+       <screenshot>resources/screenshot-02.jpg</screenshot>
+       <screenshot>resources/screenshot-03.jpg</screenshot>
+	</assets>
+  	<broken lang="en">DramaFever is no longer available. Check out the official site.</broken>
+  </extension>
+</addon><addon id="service.screensaver.hooks" name="Screensaver Hooks" version="0.0.1k" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.garepobg" version="0.1.0" />
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="start" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Execute custom script on screensaver activation / deactivation.</summary>
+    <description lang="en">Initial version.</description>
+    <disclaimer lang="en">I'm not responsible for any possible damage done to your devices.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>https://github.com/kodi1/service.screensaver.hooks</website>
+  </extension>
+</addon><addon id="service.subtitles.unacs" name="subsunacs/subsab" version="0.0.15h" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.garepobg" version="0.1.0" />
+    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.subtitle.module" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Bulgarian Subtitle Service</summary>
+    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net. Thanks to josdion and jconxtc</description>
+    <language>en</language>
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>https://github.com/kodi1/service.subtitles.unacs</website>
+    <email />
+    </extension>
+</addon><addon id="plugin.video.zelka" name="Zelka Magnet Video" version="0.0.1o" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.garepobg" version="0.1.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+        <summary>Play Zelka.org 'magnet' links via quasar</summary>
+        <summary lang="en">Addon for watching video from Zelka.org</summary>
+        <description lang="en">It is not official addon from Zelka.org</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum />
+        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+        <website>https://github.com/plugin.video.zelka</website>
+  </extension>
+</addon><addon id="service.pvrtools" name="PVR Tools" version="1.0.0" provider-name="enen92">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0" />
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">A simple PVR tools addon for kodi (iptv simple)</summary>
+        <summary lang="pt">Um simples addon de ferramentas pvr para o kodi (iptv simple)</summary>
+         <description lang="en">This addon allows you to download, extract and merge xmltv files to make a single xmltv file for XBMC PVR. It supports internet files compressed in gzip format (or plain xml). The same is applied to different m3u lists (local or hosted on the web)</description>
+         <description lang="pt">Este addon permite juntar vários ficheiros xmltv de forma a construir um xmltv único para a secção PVR do XBMC. Suporta ficheiros alojados na web comprimidos em gzip (ou simples xml). Também permite juntar várias listas m3u (locais ou da web). </description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    </extension>
+</addon><addon id="plugin.audio.bgradio_online" name="[COLOR FF00FF00]БГ Радиостанции ([/COLOR][COLOR FFFFF000]bgradio-online.com[/COLOR][COLOR FF00FF00])[/COLOR]" version="1.0.0" provider-name="Johnie">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="audio" library="default.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>http://bgradio-online.com/</summary>
+    <description>[COLOR FFFFF000]Онлайн радио България[/COLOR] - слушайте радио онлайн безплатно.
+</description>
+    <platform>all</platform>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.brigada" name="BRIGADA" version="0.19.3.31" provider-name="Majide">
+  <requires>
+  	<import addon="xbmc.python" version="3.0.0" />
+	<import addon="plugin.video.youtube" />
+	<import addon="plugin.video.vimeo" />
+    <import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Български филми и сериали</summary>
+  	<summary lang="en">Bulgarian movies and TV shows</summary>
+  	<description lang="bg">Приставка за гледане на свободнo достъпните онлайн български филми (класически и модерни).</description>
+  	<description lang="en">Addon for free viewing online Bulgarian movies (classical and modern).</description>
+  	<disclaimer lang="bg">Ако забележите материали-обект на неуредени авторски права, сигнализирайте собствениците на сайта в който те са публикувани! Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">If you notice materials-object outstanding copyright, alert the site owners in which they are published! The addon is licensed under the GPL2 license.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  	<forum>https://kodibg.org/forum/thread-10.html</forum>
+  	<news>Най-българската приставка за филми е освободена от оковите на python2 и вече е налична за Коди 19 и следващи версии. Приставката е преродена и се връща към корените си - там откъдето започна възстанието срещу консервативните плеъри и се отвориха очите на хората към възможностите на XBOX MEDIA CENTER&gt;&gt; https://www.youtube.com/watch?v=_AXjqus1r40</news>
+	<assets>
+	   <icon>resources/icon.png</icon>
+       <fanart>resources/fanart.jpg</fanart>
+       <screenshot>resources/screenshot-01.jpg</screenshot>
+	</assets>
+  </extension>
+</addon><addon id="plugin.video.gospodari" name="Господари на ефира" version="1.1.2" provider-name="HarryGG">
+  <requires>
+  	<import addon="xbmc.python" version="2.14.0" />		
+		<import addon="script.module.beautifulsoup4" version="4.3.2" />
+		<import addon="script.module.html5lib" version="0.999.0" />
+		<import addon="script.module.garepobg" version="0.1.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на видео от сайта на Господари на ефира.</summary>
+  	<summary lang="en">Addon for watching video from Gospodari.com website</summary>
+	<description lang="bg">Добавка за гледане на видео от сайта на Господари на ефира.</description>
+	<description lang="en">Addon for watching video from Gospodari.com website</description>  	
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-23.html</forum>
+  	<website>https://kodibg.org/forum/thread-23.html</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="service.sleeptimer" name="Sleep Timer" version="2.1.9" provider-name="enen92, Solo0815">
+    <requires>
+		<import addon="xbmc.addon" version="14.0.0" />
+		<import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Did you fall asleep? Get better control over media playback </summary>
+        <summary lang="pt">Adormeceu? Tenha melhor controlo sobre a reprodução de media </summary>
+         <description lang="en">This service addon makes Kodi stop any playback if it exceeds a given playback time. If you have that awful habit of leaving Kodi playing live content after you fell asleep, this addon is for you! It gives extended control over the playback time. Step mute the audio, enable the screensaver or run a custom command after the playback is stopped.</description>
+         <description lang="pt">Este service addon faz com que o Kodi pare qualquer playback se o seu tempo exceder um valor fornecido. Se tiver o hábito de adormecer enquanto o Kodi está a reproduzir conteúdo multimédia, este addon é para si! Este extende o controlo do tempo de reprodução. Baixe o volume do áudio, active o protector de ecrã ou execute um comando customizado após a reprodução ser interrompida.</description>
+         <forum>http://forum.kodi.tv/showthread.php?tid=211971</forum>
+    	    <source>https://github.com/enen92/service.sleeptimer</source>
+         <platform>all</platform>
+         <license>GPL-2.0-only</license>
+    </extension>
+</addon><addon id="script.module.garepobg" name="garepobg" version="0.1.5" provider-name="kodi1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="1.1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary />
+    <description />
+    <license />
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>https://github.com/kodi1/script.module.garepobg</website>
+  </extension>
+</addon><addon id="plugin.video.voyobg" name="Voyo Player (Само ТВ Канали и Спорт)" version="1.0.2" provider-name="HarryDoubleG, stanislav-m">
+  <requires>
+  	<import addon="xbmc.python" version="2.14.0" />
+		<import addon="script.module.requests" />
+    <import addon="script.module.kodibgcommon" version="1.0.0" />
+    <import addon="script.module.garepobg" version="0.1.4" />
+    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на съдържание на живо от сайта voyo.bg</summary>
+  	<summary lang="en">Addon for watching live events from voyo.bg</summary>
+	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
+	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>  	
+  	<language>bg,en</language>
+  	<platform>all</platform>
+  	<forum>http://kodibg.org/forum</forum>
+  	<website>http://kodibg.org/forum</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.13" provider-name="HarryDoubleG">
+  <requires>
+  	<import addon="xbmc.python" version="2.24.0" />
+    <import addon="script.module.garepobg" version="0.1.4" />
+    <import addon="script.module.requests" version="1.1.0" />
+    <import addon="script.module.kodibgcommon" version="1.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на IPTV от Виваком</summary>
+  	<summary lang="en">Addon for watching IPTV from Vivacom</summary>
+  	<disclaimer lang="bg">За да използвате приставката се нуждаете от валиден и платен абонамент за Vivacom TV GO. Приставката предоставя достъп до каналите за които имате валиден абонамент и които така или иначе може да гледате с ТВ ГО приложението. Приставката е неофициална и няма нищо общо с Vivacom. Made for fun!</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/</forum>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.10">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <summary>KodiBG common addon functions</summary>
+    <description>KodiBG common addon functions</description>
+    <source>https://github.com/harrygg/script.module.kodibgcommons</source>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
+  <news>[B]Version v1.0.0[/B]
+- Initial version</news>
+</extension>
 </addon><addon id="plugin.video.envymovies" name="ENVY[COLOR FfE36212]MOVIES[/COLOR]" version="1.1.4" provider-name="Johnie">
  <requires>
      <import addon="xbmc.python" version="2.1.0" />
@@ -494,46 +1295,20 @@ Quando vuoi. Dove vuoi.
        <screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
  </extension>
-</addon><addon id="plugin.video.filmboxlivebg" name="FILMBOX LIVE Bulgaria" version="0.0.4" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Абонаментна VOD услуга на SPI International</summary>
-    <summary lang="en">Subscription service of SPI International</summary>
-  	<description lang="bg">Във filmboxlive.com само с един единствен абонамент, може да се наслаждавате на стотици филми и развлекателни канали. От драми до трилъри, от екшъни до комедии, от награждавани продукции до филми за цялото семейство. Гледайте където и когато пожелаете – не само на компютъра си, а също и на смарт телевизора си вкъщи, на таблета си през почивката, на смартфона си по време на пътуване. Не е нужно да плащате допълнително, за да гледате едно и също съдържание на повече от едно устройство. С правата си за достъп можете да гледате съответното съдържание на всички устройства. Визуалното качество на съдържанието автоматично се настройва според скоростта на вашата интернет връзка и вида на използваното устройство.</description>
-    <description lang="en">In filmboxlive.com with only a single subscription you can enjoy great movies and exciting TV channels. From drama to thriller, action to comedy, award-winning productions to the ones you can watch with all your family. Watch anywhere and anytime you want - not only on your computer, but also on your smart TV at home, on your tablet during the break, on your smartphone while on the go. You do not need to pay again to watch the content on more than one device. With the same access credentials you can watch our content in all devices. Visual quality of our content is set automatically according to your internet speed and the devices you use.</description>
-  	<disclaimer lang="bg">Това не е официално приложение! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Името, логото и предлаганото съдържание са запазена търговска марка на SPI International и обект на запазеното авторско право и сродните на него права. Коди приставката се разпространява под GPL2 лиценз.</disclaimer>
-    <disclaimer lang="en">This is not an official addon! If an official app is available for your platform, use it instead of this addon. The name and the logo are a trademark of SPI International and the available content is subject to copyright and related rights. This Kodi addon is distributed under the GPL2 license.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/</forum>
-  	<website>http://www.filmboxlive.com/bg/</website>
-  	<news>Първа бета версия; Търсачката, разлистването по категории и пускането на филми работят! Известни проблеми:ТВ каналите не функционират засега; превъртането/seeking-а също не функционира</news>
-  	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.filmi2k" name="Filmi2k.com" version="1.0.5" provider-name="Johnie">
+</addon><addon id="plugin.video.myonvideo" name="[COLOR Ff0404B4]MY[/COLOR][COLOR FfFFFFFF]ON[/COLOR][COLOR FfFF0000]VIDEO[/COLOR]" version="1.0.4" provider-name="Johnie">
  <requires>
      <import addon="xbmc.python" version="2.1.0" />
-     <import addon="script.module.urlresolver" version="2.10.0" />
+	 <import addon="script.module.urlresolver" version="2.10.0" />
+	 <import addon="script.module.mechanize" version="0.2.5" />
  </requires>
  <extension point="xbmc.python.pluginsource" library="default.py">
      <provides>video</provides>
  </extension>
  <extension point="xbmc.addon.metadata">
-     <summary lang="bg">Приставка за съдържание при поискване от Filmi2k.com</summary>
-     <summary lang="en">Addon for VOD from Filmi2k.com</summary>
-    <description lang="bg">Приставка за съдържание при поискване от Filmi2k.com. Препоръчително е използването на широколентова интернет връзка!След като пуснете филм е необходимо да се оторизирате в https://olpair.com от друго мобилно устройство!</description>
-     <description lang="en">Addon for watching on demand videos from Filmi2k.com. Broadband internet connection is recomended!After you lunch movie you need to autorise device to https://olpair.com from another device!</description>      
+     <summary lang="bg">Приставка за съдържание при поискване от MyOnVideo</summary>
+     <summary lang="en">Addon for VOD from MyOnVideo</summary>
+    <description lang="bg">Приставка за съдържание при поискване от MyOnVideo. Препоръчително е използването на широколентова интернет връзка!</description>
+     <description lang="en">Addon for watching on demand videos from MyOnVideo. Broadband internet connection is recomended!</description>      
      <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
      <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
      <language>bg,en</language>
@@ -541,35 +1316,24 @@ Quando vuoi. Dove vuoi.
      <forum />
      <website />
      <email />
-	 <assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
  </extension>
-</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.5" provider-name="HarryDoubleG">
+</addon><addon id="service.backlight.led" name="LED backlight control" version="0.0.3" provider-name="kodi1">
   <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.garepobg" version="0.1.5" />
-    <import addon="script.module.kodibgcommon" version="1.0.9" />
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.pil" version="1.1.7" />
+    <import addon="script.module.garepobg" version="0.1.0" />
+    <import addon="script.module.requests" version="1.1.0" />
   </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
+  <extension point="xbmc.service" library="service.py" start="start" />
   <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на безплатните български телевизионни канали</summary>
-  	<summary lang="en">Addon for watching the free bulgarian TV channels</summary>
-	<description lang="bg">Приставка за гледане на безплатните български телевизионни канали.</description>
-	<description lang="en">Addon for watching the free bulgarian TV channels</description>
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>Bulgarian</language>
-  	<platform>all</platform>
-  	<forum>https://kodibg.org/forum/thread-1.html</forum>
-  	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
-  	<email>harrygg@gmail.com</email>
+    <summary>Wifi based Led control for kodi</summary>
+    <summary lang="en">Wifi conrol RGB led strips</summary>
+    <description lang="en">Additional hardware is required and WS2812 RGB LED strips.</description>
+    <disclaimer lang="en">I'm not responsible for any possible damage done to your devices.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
+    <website>https://github.com/kodi1/service.backlight.led</website>
   </extension>
 </addon><addon id="plugin.video.gledaionlain" name="GledaiOnlain" version="1.0.0" provider-name="Johnie">
  <requires>
@@ -599,34 +1363,77 @@ Quando vuoi. Dove vuoi.
        <screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
  </extension>
-</addon><addon id="plugin.video.gomovies" name="GoMovies" version="1.0.5" provider-name="Johnie">
- <requires>
-     <import addon="xbmc.python" version="2.1.0" />
-     <import addon="script.module.urlresolver" version="2.10.0" />
- </requires>
- <extension point="xbmc.python.pluginsource" library="default.py">
-     <provides>video</provides>
- </extension>
- <extension point="xbmc.addon.metadata">
-     <summary lang="bg">Приставка за съдържание при поискване от GoMovies</summary>
-     <summary lang="en">Addon for VOD from GoMovies</summary>
-    <description lang="bg">Приставка за съдържание при поискване от GoMovies. Препоръчително е използването на широколентова интернет връзка!</description>
-     <description lang="en">Addon for watching on demand videos from GoMovies. Broadband internet connection is recomended!</description>      
-     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
-     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-     <language>bg,en</language>
-     <platform>all</platform>
-     <forum>https://kodibg.org/forum/thread-568-post-9831.html</forum>
-     <website>https://gomovies.sc</website>
-     <email />
-	 <assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot01.jpg</screenshot>
-       <screenshot>resources/screenshot02.jpg</screenshot>
-       <screenshot>resources/screenshot03.jpg</screenshot>
-	</assets>
- </extension>
+</addon><addon id="script.module.urlresolver" name="URLResolver" version="7.0.00" provider-name="tvaddons">
+    <requires>
+        
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.certifi" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+    </extension>
+</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.6" provider-name="HarryDoubleG">
+  <requires>
+  	<import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.garepobg" version="0.1.5" />
+    <import addon="script.module.kodibgcommon" version="1.0.10" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на безплатните български телевизионни канали</summary>
+  	<summary lang="en">Addon for watching the free bulgarian TV channels</summary>
+	<description lang="bg">Приставка за гледане на безплатните български телевизионни канали.</description>
+	<description lang="en">Addon for watching the free bulgarian TV channels</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-1.html</forum>
+  	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="plugin.video.slavishow" name="Шоуто на Слави" version="1.1.1" provider-name="HarryGG">
+  <requires>
+  	<import addon="xbmc.python" version="2.14.0" />
+  	<import addon="script.module.garepobg" version="0.1.4" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.html5lib" version="0.999.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Добавка за гледане на видео от сайта на Шоуто на Слави.</summary>
+  	<summary lang="en">Addon for watching video from slavishow.com website</summary>
+	<description lang="bg">Добавка за гледане на видео от сайта на Шоуто на Слави.</description>
+	<description lang="en">Addon for watching video from slavishow.com website</description>  	
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>bg</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-64.html</forum>
+  	<website>https://kodibg.org/</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
 </addon><addon id="plugin.video.gong.play" name="Gong Play" version="1.5.5" provider-name="HarryGG">
   <requires>
   	<import addon="xbmc.python" version="2.14.0" />
@@ -647,312 +1454,6 @@ Quando vuoi. Dove vuoi.
   	<forum>http://kodibg.org/forum/thread-2.html</forum>
   	<website>http://kodibg.org/</website>
   	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.gospodari" name="Господари на ефира" version="1.1.2" provider-name="HarryGG">
-  <requires>
-  	<import addon="xbmc.python" version="2.14.0" />		
-		<import addon="script.module.beautifulsoup4" version="4.3.2" />
-		<import addon="script.module.html5lib" version="0.999.0" />
-		<import addon="script.module.garepobg" version="0.1.4" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на видео от сайта на Господари на ефира.</summary>
-  	<summary lang="en">Addon for watching video from Gospodari.com website</summary>
-	<description lang="bg">Добавка за гледане на видео от сайта на Господари на ефира.</description>
-	<description lang="en">Addon for watching video from Gospodari.com website</description>  	
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-  	<forum>https://kodibg.org/forum/thread-23.html</forum>
-  	<website>https://kodibg.org/forum/thread-23.html</website>
-  	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.hbogobg" name="HBO GO Bulgaria" version="0.8.0" provider-name="RESU OBH">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="inputstream.adaptive" version="2.1.0" />
-    <import addon="script.module.inputstreamhelper" version="0.3.3" />
-    <import addon="script.module.requests" version="2.22.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">HBO GO. Това е HBO. Навсякъде.</summary>
-    <summary lang="en">HBO GO. This is HBO. Everywhere.</summary>
-  	<description lang="bg">Гледайте хитови филми и сериали, HBO оригинални продукции, документални заглавия, концерти и още на вашето Коди устройство! Абонаментна услуга, ЕКСКЛУЗИВНО за HBO абонати на следните оператори: HBO GO Vip/Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. Код за регистрация/клиентски номер ще получите от вашия телеком оператор.</description>
-    <description lang="en">Watch hit movies and serials, HBO original productions, documentary titles, concerts and more on your Kodi device! Subscription service, EXCLUSIVE for HBO subscribers of the following operators: HBO GO Vip / Club Bulgaria, M SAT CABLE EAD, A1/Mtel, N3, NET1, NetSurf, NetWorx, Silistra TV, Telekabel, Telenor, Vivacom. You will receive a registration / customer ID number from your telecom operator.</description>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от HBO® Europe.</disclaimer>
-    <disclaimer lang="en">This is not an official plug-in! If an official app is available for your platform, use it instead of this plugin. All rights in the content are reserved by HBO® Europe.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-504.html</forum>
-  	<website>https://www.hbogo.bg</website>
-  	<news>Коригирана е грешка, сочеща липсата на python библиотеката requests. Добавката е превключена към осма версия на системното API.</news>
-  	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-       <screenshot>resources/screenshot-04.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.iptvbulgaria" name="IPTV Bulgaria" version="1.0" provider-name="zynobg [at] gmail.com">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.xbmcswift" version="0.2.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-   <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3</license>
-   <summary lang="en">Video plugin for www.iptvbulgaria.com http://www.iptvbulgaria.com/.</summary>
-   <language>en</language>
-   <description lang="en">Video plugin for http://www.iptvbulgaria.com/. </description>
-   <disclaimer lang="en">This plugin provides access to tv streams from http://www.iptvbulgaria.com/. </disclaimer>
-   <website>http://www.iptvbulgaria.com/</website>
-   <platform>all</platform>
-   <source>https://github.com/zinobg/plugin.video.iptvbulgaria</source>
-  </extension>
-</addon><addon id="plugin.video.kidamom" name="[COLOR FFff20146C]Kida[/COLOR][COLOR FFffEE0937]mom[/COLOR][COLOR FFff20146C][/COLOR]" version="1.0.1" provider-name="Johnie">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>https://kidamom.com/</summary>
-    <description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]Ако нямате платен абонамент изберете безплатен достъп от настройките.
-</description>
-    <description lang="en">[B][COLOR red]Before use, set your account in the addon settings![/B][/COLOR][COLOR FFff20146C]Kidamom[/COLOR]If you dont have subscription choose free access from settings.
-</description>
-    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
-use it instead of this addon. All rights on content are reserved by Kidamom.</disclaimer>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Kidamom.</disclaimer>
-    <platform>all</platform>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.kolibka" name="KOLIBKA" version="0.3.0" provider-name="Majide">
-  <requires>
-  <import addon="xbmc.python" version="2.1.0" />
-  <import addon="script.module.requests" version="1.1.0" />
-  <import addon="script.module.beautifulsoup4" version="4.3.2" />
-  <import addon="script.module.html5lib" version="0.999.0" optional="false" />
-  <import addon="script.module.garepobg" version="0.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на документални филми от kolibka.com</summary>
-  	<summary lang="en">Addon for watching documental movies from kolibka.com</summary>
-  	<description lang="bg">[COLOR 7700FF00]kodi1 мод[/COLOR]При отварянето на филмите може да забележите определено забавяне. Това не е дефект и се дължи на форматът на самите файлове, който не е предназначен за онлайн стрийминг. Наименованията на българските филми към този момент не се изобразяват правилно, но по обложката можете да се ориентирате какво да очаквате.</description>
-  	<description lang="en">[COLOR 7700FF00]kodi1 mod[/COLOR]At the opening of the movies may notice a certain delay. This is not a defect and is due to the format of the files itself, not intended for online streaming. The names of the bulgarian movies at the moment cannot be shown correctly, but you can see what to expect by the covers.</description>
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпространява под GPL3 лиценз.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum />
-  	<website />
-  	<email />
-  </extension>
-</addon><addon id="plugin.video.misiamoiatdom" name="Мисия Моят Дом" version="1.0.2" provider-name="Johnie">
- <requires>
-     <import addon="xbmc.python" version="2.1.0" />
- </requires>
- <extension point="xbmc.python.pluginsource" library="default.py">
-     <provides>video</provides>
- </extension>
- <extension point="xbmc.addon.metadata">
-     <summary lang="bg">Приставка за съдържание при поискване от Мисия моят дом</summary>
-     <summary lang="en">Addon for VOD from Misiqmoqtdom</summary>
-    <description lang="bg">Приставка за съдържание при поискване от MMD. Препоръчително е използването на широколентова интернет връзка!</description>
-     <description lang="en">Addon for watching on demand videos from MMD. Broadband internet connection is recomended!</description>
-     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
-     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-     <language>bg,en</language>
-     <platform>all</platform>
-     <forum>https://kodibg.org/forum/thread-566.html</forum>
-     <website />
-     <email />
-	 <assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot01.jpg</screenshot>
-       <screenshot>resources/screenshot02.jpg</screenshot>
-       <screenshot>resources/screenshot03.jpg</screenshot>
-	</assets>
- </extension>
-</addon><addon id="plugin.video.mtelnow" name="A1 Xplore TV GO" version="2.1.0" provider-name="Johnie">
-  <requires>
-    <import addon="inputstream.adaptive" version="2.1.0" />
-    <import addon="script.module.inputstreamhelper" version="0.3.3" />
-    <import addon="script.module.pytz" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>https://a1xploretv.bg</summary>
-    <description lang="bg">Преди употреба, въведете акаунта си в настройките!</description>
-    <description lang="en">Before use, set your account in the addon settings!</description>
-    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by A1 Bulgaria.</disclaimer>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от A1 България.</disclaimer>
-    <platform>all</platform>
-	<assets>
-	   <icon>resources/icon.png</icon>
-     <fanart>resources/fanart.jpg</fanart>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.myonvideo" name="[COLOR Ff0404B4]MY[/COLOR][COLOR FfFFFFFF]ON[/COLOR][COLOR FfFF0000]VIDEO[/COLOR]" version="1.0.4" provider-name="Johnie">
- <requires>
-     <import addon="xbmc.python" version="2.1.0" />
-	 <import addon="script.module.urlresolver" version="2.10.0" />
-	 <import addon="script.module.mechanize" version="0.2.5" />
- </requires>
- <extension point="xbmc.python.pluginsource" library="default.py">
-     <provides>video</provides>
- </extension>
- <extension point="xbmc.addon.metadata">
-     <summary lang="bg">Приставка за съдържание при поискване от MyOnVideo</summary>
-     <summary lang="en">Addon for VOD from MyOnVideo</summary>
-    <description lang="bg">Приставка за съдържание при поискване от MyOnVideo. Препоръчително е използването на широколентова интернет връзка!</description>
-     <description lang="en">Addon for watching on demand videos from MyOnVideo. Broadband internet connection is recomended!</description>      
-     <disclaimer lang="bg">Някои елементи на тази приставка, може да не са легални в държавата ви - проверете и инсталирайте на ваша отговорност.</disclaimer>
-     <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-     <language>bg,en</language>
-     <platform>all</platform>
-     <forum />
-     <website />
-     <email />
- </extension>
-</addon><addon id="plugin.video.mytv_bg" name="MyTV.BG" version="2.0.5" provider-name="jordan@mytv.bg">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.requests" version="2.7.0" /> 
-		<import addon="script.module.xbmcswift" version="0.0.1" />
-		<import addon="script.module.pyxbmct" version="1.1.4" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<language>bg</language>
-		<license>The MIT License (MIT)</license>
-		<summary lang="bg">Видео плъгин за MyTV.bg https://mytv.bg/</summary>
-		<summary lang="en">Video addon for MyTV.bg https://mytv.bg/</summary>
-		<description lang="bg">
-			Този адон предлага достъп до стриймовете на MyTV.BG (канали на живо и сериали).
-			За да го ползвате е нужна активна MyTV.bg регистрация.
-		</description>
-		<description lang="en">
-			This addon provides access to streams of MyTV.BG (channels live and series).
-			To use it is necessary active MyTV.bg registration.
-		</description>
-		<disclaimer lang="bg">
-			Нужни са активни потребителско име и парола.
-			Може да се ползва само извън България. За детайли виж http://mytv.bg/countries
-		</disclaimer>
-		<website>https://mytv.bg/</website>
-		<email>jordan@mytv.bg</email>
-	</extension>
-</addon><addon id="plugin.video.neterratv" name="Neterra.TV" version="3.0.1" provider-name="mr.olix@gmail.com">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.xbmcswift" version="0.2.0" />    
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <language>de</language>
-    <summary lang="en">Video plugin for Neterra.TV http://www.neterra.tv/</summary>
-    <summary lang="de">Video plugin für Neterra.TV http://www.neterra.tv/</summary>
-    <description lang="en">
-    This plugin provides access to tv videos streams from Neterra.TV.
-    Note: Neterra.TV account is required.</description>   
-    <description lang="de">
-    Dieses plugin bietet Zugriff auf alle Videos Streams from Neterra.TV.
-    Note: Neterra.TV Benutzer ist erforderlich.</description>   
-    <disclaimer lang="en">You have to sign up and pay to access Neterra.TV TV streams</disclaimer>
-    <website />
-    <source>git://github.com/mrolix/plugin.video.neterratv.git</source>
-    <email>mr.olix@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.2" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-  	<import addon="script.module.requests" version="2.19.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на видео от play.nova.bg</summary>
-  	<summary lang="en">Addon for watching videos from play.nova.bg</summary>
-  	<description lang="bg">Приставка за гледане на видео по заявка от услугата NOVA PLAY, собственост на United Group. Препоръчително е използването на широколентова интернет връзка!</description>
-  	<description lang="en">Addon for watching on demand videos from NOVA PLAY service, property of United Group. Broadband internet connection is recomended!</description>
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на United Group. Приставката се разпространява под GPL2 лиценз.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-14.html</forum>
-  	<website>https://play.nova.bg</website>
-  	<news>ПОПРАВЕНО: Гледането на НТВ на живо</news>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.sedem" name="СЕДЕМ" version="0.19.2.6" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-  	<import addon="script.module.requests" version="2.19.0" />
-    <import addon="script.module.urlresolver" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на документални филми</summary>
-  	<summary lang="en">Addon for watching documental movies</summary>
-  	<description lang="bg">Гледайте документални филми от различни източници. [B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Категориите от различните източници се визуализират разделно.Търсенето също се осъществява през отделни търсачки.</description>
-  	<description lang="en">Watch documentaries from various sources. [B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] The categories from the different sources are displayed separately. Searching is also done through separate search engines.</description>
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права. Името, логото и сайтът са собственост на ... всички нас. Приставката се разпространява под GPL3 лиценз.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007; ISC License for rarfile</license>
-  	<forum>https://kodibg.org/forum/thread-13.html</forum>
-  	<website />
-  	<news>ПОПРАВЕНО: Зареждането на субтитри при Колибка под Андроид;
-НАЛИЧНИ БЪГОВЕ: При гледане на втори филм със субтитри в Колибка, зареждат субтитрите от първият. Налага се да бъде рестартиран Коди, преди да гледате друг филм със субтитри в Колибка.</news>
-  	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
   </extension>
 </addon><addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.2.0" provider-name="zynobg [at] gmail.com">
   <requires>
@@ -989,133 +1490,7 @@ use it instead of this addon. All rights on content are reserved by Kidamom.</di
         <screenshot />
     </assets>
   </extension>
-</addon><addon id="plugin.video.slavishow" name="Шоуто на Слави" version="1.1.1" provider-name="HarryGG">
-  <requires>
-  	<import addon="xbmc.python" version="2.14.0" />
-  	<import addon="script.module.garepobg" version="0.1.4" />
-    <import addon="script.module.beautifulsoup4" version="4.3.2" />
-    <import addon="script.module.html5lib" version="0.999.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на видео от сайта на Шоуто на Слави.</summary>
-  	<summary lang="en">Addon for watching video from slavishow.com website</summary>
-	<description lang="bg">Добавка за гледане на видео от сайта на Шоуто на Слави.</description>
-	<description lang="en">Addon for watching video from slavishow.com website</description>  	
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България.</disclaimer>
-  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-  	<forum>https://kodibg.org/forum/thread-64.html</forum>
-  	<website>https://kodibg.org/</website>
-  	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.telenet" name="[COLOR orange]ТЕЛЕНЕТ[/COLOR]" version="1.0.0" provider-name="Johnie">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>http://telenet.bg/</summary>
-	<description lang="en">[B][COLOR red]Before use, set your account in the addon settings![/B][/COLOR] TELENET is a VOD service of the famous Bulgarian telecom operator. The service is subscribtion based and requires a paid monthly fee.</description>
-  	<description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR] ТЕЛЕНЕТ е VOD услуга на известния български телеком оператор. Услугата е абонаментна и изисква платена месечна такса или безплатна до 12 канала</description>
-    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Telenet.</disclaimer>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Теленет.</disclaimer>
-  	<language>bg</language>
-    <platform>all</platform>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.tubi" name="TUBITV" version="0.18.1.4" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="en">Watch free TV shows and movies from tubitv.com</summary>
-  	<description lang="en">Tubi TV offers free popular movies and TV series streaming to you in full HD. Unlike Netflix and Hulu, Tubi TV is absolutely free. You don’t have to spend a dime. You don’t have to register with your credit card. Unlike cable, you can watch it anywhere, anytime and on any device, so grab your popcorn and enjoy! Free shows and movies are added every week, so you’ll never run out of entertainment on the go. Watch new movies, action flicks, documentaries, Korean dramas, anime, horror and so much more, without ever paying a subscription fee! Tubi TV has the largest library of free and legal TV shows and movies to choose from, whenever and wherever you want!</description>
-  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by movie studios.</disclaimer>
-  	<language>en</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-223.html</forum>
-  	<website>https://tubitv.com</website>
-  	<news>Fixed: genres listing</news>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.tvbulsatcomv2" name="[COLOR orange]TV[/COLOR] [COLOR red]BULSATCOM[/COLOR] V2" version="2.0.1d" provider-name="Johnie">
-  <requires>
-  	<import addon="xbmc.python" version="2.1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">ТЕЛЕВИЗИЯ Булсатком</summary>
-    <description lang="en">[B][COLOR red]Before use, set your account in the addon settings[/B][/COLOR] FUSION of Bulsatcom is a VOD service of the famous Bulgarian telecom operator. The service is subscribtion based and requires a paid monthly fee for satellite TV or IPTV.</description>
-  	<description lang="bg">[B][COLOR red]Преди употреба, въведете акаунта си в настройките![/B][/COLOR] FUSION на Булсатком е VOD услуга на известния български телеком оператор. Услугата е абонаментна и изисква платена месечна такса за сателитна или IP телевизия.</description>
-    <disclaimer lang="en">This is not an official addon! If the official APP is available for your platform,
-use it instead of this addon. All rights on content are reserved by Bulsatcom.</disclaimer>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Булсатком.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-  	<forum>https://kodibg.org/forum/thread-565.html</forum>
-  	<website>http://bulsat.com</website>
-  	<news>Първа публична версия</news>
-  	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.vatim" name="VATIM" version="0.19.0.9" provider-name="Majide">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-  	<import addon="inputstream.adaptive" version="2.1.0" />
-	<import addon="script.module.requests" version="2.22.0" />
-	<import addon="script.module.inputstreamhelper" version="0.3.3" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на детски сериали от vatim.xyz</summary>
-  	<summary lang="en">Addon for watching kids shows from vatim.xyz</summary>
-	<description lang="bg">Приставка за гледане на детски сериали от vatim.xyz. Повечето са с дублаж на български език. Според вашите предпочитания, можете да избирате между отделните налични заглавия.</description>
-  	<description lang="en">Addon for watching kids shows from vatim.xyz. The most are with bulgarian dubbing. According to your preference, you can choose between the available titles.</description>
-  	<disclaimer lang="bg">Приставката е неофициална и се разпространява под GPL2 лиценз.</disclaimer>
-  	<disclaimer lang="en">The addon is not official and is distributed under GPL2 license.</disclaimer>
-  	<language>bg</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-596.html</forum>
-  	<website>http://vatim.xyz</website>
-  	<news>Добавено: Повече игрални филми; Колекциите са допълнени.</news>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.vbox7" name="VBOX7" version="0.19.6.0" provider-name="Majide">
+</addon><addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.3" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="3.0.0" />
   	<import addon="script.module.requests" version="2.19.0" />
@@ -1124,55 +1499,18 @@ use it instead of this addon. All rights on content are reserved by Bulsatcom.</
   	<provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на видео от vbox7.com</summary>
-  	<summary lang="en">Addon for watching videos from vbox7.com</summary>
-  	<description lang="bg">От бутон Конфигурация, можете да въведете валидни потребителски имена (VBOX7 акаунти) за да се активират опциите "Клипове, Плейлисти и Абонаменти на потребител". Приставката за гледане на видео по заявка от услугата VBOX7 e собственост на United Group. Препоръчително е използването на широколентова интернет връзка!</description>
-  	<description lang="en">From the configuration button, you can enter a valid user names (VBOX7 accounts) to enable the "Videos, Playlists and User subscriptions". The Addon for watching on demand videos from VBOX7 service is a property of United Group. Broadband internet connection is recomended!</description>
-  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на MTG. Приставката се разпространява под GPL3 лиценз.</disclaimer>
+  	<summary lang="bg">Приставка за гледане на видео от play.nova.bg</summary>
+  	<summary lang="en">Addon for watching videos from play.nova.bg</summary>
+  	<description lang="bg">Приставка за гледане на видео по заявка от услугата NOVA PLAY, собственост на United Group. Препоръчително е използването на широколентова интернет връзка!</description>
+  	<description lang="en">Addon for watching on demand videos from NOVA PLAY service, property of United Group. Broadband internet connection is recomended!</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адреса и сайтът поместен на него са собственост на United Group. Приставката се разпространява под GPL2 лиценз.</disclaimer>
   	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
   	<language>bg</language>
   	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
-  	<forum>https://kodibg.org/forum/thread-12.html</forum>
-  	<website>https://vbox7.com</website>
-  	<news>Добавена е поддръжка на Коди 19 Матрикс и следващи версии;
-Добавени са повече позиции за VBOX7 акаунти в настройките на добавката;
-Премахнати са неработещите елементи, според новото API на услугата. Предишното API имаше по-голяма функционалност, но явно такава е модата: да се премахват функции, вместо да се добавят такива :(
-</news>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.17" provider-name="Majide">
-  <requires>
-	<import addon="xbmc.python" version="3.0.0" />
-	<import addon="inputstream.adaptive" version="2.1.0" />
-	<import addon="script.module.requests" version="2.22.0" />
-	<import addon="script.module.inputstreamhelper" version="0.3.3" />
-	<import addon="script.module.youtube.dl" version="21.303.0+matrix.1" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">VIKI.COM Глобална ТВ за фенове</summary>
-  	<summary lang="en">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
-  	<description lang="bg">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
-  	<description lang="en">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
-  	<disclaimer lang="bg">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
-  	<disclaimer lang="en">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
-  	<language>en</language>
-  	<platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-209.html</forum>
-  	<website>https://www.viki.com</website>
-  	<news>FIXED: Loading Videos and Subtitles;
-CHANGED: Playback is now based on Youtube-dl/yt-dlp;
-KNOWN ISSUES: No Audio is available; Not Easy Configuration: After instalation/update of the addon, you must download this file https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/extractor/viki.py and place it in ...kodi/addons/script.module.youtube.dl/lib/youtube_dl/extractor directory! Youtube-dl has not yet fixed the viki extractor, but the yt-dlp fork is. If after all this addon still doesn't work for you, use the official VIKI apps for your platform.</news>
+  	<forum>https://kodibg.org/forum/thread-14.html</forum>
+  	<website>https://play.nova.bg</website>
+  	<news>ПРОМЯНА: Гледането на VOD на запис, вече става чрез InputStream Adaptive. В неговите настройки можете да зададете някакви лимити в разделителната способност и битрейта за да укажете качеството, което работи най-добре за вас.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
@@ -1181,257 +1519,6 @@ KNOWN ISSUES: No Audio is available; Not Easy Configuration: After instalation/u
        <screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
   </extension>
-</addon><addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.13" provider-name="HarryDoubleG">
-  <requires>
-  	<import addon="xbmc.python" version="2.24.0" />
-    <import addon="script.module.garepobg" version="0.1.4" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Приставка за гледане на IPTV от Виваком</summary>
-  	<summary lang="en">Addon for watching IPTV from Vivacom</summary>
-  	<disclaimer lang="bg">За да използвате приставката се нуждаете от валиден и платен абонамент за Vivacom TV GO. Приставката предоставя достъп до каналите за които имате валиден абонамент и които така или иначе може да гледате с ТВ ГО приложението. Приставката е неофициална и няма нищо общо с Vivacom. Made for fun!</disclaimer>
-  	<language>Bulgarian</language>
-  	<platform>all</platform>
-  	<forum>https://kodibg.org/forum/</forum>
-  	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.voyobg" name="Voyo Player (Само ТВ Канали и Спорт)" version="1.0.2" provider-name="HarryDoubleG, stanislav-m">
-  <requires>
-  	<import addon="xbmc.python" version="2.14.0" />
-		<import addon="script.module.requests" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
-    <import addon="script.module.garepobg" version="0.1.4" />
-    
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание на живо от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>  	
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-  	<website>http://kodibg.org/forum</website>
-  	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.1.0" provider-name="stanislav-m(sTa)">
-  <requires>
-	<import addon="script.module.beautifulsoup4" version="4.3.2" />
-	<import addon="script.module.requests" version="2.9.1" />
-	<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-	<website>http://kodibg.org/forum</website>
-	<assets>
-        	<icon>icon.png</icon>
-        	<fanart />
-        	<banner /> 
-        	<clearlogo /> 
-        	<screenshot /> 
-    	</assets>
-  </extension>
-</addon><addon id="plugin.video.zamunda" name="Zamunda Magnet Video" version="0.0.1l" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.garepobg" version="0.1.0" />
-    <import addon="script.module.beautifulsoup4" version="4.3.2" />
-    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary>Play Zamunda.net 'magnet' links via quasar</summary>
-        <summary lang="en">Addon for watching video from Zamunda.net</summary>
-        <description lang="en">It is not official addon from Zamunda.net</description>
-        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum />
-        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-        <website>https://github.com/plugin.video.zamunda</website>
-  </extension>
-</addon><addon id="plugin.video.zelka" name="Zelka Magnet Video" version="0.0.1o" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.garepobg" version="0.1.0" />
-    <import addon="script.module.beautifulsoup4" version="4.3.2" />
-    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary>Play Zelka.org 'magnet' links via quasar</summary>
-        <summary lang="en">Addon for watching video from Zelka.org</summary>
-        <description lang="en">It is not official addon from Zelka.org</description>
-        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-        <language>en</language>
-        <platform>all</platform>
-        <forum />
-        <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-        <website>https://github.com/plugin.video.zelka</website>
-  </extension>
-</addon><addon id="script.module.garepobg" name="garepobg" version="0.1.5" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.requests" version="1.1.0" />
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary />
-    <description />
-    <license />
-    <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-    <website>https://github.com/kodi1/script.module.garepobg</website>
-  </extension>
-</addon><addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.9">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-  </requires>
-  <extension library="lib" point="xbmc.python.module" />
-  <extension point="xbmc.addon.metadata">
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-    <summary>KodiBG common addon functions</summary>
-    <description>KodiBG common addon functions</description>
-    <source>https://github.com/harrygg/script.module.kodibgcommons</source>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
-  <news>[B]Version v1.0.0[/B]
-- Initial version</news>
-</extension>
-</addon><addon id="script.module.urlresolver" name="URLResolver" version="7.0.00" provider-name="tvaddons">
-    <requires>
-        
-        <import addon="script.module.six" />
-        <import addon="script.module.kodi-six" />
-        <import addon="script.module.certifi" />
-        <import addon="plugin.video.youtube" optional="true" />
-        <import addon="script.module.python.twitch" optional="true" />
-        <import addon="plugin.googledrive" optional="true" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
-        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
-        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
-        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
-        <forum>https://www.tvaddons.co/forums</forum>
-        <website>https://www.tvaddons.co</website>
-    </extension>
-</addon><addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.7" provider-name="Shani">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.requests" />
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>executable</provides>
-  </extension>
-
-
-    
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Proxy for f4m</summary>
-    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
-  </extension>
-</addon><addon id="service.backlight.led" name="LED backlight control" version="0.0.3" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.pil" version="1.1.7" />
-    <import addon="script.module.garepobg" version="0.1.0" />
-    <import addon="script.module.requests" version="1.1.0" />
-  </requires>
-  <extension point="xbmc.service" library="service.py" start="start" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Wifi based Led control for kodi</summary>
-    <summary lang="en">Wifi conrol RGB led strips</summary>
-    <description lang="en">Additional hardware is required and WS2812 RGB LED strips.</description>
-    <disclaimer lang="en">I'm not responsible for any possible damage done to your devices.</disclaimer>
-    <language>en</language>
-    <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-    <website>https://github.com/kodi1/service.backlight.led</website>
-  </extension>
-</addon><addon id="service.pvrtools" name="PVR Tools" version="1.0.0" provider-name="enen92">
-    <requires>
-        <import addon="xbmc.addon" version="12.0.0" />
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.service" library="service.py" start="login" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">A simple PVR tools addon for kodi (iptv simple)</summary>
-        <summary lang="pt">Um simples addon de ferramentas pvr para o kodi (iptv simple)</summary>
-         <description lang="en">This addon allows you to download, extract and merge xmltv files to make a single xmltv file for XBMC PVR. It supports internet files compressed in gzip format (or plain xml). The same is applied to different m3u lists (local or hosted on the web)</description>
-         <description lang="pt">Este addon permite juntar vários ficheiros xmltv de forma a construir um xmltv único para a secção PVR do XBMC. Suporta ficheiros alojados na web comprimidos em gzip (ou simples xml). Também permite juntar várias listas m3u (locais ou da web). </description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    </extension>
-</addon><addon id="service.screensaver.hooks" name="Screensaver Hooks" version="0.0.1k" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.garepobg" version="0.1.0" />
-  </requires>
-  <extension point="xbmc.service" library="service.py" start="start" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Execute custom script on screensaver activation / deactivation.</summary>
-    <description lang="en">Initial version.</description>
-    <disclaimer lang="en">I'm not responsible for any possible damage done to your devices.</disclaimer>
-    <language>en</language>
-    <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-    <website>https://github.com/kodi1/service.screensaver.hooks</website>
-  </extension>
-</addon><addon id="service.sleeptimer" name="Sleep Timer" version="2.1.7" provider-name="enen92, Solo0815">
-    <requires>
-		<import addon="xbmc.addon" version="14.0.0" />
-		<import addon="xbmc.python" version="3.0.0" />
-    </requires>
-    <extension point="xbmc.service" library="service.py" start="login" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Did you fall asleep? Get better control over media playback </summary>
-        <summary lang="pt">Adormeceu? Tenha melhor controlo sobre a reprodução de media </summary>
-         <description lang="en">This service addon makes Kodi stop any playback if it exceeds a given playback time. If you have that awful habit of leaving Kodi playing live content after you fell asleep, this addon is for you! It gives extended control over the playback time. Step mute the audio, enable the screensaver or run a custom command after the playback is stopped.</description>
-         <description lang="pt">Este service addon faz com que o Kodi pare qualquer playback se o seu tempo exceder um valor fornecido. Se tiver o hábito de adormecer enquanto o Kodi está a reproduzir conteúdo multimédia, este addon é para si! Este extende o controlo do tempo de reprodução. Baixe o volume do áudio, active o protector de ecrã ou execute um comando customizado após a reprodução ser interrompida.</description>
-         <forum>http://forum.kodi.tv/showthread.php?tid=211971</forum>
-    	    <source>https://github.com/enen92/service.sleeptimer</source>
-         <platform>all</platform>
-         <license>GPL-2.0-only</license>
-    </extension>
 </addon><addon id="service.subtitles.bukvibg" name="БУКВИ.БГ" version="0.0.1" provider-name="Majide">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -1440,62 +1527,5 @@ KNOWN ISSUES: No Audio is available; Not Easy Configuration: After instalation/u
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Субтитри от БУКВИ.БГ</summary>
     <description lang="en">Тази приставка позволява търсене и изтегляне на субтитри през сайта bukvi.bg. Автоматичното търсене е по първата част от заглавието, до срещане на знак точка. Можете да използвате и ръчно търсене (използвайте минимум думи за повече резултати). Приставката изисква python библиотеката rarfile и unrar/WinRAR за разархивиране на RAR архиви. Прочетете във форума kodibg.org, как да ги осигурите.</description>
-  </extension>
-</addon><addon id="service.subtitles.modedbg" name="[B]B[/B]ulgarian [B]Subs[/B]" version="0.0.12" provider-name="kodi1 moded by Johnie">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.beautifulsoup4" version="4.3.2" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-  </requires>
-  <extension point="xbmc.subtitle.module" library="service.py" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Bulgarian Subtitle Service</summary>
-    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net and yavka.net and bukvi.bg and easternspirit.org</description>
-    <language>en</language>
-    <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-    <website>http://forum.kodi.tv/showthread.php?tid=195322</website>
-    <email />
-    </extension>
-</addon><addon id="service.subtitles.unacs" name="subsunacs/subsab" version="0.0.15h" provider-name="kodi1">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.beautifulsoup4" version="4.3.2" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.garepobg" version="0.1.0" />
-    <import addon="script.module.html5lib" version="0.999.0" optional="false" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-  </requires>
-  <extension point="xbmc.subtitle.module" library="service.py" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Bulgarian Subtitle Service</summary>
-    <description lang="en">Subtitles from subs.sab.bz and subsunacs.net. Thanks to josdion and jconxtc</description>
-    <language>en</language>
-    <platform>all</platform>
-    <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
-    <website>https://github.com/kodi1/service.subtitles.unacs</website>
-    <email />
-    </extension>
-</addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.0.4" provider-name="stanislav-m(sTa)">
-  <requires>
-  	<import addon="xbmc.python" version="2.14.0" />
-	<import addon="script.module.beautifulsoup4" version="4.3.2" />
-	<import addon="script.module.requests" version="2.9.1" />
-	<import addon="script.module.inputstreamhelper" version="0.3.3" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-  	<website>http://kodibg.org/forum</website>
   </extension>
 </addon></addons>

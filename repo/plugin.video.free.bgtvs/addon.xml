@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.5" provider-name="HarryDoubleG">
+<addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.6" provider-name="HarryDoubleG">
   <requires>
   	<import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.garepobg" version="0.1.5"/>
-    <import addon="script.module.kodibgcommon" version="1.0.9"/>
+    <import addon="script.module.kodibgcommon" version="1.0.10"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>

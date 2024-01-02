@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.dazn" version="1.3.18" name="DAZN" provider-name="Jin, Maven">
+<addon id="plugin.video.dazn" version="1.3.26" name="DAZN" provider-name="Jin, Maven">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.inputstreamhelper" version="0.5.0"/>
@@ -14,8 +14,26 @@
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <news>
-- request timeout to 30s
-- play live events from the beginning (context menu)
+V1.3.26
+- improved package permission detection
+- use the ia property to play a buffered live stream from the beginning
+V1.3.25
+- colored display of unplayable streams (package permission)
+V1.3.24
+- fixed wrong function calls
+- fixed login
+V1.3.23
+- fixed lowercase error for "Start from beginning" feature
+V1.3.22
+- generation of a UUID for Android version 11 and higher, since "Network.MacAddress" returns an empty string
+- reset device id on logout
+- fix ListItem properties deprecations
+- show additional error message
+- dynamically determine the maximum number of devices that can be registered
+- fixed "Start from beginning" for live events
+V1.3.21
+- fixed missing PIN prompt when starting a stream via "Start from Beginning" context menu
+- fixed error when adding stream infos on kodi 18 and 19
         </news>
         <assets>
             <icon>resources/icon.png</icon>

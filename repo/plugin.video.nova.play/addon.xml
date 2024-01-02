@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.2" provider-name="Majide">
+<addon id="plugin.video.nova.play" name="NOVA PLAY" version="0.19.2.3" provider-name="Majide">
   <requires>
   	<import addon="xbmc.python" version="3.0.0"/>
   	<import addon="script.module.requests" version="2.19.0"/>
@@ -19,7 +19,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
   	<forum>https://kodibg.org/forum/thread-14.html</forum>
   	<website>https://play.nova.bg</website>
-  	<news>ПОПРАВЕНО: Гледането на НТВ на живо</news>
+  	<news>ПРОМЯНА: Гледането на VOD на запис, вече става чрез InputStream Adaptive. В неговите настройки можете да зададете някакви лимити в разделителната способност и битрейта за да укажете качеството, което работи най-добре за вас.</news>
 	<assets>
 	   <icon>resources/icon.png</icon>
        <fanart>resources/fanart.jpg</fanart>
