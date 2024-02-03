@@ -1,8 +1,6 @@
-.venv\bin\activate
-
 git pull
 
-python3 update_repo.py
+python update_repo.py
 
 git status
 
