@@ -13,6 +13,7 @@ import requests
 from packaging import version
 
 readme_text = "Last updated addons:  \n"
+updated_addons_count = 0
 repo_dir = os.path.join(os.getcwd(), "repo")
 requests.packages.urllib3.disable_warnings()
 tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
@@ -96,10 +97,11 @@ def is_updated(addon):
         return True
 
     if local_addon_version < remote_addon_version:
-        global readme_text
+        global readme_text, updated_addons_count
+        updated_addons_count += 1
         log("\033[1;32mNew version for addon %s will be downloaded!\033[0m\n" % addon["name"])
-        readme_text += "%s | updated to %s (previously %s)  \n" % (
-            addon["name"], remote_addon_version, local_addon_version)
+        readme_text += "%s | updated to %s (previously %s)  on %s \n" % (
+            addon["name"], remote_addon_version, local_addon_version, time.strftime("%d.%m.%Y"))
         return True
 
     log("\033[0;31mNo new version available!\033[0m\n")
@@ -209,9 +211,12 @@ def update_last_update_time():
 
 
 def update_readme():
-    log("Updating README.md")
-    with open("README.md", "w") as w:
-        w.write(readme_text)
+    if updated_addons_count == 0:
+        log("No new addones were added.")
+    else:
+        log("Updating README.md")
+        with open("README.md", "w") as w:
+            w.write(readme_text)
 
 
 def log(msg):
