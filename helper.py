@@ -101,7 +101,7 @@ def is_updated(addon):
             addon["name"], remote_addon_version, local_addon_version)
         return True
 
-    log("\033[0;31mNo new version available!\033[0m\n" % addon["name"])
+    log("\033[0;31mNo new version available!\033[0m\n")
     return False
 
 
