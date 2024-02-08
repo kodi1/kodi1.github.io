@@ -10,8 +10,9 @@ Install required packages. Note the lxml package might require Microsoft Visual 
 On Linux it might need to be installed with apt 'sudo apt-get install python3-lxml'  
 pip install -r requirements.txt  
 
-To add remove addons modify the repo/addons.json file  
+To add or remove addons, modify the repo/addons.json file
 
 To run the repository updater:
+
 cd repo
 python3 import_addons.py
