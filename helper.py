@@ -79,7 +79,8 @@ def get_addon_version(version_string):
 
 
 def is_updated(addon):
-    log("Checking if addon \033[1;32m%s\033[0m has new version" % addon["name"])
+    log("\033[1;32m%s\033[0m" % addon["name"])
+    log("Checking for new versions")
     local_addon_version_string = get_addon_version_from_xml_file(addon["xmlfile"])
     remote_addon_version_string = get_remote_addon_version_string(addon["owner"], addon["name"])
     log("Local version is %s, remote version is %s" % (local_addon_version_string, remote_addon_version_string))
