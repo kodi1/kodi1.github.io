@@ -79,7 +79,7 @@ def get_addon_version(version_string):
 
 
 def is_updated(addon):
-    log("Checking if addon %s has new version" % addon["name"].upper())
+    log("Checking if addon \033[1;32m%s\033[0m has new version" % addon["name"])
     local_addon_version_string = get_addon_version_from_xml_file(addon["xmlfile"])
     remote_addon_version_string = get_remote_addon_version_string(addon["owner"], addon["name"])
     log("Local version is %s, remote version is %s" % (local_addon_version_string, remote_addon_version_string))
@@ -91,16 +91,17 @@ def is_updated(addon):
         if local_addon_version_string == remote_addon_version_string:
             log("Version strings are equal, no update required")
             return False
+        log("Could not compare version strings. \033[1;32mUpdating addon anyway!\033[0m\n")
         return True
 
     if local_addon_version < remote_addon_version:
         global readme_text
-        log("New version for addon %s will be downloaded!" % addon["name"])
+        log("\033[1;32mNew version for addon %s will be downloaded!\033[0m\n" % addon["name"])
         readme_text += "%s | updated to %s (previously %s)  \n" % (
             addon["name"], remote_addon_version, local_addon_version)
         return True
 
-    log("Skipping addon %s update! No new version available!" % addon["name"])
+    log("\033[0;31mNo new version available!\033[0m\n" % addon["name"])
     return False
 
 
@@ -160,7 +161,7 @@ def delete_orphan_addon_folders(addons):
     addon_folders = [f for f in os.listdir(repo_dir) if os.path.isdir(os.path.join(repo_dir, f)) and not f.startswith(".") and not f.startswith("_")]
     for addon_folder in addon_folders:
         if is_orphan(addon_folder, addons):
-            log("Removing orphan directory %s" % addon_folder)
+            log("Removing orphan directory \033[0;31m%s\033[0m" % addon_folder)
             shutil.rmtree(os.path.join(repo_dir, addon_folder))
 
 
