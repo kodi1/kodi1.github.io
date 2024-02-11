@@ -12,6 +12,7 @@ for addon in addons:
             continue
         copy_to_repo(temp_addon_path, addon)
 
+update_last_update_time()
 deleted_folders_count = delete_orphan_addon_folders(addons)
 
 if len(updated_addons) == 0 and deleted_folders_count == 0:
@@ -21,6 +22,5 @@ if len(updated_addons) == 0 and deleted_folders_count == 0:
 
 generate_addonsxml(addons)
 generate_md5_file()
-update_last_update_time()
 update_readme(updated_addons)
 
