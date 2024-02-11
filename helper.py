@@ -11,10 +11,11 @@ import xml.etree.ElementTree as etree
 
 import requests
 from packaging import version
+from packaging.version import InvalidVersion
+from packaging_legacy import version as legacy_version
 
 readme_text = "Last updated addons:  \n"
-updated_addons_count = 0
-repo_dir = os.path.join(os.getcwd(), "repo")
+repo_folder = os.path.join(os.getcwd(), "repo")
 requests.packages.urllib3.disable_warnings()
 tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
 
@@ -44,8 +45,8 @@ def get_addons_list():
                 "name": addon_name,
                 "owner": owner,
                 "url": url,
-                "folder": os.path.join(repo_dir, addon_name),
-                "xmlfile": os.path.join(repo_dir, addon_name, "addon.xml")
+                "folder": os.path.join(repo_folder, addon_name),
+                "xmlfile": os.path.join(repo_folder, addon_name, "addon.xml")
             })
     return addons
 
@@ -74,6 +75,8 @@ def get_addon_version_from_xml_file(addon_xml_path):
 def get_addon_version(version_string):
     try:
         return version.parse(version_string)
+    except InvalidVersion:
+        return legacy_version.parse(version_string)
     except Exception as ex:
         log(ex)
         return None
@@ -97,11 +100,11 @@ def is_updated(addon):
         return True
 
     if local_addon_version < remote_addon_version:
-        global readme_text, updated_addons_count
-        updated_addons_count += 1
+        addon["old_version"] = local_addon_version
+        addon["new_version"] = remote_addon_version
+        addon["update_time"] = time.strftime("%d.%m.%Y")
         log("\033[1;32mNew version for addon %s will be downloaded!\033[0m\n" % addon["name"])
-        readme_text += "%s | updated to %s (previously %s)  on %s \n" % (
-            addon["name"], remote_addon_version, local_addon_version, time.strftime("%d.%m.%Y"))
+
         return True
 
     log("\033[0;31mNo new version available!\033[0m\n")
@@ -161,11 +164,15 @@ def is_orphan(addon_name, addons):
 
 
 def delete_orphan_addon_folders(addons):
-    addon_folders = [f for f in os.listdir(repo_dir) if os.path.isdir(os.path.join(repo_dir, f)) and not f.startswith(".") and not f.startswith("_")]
+    count = 0
+    addon_folders = [f for f in os.listdir(repo_folder) if
+                     os.path.isdir(os.path.join(repo_folder, f)) and not f.startswith(".") and not f.startswith("_")]
     for addon_folder in addon_folders:
         if is_orphan(addon_folder, addons):
-            log("Removing orphan directory \033[0;31m%s\033[0m" % addon_folder)
-            shutil.rmtree(os.path.join(repo_dir, addon_folder))
+            log("Deleting directory of removed addon \033[0;31m%s\033[0m" % addon_folder)
+            shutil.rmtree(os.path.join(repo_folder, addon_folder))
+            count += 1
+    return count
 
 
 def get_xml_content(path):
@@ -185,17 +192,17 @@ def generate_addonsxml(addons):
         addon_xml_content = get_xml_content(addon["xmlfile"])
         if addon_xml_content:
             addons_xml_content.append(addon_xml_content)
-    etree.ElementTree(addons_xml_content).write("repo/addons.xml", encoding="utf8")
+    etree.ElementTree(addons_xml_content).write(os.path.join(repo_folder, "addons.xml"), encoding="utf8")
     log("Generated addons.xml")
 
 
 def generate_md5_file():
     try:
         md5sum = hashlib.md5()
-        md5sum.update(open("repo/addons.xml", "r", encoding="utf8").read().encode('utf-8'))
+        md5sum.update(open(os.path.join(repo_folder, "addons.xml"), "r", encoding="utf8").read().encode('utf-8'))
         newmd5sum = md5sum.hexdigest()
         log("new md5 sum: %s" % newmd5sum)
-        with open("repo/addons.xml.md5", "w", encoding="utf8") as file:
+        with open(os.path.join(repo_folder, "addons.xml.md5"), "w", encoding="utf8") as file:
             file.write(newmd5sum)
     except Exception as e:
         log("An error occurred creating addons.xml.md5 file: %s" % e)
@@ -210,13 +217,15 @@ def update_last_update_time():
         re.sub('>Last update: (.*?)<', last_update_text, text)
 
 
-def update_readme():
-    if updated_addons_count == 0:
-        log("No new addones were added.")
-    else:
-        log("Updating README.md")
-        with open("README.md", "w") as w:
-            w.write(readme_text)
+def update_readme(updated_addons):
+    log("Updating README.md")
+    with open("README.md", "w") as w:
+        for updated_addon in updated_addons:
+            text = "%s | updated to %s (previously %s)  on %s \n" % (
+                updated_addon["name"], updated_addon.get("new_version"), updated_addon.get("old_version"),
+                updated_addon.get("update_time"))
+            print(text)
+            w.write(text)
 
 
 def log(msg):
