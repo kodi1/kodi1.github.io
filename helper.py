@@ -211,23 +211,26 @@ def generate_md5_file():
 
 
 def update_last_update_time():
-    with open('index.html', "w") as file:
-        text = file.read()
+    text = None
+    with open("index.html", "r", encoding="utf8") as f:
+        text = f.read()
+    with open("index.html", "w", encoding="utf8") as f:
         last_update_time = time.strftime("%H:%M:%S - %d.%m.%Y")
-        text = re.sub('>Last update: (.*?)<', last_update_time, text)
-        file.write(text)
-    log("Updated last update time: %s" % last_update_time)
+        last_update_text = ">Last update: %s<" % last_update_time
+        text = re.sub('>Last update: (.*?)<', last_update_text, text)
+        f.write(text)
+        log("Updated last update time: %s" % last_update_time)
 
 
 def update_readme(updated_addons):
     log("Updating README.md")
-    with open("README.md", "w") as w:
+    with open("README.md", "w") as file_handle:
         for updated_addon in updated_addons:
             text = "%s | updated to %s (previously %s)  on %s \n" % (
                 updated_addon["name"], updated_addon.get("new_version"), updated_addon.get("old_version"),
                 updated_addon.get("update_time"))
             print(text)
-            w.write(text)
+            file_handle.write(text)
 
 
 def log(msg):
