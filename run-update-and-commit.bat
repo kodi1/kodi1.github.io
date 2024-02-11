@@ -1,3 +1,4 @@
+@echo off
 
 git pull
 call .venv\Scripts\activate.bat
