@@ -211,10 +211,11 @@ def generate_md5_file():
 
 
 def update_last_update_time():
-    with open('index.html') as file:
+    with open('index.html', "w") as file:
         text = file.read()
         last_update_time = time.strftime("%H:%M:%S - %d.%m.%Y")
-        re.sub('>Last update: (.*?)<', last_update_time, text)
+        text = re.sub('>Last update: (.*?)<', last_update_time, text)
+        file.write(text)
     log("Updated last update time: %s" % last_update_time)
 
 
