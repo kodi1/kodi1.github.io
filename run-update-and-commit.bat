@@ -1,5 +1,7 @@
 @echo off
 
+cd /D "%~dp0"
+
 git pull
 call .venv\Scripts\activate.bat
 python update_repo.py
