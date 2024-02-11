@@ -2,4 +2,4 @@
 .venv/
 *.pyc
 .idea
-run-update-and-commit.log
+*.log
