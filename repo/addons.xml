@@ -561,37 +561,6 @@ Note: http://www.bgtv-on.com/ account is required.</description>
       <screenshot />
     </assets>
   </extension>
-</addon><addon id="plugin.video.mytv_bg" name="MyTV.BG" version="2.0.5" provider-name="jordan@mytv.bg">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.requests" version="2.7.0" /> 
-		<import addon="script.module.xbmcswift" version="0.0.1" />
-		<import addon="script.module.pyxbmct" version="1.1.4" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<language>bg</language>
-		<license>The MIT License (MIT)</license>
-		<summary lang="bg">Видео плъгин за MyTV.bg https://mytv.bg/</summary>
-		<summary lang="en">Video addon for MyTV.bg https://mytv.bg/</summary>
-		<description lang="bg">
-			Този адон предлага достъп до стриймовете на MyTV.BG (канали на живо и сериали).
-			За да го ползвате е нужна активна MyTV.bg регистрация.
-		</description>
-		<description lang="en">
-			This addon provides access to streams of MyTV.BG (channels live and series).
-			To use it is necessary active MyTV.bg registration.
-		</description>
-		<disclaimer lang="bg">
-			Нужни са активни потребителско име и парола.
-			Може да се ползва само извън България. За детайли виж http://mytv.bg/countries
-		</disclaimer>
-		<website>https://mytv.bg/</website>
-		<email>jordan@mytv.bg</email>
-	</extension>
 </addon><addon id="plugin.video.filmi2k" name="Filmi2k.com" version="1.0.5" provider-name="Johnie">
  <requires>
      <import addon="xbmc.python" version="2.1.0" />
@@ -788,65 +757,6 @@ Note: http://www.bgtv-on.com/ account is required.</description>
      <website />
      <email />
  </extension>
-</addon><addon id="plugin.video.neterratv" name="Neterra.TV" version="3.0.1" provider-name="mr.olix@gmail.com">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.xbmcswift" version="0.2.0" />    
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <language>de</language>
-    <summary lang="en">Video plugin for Neterra.TV http://www.neterra.tv/</summary>
-    <summary lang="de">Video plugin für Neterra.TV http://www.neterra.tv/</summary>
-    <description lang="en">
-    This plugin provides access to tv videos streams from Neterra.TV.
-    Note: Neterra.TV account is required.</description>   
-    <description lang="de">
-    Dieses plugin bietet Zugriff auf alle Videos Streams from Neterra.TV.
-    Note: Neterra.TV Benutzer ist erforderlich.</description>   
-    <disclaimer lang="en">You have to sign up and pay to access Neterra.TV TV streams</disclaimer>
-    <website />
-    <source>git://github.com/mrolix/plugin.video.neterratv.git</source>
-    <email>mr.olix@gmail.com</email>
-  </extension>
-</addon><addon id="plugin.DJ.Zone.House.Radio" name="DJ Zone House Radio" provider-name="DJ Zone House Radio" version="1.0.0">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.requests" version="2.9.1" />
-	</requires>
-	<extension library="addon.py" point="xbmc.python.pluginsource">
-		<provides>audio</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_gb">Listen to custom radio streams with station fanart and on-screen track information</summary>
-		<description lang="en_gb" />
-		<disclaimer lang="en_gb" />
-		<language />
-		<platform>all</platform>
-		<license />
-		<forum />
-		<website />
-		<email />
-		<source />
-		<news>
-			
-
-			v1.0.0 (2017-02-24)
-			- Initial release
-		</news>
-		<assets>
-			<icon>resources/media/icon.png</icon>
-		</assets>
-	</extension>
-	<extension point="xbmc.addon.repository">
-		<info>http://dev.rocketchilli.com/kodi-repo/addons.xml</info>
-		<checksum>http://dev.rocketchilli.com/kodi-repo/addons.xml.md5</checksum>
-		<datadir zip="true">http://dev.rocketchilli.com/kodi-repo/addons</datadir>
-	</extension>
 </addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.2.3" provider-name="stanislav-m(sTa)">
   <requires>
 	<import addon="script.module.beautifulsoup4" version="4.3.2" />
