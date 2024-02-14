@@ -20,34 +20,13 @@ requests.packages.urllib3.disable_warnings()
 tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
 
 
-def get_repo_details(url):
-    repo_owner = None
-    repo_name = None
-    try:
-        matches = re.compile(r"github\.com/(.+?)/(.+?)/archive").findall(url)
-        repo_owner = matches[0][0]
-        repo_name = matches[0][1]
-    except Exception as er:
-        log(er)
-        log("Not able to verify if there is a new version of the addon.")
-    return repo_owner, repo_name
-
-
 def get_addons_list():
     log("Loading addons list from addons.json")
-    urls_list = json.load(open('addons.json'))
-    log("Number of addons in list %s" % len(urls_list))
-    addons = []
-    for url in urls_list:
-        owner, addon_name = get_repo_details(url)
-        if addon_name:
-            addons.append({
-                "name": addon_name,
-                "owner": owner,
-                "url": url,
-                "folder": os.path.join(repo_folder, addon_name),
-                "xmlfile": os.path.join(repo_folder, addon_name, "addon.xml")
-            })
+    addons = json.load(open('addons.json'))
+    log("Number of addons in list %s" % len(addons))
+    for addon in addons:
+        addon["folder"] = os.path.join(repo_folder, addon["name"]),
+        addon["xmlfile"] = os.path.join(repo_folder, addon["name"], "addon.xml")
     return addons
 
 
@@ -91,6 +70,10 @@ def is_updated(addon):
     local_addon_version = get_addon_version(local_addon_version_string)
     remote_addon_version = get_addon_version(remote_addon_version_string)
 
+    if not local_addon_version and not remote_addon_version:
+        log("Unable to detect local and remote addon versions. Updating it.")
+        return True
+
     if not local_addon_version or not remote_addon_version:
         log("Due to version parsing failure, comparing version strings")
         if local_addon_version_string == remote_addon_version_string:
@@ -112,9 +95,10 @@ def is_updated(addon):
 
 
 def download(addon):
-    if not download_from_url(addon["url"]):
-        return download_from_url(addon["url"])
-
+    local_file = download_from_url(addon["url"])
+    if not local_file:
+        local_file = download_from_url(addon["url"])
+    return local_file
 
 def download_from_url(url):
     file_name = None
@@ -127,7 +111,7 @@ def download_from_url(url):
                 file_name = os.path.join(tmp_path, rh.split('filename=')[1])
             else:
                 file_name = os.path.join(tmp_path, url.split('/')[-1])
-            log("Downloading: ", file_name)
+            log("Downloading: %s" % file_name)
             with open(file_name, "wb") as code:
                 code.write(r.content)
 
