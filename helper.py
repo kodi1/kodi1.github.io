@@ -25,7 +25,7 @@ def get_addons_list():
     addons = json.load(open('addons.json'))
     log("Number of addons in list %s" % len(addons))
     for addon in addons:
-        addon["folder"] = os.path.join(repo_folder, addon["name"]),
+        addon["folder"] = os.path.join(repo_folder, addon["name"])
         addon["xmlfile"] = os.path.join(repo_folder, addon["name"], "addon.xml")
     return addons
 
@@ -100,6 +100,7 @@ def download(addon):
         local_file = download_from_url(addon["url"])
     return local_file
 
+
 def download_from_url(url):
     file_name = None
     try:
@@ -121,23 +122,95 @@ def download_from_url(url):
     return file_name
 
 
-def copy_to_repo(addon_temp_file, addon):
+def get_addon_xml_path(extract_folder):
+    """
+    Function that provides the absolute path of the extracted addon folder containing the addon.xml
+    """
+    for folder in os.listdir(extract_folder):
+        if folder.startswith(".") or folder.startswith("_"):
+            continue
+        absolute_folder_path = os.path.join(extract_folder, folder)
+        if not os.path.isdir(absolute_folder_path):
+            continue
+        addon_xml_path = os.path.join(absolute_folder_path, "addon.xml")
+        if os.path.isfile(addon_xml_path):
+            return addon_xml_path
+
+
+def get_temp_addon_extract_folder(addon_temp_file):
+    temp_file_name = os.path.splitext(addon_temp_file)[0]
+    return os.path.join(tmp_path, temp_file_name)
+
+
+def extract_addon_archive_to_folder(temp_addon_file, temp_addon_extract_folder):
+    """
+    Extract the addon archive to a separate folder, so we can easier find the addon.xml
+    This is necessary because some addon ZIP file names are different from the addon name
+    """
+    log("Extracting addon to temp folder %s" % temp_addon_extract_folder)
+    zipfile.ZipFile(temp_addon_file).extractall(temp_addon_extract_folder)
+
+
+def create_new_addon_file_name(addon_name, addon_version):
+    return '%s-%s.zip' % (addon_name, addon_version)
+
+
+def delete_temp_files(temp_addon_file):
     try:
-        log("Extracting addon to temp folder %s" % tmp_path)
-        zipfile.ZipFile(addon_temp_file).extractall(tmp_path)
-        addon_temp_dir = os.path.join(tmp_path, os.path.splitext(addon_temp_file)[0])
-        addon_xml = os.path.join(addon_temp_dir, 'addon.xml')
-        addon_version = get_addon_version_from_xml_file(addon_xml)
-        new_addon_zip_file_name = '%s-%s.zip' % (addon["name"], addon_version)
-        new_addon_zip_file_path = os.path.join(addon["folder"], new_addon_zip_file_name)
-        log("New addon zip file path: %s" % new_addon_zip_file_path)
-        shutil.copy(addon_temp_file, new_addon_zip_file_path)
-        log("Copying addon.xml to %s" % addon["folder"])
-        shutil.copy(addon_xml, addon["folder"])
-        log("Deleting addon temp dir")
-        shutil.rmtree(addon_temp_dir)
-    except Exception as er:
-        log(er)
+        log("Deleting addon temp files")
+        shutil.rmtree(get_temp_addon_extract_folder(temp_addon_file))
+        os.unlink(temp_addon_file)
+    except:
+        pass
+
+
+def extract_addon_content(addon_name, addon_temp_file):
+    """
+    Extracts addon and renames it as per the version in addon.xml
+    @returns: A tuple containing the path to the addon archive zip and the path to the addon.xml
+    """
+    personal_addon_extract_folder = get_temp_addon_extract_folder(addon_temp_file)
+    extract_addon_archive_to_folder(addon_temp_file, personal_addon_extract_folder)
+    temp_addon_xml_path = get_addon_xml_path(personal_addon_extract_folder)
+
+    return temp_addon_xml_path
+
+
+def copy_file(source_file, destination_file):
+    dst_folder = os.path.dirname(destination_file)
+
+    if not os.path.exists(dst_folder):
+        log("Creating addon folder as it does not exist %s" % dst_folder)
+        os.makedirs(dst_folder)
+
+    shutil.copy(source_file, destination_file)
+
+
+#
+#
+# def copy_to_repo(addon_temp_file, addon):
+#     """
+#     Renames addon zip to include addon version.
+#     Copies the new addon zip and the extracted addon.xml to the repository folder
+#     """
+#     try:
+#         temp_addon_dir = extract_addon_archive_to_folder(addon_temp_file)
+#
+#         temp_addon_xml = os.path.join(temp_addon_dir, 'addon.xml')
+#         log("Copying addon.xml to %s" % addon["folder"])
+#         shutil.copy(temp_addon_xml, addon["folder"])
+#
+#         new_addon_zip_file_name = create_new_addon_file_name(addon, temp_addon_xml)
+#         new_addon_zip_file_path = os.path.join(addon["folder"], new_addon_zip_file_name)
+#         log("New addon zip file path: %s" % new_addon_zip_file_path)
+#         if not os.path.isdir(addon["folder"]):
+#             log("Creating addon folder as it does not exist %s" % addon["folder"])
+#             os.mkdir(addon["folder"])
+#         shutil.copy(addon_temp_file, new_addon_zip_file_path)
+#
+#         delete_temp_files(addon_temp_file)
+#     except Exception as er:
+#         log(er)
 
 
 def is_orphan(addon_name, addons):

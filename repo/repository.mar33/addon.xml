@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.mar33" name="Mar33 Repository" version="3.3.33" provider-name="MartinStZ">
+    <extension point="xbmc.addon.repository" name="Mar33 Repository">
+        <dir>
+            <info compressed="false">http://martinstz.com/_repo/addons.xml</info>
+            <checksum>http://martinstz.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://martinstz.com/_repo/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repo from MartinStz</summary>
+        <description>For installing videos, musics and subtitles addons</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

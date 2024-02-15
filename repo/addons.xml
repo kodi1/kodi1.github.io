@@ -1,5 +1,61 @@
 <?xml version='1.0' encoding='utf8'?>
-<addons><addon id="plugin.video.zelka" name="Zelka Magnet Video" version="0.0.1o" provider-name="kodi1">
+<addons><addon id="repository.mar33" name="Mar33 Repository" version="3.3.33" provider-name="MartinStZ">
+    <extension point="xbmc.addon.repository" name="Mar33 Repository">
+        <dir>
+            <info compressed="false">http://martinstz.com/_repo/addons.xml</info>
+            <checksum>http://martinstz.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://martinstz.com/_repo/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repo from MartinStz</summary>
+        <description>For installing videos, musics and subtitles addons</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.majide" name="Majide Add-on repository" version="0.20.6" provider-name="Majide">
+	<extension point="xbmc.addon.repository" name="Majide Add-on repository">
+		
+		<dir minversion="18.90.0" maxversion="19.89.999">
+			<info compressed="false">https://andromeda.eu.org/addons/matrix/addons.xml</info>
+			<checksum verify="sha256">https://andromeda.eu.org/addons/matrix/addons.sha256</checksum>
+			<datadir zip="true">https://andromeda.eu.org/addons/matrix</datadir>
+			<artdir>https://andromeda.eu.org/addons/matrix</artdir>
+			<hashes>sha256</hashes>
+		</dir>
+		
+		<dir minversion="19.90.0" maxversion="20.89.999">
+			<info compressed="false">https://andromeda.eu.org/addons/nexus/addons.xml</info>
+			<checksum verify="sha256">https://andromeda.eu.org/addons/nexus/addons.sha256</checksum>
+			<datadir zip="true">https://andromeda.eu.org/addons/nexus</datadir>
+			<artdir>https://andromeda.eu.org/addons/nexus</artdir>
+			<hashes>sha256</hashes>
+		</dir>
+		
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Инсталира добавки на Majide</summary>
+		<summary lang="en_US">Install Add-ons of Majide</summary>
+		<description lang="bg_BG">Сваля и инсталира добавки от неофициалното хранилище на Majide.</description>
+		<description lang="en_US">Download and install add-ons from unofficial repository of Majide.</description>
+		<disclaimer lang="bg_BG">Majide не е автор на всички добавки в хранилището и не носи отговорност за съдържанието им и ефекта от инсталирането им във вашето устройство!</disclaimer>
+		<disclaimer lang="en_US">Majide did not make all the add-ons in this repository and is not responsible for their content and effect of installing them on your device!</disclaimer>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon><addon id="plugin.video.zelka" name="Zelka Magnet Video" version="0.0.1o" provider-name="kodi1">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.requests" version="1.1.0" />
@@ -162,12 +218,12 @@
     <forum>http://forum.kodi.tv/showthread.php?tid=195322</forum>
     <website>https://github.com/kodi1/script.module.garepobg</website>
   </extension>
-</addon><addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="1.0.13" provider-name="HarryDoubleG">
+</addon><addon id="plugin.video.vivatvgo" name="[COLOR orange]TV GO[/COLOR] Player" version="2.0.0" provider-name="HarryDoubleG">
   <requires>
-  	<import addon="xbmc.python" version="2.24.0" />
-    <import addon="script.module.garepobg" version="0.1.4" />
-    <import addon="script.module.requests" version="1.1.0" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
+  	<import addon="xbmc.python" version="3.0.0" />
+
+    <import addon="script.module.requests" version="2.25.1" />
+    <import addon="script.module.kodibgcommon" version="1.0.10" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
   	<provides>video</provides>
