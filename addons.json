@@ -37,5 +37,7 @@
   {"owner":"zinobg", "name":"plugin.video.bgtvon", "url":"https://github.com/zinobg/plugin.video.bgtvon/archive/master.zip"},
   {"owner":"stanislav-m", "name":"plugin.video.voyobgvod", "url":"https://github.com/stanislav-m/plugin.video.voyobgvod/archive/master.zip"},
   {"owner":"batvani", "name":"plugin.video.bntbg", "url":"https://github.com/batvani/plugin.video.bntbg/archive/master.zip"},
-  {"owner":"Maven85", "name":"plugin.video.dazn", "url":"https://github.com/Maven85/plugin.video.dazn/archive/master.zip"}
+  {"owner":"Arias800", "name":"plugin.video.vikir", "url":"https://github.com/Arias800/plugin.video.vikir/archive/master.zip"},
+  {"owner":"Maven85", "name":"plugin.video.dazn", "url":"https://github.com/Maven85/plugin.video.dazn/archive/master.zip"},
+  {"owner":"MRLB", "name":"kodi-eurosportplayer", "url":"https://github.com/MRLB/kodi-eurosportplayer/archive/master.zip"}
 ]
