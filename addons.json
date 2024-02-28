@@ -1,7 +1,7 @@
 [
 
   {"owner":"ronie", "name":"weather.multi", "url":"https://gitlab.com/ronie/weather.multi/-/archive/master/weather.multi-master.zip"},
-  {"owner":"martinstz", "name":"repository.mar33", "url":"https://martinstz.com/repo/repository.mar33-3.3.33.zip", "update": false},
+  {"owner":"martinstz", "name":"repository.mar33", "url":"https://martinstz.com/repo/repository.mar33-3.3.33.zip"},
   {"owner":"majide", "name":"repository.majide", "url":"https://andromeda.eu.org/xbmc/repository.majide-0.20.6.zip", "update": false},
   {"owner":"kodi1", "name":"plugin.video.zelka", "url":"https://github.com/kodi1/plugin.video.zelka/archive/master.zip", "enabled": false},
   {"owner":"kodi1", "name":"service.backlight.led", "url":"https://github.com/kodi1/service.backlight.led/archive/master.zip", "enabled": false},
@@ -41,6 +41,6 @@
   {"owner":"batvani", "name":"plugin.video.bntbg", "url":"https://github.com/batvani/plugin.video.bntbg/archive/master.zip"},
   {"owner":"Arias800", "name":"plugin.video.vikir", "url":"https://github.com/Arias800/plugin.video.vikir/archive/master.zip"},
   {"owner":"herrnst", "name":"plugin.video.dazn", "url":"https://github.com/herrnst/plugin.video.dazn/archive/master.zip"},
-  {"owner":"MRLB", "name":"kodi-eurosportplayer", "url":"https://github.com/MRLB/kodi-eurosportplayer/archive/master.zip"},
-  {"owner":"gazer22", "name":"kodi-radio-browser", "url":"https://github.com/gazer22/kodi-radio-browser/archive/master.zip"}
+  {"owner":"MRLB", "name":"plugin.video.eurosportplayer", "url":"https://github.com/MRLB/kodi-eurosportplayer/archive/master.zip"},
+  {"owner":"gazer22", "name":"plugin.audio.radiobrowser", "url":"https://github.com/gazer22/kodi-radio-browser/archive/master.zip"}
 ]

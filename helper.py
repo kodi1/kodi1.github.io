@@ -37,11 +37,19 @@ def get_addons_list():
     return enabled_addons
 
 
-def get_remote_addon_version_string(addon):
+def get_remote_addon_xml_url(addon):
     remote_url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], addon["name"])
-    if "gitlab" in addon["url"]:
+    if "gitlab.com" in addon["url"]:
         remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon["name"])
+    elif "martinstz.com" in addon["url"]:
+        remote_url = "https://martinstz.com/repo/addon.xml"
+    elif "andromeda.eu.org" in addon["url"]:
+        remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon)
+    return remote_url
 
+
+def get_remote_addon_version_string(addon):
+    remote_url = get_remote_addon_xml_url(addon)
     try:
         res = requests.get(remote_url, verify=False)
         xml = etree.fromstring(res.content)
@@ -195,33 +203,6 @@ def copy_file(source_file, destination_file):
         os.makedirs(dst_folder)
 
     shutil.copy(source_file, destination_file)
-
-
-#
-#
-# def copy_to_repo(addon_temp_file, addon):
-#     """
-#     Renames addon zip to include addon version.
-#     Copies the new addon zip and the extracted addon.xml to the repository folder
-#     """
-#     try:
-#         temp_addon_dir = extract_addon_archive_to_folder(addon_temp_file)
-#
-#         temp_addon_xml = os.path.join(temp_addon_dir, 'addon.xml')
-#         log("Copying addon.xml to %s" % addon["folder"])
-#         shutil.copy(temp_addon_xml, addon["folder"])
-#
-#         new_addon_zip_file_name = create_new_addon_file_name(addon, temp_addon_xml)
-#         new_addon_zip_file_path = os.path.join(addon["folder"], new_addon_zip_file_name)
-#         log("New addon zip file path: %s" % new_addon_zip_file_path)
-#         if not os.path.isdir(addon["folder"]):
-#             log("Creating addon folder as it does not exist %s" % addon["folder"])
-#             os.mkdir(addon["folder"])
-#         shutil.copy(addon_temp_file, new_addon_zip_file_path)
-#
-#         delete_temp_files(addon_temp_file)
-#     except Exception as er:
-#         log(er)
 
 
 def is_orphan(addon_name, addons):
