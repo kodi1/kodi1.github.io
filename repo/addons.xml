@@ -889,13 +889,13 @@ Note: http://www.bgtv-on.com/ account is required.</description>
        <screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
   </extension>
-</addon><addon id="plugin.video.dazn" version="1.3.26" name="DAZN" provider-name="Jin, Maven">
+</addon><addon id="plugin.video.dazn" version="1.96.5.0" name="DAZN" provider-name="Jin, Maven85">
     <requires>
-        <import addon="xbmc.python" version="2.26.0" />
+        <import addon="xbmc.python" version="3.0.1" />
         <import addon="script.module.inputstreamhelper" version="0.5.0" />
-        <import addon="script.module.kodi-six" version="0.1.3" />
-        <import addon="script.module.six" version="1.13.0" />
-        <import addon="script.common.plugin.cache" version="2.6.1" />
+        <import addon="script.module.kodi-six" version="0.1.3.1" />
+        <import addon="script.module.six" version="1.14.0" />
+        <import addon="script.common.plugin.cache" version="2.6.1.1" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -904,26 +904,12 @@ Note: http://www.bgtv-on.com/ account is required.</description>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <news>
-V1.3.26
-- improved package permission detection
-- use the ia property to play a buffered live stream from the beginning
-V1.3.25
-- colored display of unplayable streams (package permission)
-V1.3.24
-- fixed wrong function calls
-- fixed login
-V1.3.23
-- fixed lowercase error for "Start from beginning" feature
-V1.3.22
-- generation of a UUID for Android version 11 and higher, since "Network.MacAddress" returns an empty string
-- reset device id on logout
-- fix ListItem properties deprecations
-- show additional error message
-- dynamically determine the maximum number of devices that can be registered
-- fixed "Start from beginning" for live events
-V1.3.21
-- fixed missing PIN prompt when starting a stream via "Start from Beginning" context menu
-- fixed error when adding stream infos on kodi 18 and 19
+- fixed playback of some streams
+- fixed error 404 when retrieving user profile
+- fixed resolution problem on android devices
+- fixed playback for Kodi Nexus
+- added the date of an event in the title
+- fixed playback
         </news>
         <assets>
             <icon>resources/icon.png</icon>
@@ -1046,4 +1032,30 @@ Quando vuoi. Dove vuoi.
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <website>https://www.eurosportplayer.com</website>
     </extension>
+</addon><addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.0" provider-name="sailor">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Radio-Browser</summary>
+    <summary lang="bg">Radio-Browser</summary>
+    <summary lang="de">Radio-Browser</summary>
+    <description lang="en">Directory of radio stations that uses www.radio-browser.info as source.
+
+If you miss your favourite station, just go to www.radio-browser.info and add it yourself. It is a wiki like system.</description>
+    <description lang="bg">Колекция от радио станции, с източник www.radio-browser.info
+
+Ако любимата ви станция не е в списъка, можете да я добавите като посетите www.radio-browser.info</description>
+    <description lang="de">Verzeichnis von Radio-Stationen das www.radio-browser.info als Quelle nutzt.
+
+Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info und füge sie für alle Benutzer hinzu!</description>
+    <license>GNU General Public License, Version 3</license>
+    <website>https://www.radio-browser.info</website>
+    <source>https://github.com/segler-alex/kodi-radio-browser</source>
+    <email>segler_alex@web.de</email>
+  </extension>
 </addon></addons>

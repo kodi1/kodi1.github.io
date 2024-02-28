@@ -1,6 +1,6 @@
 [
-  {"owner":"martinstz", "name":"repository.mar33", "url":"https://martinstz.com/repo/repository.mar33-3.3.33.zip"},
-  {"owner":"majide", "name":"repository.majide", "url":"https://andromeda.eu.org/xbmc/repository.majide-0.20.6.zip"},
+  {"owner":"martinstz", "name":"repository.mar33", "url":"https://martinstz.com/repo/repository.mar33-3.3.33.zip", "update": false},
+  {"owner":"majide", "name":"repository.majide", "url":"https://andromeda.eu.org/xbmc/repository.majide-0.20.6.zip", "update": false},
   {"owner":"kodi1", "name":"plugin.video.zelka", "url":"https://github.com/kodi1/plugin.video.zelka/archive/master.zip"},
   {"owner":"kodi1", "name":"service.backlight.led", "url":"https://github.com/kodi1/service.backlight.led/archive/master.zip"},
   {"owner":"kodi1", "name":"plugin.program.bscfusion", "url":"https://github.com/kodi1/plugin.program.bscfusion/archive/master.zip"},
@@ -38,6 +38,8 @@
   {"owner":"stanislav-m", "name":"plugin.video.voyobgvod", "url":"https://github.com/stanislav-m/plugin.video.voyobgvod/archive/master.zip"},
   {"owner":"batvani", "name":"plugin.video.bntbg", "url":"https://github.com/batvani/plugin.video.bntbg/archive/master.zip"},
   {"owner":"Arias800", "name":"plugin.video.vikir", "url":"https://github.com/Arias800/plugin.video.vikir/archive/master.zip"},
-  {"owner":"Maven85", "name":"plugin.video.dazn", "url":"https://github.com/Maven85/plugin.video.dazn/archive/master.zip"},
-  {"owner":"MRLB", "name":"kodi-eurosportplayer", "url":"https://github.com/MRLB/kodi-eurosportplayer/archive/master.zip"}
+  {"owner":"herrnst", "name":"plugin.video.dazn", "url":"https://github.com/herrnst/plugin.video.dazn/archive/master.zip"},
+  {"owner":"MRLB", "name":"kodi-eurosportplayer", "url":"https://github.com/MRLB/kodi-eurosportplayer/archive/master.zip"},
+  {"owner":"gazer22", "name":"kodi-radio-browser", "url":"https://github.com/gazer22/kodi-radio-browser/archive/master.zip"},
+  { "owner":"ronie", "name":"weather.multi", "url":"https://gitlab.com/ronie/weather.multi/-/archive/master/weather.multi-master.zip", "enabled": true}
 ]

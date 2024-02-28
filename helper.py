@@ -23,21 +23,31 @@ tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename
 def get_addons_list():
     log("Loading addons list from addons.json")
     addons = json.load(open('addons.json'))
-    log("Number of addons in list %s" % len(addons))
+    enabled_addons = []
+    disabled_addons_count = 0
     for addon in addons:
-        addon["folder"] = os.path.join(repo_folder, addon["name"])
-        addon["xmlfile"] = os.path.join(repo_folder, addon["name"], "addon.xml")
-    return addons
+        if addon.get("enabled", True):
+            addon["folder"] = os.path.join(repo_folder, addon["name"])
+            addon["xmlfile"] = os.path.join(repo_folder, addon["name"], "addon.xml")
+            enabled_addons.append(addon)
+        else:
+            disabled_addons_count += 1
+    log("Number of enabled addons in list %s" % len(addons))
+    log("Number of disabled addons in list %s\n" % disabled_addons_count)
+    return enabled_addons
 
 
-def get_remote_addon_version_string(repo_id, addon_id):
+def get_remote_addon_version_string(addon):
+    if "github" not in addon["url"]:
+        return None
+
     try:
-        url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (repo_id, addon_id)
+        url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], addon["name"])
         res = requests.get(url, verify=False)
         xml = etree.fromstring(res.content)
         return xml.get('version')
     except Exception as ex:
-        log(ex)
+        log("Error getting remote version: %s" % ex)
     return None
 
 
@@ -63,9 +73,13 @@ def get_addon_version(version_string):
 
 def is_updated(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
+    if not addon.get("update", True):
+        log("Skipping automatic update as update property is disabled\n")
+        return False
+
     log("Checking for new versions")
     local_addon_version_string = get_addon_version_from_xml_file(addon["xmlfile"])
-    remote_addon_version_string = get_remote_addon_version_string(addon["owner"], addon["name"])
+    remote_addon_version_string = get_remote_addon_version_string(addon)
     log("Local version is %s, remote version is %s" % (local_addon_version_string, remote_addon_version_string))
     local_addon_version = get_addon_version(local_addon_version_string)
     remote_addon_version = get_addon_version(remote_addon_version_string)
