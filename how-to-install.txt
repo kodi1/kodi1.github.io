@@ -10,7 +10,16 @@ Install required packages. Note the lxml package might require Microsoft Visual 
 On Linux it might need to be installed with apt 'sudo apt-get install python3-lxml'  
 pip install -r requirements.txt  
 
-To add or remove addons, modify the addons.json file
+To add or remove addons, modify the addons.json file and add a line for the new addon.
+Here is an example:
+{"owner":"harrygg", "name":"plugin.video.free.bgtvs", "url":"https://github.com/harrygg/plugin.video.free.bgtvs/archive/master.zip", "enabled": true, "update": true},
+
+* the url property must point to the absolute path of the addon zip file without any redirections.
+* the name of the addon must match the ID of the addon in the addon.xml
+* the enabled property, if set to false, will keep the addon in the list but will delete it from the repository. This is
+done in cases where you expect the addon to be fixed but until so, you do not want it part of the repo. Defaults to true
+* the update property, if set to false tells the script to skip the addon update. Defaults to true.
+
 
 To run the repository updater on Windows:
 ./run-update-and-commit.bat
