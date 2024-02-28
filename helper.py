@@ -232,12 +232,13 @@ def is_orphan(addon_name, addons):
 
 
 def delete_orphan_addon_folders(addons):
+    log("Checking for orphan folders to delete")
     count = 0
     addon_folders = [f for f in os.listdir(repo_folder) if
                      os.path.isdir(os.path.join(repo_folder, f)) and not f.startswith(".") and not f.startswith("_")]
     for addon_folder in addon_folders:
         if is_orphan(addon_folder, addons):
-            log("Deleting directory of removed/disabled addon \033[0;31m%s\033[0m" % addon_folder)
+            log("Deleting \033[0;31m%s\033[0m" % addon_folder)
             shutil.rmtree(os.path.join(repo_folder, addon_folder))
             count += 1
     return count
