@@ -38,12 +38,12 @@ def get_addons_list():
 
 
 def get_remote_addon_version_string(addon):
-    if "github" not in addon["url"]:
-        return None
+    remote_url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], addon["name"])
+    if "gitlab" in addon["url"]:
+        remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon["name"])
 
     try:
-        url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], addon["name"])
-        res = requests.get(url, verify=False)
+        res = requests.get(remote_url, verify=False)
         xml = etree.fromstring(res.content)
         return xml.get('version')
     except Exception as ex:
@@ -61,7 +61,7 @@ def get_addon_version_from_xml_file(addon_xml_path):
     return version_string
 
 
-def get_addon_version(version_string):
+def get_version_obj(version_string):
     try:
         return version.parse(version_string)
     except InvalidVersion:
@@ -81,8 +81,8 @@ def is_updated(addon):
     local_addon_version_string = get_addon_version_from_xml_file(addon["xmlfile"])
     remote_addon_version_string = get_remote_addon_version_string(addon)
     log("Local version is %s, remote version is %s" % (local_addon_version_string, remote_addon_version_string))
-    local_addon_version = get_addon_version(local_addon_version_string)
-    remote_addon_version = get_addon_version(remote_addon_version_string)
+    local_addon_version = get_version_obj(local_addon_version_string)
+    remote_addon_version = get_version_obj(remote_addon_version_string)
 
     if not local_addon_version and not remote_addon_version:
         log("Unable to detect local and remote addon versions. Updating it.")
@@ -119,13 +119,10 @@ def download_from_url(url):
     file_name = None
     try:
         r = requests.get(url, verify=False, timeout=30, headers={
-            'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0'})
-        rh = r.headers.get('content-disposition')
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/121.0.0.0 Safari/537.36'})
         if r.status_code == 200:
-            if rh:
-                file_name = os.path.join(tmp_path, rh.split('filename=')[1])
-            else:
-                file_name = os.path.join(tmp_path, url.split('/')[-1])
+            file_name = os.path.join(tmp_path, url.split('/')[-1])
             log("Downloading: %s" % file_name)
             with open(file_name, "wb") as code:
                 code.write(r.content)
@@ -240,7 +237,7 @@ def delete_orphan_addon_folders(addons):
                      os.path.isdir(os.path.join(repo_folder, f)) and not f.startswith(".") and not f.startswith("_")]
     for addon_folder in addon_folders:
         if is_orphan(addon_folder, addons):
-            log("Deleting directory of removed addon \033[0;31m%s\033[0m" % addon_folder)
+            log("Deleting directory of removed/disabled addon \033[0;31m%s\033[0m" % addon_folder)
             shutil.rmtree(os.path.join(repo_folder, addon_folder))
             count += 1
     return count
