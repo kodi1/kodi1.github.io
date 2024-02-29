@@ -1,68 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.eurosportplayer" version="13.2.2+matrix.0" name="Eurosport Player" provider-name="MRLB">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.inputstreamhelper" version="0.5.2"/>
-		<import addon="script.module.requests"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <news>
-			IMPORTANT:
-			Please enter your login-cookie into line 9 of resources/settings.xml as default-value (see manuel)
-			v.13.2.2+matrix.0 (2023-01-20):
-			- Kodi 20 support
-			v.13.2.1+matrix.1 (2021-03-13):
-			- fixed that stream starts again
-			v.13.2.0+matrix.1 (2021-02-27):
-			- added stream selection
-			v.13.1.13 (2021-02-23):
-			- Kodi 19 ready
-			v.13.1.12 (2021-01-24):
-			- added more stream-information into the interface
-			v.13.1.11 (2020-12-29):
-			- fixed error with eurosport 2 and added cookie to setting.xml
-			v.13.1.10 (2020-09-26):
-			- fixed useragent error
-			v.13.1.9 (2020-09-26):
-			- fixed issue with header
-			v.13.1.8 (2020-05-16):
-			- fixed issue with date/time
-			v.13.1.7 (2020-05-11):
-			- fixed issue with georestrictionscheck
-			v.13.1.6 (2020-01-31):
-			- fixed issue with missing secondary title
-			v.13.1.5 (2020-01-25):
-			- shorted events (time)
-			v13.1.4 (2020-01-12):
-			- added error handling if verifiedHomeTerritory is not available
-			v13.1.3 (2020-01-12):
-			- added error handling for false cookie
-			v13.1.2 (2020-01-05):
-			- highlight liveevents at schedule
-			v13.1.1 (2020-01-05):
-			- added schedule
-			v13.1.0 (2020-01-01):
-			- issues with android devices solved
-			- archive added
-			v13.0.0 (2019-12-31):
-			- first initial. Please enter your login-cookie into line 120 of default.py
-        </news>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-        </assets>        
-        <summary lang="de_DE">Eurosport live, jederzeit und überall</summary>
-        <description lang="de_DE">Eurosport Player ist der Eurosport-Abonnementservice, mit dem Sie vollständigen und unbegrenzten LIVE- und On-Demand-Zugriff auf die Eurosport-Kanäle und exklusive Inhalte erhalten.</description>
-        <disclaimer lang="de_DE">Inoffizielles Addon - Benutzung auf eigene Gefahr</disclaimer>
-        <summary lang="en_GB">Watch Eurosport Live Anytime, Anywhere</summary>
-        <description lang="en_GB">Eurosport Player is the Eurosport subscription service to enjoy full and unlimited access to the Eurosport channels and exclusive content LIVE and on demand.</description>
-        <disclaimer lang="en_GB">Unofficial Addon - Use at your own risk</disclaimer>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <website>https://www.eurosportplayer.com</website>
-    </extension>
+<addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.0" provider-name="sailor">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Radio-Browser</summary>
+    <summary lang="bg">Radio-Browser</summary>
+    <summary lang="de">Radio-Browser</summary>
+    <description lang="en">Directory of radio stations that uses www.radio-browser.info as source.
+
+If you miss your favourite station, just go to www.radio-browser.info and add it yourself. It is a wiki like system.</description>
+    <description lang="bg">Колекция от радио станции, с източник www.radio-browser.info
+
+Ако любимата ви станция не е в списъка, можете да я добавите като посетите www.radio-browser.info</description>
+    <description lang="de">Verzeichnis von Radio-Stationen das www.radio-browser.info als Quelle nutzt.
+
+Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info und füge sie für alle Benutzer hinzu!</description>
+    <license>GNU General Public License, Version 3</license>
+    <website>https://www.radio-browser.info</website>
+    <source>https://github.com/segler-alex/kodi-radio-browser</source>
+    <email>segler_alex@web.de</email>
+  </extension>
 </addon>

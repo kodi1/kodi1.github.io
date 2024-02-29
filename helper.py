@@ -38,7 +38,10 @@ def get_addons_list():
 
 
 def get_remote_addon_xml_url(addon):
-    remote_url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], addon["name"])
+    remote_url = None
+    if "github.com" in addon["url"]:
+        repo_name = addon.get("repo_name", addon["name"])
+        remote_url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], repo_name)
     if "gitlab.com" in addon["url"]:
         remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon["name"])
     elif "martinstz.com" in addon["url"]:
