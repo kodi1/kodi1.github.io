@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
+<?xml version='1.0' encoding='UTF-8'?>
+<addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.10">
   <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
-    <import addon="script.module.html5lib" version="0.999.0"/>
-    <import addon="script.module.garepobg" version="0.1.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodibgcommon" version="1.0.0"/>
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
+  <extension library="lib" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <summary>KodiBG common addon functions</summary>
+    <description>KodiBG common addon functions</description>
+    <source>https://github.com/harrygg/script.module.kodibgcommons</source>
     <platform>all</platform>
-    <language>bg</language>
-    <summary>Summary for "Btv Plus"</summary>
-    <description>Description for "Btv Plus"</description>
-    <forum>https://kodibg.org/forum/thread-145.html</forum>
-    <website>https://github.com/harrygg/plugin.video.btvplus</website>
-  </extension>
+    <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
+  <news>[B]Version v1.0.0[/B]
+- Initial version</news>
+</extension>
 </addon>

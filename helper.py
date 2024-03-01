@@ -8,19 +8,24 @@ import tempfile
 import zipfile
 import time
 import xml.etree.ElementTree as etree
-
 import requests
-from packaging import version
-from packaging.version import InvalidVersion
-from packaging_legacy import version as legacy_version
 
-readme_text = "Last updated addons:  \n"
+force_global_update = False
 repo_folder = os.path.join(os.getcwd(), "repo")
 requests.packages.urllib3.disable_warnings()
-tmp_path = tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
+
+
+def get_temp_path():
+    """
+    Returns the temp folder where all addons will be extracted
+    """
+    return tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
 
 
 def get_addons_list():
+    """
+    Loads the list of addons from addons.json and returns ONLY the enabled addons
+    """
     log("Loading addons list from addons.json")
     addons = json.load(open('addons.json'))
     enabled_addons = []
@@ -37,23 +42,28 @@ def get_addons_list():
     return enabled_addons
 
 
-def get_remote_addon_xml_url(addon):
-    remote_url = None
-    if "github.com" in addon["url"]:
-        repo_name = addon.get("repo_name", addon["name"])
-        remote_url = "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], repo_name)
-    if "gitlab.com" in addon["url"]:
-        remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon["name"])
-    elif "martinstz.com" in addon["url"]:
-        remote_url = "https://martinstz.com/repo/addon.xml"
-    elif "andromeda.eu.org" in addon["url"]:
-        remote_url = "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], addon)
-    return remote_url
+def build_remote_addon_xml_url(addon):
+    """
+    Builds the URL to the remote addon.xml. Currently supports only github, gitlab
+    """
+    repo_name = addon.get("repo_name") if addon.get("repo_name") else addon["name"]
+
+    if addon["provider"] == "github":
+        return "https://raw.githubusercontent.com/%s/%s/master/addon.xml" % (addon["owner"], repo_name)
+    elif addon["provider"] == "gitlab":
+        return "https://gitlab.com/%s/%s/-/raw/master/addon.xml" % (addon["owner"], repo_name)
+    raise Exception("Unknown addon provider for %s" % addon["name"])
 
 
 def get_remote_addon_version_string(addon):
-    remote_url = get_remote_addon_xml_url(addon)
     try:
+        remote_url = addon.get("remote_xml_url")
+        if not remote_url:
+            remote_url = build_remote_addon_xml_url(addon)
+            if not remote_url:
+                log("No remote xml provided for version comparison")
+                return None
+
         res = requests.get(remote_url, verify=False)
         xml = etree.fromstring(res.content)
         return xml.get('version')
@@ -72,18 +82,11 @@ def get_addon_version_from_xml_file(addon_xml_path):
     return version_string
 
 
-def get_version_obj(version_string):
-    try:
-        return version.parse(version_string)
-    except InvalidVersion:
-        return legacy_version.parse(version_string)
-    except Exception as ex:
-        log(ex)
-        return None
-
-
 def is_updated(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
+    if force_global_update:
+        log("Force updating all addons due to force_global_update=True")
+        return True
     if addon.get("force_update", False):
         log("Force updating addon due to addon setting force_update=True")
         return True
@@ -91,52 +94,61 @@ def is_updated(addon):
         log("Skipping automatic update as update property is disabled\n")
         return False
 
-    log("Checking for new versions")
-    local_addon_version_string = get_addon_version_from_xml_file(addon["xmlfile"])
-    remote_addon_version_string = get_remote_addon_version_string(addon)
-    log("Local version is %s, remote version is %s" % (local_addon_version_string, remote_addon_version_string))
-    local_addon_version = get_version_obj(local_addon_version_string)
-    remote_addon_version = get_version_obj(remote_addon_version_string)
+    log("Checking for addon new versions")
+    addon["version"] = get_addon_version_from_xml_file(addon["xmlfile"])
+    addon["new_version"] = get_remote_addon_version_string(addon)
 
-    if not local_addon_version and not remote_addon_version:
-        log("Unable to detect local and remote addon versions. Updating it.")
+    if addon.get("version") is None and addon.get("new_version") is None:
+        log("Unable to detect local and remote addon versions. Updating addon anyway.")
         return True
 
-    if not local_addon_version or not remote_addon_version:
-        log("Due to version parsing failure, comparing version strings")
-        if local_addon_version_string == remote_addon_version_string:
-            log("Version strings are equal, no update required")
-            return False
-        log("Could not compare version strings. \033[1;32mUpdating addon anyway!\033[0m\n")
-        return True
-
-    if local_addon_version < remote_addon_version:
-        addon["old_version"] = local_addon_version
-        addon["new_version"] = remote_addon_version
-        addon["update_time"] = time.strftime("%d.%m.%Y")
-        log("\033[1;32mNew version for addon %s will be downloaded!\033[0m\n" % addon["name"])
-
+    log("Local version is %s, remote version is %s" % (addon["version"], addon["new_version"]))
+    if addon.get("version") != addon.get("new_version"):
+        log("\033[1;32mRemote version for addon %s is different than local. Updating addon!\033[0m" % addon["name"])
         return True
 
     log("\033[0;31mNo new version available!\033[0m\n")
     return False
 
 
-def download(addon):
-    local_file = download_from_url(addon["url"])
+def build_download_url(addon):
+    """
+    Build addon zip url given the provider - github or gitlab
+    """
+    provider = addon.get("provider")
+
+    if provider:
+        repo_name = addon.get("repo_name")
+        if not repo_name:
+            repo_name = addon["name"]
+
+        if provider.lower() == "github":
+            return "https://github.com/%s/%s/archive/master.zip" % (addon["owner"], repo_name)
+        elif provider.lower() == "gitlab":
+            return "https://gitlab.com/%s/%s/-/archive/master/weather.multi-master.zip" % (addon["owner"], repo_name)
+
+    raise Exception("No provider provided for addon %s" % addon["name"])
+
+
+def download(addon, temp_folder):
+
+    url = addon.get('url')
+    if url is None:
+        url = build_download_url(addon)
+    local_file = download_from_url(url, temp_folder)
     if not local_file:
-        local_file = download_from_url(addon["url"])
+        local_file = download_from_url(url, temp_folder)
     return local_file
 
 
-def download_from_url(url):
+def download_from_url(url, temp_folder):
     file_name = None
     try:
         r = requests.get(url, verify=False, timeout=30, headers={
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/121.0.0.0 Safari/537.36'})
         if r.status_code == 200:
-            file_name = os.path.join(tmp_path, url.split('/')[-1])
+            file_name = os.path.join(temp_folder, url.split('/')[-1])
             log("Downloading: %s" % file_name)
             with open(file_name, "wb") as code:
                 code.write(r.content)
@@ -165,7 +177,7 @@ def resolve_addon_xml_folder(extract_folder):
 
 def get_temp_addon_extract_folder(addon_temp_file):
     temp_file_name = os.path.splitext(addon_temp_file)[0]
-    return os.path.join(tmp_path, temp_file_name)
+    return os.path.join(get_temp_path(), temp_file_name)
 
 
 def extract_addon_archive_to_folder(temp_addon_file, temp_addon_extract_folder):
@@ -190,6 +202,14 @@ def delete_temp_files(temp_addon_file):
         os.unlink(temp_addon_file)
     except:
         pass
+
+
+def delete_folder(folder):
+    try:
+        log("Deleting addon temp folder")
+        shutil.rmtree(folder)
+    except Exception as er:
+        log(er)
 
 
 def extract_addon_content(addon_name, addon_temp_file):
@@ -247,6 +267,9 @@ def generate_addonsxml(addons):
     addons_xml_content = etree.Element("addons")
     for addon in addons:
         addon_xml_content = get_xml_content(addon["xmlfile"])
+        addon_id = addon_xml_content.get('id')
+        if addon["name"] != addon_id:
+            raise Exception("ERROR addon name/id mismatch %s/%s" % (addon["name"], addon_id))
         if addon_xml_content:
             addons_xml_content.append(addon_xml_content)
     etree.ElementTree(addons_xml_content).write(os.path.join(repo_folder, "addons.xml"), encoding="utf8")
@@ -283,9 +306,8 @@ def update_readme(updated_addons):
     log("Updating README.md")
     with open("README.md", "w") as file_handle:
         for updated_addon in updated_addons:
-            text = "%s | updated to %s (previously %s)  on %s \n" % (
-                updated_addon["name"], updated_addon.get("new_version"), updated_addon.get("old_version"),
-                updated_addon.get("update_time"))
+            text = "%s | updated to %s on %s \n" % (
+                updated_addon["name"], updated_addon.get("new_version"), updated_addon.get("update_time"))
             print(text)
             file_handle.write(text)
 

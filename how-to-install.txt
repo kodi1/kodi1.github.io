@@ -16,7 +16,6 @@ Here is an example:
 
 * the url property must point to the absolute path of the addon zip file without any redirections.
 * the name of the addon must match the ID of the addon in the addon.xml
-* the repo_name is optional and should be used when the addon name in github  is different than the repo name
 * the enabled property, if set to false, will keep the addon in the list but will delete it from the repository. This is
 done in cases where you expect the addon to be fixed but until so, you do not want it part of the repo. Defaults to true
 * the update property, if set to false tells the script to skip the addon update. Defaults to true.
