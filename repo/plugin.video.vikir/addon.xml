@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.28" provider-name="Majide, Arias800">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-  	<import addon="inputstream.adaptive" version="2.1.0" />
-  	<import addon="script.module.requests" version="2.22.0" />
-  	<import addon="script.module.inputstreamhelper" version="0.3.3" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py"/>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg_BG">VIKI.COM Глобална ТВ за фенове</summary>
-  	<summary lang="en_GB">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
-  	<description lang="bg_BG">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
-  	<description lang="en_GB">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
-  	<disclaimer lang="bg_BG">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
-  	<disclaimer lang="en_GB">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
-  	<language>en</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-209.html</forum>
-  	<website>https://www.viki.com</website>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
+<addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+        <import addon="script.module.html5lib" version="0.999.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
+        <platform>all</platform>
+        <language>bg</language>
+        <description>Kodi addon for BNT</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>

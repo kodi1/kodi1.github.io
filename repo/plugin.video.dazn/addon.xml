@@ -1,79 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.dazn" version="1.96.5.0" name="DAZN" provider-name="Jin, Maven85">
+<addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
     <requires>
-        <import addon="xbmc.python" version="3.0.1"/>
-        <import addon="script.module.inputstreamhelper" version="0.5.0"/>
-        <import addon="script.module.kodi-six" version="0.1.3.1"/>
-        <import addon="script.module.six" version="1.14.0"/>
-        <import addon="script.common.plugin.cache" version="2.6.1.1"/>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+        <import addon="script.module.html5lib" version="0.999.0"/>
+        <import addon="script.module.requests"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="startup.py"/>
     <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <news>
-- fixed playback of some streams
-- fixed error 404 when retrieving user profile
-- fixed resolution problem on android devices
-- fixed playback for Kodi Nexus
-- added the date of an event in the title
-- fixed playback
-        </news>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-            <screenshot>resources/media/screenshot-01.jpg</screenshot>
-            <screenshot>resources/media/screenshot-02.jpg</screenshot>
-            <screenshot>resources/media/screenshot-03.jpg</screenshot>
-            <screenshot>resources/media/screenshot-04.jpg</screenshot>
-        </assets>
-        <summary lang="de_DE">ERLEBE DEINEN SPORT. LIVE UND AUF ABRUF.</summary>
-        <description lang="de_DE">
-DAZN ist ein live und on-demand Sportstreaming-Dienst. 
-Du kannst jetzt Sportevents anschauen, wann immer es dir passt. Jederzeit. Überall.
-        </description>
-        <disclaimer lang="de_DE">Inoffizielles Addon - Benutzung auf eigene Gefahr</disclaimer>
-        <summary lang="en_GB">WATCH SPORTS. LIVE AND ON-DEMAND.</summary>
-        <description lang="en_GB">
-With DAZN, you can watch your favourite sport, live and on demand, at a time that suits you. 
-Anytime. Anywhere.
-        </description>
-        <disclaimer lang="en_GB">Unofficial Addon - Use at your own risk</disclaimer>
-        <summary lang="en_US">WATCH SPORTS. LIVE AND ON-DEMAND.</summary>
-        <description lang="en_US">
-With DAZN, you can watch your favourite sport, live and on demand, at a time that suits you. 
-Anytime. Anywhere.
-        </description>
-        <disclaimer lang="en_US">Unofficial Addon - Use at your own risk</disclaimer>
-        <summary lang="es_ES">VER ESTE DEPORTE. EN VIVO Y A LA CARTA.</summary>
-        <description lang="es_ES">
-Con DAZN, puedes ver tus deportes favoritos cuando lo desees.
-Cuando quieras. Donde quieras.
-        </description>
-        <disclaimer lang="es_ES">Complemento no oficial - Use bajo su propio riesgo</disclaimer>
-        <summary lang="fr_CA">REGARDER LES SPORTS. VIVANT OU PLUS TARD.</summary>
-        <description lang="fr_CA">
-Regardez avec DAZN vos sports préférés à la demande.
-Quand voulez. Où vous voulez.
-        </description>
-        <disclaimer lang="fr_CA">Addiciel non officiel - Utilisez à vos risques et périls</disclaimer>
-        <summary lang="fr_FR">REGARDER LES SPORTS. VIVANT OU PLUS TARD.</summary>
-        <description lang="fr_FR">
-Regardez avec DAZN vos sports préférés à la demande.
-Quand voulez. Où vous voulez.
-        </description>
-        <disclaimer lang="fr_FR">Addiciel non officiel - Utilisez à vos risques et périls</disclaimer>
-        <summary lang="it_IT">GUARDARE SPORT. LIVE E A RICHIESTA.</summary>
-        <description lang="it_IT">
-Con DAZN puoi guardare i tuoi eventi sportivi preferiti a tuo piacimento.
-Quando vuoi. Dove vuoi.
-        </description>
-        <disclaimer lang="it_IT">Addon non ufficiale - A proprio rischio e pericolo</disclaimer>
+        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
         <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <website>https://www.dazn.com</website>
-        <source>https://github.com/Maven85/plugin.video.dazn</source>
+        <language>bg</language>
+        <description>Kodi addon for BNT</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
     </extension>
 </addon>

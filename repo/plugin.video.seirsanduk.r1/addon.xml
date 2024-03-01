@@ -1,37 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.2.0" provider-name="zynobg [at] gmail.com">
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.6" provider-name="HarryDoubleG">
   <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.xbmcswift2" version="1.1.1" />
+  	<import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.garepobg" version="0.1.5"/>
+    <import addon="script.module.kodibgcommon" version="1.0.10"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
+  	<provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB"></summary>
-    <description lang="en_GB">www.SEIRSANDUK.com</description>
-    <disclaimer lang="en_GB"></disclaimer>
-    <language>en</language> <!-- the language of the videos or other content the plugin provides, may be omitted in case the addon does not provide any content -->
-    <platform>all</platform>
-    <license>GPL-3.0</license>
-    <forum></forum> <!-- may be omitted  -->
-    <website>http://www.SEIRSANDUK.com</website> <!-- the url of the website that contains the videos (or the official website of your plugin). May be omitted.  -->
-    <email>zinobg@gmail.com</email> <!-- may be left omitted  -->
-    <source>http://github.com/zinobg/plugin.video.seirsanduk.r1</source>
-    <news>v4.1.1 (02/03/2020)
-			- Using another way of playing channels with xbmcswift2 plugin. 
-			- TV channels open with one click
-		  v4.1.3 (03/04/2020)
-			- Added a new domain for channel listing
-		  v4.1.4 (05/04/2020)
-			- Added a new domain for channel listing
-    </news>
-    <assets>
-        <icon>resources/icon.png</icon>
-        <fanart>resources/fanart.jpg</fanart>
-        <banner></banner>
-        <clearlogo></clearlogo>
-        <screenshot></screenshot>
-    </assets>
+  	<summary lang="bg">Приставка за гледане на безплатните български телевизионни канали</summary>
+  	<summary lang="en">Addon for watching the free bulgarian TV channels</summary>
+	<description lang="bg">Приставка за гледане на безплатните български телевизионни канали.</description>
+	<description lang="en">Addon for watching the free bulgarian TV channels</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-1.html</forum>
+  	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
+  	<email>harrygg@gmail.com</email>
   </extension>
 </addon>

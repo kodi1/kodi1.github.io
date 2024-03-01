@@ -84,6 +84,9 @@ def get_version_obj(version_string):
 
 def is_updated(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
+    if addon.get("force_update", False):
+        log("Force updating addon due to addon setting force_update=True")
+        return True
     if not addon.get("update", True):
         log("Skipping automatic update as update property is disabled\n")
         return False
@@ -144,9 +147,10 @@ def download_from_url(url):
     return file_name
 
 
-def get_addon_xml_path(extract_folder):
+def resolve_addon_xml_folder(extract_folder):
     """
     Function that provides the absolute path of the extracted addon folder containing the addon.xml
+    It is required as some addon are nested into a separate folder
     """
     for folder in os.listdir(extract_folder):
         if folder.startswith(".") or folder.startswith("_"):
@@ -156,7 +160,7 @@ def get_addon_xml_path(extract_folder):
             continue
         addon_xml_path = os.path.join(absolute_folder_path, "addon.xml")
         if os.path.isfile(addon_xml_path):
-            return addon_xml_path
+            return absolute_folder_path
 
 
 def get_temp_addon_extract_folder(addon_temp_file):
@@ -171,6 +175,8 @@ def extract_addon_archive_to_folder(temp_addon_file, temp_addon_extract_folder):
     """
     log("Extracting addon to temp folder %s" % temp_addon_extract_folder)
     zipfile.ZipFile(temp_addon_file).extractall(temp_addon_extract_folder)
+
+    return resolve_addon_xml_folder(temp_addon_extract_folder)
 
 
 def create_new_addon_file_name(addon_name, addon_version):
@@ -189,13 +195,11 @@ def delete_temp_files(temp_addon_file):
 def extract_addon_content(addon_name, addon_temp_file):
     """
     Extracts addon and renames it as per the version in addon.xml
-    @returns: A tuple containing the path to the addon archive zip and the path to the addon.xml
+    @returns: A the path to the addon's addon.xml
     """
-    personal_addon_extract_folder = get_temp_addon_extract_folder(addon_temp_file)
-    extract_addon_archive_to_folder(addon_temp_file, personal_addon_extract_folder)
-    temp_addon_xml_path = get_addon_xml_path(personal_addon_extract_folder)
-
-    return temp_addon_xml_path
+    addon_extract_folder = get_temp_addon_extract_folder(addon_temp_file)
+    folder_containing_addon_xml = extract_addon_archive_to_folder(addon_temp_file, addon_extract_folder)
+    return folder_containing_addon_xml
 
 
 def copy_file(source_file, destination_file):
@@ -204,8 +208,8 @@ def copy_file(source_file, destination_file):
     if not os.path.exists(dst_folder):
         log("Creating addon folder as it does not exist %s" % dst_folder)
         os.makedirs(dst_folder)
-
-    shutil.copy(source_file, destination_file)
+    if os.path.isfile(source_file):
+        shutil.copy(source_file, destination_file)
 
 
 def is_orphan(addon_name, addons):

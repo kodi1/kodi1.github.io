@@ -1,0 +1,9 @@
+v1.0.0 (2016-06-19)
+- First working version with basic lists for tags, countries, top 100s
+v1.1.0 (2018-12-17)
+- Add search function
+- Add in-app favorites menu
+v1.2.0 (2020-06-21)
+- Use new api (api.radio-browser.info)
+v1.3.0 (2021-02-22)
+- Update for Kodi v19

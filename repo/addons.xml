@@ -1,26 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<addons><addon id="weather.multi" name="Multi Weather" version="0.0.25" provider-name="ronie">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-		<import addon="script.openweathermap.maps" version="1.0.4" />
-		<import addon="script.module.requests" version="2.22.0+matrix.1" />
-		<import addon="script.module.dateutil" version="2.8.1+matrix.1" />
-	</requires>
-	<extension point="xbmc.python.weather" library="default.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Weather forecast from several providers</summary>
-		<description lang="en_GB">Weather forecast provided by Yahoo, Weatherbit and Openweathermap</description>
-		<platform>all</platform>
-		<license>GPL-2.0-only</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=352028</forum>
-		<source>https://gitlab.com/ronie/weather.multi/</source>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-		</assets>
-		<news>- fix yahoo weather again</news>
-	</extension>
-</addon><addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.0" provider-name="sailor">
+<addons><addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.0" provider-name="sailor">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -46,24 +25,6 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
     <source>https://github.com/segler-alex/kodi-radio-browser</source>
     <email>segler_alex@web.de</email>
   </extension>
-</addon><addon id="repository.mar33" name="Mar33 Repository" version="3.3.33" provider-name="MartinStZ">
-    <extension point="xbmc.addon.repository" name="Mar33 Repository">
-        <dir>
-            <info compressed="false">http://martinstz.com/_repo/addons.xml</info>
-            <checksum>http://martinstz.com/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">http://martinstz.com/_repo/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repo from MartinStz</summary>
-        <description>For installing videos, musics and subtitles addons</description>
-        <disclaimer />
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
 </addon><addon id="repository.majide" name="Majide Add-on repository" version="0.20.6" provider-name="Majide">
 	<extension point="xbmc.addon.repository" name="Majide Add-on repository">
 		
@@ -102,6 +63,45 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
+</addon><addon id="weather.multi" name="Multi Weather" version="0.0.25" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.openweathermap.maps" version="1.0.4" />
+		<import addon="script.module.requests" version="2.22.0+matrix.1" />
+		<import addon="script.module.dateutil" version="2.8.1+matrix.1" />
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Weather forecast from several providers</summary>
+		<description lang="en_GB">Weather forecast provided by Yahoo, Weatherbit and Openweathermap</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=352028</forum>
+		<source>https://gitlab.com/ronie/weather.multi/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+		<news>- fix yahoo weather again</news>
+	</extension>
+</addon><addon id="repository.mar33" name="Mar33 Repository" version="3.3.33" provider-name="MartinStZ">
+    <extension point="xbmc.addon.repository" name="Mar33 Repository">
+        <dir>
+            <info compressed="false">http://martinstz.com/_repo/addons.xml</info>
+            <checksum>http://martinstz.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://martinstz.com/_repo/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repo from MartinStz</summary>
+        <description>For installing videos, musics and subtitles addons</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon><addon id="service.sleeptimer" name="Sleep Timer" version="2.1.9" provider-name="enen92, Solo0815">
     <requires>
 		<import addon="xbmc.addon" version="14.0.0" />
@@ -225,45 +225,46 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.voyobg" name="Voyo Player (Само ТВ Канали и Спорт)" version="1.0.2" provider-name="HarryDoubleG, stanislav-m">
-  <requires>
-  	<import addon="xbmc.python" version="2.14.0" />
-		<import addon="script.module.requests" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
-    <import addon="script.module.garepobg" version="0.1.4" />
-    
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание на живо от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>  	
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-  	<website>http://kodibg.org/forum</website>
-  	<email>harrygg@gmail.com</email>
-  </extension>
-</addon><addon id="script.module.kodibgcommon" name="KodiBG commonly used addon functions" provider-name="HarryDoubleG" version="1.0.10">
+</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.html5lib" version="0.999.0" />
+    <import addon="script.module.garepobg" version="0.1.4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodibgcommon" version="1.0.0" />
   </requires>
-  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
   <extension point="xbmc.addon.metadata">
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-    <summary>KodiBG common addon functions</summary>
-    <description>KodiBG common addon functions</description>
-    <source>https://github.com/harrygg/script.module.kodibgcommons</source>
     <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
-  <news>[B]Version v1.0.0[/B]
-- Initial version</news>
-</extension>
+    <language>bg</language>
+    <summary>Summary for "Btv Plus"</summary>
+    <description>Description for "Btv Plus"</description>
+    <forum>https://kodibg.org/forum/thread-145.html</forum>
+    <website>https://github.com/harrygg/plugin.video.btvplus</website>
+  </extension>
+</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.beautifulsoup4" version="4.3.2" />
+    <import addon="script.module.html5lib" version="0.999.0" />
+    <import addon="script.module.garepobg" version="0.1.4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodibgcommon" version="1.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>bg</language>
+    <summary>Summary for "Btv Plus"</summary>
+    <description>Description for "Btv Plus"</description>
+    <forum>https://kodibg.org/forum/thread-145.html</forum>
+    <website>https://github.com/harrygg/plugin.video.btvplus</website>
+  </extension>
 </addon><addon id="plugin.program.pvr.playlist.helper" name="PVR Playlist Helper" version="1.0.7" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -285,39 +286,90 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
         <forum>https://kodibg.org/forum/</forum>
         <website>https://github.com/harrygg/plugin.program.pvr.playlist.helper</website>
   </extension>
-</addon><addon id="plugin.video.seirsanduk.r1" name="SEIRSANDUK R1" version="4.2.0" provider-name="zynobg [at] gmail.com">
+</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.6" provider-name="HarryDoubleG">
   <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.xbmcswift2" version="1.1.1" />
+  	<import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.garepobg" version="0.1.5" />
+    <import addon="script.module.kodibgcommon" version="1.0.10" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на безплатните български телевизионни канали</summary>
+  	<summary lang="en">Addon for watching the free bulgarian TV channels</summary>
+	<description lang="bg">Приставка за гледане на безплатните български телевизионни канали.</description>
+	<description lang="en">Addon for watching the free bulgarian TV channels</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-1.html</forum>
+  	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.6" provider-name="HarryDoubleG">
+  <requires>
+  	<import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.garepobg" version="0.1.5" />
+    <import addon="script.module.kodibgcommon" version="1.0.10" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="bg">Приставка за гледане на безплатните български телевизионни канали</summary>
+  	<summary lang="en">Addon for watching the free bulgarian TV channels</summary>
+	<description lang="bg">Приставка за гледане на безплатните български телевизионни канали.</description>
+	<description lang="en">Addon for watching the free bulgarian TV channels</description>
+  	<disclaimer lang="bg">Някои елементи на тази приставка, може да нямат уредени авторски права в България. Името, логото, интернет адресите са собственост на телевизионните компании. Приставката се разпространява под GPL2 лиценз.</disclaimer>
+  	<disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  	<language>Bulgarian</language>
+  	<platform>all</platform>
+  	<forum>https://kodibg.org/forum/thread-1.html</forum>
+  	<website>https://github.com/harrygg/plugin.video.free.bgtvs/</website>
+  	<email>harrygg@gmail.com</email>
+  </extension>
+</addon><addon id="plugin.video.bgtvon" name="BGTV-ON" version="6.1.0" provider-name="zinobg [at] gmail.com">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />  
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB" />
-    <description lang="en_GB">www.SEIRSANDUK.com</description>
-    <disclaimer lang="en_GB" />
-    <language>en</language> 
     <platform>all</platform>
     <license>GPL-3.0</license>
-    <forum /> 
-    <website>http://www.SEIRSANDUK.com</website> 
-    <email>zinobg@gmail.com</email> 
-    <source>http://github.com/zinobg/plugin.video.seirsanduk.r1</source>
-    <news>v4.1.1 (02/03/2020)
-			- Using another way of playing channels with xbmcswift2 plugin. 
-			- TV channels open with one click
-		  v4.1.3 (03/04/2020)
-			- Added a new domain for channel listing
-		  v4.1.4 (05/04/2020)
-			- Added a new domain for channel listing
+    <language>en</language>
+    <summary lang="en_GB">Video plugin for bgtv-on.com http://www.bgtv-on.com/.</summary>
+    <description lang="en_GB">This plugin provides access to tv streams from http://www.bgtv-on.com/.
+Note: http://www.bgtv-on.com/ account is required.</description>
+    <disclaimer lang="en_GB">You have to sign up and pay to access http://www.bgtv-on.com/ TV streams.</disclaimer>
+    <email>zinobg@gmail.com</email>
+    <website>http://www.bgtv-on.com/</website>
+    <source>https://github.com/zinobg/plugin.video.bgtvon</source>
+   <news>v4.2.2 (02/03/2020)
+      		[new] The plugin is re-written using xbmcswift2 plugin, which provides some new features.
+			[fix] Some fixes into addon.xml file.
+		  v4.2.3 (10/03/2020)
+			[new] added contextmenu() on the place of select(), for the newer versions of Kodi. Older version will still work with select()
+		  v4.2.4 (12/03/2020)
+			[fix] Small bugfixes
+		  v5.0.0 (TBD)
+			[new] TBD
+		  v5.0.1 (bugfix)
+		    [fix] a problem with the first login is fixed
+          v5.0.2 (fix)
+            [fix] the problem with recorded videos
+          v6.1.0
+            [new] Python3 compatible
     </news>
     <assets>
-        <icon>resources/icon.png</icon>
-        <fanart>resources/fanart.jpg</fanart>
-        <banner />
-        <clearlogo />
-        <screenshot />
+      <icon>resources/png/icon.png</icon>
+      <fanart>resources/png/fanart.jpg</fanart>
+      <banner />
+      <clearlogo />
+      <screenshot />
     </assets>
   </extension>
 </addon><addon id="plugin.video.bgtvon" name="BGTV-ON" version="6.1.0" provider-name="zinobg [at] gmail.com">
@@ -362,32 +414,6 @@ Note: http://www.bgtv-on.com/ account is required.</description>
       <screenshot />
     </assets>
   </extension>
-</addon><addon id="plugin.video.voyobgvod" name="Voyo VOD" version="0.2.3" provider-name="stanislav-m(sTa)">
-  <requires>
-	<import addon="script.module.beautifulsoup4" version="4.3.2" />
-	<import addon="script.module.requests" version="2.9.1" />
-	<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events and video on demand from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-	<website>http://kodibg.org/forum</website>
-	<assets>
-        	<icon>icon.png</icon>
-        	<fanart />
-        	<banner /> 
-        	<clearlogo /> 
-        	<screenshot /> 
-    	</assets>
-  </extension>
 </addon><addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -407,113 +433,43 @@ Note: http://www.bgtv-on.com/ account is required.</description>
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="plugin.video.vikir" name="VIKI®" version="0.19.4.28" provider-name="Majide, Arias800">
-  <requires>
-  	<import addon="xbmc.python" version="3.0.0" />
-  	<import addon="inputstream.adaptive" version="2.1.0" />
-  	<import addon="script.module.requests" version="2.22.0" />
-  	<import addon="script.module.inputstreamhelper" version="0.3.3" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" />
-  <extension point="xbmc.addon.metadata">
-  	<summary lang="bg_BG">VIKI.COM Глобална ТВ за фенове</summary>
-  	<summary lang="en_GB">VIKI.COM GLOBAL TV POWERED BY FANS</summary>
-  	<description lang="bg_BG">[B][COLOR red]Преди употреба, задайте предпочитанията си в настройките на приставката![/B][/COLOR] Във VIKI.COM гледайте най-добрите световни телевизионни предавания, филми, развлекателни новини и друго съдържание във високо качество, достъпно на повече от 150 езика в една общност от запалени фенове. Заедно, ние сме за премахването на бариерите, които стоят между голямото забавление и неговите фенове, без значение къде са те!</description>
-  	<description lang="en_GB">[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!</description>
-  	<disclaimer lang="bg_BG">Това не е официална приставка! Ако официално приложение е достъпно за вашата платформа, използвайте него вместо тази приставка. Всички права върху съдържанието са запазени от Rakuten.</disclaimer>
-  	<disclaimer lang="en_GB">This is not an official addon! If the official APP is available for your platform, use it instead of this addon. All rights on content are reserved by Rakuten.</disclaimer>
-  	<language>en</language>
-  	<platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  	<forum>https://kodibg.org/forum/thread-209.html</forum>
-  	<website>https://www.viki.com</website>
-	<assets>
-	   <icon>resources/icon.png</icon>
-       <fanart>resources/fanart.jpg</fanart>
-       <screenshot>resources/screenshot-01.jpg</screenshot>
-       <screenshot>resources/screenshot-02.jpg</screenshot>
-       <screenshot>resources/screenshot-03.jpg</screenshot>
-	</assets>
-  </extension>
-</addon><addon id="plugin.video.dazn" version="1.96.5.0" name="DAZN" provider-name="Jin, Maven85">
+</addon><addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
     <requires>
-        <import addon="xbmc.python" version="3.0.1" />
-        <import addon="script.module.inputstreamhelper" version="0.5.0" />
-        <import addon="script.module.kodi-six" version="0.1.3.1" />
-        <import addon="script.module.six" version="1.14.0" />
-        <import addon="script.common.plugin.cache" version="2.6.1.1" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.beautifulsoup4" version="4.3.2" />
+        <import addon="script.module.html5lib" version="0.999.0" />
+        <import addon="script.module.requests" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="startup.py" />
     <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <news>
-- fixed playback of some streams
-- fixed error 404 when retrieving user profile
-- fixed resolution problem on android devices
-- fixed playback for Kodi Nexus
-- added the date of an event in the title
-- fixed playback
-        </news>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-            <screenshot>resources/media/screenshot-01.jpg</screenshot>
-            <screenshot>resources/media/screenshot-02.jpg</screenshot>
-            <screenshot>resources/media/screenshot-03.jpg</screenshot>
-            <screenshot>resources/media/screenshot-04.jpg</screenshot>
-        </assets>
-        <summary lang="de_DE">ERLEBE DEINEN SPORT. LIVE UND AUF ABRUF.</summary>
-        <description lang="de_DE">
-DAZN ist ein live und on-demand Sportstreaming-Dienst. 
-Du kannst jetzt Sportevents anschauen, wann immer es dir passt. Jederzeit. Überall.
-        </description>
-        <disclaimer lang="de_DE">Inoffizielles Addon - Benutzung auf eigene Gefahr</disclaimer>
-        <summary lang="en_GB">WATCH SPORTS. LIVE AND ON-DEMAND.</summary>
-        <description lang="en_GB">
-With DAZN, you can watch your favourite sport, live and on demand, at a time that suits you. 
-Anytime. Anywhere.
-        </description>
-        <disclaimer lang="en_GB">Unofficial Addon - Use at your own risk</disclaimer>
-        <summary lang="en_US">WATCH SPORTS. LIVE AND ON-DEMAND.</summary>
-        <description lang="en_US">
-With DAZN, you can watch your favourite sport, live and on demand, at a time that suits you. 
-Anytime. Anywhere.
-        </description>
-        <disclaimer lang="en_US">Unofficial Addon - Use at your own risk</disclaimer>
-        <summary lang="es_ES">VER ESTE DEPORTE. EN VIVO Y A LA CARTA.</summary>
-        <description lang="es_ES">
-Con DAZN, puedes ver tus deportes favoritos cuando lo desees.
-Cuando quieras. Donde quieras.
-        </description>
-        <disclaimer lang="es_ES">Complemento no oficial - Use bajo su propio riesgo</disclaimer>
-        <summary lang="fr_CA">REGARDER LES SPORTS. VIVANT OU PLUS TARD.</summary>
-        <description lang="fr_CA">
-Regardez avec DAZN vos sports préférés à la demande.
-Quand voulez. Où vous voulez.
-        </description>
-        <disclaimer lang="fr_CA">Addiciel non officiel - Utilisez à vos risques et périls</disclaimer>
-        <summary lang="fr_FR">REGARDER LES SPORTS. VIVANT OU PLUS TARD.</summary>
-        <description lang="fr_FR">
-Regardez avec DAZN vos sports préférés à la demande.
-Quand voulez. Où vous voulez.
-        </description>
-        <disclaimer lang="fr_FR">Addiciel non officiel - Utilisez à vos risques et périls</disclaimer>
-        <summary lang="it_IT">GUARDARE SPORT. LIVE E A RICHIESTA.</summary>
-        <description lang="it_IT">
-Con DAZN puoi guardare i tuoi eventi sportivi preferiti a tuo piacimento.
-Quando vuoi. Dove vuoi.
-        </description>
-        <disclaimer lang="it_IT">Addon non ufficiale - A proprio rischio e pericolo</disclaimer>
+        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
         <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <website>https://www.dazn.com</website>
-        <source>https://github.com/Maven85/plugin.video.dazn</source>
+        <language>bg</language>
+        <description>Kodi addon for BNT</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="plugin.video.bntbg" name="БНТ" version="5.0.1" provider-name="BatVani">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.beautifulsoup4" version="4.3.2" />
+        <import addon="script.module.html5lib" version="0.999.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="bg">Приставка за гледане на видео от bnt.bg</summary>
+        <platform>all</platform>
+        <language>bg</language>
+        <description>Kodi addon for BNT</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
     </extension>
 </addon><addon id="plugin.video.eurosportplayer" version="13.2.2+matrix.0" name="Eurosport Player" provider-name="MRLB">
     <requires>

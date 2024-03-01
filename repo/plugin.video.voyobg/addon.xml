@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.voyobg" name="Voyo Player (Само ТВ Канали и Спорт)" version="1.0.2" provider-name="HarryDoubleG,
-stanislav-m">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
   <requires>
-  	<import addon="xbmc.python" version="2.14.0"/>
-		<import addon="script.module.requests" />
-    <import addon="script.module.kodibgcommon" version="1.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.html5lib" version="0.999.0"/>
     <import addon="script.module.garepobg" version="0.1.4"/>
-    <!-- <import addon="inputstream.adaptive" version="2.1.0"/> -->
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodibgcommon" version="1.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
-  	<provides>video</provides>
+    <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-  	<summary lang="bg">Добавка за гледане на съдържание на живо от сайта voyo.bg</summary>
-  	<summary lang="en">Addon for watching live events from voyo.bg</summary>
-	<description lang="bg">Добавката изисква активен акаунт и платен абонамент от Войо.бг.</description>
-	<description lang="en">The addon requires an active account and paid subscription at Voyo.bg</description>  	
-  	<language>bg,en</language>
-  	<platform>all</platform>
-  	<forum>http://kodibg.org/forum</forum>
-  	<website>http://kodibg.org/forum</website>
-  	<email>harrygg@gmail.com</email>
+    <platform>all</platform>
+    <language>bg</language>
+    <summary>Summary for "Btv Plus"</summary>
+    <description>Description for "Btv Plus"</description>
+    <forum>https://kodibg.org/forum/thread-145.html</forum>
+    <website>https://github.com/harrygg/plugin.video.btvplus</website>
   </extension>
 </addon>
