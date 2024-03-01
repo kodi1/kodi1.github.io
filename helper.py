@@ -13,13 +13,18 @@ import requests
 force_global_update = False
 repo_folder = os.path.join(os.getcwd(), "repo")
 requests.packages.urllib3.disable_warnings()
+temp_dir = None
 
 
-def get_temp_path():
+def get_temp_folder():
     """
     Returns the temp folder where all addons will be extracted
     """
-    return tempfile.mkdtemp(prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
+    global temp_dir
+    if not temp_dir:
+        temp_dir = tempfile.mkdtemp(
+            prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
+    return temp_dir
 
 
 def get_addons_list():
@@ -131,7 +136,6 @@ def build_download_url(addon):
 
 
 def download(addon, temp_folder):
-
     url = addon.get('url')
     if url is None:
         url = build_download_url(addon)
@@ -177,7 +181,7 @@ def resolve_addon_xml_folder(extract_folder):
 
 def get_temp_addon_extract_folder(addon_temp_file):
     temp_file_name = os.path.splitext(addon_temp_file)[0]
-    return os.path.join(get_temp_path(), temp_file_name)
+    return os.path.join(get_temp_folder(), temp_file_name)
 
 
 def extract_addon_archive_to_folder(temp_addon_file, temp_addon_extract_folder):

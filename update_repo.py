@@ -6,7 +6,7 @@ files_to_copy = ["addon.xml", "icon.png", "changelog.txt", "fanart.jpg"]
 
 for addon in addons:
     if should_updated(addon):
-        temp_addon_file = download(addon, get_temp_path())
+        temp_addon_file = download(addon, get_temp_folder())
         if not temp_addon_file:
             continue
         addon["update_time"] = time.strftime("%d.%m.%Y")
@@ -32,4 +32,4 @@ else:
     generate_md5_file()
     update_readme(updated_addons_list)
 
-delete_folder(get_temp_path())
+delete_folder(get_temp_folder())
