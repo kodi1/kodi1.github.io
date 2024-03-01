@@ -82,7 +82,7 @@ def get_addon_version_from_xml_file(addon_xml_path):
     return version_string
 
 
-def is_updated(addon):
+def should_updated(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
     if force_global_update:
         log("Force updating all addons due to force_global_update=True")
@@ -206,7 +206,7 @@ def delete_temp_files(temp_addon_file):
 
 def delete_folder(folder):
     try:
-        log("Deleting addon temp folder")
+        log("Deleting addon temp folder %s" % folder)
         shutil.rmtree(folder)
     except Exception as er:
         log(er)

@@ -5,7 +5,7 @@ updated_addons_list = []
 files_to_copy = ["addon.xml", "icon.png", "changelog.txt", "fanart.jpg"]
 
 for addon in addons:
-    if is_updated(addon):
+    if should_updated(addon):
         temp_addon_file = download(addon, get_temp_path())
         if not temp_addon_file:
             continue
@@ -27,9 +27,9 @@ deleted_folders_count = delete_orphan_addon_folders(addons)
 if len(updated_addons_list) == 0 and deleted_folders_count == 0:
     log("No new addons found!")
     log("Skipping repo update!")
-    sys.exit(0)
+else:
+    generate_addonsxml(addons)
+    generate_md5_file()
+    update_readme(updated_addons_list)
 
-generate_addonsxml(addons)
-generate_md5_file()
-update_readme(updated_addons_list)
 delete_folder(get_temp_path())
