@@ -39,7 +39,7 @@
   {"owner":"zinobg", "name":"plugin.video.bgtvon", "provider":"github"},
   {"owner":"stanislav-m", "name":"plugin.video.voyobgvod", "provider":"github"},
   {"owner":"batvani", "name":"plugin.video.bntbg", "provider":"github"},
-  {"owner":"Arias800", "name":"plugin.video.vikir", "provider":"github"},
+  {"owner":"Arias800", "name":"plugin.video.vikir", "provider":"github", "force_update": true},
   {"owner":"herrnst", "name":"plugin.video.dazn", "provider":"github"},
   {"owner":"MRLB", "name":"plugin.video.eurosportplayer", "provider":"github", "repo_name": "kodi-eurosportplayer"}
 ]
