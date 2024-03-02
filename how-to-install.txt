@@ -12,13 +12,22 @@ pip install -r requirements.txt
 
 To add or remove addons, modify the addons.json file and add a line for the new addon.
 Here is an example:
-{"owner":"harrygg", "name":"plugin.video.free.bgtvs", "url":"https://github.com/harrygg/plugin.video.free.bgtvs/archive/master.zip", "enabled": true, "update": true},
+{"owner":"harrygg", "name":"plugin.video.free.bgtvs", "provider":"github", "enabled": true, "update": true, "false_update": false},
+{"owner":"majide", "name":"repository.majide", "url":"https://andromeda.eu.org/xbmc/repository.majide-0.20.6.zip", "update": false},
 
-* the url property must point to the absolute path of the addon zip file without any redirections.
-* the name of the addon must match the ID of the addon in the addon.xml
-* the enabled property, if set to false, will keep the addon in the list but will delete it from the repository. This is
-done in cases where you expect the addon to be fixed but until so, you do not want it part of the repo. Defaults to true
-* the update property, if set to false tells the script to skip the addon update. Defaults to true.
+The following properties are available:
+* "url" - must point to the absolute path of the addon zip file without any redirections.
+    If it is omitted, the "provider" property must be provided.
+* "provider" - Used for building the URL the addon zip will be downloaded from. Currently, the supported providers are:
+"github" and "gitlab". Mandatory if no "url" is provided.
+* "owner" - the repo owner. Used for building the URL the addon zip will be downloaded from.
+Mandatory if no "url" is provided.
+* "name" - the name of the addon. Must match the ID of the addon in the addon.xml
+* "enabled" - if set to false, will keep the addon in the list but will delete it from the repository.
+This is done in cases where you expect the addon to be fixed but until so, you do not want it part of the repo.
+Defaults to true
+* "update" - if set to false tells the script to skip the addon update. Defaults to true.
+* "force_update" - forces update and downloads it from the remote server, regardless of whether the addon has updates.
 
 
 To run the repository updater on Windows:
