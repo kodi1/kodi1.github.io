@@ -5,8 +5,8 @@ updated_addons_list = []
 files_to_copy = ["addon.xml", "icon.png", "changelog.txt", "fanart.jpg"]
 
 for addon in addons:
-    if should_updated(addon):
-        temp_addon_file = download(addon, get_temp_folder())
+    if should_update(addon):
+        temp_addon_file = download(addon)
         if not temp_addon_file:
             continue
         addon["update_time"] = time.strftime("%d.%m.%Y")

@@ -1,1 +1,1 @@
-plugin.video.vikir | updated to 0.19.4.28 on 01.03.2024 
+plugin.video.vikir | updated to 0.19.4.28 on 02.03.2024 

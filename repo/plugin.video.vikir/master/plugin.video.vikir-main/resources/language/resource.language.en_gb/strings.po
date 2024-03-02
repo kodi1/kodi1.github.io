@@ -1,0 +1,570 @@
+# XBMC Media Center language file
+# Addon Name: VIKI®
+# Addon id: plugin.video.vikir
+# Addon version: 0.19.4.27
+# Addon Provider: Arias800, Majide
+msgid ""
+msgstr ""
+"Project-Id-Version: plugin.video.vikir\n"
+"Report-Msgid-Bugs-To: https://github.com/Arias800/plugin.video.vikir\n"
+"POT-Creation-Date: 2022-04-08 17:31+0000\n"
+"PO-Revision-Date: 2023-03-17 21:48+0000\n"
+"Last-Translator: azgaresncf\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "Addon Summary"
+msgid "VIKI.COM GLOBAL TV POWERED BY FANS"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "[B][COLOR red]Before use, set your preferences in the addon settings![/B][/COLOR] In VIKI.COM watch the best global TV shows, movies, entertainment news and other premium content in high quality, translated into more than 150 languages by a community of avid fans. Together, we’re breaking down barriers that stand between great entertainment and its fans, no matter where they are!"
+msgstr ""
+
+msgctxt "Addon Disclaimer"
+msgid "This is not an official addon! If the official APP is available for your platform,\nuse it instead of this addon. All rights on content are reserved by Rakuten."
+msgstr ""
+
+msgctxt "#0"
+msgid "English"
+msgstr ""
+
+msgctxt "#1"
+msgid "Български"
+msgstr ""
+
+msgctxt "#2"
+msgid "Español"
+msgstr ""
+
+msgctxt "#3"
+msgid "Français"
+msgstr ""
+
+msgctxt "#4"
+msgid "Português"
+msgstr ""
+
+msgctxt "#5"
+msgid "日本語"
+msgstr ""
+
+msgctxt "#6"
+msgid "简体中文"
+msgstr ""
+
+msgctxt "#7"
+msgid "繁體中文"
+msgstr ""
+
+msgctxt "#8"
+msgid "한국어"
+msgstr ""
+
+msgctxt "#9"
+msgid "Abkhazian"
+msgstr ""
+
+msgctxt "#10"
+msgid "Afar"
+msgstr ""
+
+msgctxt "#11"
+msgid "Afrikaans"
+msgstr ""
+
+msgctxt "#12"
+msgid "Akana"
+msgstr ""
+
+msgctxt "#13"
+msgid "Amharic"
+msgstr ""
+
+msgctxt "#14"
+msgid "AngloSaxon"
+msgstr ""
+
+msgctxt "#15"
+msgid "Azərbaycan"
+msgstr ""
+
+msgctxt "#16"
+msgid "Bahasa Melayu"
+msgstr ""
+
+msgctxt "#17"
+msgid "BahasaIndonesia"
+msgstr ""
+
+msgctxt "#18"
+msgid "Basa Jawa"
+msgstr ""
+
+msgctxt "#19"
+msgid "Bengali"
+msgstr ""
+
+msgctxt "#20"
+msgid "Bodskad"
+msgstr ""
+
+msgctxt "#21"
+msgid "Bosanski"
+msgstr ""
+
+msgctxt "#22"
+msgid "Català"
+msgstr ""
+
+msgctxt "#23"
+msgid "Chamoru"
+msgstr ""
+
+msgctxt "#24"
+msgid "Cherokee"
+msgstr ""
+
+msgctxt "#25"
+msgid "Cuengh"
+msgstr ""
+
+msgctxt "#26"
+msgid "Cymraeg"
+msgstr ""
+
+msgctxt "#27"
+msgid "Dansk"
+msgstr ""
+
+msgctxt "#28"
+msgid "Deutsch"
+msgstr ""
+
+msgctxt "#29"
+msgid "Divehi"
+msgstr ""
+
+msgctxt "#30"
+msgid "Dzongkha"
+msgstr ""
+
+msgctxt "#31"
+msgid "Eesti"
+msgstr ""
+
+msgctxt "#32"
+msgid "Esperanto"
+msgstr ""
+
+msgctxt "#33"
+msgid "Euskara"
+msgstr ""
+
+msgctxt "#34"
+msgid "Faka Tonga"
+msgstr ""
+
+msgctxt "#35"
+msgid "Gaeilge"
+msgstr ""
+
+msgctxt "#36"
+msgid "Gagana Samoa"
+msgstr ""
+
+msgctxt "#37"
+msgid "Galego"
+msgstr ""
+
+msgctxt "#38"
+msgid "Gàidhlig"
+msgstr ""
+
+msgctxt "#39"
+msgid "Hmong"
+msgstr ""
+
+msgctxt "#40"
+msgid "Hrvatski"
+msgstr ""
+
+msgctxt "#41"
+msgid "Interlingua"
+msgstr ""
+
+msgctxt "#42"
+msgid "Italiano"
+msgstr ""
+
+msgctxt "#43"
+msgid "Karaoke"
+msgstr ""
+
+msgctxt "#44"
+msgid "Kaszëbsczi"
+msgstr ""
+
+msgctxt "#45"
+msgid "Kernewek/Karnuack"
+msgstr ""
+
+msgctxt "#46"
+msgid "Khmer"
+msgstr ""
+
+msgctxt "#47"
+msgid "Kirundi"
+msgstr ""
+
+msgctxt "#48"
+msgid "Kiswahili"
+msgstr ""
+
+msgctxt "#49"
+msgid "Kreyòlayisyen"
+msgstr ""
+
+msgctxt "#50"
+msgid "Kurdî/كوردی"
+msgstr ""
+
+msgctxt "#51"
+msgid "Lao"
+msgstr ""
+
+msgctxt "#52"
+msgid "Latina"
+msgstr ""
+
+msgctxt "#53"
+msgid "Latviešu"
+msgstr ""
+
+msgctxt "#54"
+msgid "Lietuvių"
+msgstr ""
+
+msgctxt "#55"
+msgid "Magyar"
+msgstr ""
+
+msgctxt "#56"
+msgid "Malagasy"
+msgstr ""
+
+msgctxt "#57"
+msgid "Malayalam"
+msgstr ""
+
+msgctxt "#58"
+msgid "Moldoveana"
+msgstr ""
+
+msgctxt "#59"
+msgid "Myanmasa"
+msgstr ""
+
+msgctxt "#60"
+msgid "Na Vosa Vakaviti"
+msgstr ""
+
+msgctxt "#61"
+msgid "Nederlands"
+msgstr ""
+
+msgctxt "#62"
+msgid "Nehiyaw"
+msgstr ""
+
+msgctxt "#63"
+msgid "Norsk(Bokmål)"
+msgstr ""
+
+msgctxt "#64"
+msgid "Oriya"
+msgstr ""
+
+msgctxt "#65"
+msgid "O‘zbek"
+msgstr ""
+
+msgctxt "#66"
+msgid "Polski"
+msgstr ""
+
+msgctxt "#67"
+msgid "Română"
+msgstr ""
+
+msgctxt "#68"
+msgid "Rumantsch"
+msgstr ""
+
+msgctxt "#69"
+msgid "Sesotho"
+msgstr ""
+
+msgctxt "#70"
+msgid "Shqip"
+msgstr ""
+
+msgctxt "#71"
+msgid "Slovenčina"
+msgstr ""
+
+msgctxt "#72"
+msgid "Slovenščina"
+msgstr ""
+
+msgctxt "#73"
+msgid "Soomaaliga"
+msgstr ""
+
+msgctxt "#74"
+msgid "Srpskohrvatski"
+msgstr ""
+
+msgctxt "#75"
+msgid "Suomi"
+msgstr ""
+
+msgctxt "#76"
+msgid "Svenska"
+msgstr ""
+
+msgctxt "#77"
+msgid "Tagalog"
+msgstr ""
+
+msgctxt "#78"
+msgid "Tatarça/Татарча"
+msgstr ""
+
+msgctxt "#79"
+msgid "TiếngViệt"
+msgstr ""
+
+msgctxt "#80"
+msgid "Twi"
+msgstr ""
+
+msgctxt "#81"
+msgid "Türkçe"
+msgstr ""
+
+msgctxt "#82"
+msgid "Wollof"
+msgstr ""
+
+msgctxt "#83"
+msgid "Yorùbá"
+msgstr ""
+
+msgctxt "#84"
+msgid "chi Shona"
+msgstr ""
+
+msgctxt "#85"
+msgid "lolspeak"
+msgstr ""
+
+msgctxt "#86"
+msgid "tlh Ingan-Hol"
+msgstr ""
+
+msgctxt "#87"
+msgid "Íslenska"
+msgstr ""
+
+msgctxt "#88"
+msgid "Čeština"
+msgstr ""
+
+msgctxt "#89"
+msgid "Ελληνικά"
+msgstr ""
+
+msgctxt "#90"
+msgid "Башҡорт"
+msgstr ""
+
+msgctxt "#91"
+msgid "Македонски"
+msgstr ""
+
+msgctxt "#92"
+msgid "Монгол"
+msgstr ""
+
+msgctxt "#93"
+msgid "Русский"
+msgstr ""
+
+msgctxt "#94"
+msgid "Српски/Srpski"
+msgstr ""
+
+msgctxt "#95"
+msgid "Українська"
+msgstr ""
+
+msgctxt "#96"
+msgid "црногорски"
+msgstr ""
+
+msgctxt "#97"
+msgid "қазақша"
+msgstr ""
+
+msgctxt "#98"
+msgid "Հայերեն"
+msgstr ""
+
+msgctxt "#99"
+msgid "עברית"
+msgstr ""
+
+msgctxt "#100"
+msgid "العربية"
+msgstr ""
+
+msgctxt "#101"
+msgid "اڙدو"
+msgstr ""
+
+msgctxt "#102"
+msgid "سرائیکی"
+msgstr ""
+
+msgctxt "#103"
+msgid "فارسی"
+msgstr ""
+
+msgctxt "#104"
+msgid "छत्तीसगढ़ी"
+msgstr ""
+
+msgctxt "#105"
+msgid "नेपाली"
+msgstr ""
+
+msgctxt "#106"
+msgid "मराठी"
+msgstr ""
+
+msgctxt "#107"
+msgid "संस्कृतम्"
+msgstr ""
+
+msgctxt "#108"
+msgid "हिन्दी"
+msgstr ""
+
+msgctxt "#109"
+msgid "ਪੰਜਾਬੀ"
+msgstr ""
+
+msgctxt "#110"
+msgid "ગુજરાતી"
+msgstr ""
+
+msgctxt "#111"
+msgid "தமிழ்"
+msgstr ""
+
+msgctxt "#112"
+msgid "తెలుగు"
+msgstr ""
+
+msgctxt "#113"
+msgid "ಕನ್ನಡ"
+msgstr ""
+
+msgctxt "#114"
+msgid "ไทย"
+msgstr ""
+
+msgctxt "#115"
+msgid "粵語"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Email"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Password"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Add to watchlist"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Configure InputStream Adaptive"
+msgstr ""
+
+msgctxt "#30038"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#30039"
+msgid "Series"
+msgstr ""
+
+msgctxt "#30040"
+msgid "Search"
+msgstr ""
+
+msgctxt "#30041"
+msgid "Watchlist"
+msgstr ""
+
+msgctxt "#30042"
+msgid "Browse by Genre"
+msgstr ""
+
+msgctxt "#30043"
+msgid "Browse by Country"
+msgstr ""
+
+msgctxt "#30044"
+msgid "Newest"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Popular this week"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Popular all"
+msgstr ""
+
+msgctxt "#30047"
+msgid "Highly Rated"
+msgstr ""
+
+msgctxt "#30054"
+msgid "Latest Clips"
+msgstr ""
+
+msgctxt "#30055"
+msgid "Next page"
+msgstr ""
+
+msgctxt "#30061"
+msgid "An error occurred"
+msgstr ""
+
+msgctxt "#30305"
+msgid "Language"
+msgstr ""
+
+msgctxt "#30306"
+msgid "This program needs a Viki Pass.\nUpgrade your account to gain access to the paid content"
+msgstr ""

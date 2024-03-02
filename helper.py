@@ -87,7 +87,7 @@ def get_addon_version_from_xml_file(addon_xml_path):
     return version_string
 
 
-def should_updated(addon):
+def should_update(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
     if force_global_update:
         log("Force updating all addons due to force_global_update=True")
@@ -135,18 +135,19 @@ def build_download_url(addon):
     raise Exception("No provider provided for addon %s" % addon["name"])
 
 
-def download(addon, temp_folder):
+def download(addon):
     url = addon.get('url')
     if url is None:
         url = build_download_url(addon)
-    local_file = download_from_url(url, temp_folder)
+    local_file = download_from_url(url, addon["folder"])
     if not local_file:
-        local_file = download_from_url(url, temp_folder)
+        local_file = download_from_url(url, addon["folder"])
     return local_file
 
 
 def download_from_url(url, temp_folder):
     file_name = None
+    log("Downloading zip from url %s" % url)
     try:
         r = requests.get(url, verify=False, timeout=30, headers={
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '

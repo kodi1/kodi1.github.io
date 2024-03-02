@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<settings version="1">
+	<section id="plugin.video.vikir">
+		<category id="prédéfini" label="571" help="">
+			<group id="1">
+				<setting id="viki_username" type="string" label="30001" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30001</heading>
+					</control>
+				</setting>
+				<setting id="viki_password" type="string" label="30002" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>30002</heading>
+						<hidden>true</hidden>
+					</control>
+				</setting>
+				<setting id="user_id" type="string" label="30002" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>30002</heading>
+						<hidden>true</hidden>
+					</control>
+				</setting>
+				<setting id="auth_token" type="string" label="30002" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>30002</heading>
+						<hidden>true</hidden>
+					</control>
+				</setting>
+			</group>
+			<group id="2">
+				<setting id="lang" type="integer" label="30305" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="0">0</option>
+							<option label="1">1</option>
+							<option label="2">2</option>
+							<option label="3">3</option>
+							<option label="4">4</option>
+							<option label="5">5</option>
+							<option label="6">6</option>
+							<option label="7">7</option>
+							<option label="8">8</option>
+							<option label="9">9</option>
+							<option label="10">10</option>
+							<option label="11">11</option>
+							<option label="12">12</option>
+							<option label="13">13</option>
+							<option label="14">14</option>
+							<option label="15">15</option>
+							<option label="16">16</option>
+							<option label="17">17</option>
+							<option label="18">18</option>
+							<option label="19">19</option>
+							<option label="20">20</option>
+							<option label="21">21</option>
+							<option label="22">22</option>
+							<option label="23">23</option>
+							<option label="24">24</option>
+							<option label="25">25</option>
+							<option label="26">26</option>
+							<option label="27">27</option>
+							<option label="28">28</option>
+							<option label="29">29</option>
+							<option label="30">30</option>
+							<option label="31">31</option>
+							<option label="32">32</option>
+							<option label="33">33</option>
+							<option label="34">34</option>
+							<option label="35">35</option>
+							<option label="36">36</option>
+							<option label="37">37</option>
+							<option label="38">38</option>
+							<option label="39">39</option>
+							<option label="40">40</option>
+							<option label="41">41</option>
+							<option label="42">42</option>
+							<option label="43">43</option>
+							<option label="44">44</option>
+							<option label="45">45</option>
+							<option label="46">46</option>
+							<option label="47">47</option>
+							<option label="48">48</option>
+							<option label="49">49</option>
+							<option label="50">50</option>
+							<option label="51">51</option>
+							<option label="52">52</option>
+							<option label="53">53</option>
+							<option label="54">54</option>
+							<option label="55">55</option>
+							<option label="56">56</option>
+							<option label="57">57</option>
+							<option label="58">58</option>
+							<option label="59">59</option>
+							<option label="60">60</option>
+							<option label="61">61</option>
+							<option label="62">62</option>
+							<option label="63">63</option>
+							<option label="64">64</option>
+							<option label="65">65</option>
+							<option label="66">66</option>
+							<option label="67">67</option>
+							<option label="68">68</option>
+							<option label="69">69</option>
+							<option label="70">70</option>
+							<option label="71">71</option>
+							<option label="72">72</option>
+							<option label="73">73</option>
+							<option label="74">74</option>
+							<option label="75">75</option>
+							<option label="76">76</option>
+							<option label="77">77</option>
+							<option label="78">78</option>
+							<option label="79">79</option>
+							<option label="80">80</option>
+							<option label="81">81</option>
+							<option label="82">82</option>
+							<option label="83">83</option>
+							<option label="84">84</option>
+							<option label="85">85</option>
+							<option label="86">86</option>
+							<option label="87">87</option>
+							<option label="88">88</option>
+							<option label="89">89</option>
+							<option label="90">90</option>
+							<option label="91">91</option>
+							<option label="92">92</option>
+							<option label="93">93</option>
+							<option label="94">94</option>
+							<option label="95">95</option>
+							<option label="96">96</option>
+							<option label="97">97</option>
+							<option label="98">98</option>
+							<option label="99">99</option>
+							<option label="100">100</option>
+							<option label="101">101</option>
+							<option label="102">102</option>
+							<option label="103">103</option>
+							<option label="104">104</option>
+							<option label="105">105</option>
+							<option label="106">106</option>
+							<option label="107">107</option>
+							<option label="108">108</option>
+							<option label="109">109</option>
+							<option label="110">110</option>
+							<option label="111">111</option>
+							<option label="112">112</option>
+							<option label="113">113</option>
+							<option label="114">114</option>
+							<option label="115">115</option>
+						</options>
+					</constraints>
+					<control type="list" format="string">
+						<heading>30305</heading>
+					</control>
+				</setting>
+				<setting id="inputstream_adaptive" type="action" label="30004" help="">
+					<level>0</level>
+					<data>Addon.OpenSettings(inputstream.adaptive)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+			</group>
+		</category>
+	</section>
+</settings>
