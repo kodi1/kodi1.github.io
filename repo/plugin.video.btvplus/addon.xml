@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
+<addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.5" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.beautifulsoup4" version="4.3.2"/>
@@ -18,5 +18,8 @@
     <description>Description for "Btv Plus"</description>
     <forum>https://kodibg.org/forum/thread-145.html</forum>
     <website>https://github.com/harrygg/plugin.video.btvplus</website>
+	<assets>
+		<icon>resources/icon.png</icon>
+	</assets>
   </extension>
 </addon>

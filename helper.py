@@ -26,7 +26,7 @@ class LogLevel(Enum):
     DEBUG = 1
 
 
-__default_loglevel = LogLevel.INFO
+__default_loglevel = LogLevel.DEBUG
 
 
 def log(msg, loglevel=LogLevel.INFO):
@@ -93,6 +93,7 @@ def __get_remote_addon_version_string(addon):
         remote_url = addon.get("remote_xml_url")
         if not remote_url:
             remote_url = __build_remote_addon_xml_url(addon)
+            log("Getting remote addon version from url: %s" % remote_url, LogLevel.DEBUG)
             if not remote_url:
                 log("No remote xml provided for version comparison")
                 return None
@@ -101,7 +102,7 @@ def __get_remote_addon_version_string(addon):
         xml = etree.fromstring(res.content)
         return xml.get('version')
     except Exception as ex:
-        log("Error getting remote version: %s" % ex)
+        log("Error getting remote version: %s" % ex, LogLevel.ERROR)
     return None
 
 
@@ -111,7 +112,7 @@ def __get_addon_version_from_xml_file(addon_xml_path):
         xml = etree.parse(addon_xml_path)
         version_string = xml.getroot().get('version')
     except Exception as ex:
-        log(ex)
+        log(ex, LogLevel.ERROR)
     return version_string
 
 
@@ -184,7 +185,7 @@ def download(addon):
             addon["temp_file"] = __download_from_url(url, get_temp_folder())
         return True
     except Exception as er:
-        log(er)
+        log(er, LogLevel.ERROR)
         return False
 
 
@@ -253,7 +254,7 @@ def try_delete_folder(folder):
         if os.path.exists(folder):
             shutil.rmtree(folder)
     except Exception as er:
-        log(er)
+        log(er, LogLevel.ERROR)
 
 
 def __generate_new_archive_filename(addon):
@@ -288,7 +289,7 @@ def update(addon):
 
         return True
     except Exception as er:
-        log(er)
+        log(er, LogLevel.ERROR)
         return False
 
 
@@ -347,7 +348,7 @@ def generate_md5_file():
         with open(os.path.join(__repo_folder, "addons.xml.md5"), "w", encoding="utf8") as file:
             file.write(newmd5sum)
     except Exception as e:
-        log("An error occurred creating addons.xml.md5 file: %s" % e)
+        log("An error occurred creating addons.xml.md5 file: %s" % e, LogLevel.ERROR)
 
     log("Generated md5")
 

@@ -302,7 +302,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   	<forum>https://kodibg.org/forum/</forum>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.4" provider-name="HarryDoubleG">
+</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.5" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.beautifulsoup4" version="4.3.2" />
@@ -321,6 +321,9 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
     <description>Description for "Btv Plus"</description>
     <forum>https://kodibg.org/forum/thread-145.html</forum>
     <website>https://github.com/harrygg/plugin.video.btvplus</website>
+	<assets>
+		<icon>resources/icon.png</icon>
+	</assets>
   </extension>
 </addon><addon id="plugin.video.gong.play" name="Gong Play" version="1.5.5" provider-name="HarryGG">
   <requires>
