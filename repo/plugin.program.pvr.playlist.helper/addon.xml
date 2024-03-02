@@ -19,5 +19,8 @@
         <platform>all</platform>
         <forum>https://kodibg.org/forum/</forum>
         <website>https://github.com/harrygg/plugin.program.pvr.playlist.helper</website>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
   </extension>
 </addon>
