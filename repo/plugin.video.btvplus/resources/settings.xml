@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Потребителски данни">
+<!--    <setting type="lsep" label="Данни за вход в сайта btv.bg" />-->
+<!--    <setting label="Потребител" id="btv_username" type="text" />-->
+<!--    <setting label="Парола" id="btv_password" type="text" option="hidden" />-->
+    <setting type="sep" />
+    <setting label="Разширен журнал (Дебъг)" type="bool"   id="debug" default="false"/>
+	</category>
+</settings>

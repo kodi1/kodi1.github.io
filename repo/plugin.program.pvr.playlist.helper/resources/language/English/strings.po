@@ -1,0 +1,227 @@
+# Kodi Media Center language file
+# Addon Name: PVR Playlist Helper
+# Addon id: plugin.program.pvr.playlist.helper
+# Addon Provider: HarryDoubleG
+msgid ""
+msgstr ""
+
+msgctxt "#30010"
+msgid "M3U Playlists"
+msgstr "M3U Playlists"
+
+msgctxt "#30110"
+msgid "M3U Playlist 1"
+msgstr "M3U Playlist 1"
+
+msgctxt "#30210"
+msgid "M3U Playlist 2"
+msgstr "M3U Playlist 2"
+
+msgctxt "#30310"
+msgid "Export Combinded M3U Playlist"
+msgstr "Export Combinded M3U Playlist"
+
+msgctxt "#30011"
+msgid "M3U playlist path"
+msgstr "M3U playlist path"
+
+msgctxt "#30012"
+msgid "M3U playlist URL"
+msgstr "M3U playlist URL"
+
+msgctxt "#30078"
+msgid "Add channels from another playlist"
+msgstr "Add channels from another playlist"
+
+msgctxt "#30079"
+msgid "Add channels from another playlist"
+msgstr "Add channels from another playlist"
+
+msgctxt "#30080"
+msgid "Export playlist.m3u to folder"
+msgstr "Export playlist.m3u to folder"
+
+msgctxt "#30081"
+msgid "Export playlist.m3u to folder"
+msgstr "Export playlist.m3u to another none-default folder"
+
+msgctxt "#30211"
+msgid "Local folder"
+msgstr "Local folder to export the combined playlist.m3u to"
+
+msgctxt "#30000"
+msgid "Location"
+msgstr "Location"
+
+msgctxt "#30001"
+msgid "Local path (includes local network)"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Remote path (Internet address)"
+msgstr "Remote path (Internet address)"
+
+msgctxt "#30003"
+msgid "Disabled"
+msgstr "Disabled"
+
+msgctxt "#30004"
+msgid "Repeated refresh"
+msgstr "Repeated refresh"
+
+msgctxt "#30005"
+msgid "Once per day"
+msgstr "Once per day"
+
+
+msgctxt "#30014"
+msgid "Only number by channel order in M3U"
+msgstr "Only number by channel order in M3U"
+
+msgctxt "#30015"
+msgid "Auto refresh mode"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Refresh interval"
+msgstr "Refresh interval"
+
+msgctxt "#30017"
+msgid "Refresh hour (24h)"
+msgstr "Refresh hour (24h)"
+
+msgctxt "#30018"
+msgid "Refresh"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Streams map"
+msgstr "Streams map"
+
+msgctxt "#30020"
+msgid "Streams map"
+msgstr "Streams map"
+
+msgctxt "#30021"
+msgid "Path to JSON map file"
+msgstr "Path to JSON map file"
+
+msgctxt "#30022"
+msgid "URL of JSON map file"
+msgstr "URL of JSON map file"
+
+msgctxt "#30023"
+msgid "Reorder channels"
+msgstr "Reorder channels"
+
+msgctxt "#30024"
+msgid "Reorder channels in M3U as per the order in the streams map file"
+msgstr "Reorder channels in M3U as per the order in the streams map file"
+
+msgctxt "#30025"
+msgid "Remove channels not in map"
+msgstr "Remove channels not in map"
+
+msgctxt "#30026"
+msgid "If stream is not in the map, then don't add it to the playlist"
+msgstr "If stream is not in the map, then don't add it to the playlist"
+
+msgctxt "#30120"
+msgid "A local or remote path to a JSON formatted map with streams and the stream details that has to be changed"
+msgstr "A local or remote path to a JSON formatted map with streams and the stream details that has to be changed"
+
+msgctxt "#30025"
+msgid "Cache m3u at local storage"
+msgstr "Cache m3u at local storage"
+
+msgctxt "#30026"
+msgid "Cache XMLTV at local storage"
+msgstr "Cache XMLTV at local storage"
+
+msgctxt "#30027"
+msgid "{0:.1f} hours"
+msgstr "{0:.1f} hours"
+
+msgctxt "#30028"
+msgid "Only load TV channels in groups"
+msgstr ""
+
+msgctxt "#30029"
+msgid "TV Groups"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Server"
+msgstr "Server"
+
+msgctxt "#30051"
+msgid "Allow listening on all Network interfaces"
+msgstr "Allow listening on all Network interfaces"
+
+msgctxt "#30052"
+msgid "By default we listen on all Network interfaces i.e. 0.0.0.0 (including 127.0.0.1). If set to false, only 127.0.0.1 will be used"
+msgstr "By default we listen on all Network interfaces i.e. 0.0.0.0 (including 127.0.0.1). If set to false, only 127.0.0.1 will be used"
+
+msgctxt "#30053"
+msgid "Port"
+msgstr "Port"
+
+msgctxt "#30054"
+msgid "The port the server will be listening on"
+msgstr "The port the server will be listening on"
+
+msgctxt "#30055"
+msgid "IP to use in playlist"
+msgstr "IP to use in playlist"
+
+msgctxt "#30056"
+msgid "This is generally 127.0.0.1 or localhost"
+msgstr "This is generally 127.0.0.1 or localhost"
+
+msgctxt "#30070"
+msgid "Debug"
+msgstr "Debug"
+
+msgctxt "#30074"
+msgid "Enable debug logs"
+msgstr "Enable debug logs"
+
+msgctxt "#30075"
+msgid "Extended information will be added to the logs"
+msgstr "Extended information will be added to the logs"
+
+msgctxt "#30601"
+msgid "Select where to find the M3U resource. The options are: [B]Local path[/B] - A path to an M3U file whether it be on the device or the local network; [B]Remote path[/B] - A URL specifying the location of the M3U file."
+msgstr ""
+
+msgctxt "#30602"
+msgid "If location is [B]Local path[/B] this setting must contain a valid path for the addon to function."
+msgstr ""
+
+msgctxt "#30603"
+msgid "If location is [B]Remote path[/B] this setting must contain a valid URL for the addon to function."
+msgstr ""
+
+msgctxt "#30604"
+msgid "If location is [B]Remote path[/B] select whether or not the the M3U file should be cached locally."
+msgstr ""
+
+msgctxt "#30605"
+msgid "The number to start numbering channels from. Only used when [B]Use backend channel numbers[/B] from PVR settings is enabled and a channel number is not supplied in the M3U file."
+msgstr ""
+
+msgctxt "#30606"
+msgid "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
+msgstr "Ignore any 'tvg-chno' tags and only number channels by the order in the M3U starting at 'Start channel number'."
+
+msgctxt "#30607"
+msgid "Select the auto refresh mode for the M3U/XMLTV files. Note that caching is disabled if auto refresh is used. The options are: [B]Disabled[/B] - Don't auto refresh the files; [B]Repeated refresh[/B] - Refresh the files on a minute based interval; [B]Once per day[/B] - Refresh the files once per day."
+msgstr ""
+
+msgctxt "#30608"
+msgid "If M3U auto refresh mode is [B]Repeated refresh[/B] refresh the files every time this number of minutes passes. Max 120 minutes."
+msgstr ""
+
+msgctxt "#30609"
+msgid "If auto refresh mode is [B]Once per day[/B] refresh the files every time this hour of the day is reached."
+msgstr ""

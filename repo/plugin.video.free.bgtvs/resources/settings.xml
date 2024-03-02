@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Общи">
+		<setting type="bool" id="use_local_db" label="Използвай локален файл с ТВ база данни" default="false" />
+    <setting type="file" label="Път до файла с базата данни" values="resources" id="db_file_path" mask="" visible="eq(-1,true)" />
+    <setting type="sep" />
+		<setting type="bool" id="show_only_enabled" label="Показвай само активни канали" default="true" />
+    <setting type="sep" />
+		<setting type="bool" id="debug" label="Разреши разширен лог" default="false" />
+    <setting type="lsep" label="Натисни за да обновиш ръчно базата данни с канали" />
+    <setting type="action" label="Обнови" action="RunPlugin(plugin://plugin.video.free.bgtvs/?action=update_tvdb)" />
+    <setting label="УРЛ до базата данни с канали" id="url_to_db" type="text" visible="false" default="https://github.com/hristo-genev/uWsgiApps/raw/master/freetvandradio/tvs.sqlite3" />
+	</category>
+	<category label="Потребителски данни">
+    <setting type="lsep" label="Данни за вход в сайта btv.bg" />
+    <setting label="Потребител" id="btv_username" type="text" />
+    <setting label="Парола" id="btv_password" type="text" option="hidden" />
+    <setting type="sep" />
+	</category>
+</settings>

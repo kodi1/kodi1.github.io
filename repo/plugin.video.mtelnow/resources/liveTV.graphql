@@ -1,0 +1,151 @@
+query liveTV($channelAfterCursor: String, $currentTime: Date!, $logoWidth: Int!, $logoHeight: Int!, $thumbnailHeight: Int!, $backgroundHeight: Int!, $backgroundWidth: Int!, $channelListId: ID!, $shortDescriptionMaxLength: Int!) {
+  channelList(id: $channelListId) {
+    ...cacheInfoFragment
+    name
+    channels(after: $channelAfterCursor) {
+      ...cacheInfoFragment
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+        __typename
+      }
+      edges {
+        ...cacheInfoFragment
+        cursor
+        node {
+          ...cacheInfoFragment
+          title
+          userInfo {
+            ...cacheInfoFragment
+            subscribed
+            __typename
+          }
+          logo(width: $logoWidth, height: $logoHeight) {
+            ...cacheInfoFragment
+            url
+            __typename
+          }
+          currentEvent: eventsAt(time: $currentTime, previous: 0, following: 0) {
+            ...cacheInfoFragment
+            itemCount
+            items {
+              ...nowPlayingEventFragment
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+
+fragment cacheInfoFragment on Cacheable {
+  __typename
+  id
+  expiry
+}
+
+fragment nowPlayingEventFragment on Event {
+  ...cacheInfoFragment
+  ...eventInfoBasicFragment
+  eventEntitlements: entitlements {
+    ...eventEntitlementsFragment
+    __typename
+  }
+  eventMetadata: metadata {
+    ...metadataExtendedFragment
+    __typename
+  }
+  __typename
+}
+
+fragment eventInfoBasicFragment on Event {
+  title
+  start
+  end
+  blackout
+  startOverTVBeforeTime
+  startOverTVAfterTime
+  thumbnail(height: $thumbnailHeight) {
+    ...imageFragment
+    __typename
+  }
+  parentalRating {
+    ...parentalRatingFragment
+    __typename
+  }
+  backgroundImage(width: $backgroundWidth, height: $backgroundHeight) {
+    ...imageFragment
+    __typename
+  }
+  __typename
+}
+
+fragment imageFragment on Image {
+  ...cacheInfoFragment
+  url
+  width
+  height
+  __typename
+}
+
+fragment parentalRatingFragment on ParentalRating {
+  ...cacheInfoFragment
+  title
+  description
+  rank
+  adult
+  __typename
+}
+
+fragment eventEntitlementsFragment on EventEntitlements {
+  pauseLiveTV
+  restartTV
+  catchupTV
+  catchupTVAvailableUntil
+  networkRecording
+  networkRecordingPlannableUntil
+  __typename
+}
+
+fragment metadataExtendedFragment on Metadata {
+  ...cacheInfoFragment
+  title
+  originalTitle
+  shortDescription(maxLength: $shortDescriptionMaxLength)
+  country
+  year
+  fullDescription
+  genre {
+    ...cacheInfoFragment
+    title
+    __typename
+  }
+  seriesInfo {
+    ...cacheInfoFragment
+    title
+    __typename
+  }
+  episodeInfo {
+    ...cacheInfoFragment
+    number
+    title
+    season
+    __typename
+  }
+  actors
+  directors
+  ratings {
+    ...cacheInfoFragment
+    value
+    name
+    __typename
+  }
+  __typename
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Входни данни">
+        <setting label="Потребител" type="text"   id="username" default="" />
+        <setting label="Парола" type="text"   id="password" option="hidden" default="" />
+        <setting type="sep"/>
+        <setting id="debug" type="bool" label="Включи разширен лог" default="false" />
+        <setting id="use_isa" type="bool" label="Използвай InputStream Adaptive" default="false" />
+    </category>
+</settings>

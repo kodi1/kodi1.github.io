@@ -8,26 +8,54 @@ import tempfile
 import zipfile
 import time
 import xml.etree.ElementTree as etree
+from enum import Enum
+
 import requests
 
-force_global_update = False
-repo_folder = os.path.join(os.getcwd(), "repo")
+__force_global_update = False
+__repo_folder = os.path.join(os.getcwd(), "repo")
 requests.packages.urllib3.disable_warnings()
-temp_dir = None
+__backup_folder_suffix = "_backup"
+__temp_dir = None
+
+
+class LogLevel(Enum):
+    ERROR = 4
+    WARN = 3
+    INFO = 2
+    DEBUG = 1
+
+
+__default_loglevel = LogLevel.INFO
+
+
+def log(msg, loglevel=LogLevel.INFO):
+    if loglevel.value >= __default_loglevel.value:
+        if loglevel == LogLevel.WARN:
+            loglevelstring = "\033[1;33m%s\033[0m" % loglevel.name.upper()
+            msg = "\033[0;33m%s\033[0m" % msg
+        elif loglevel == LogLevel.ERROR:
+            loglevelstring = "\033[0;31m%s\033[0m" % loglevel.name.upper()
+            msg = "\033[0;31m%s\033[0m" % msg
+        elif loglevel == LogLevel.INFO:
+            loglevelstring = "\033[1;32m%s\033[0m" % loglevel.name.upper()
+        else:
+            loglevelstring = loglevel.name.upper()
+        print("%s | %s | %s" % (time.strftime("%d.%m.%Y %H:%M:%S"), loglevelstring, msg))
 
 
 def get_temp_folder():
     """
     Returns the temp folder where all addons will be extracted
     """
-    global temp_dir
-    if not temp_dir:
-        temp_dir = tempfile.mkdtemp(
+    global __temp_dir
+    if not __temp_dir:
+        __temp_dir = tempfile.mkdtemp(
             prefix='%s_tmp_' % os.path.splitext(os.path.basename(sys.modules['__main__'].__file__))[0])
-    return temp_dir
+    return __temp_dir
 
 
-def get_addons_list():
+def get_enabled_addons():
     """
     Loads the list of addons from addons.json and returns ONLY the enabled addons
     """
@@ -37,17 +65,17 @@ def get_addons_list():
     disabled_addons_count = 0
     for addon in addons:
         if addon.get("enabled", True):
-            addon["folder"] = os.path.join(repo_folder, addon["name"])
-            addon["xmlfile"] = os.path.join(repo_folder, addon["name"], "addon.xml")
+            addon["folder"] = os.path.join(__repo_folder, addon["name"])
+            addon["xmlfile"] = os.path.join(__repo_folder, addon["name"], "addon.xml")
             enabled_addons.append(addon)
         else:
             disabled_addons_count += 1
     log("Number of enabled addons in list %s" % len(addons))
-    log("Number of disabled addons in list %s\n" % disabled_addons_count)
+    log("Number of disabled addons in list %s" % disabled_addons_count)
     return enabled_addons
 
 
-def build_remote_addon_xml_url(addon):
+def __build_remote_addon_xml_url(addon):
     """
     Builds the URL to the remote addon.xml. Currently supports only github, gitlab
     """
@@ -60,11 +88,11 @@ def build_remote_addon_xml_url(addon):
     raise Exception("Unknown addon provider for %s" % addon["name"])
 
 
-def get_remote_addon_version_string(addon):
+def __get_remote_addon_version_string(addon):
     try:
         remote_url = addon.get("remote_xml_url")
         if not remote_url:
-            remote_url = build_remote_addon_xml_url(addon)
+            remote_url = __build_remote_addon_xml_url(addon)
             if not remote_url:
                 log("No remote xml provided for version comparison")
                 return None
@@ -77,7 +105,7 @@ def get_remote_addon_version_string(addon):
     return None
 
 
-def get_addon_version_from_xml_file(addon_xml_path):
+def __get_addon_version_from_xml_file(addon_xml_path):
     version_string = None
     try:
         xml = etree.parse(addon_xml_path)
@@ -89,19 +117,30 @@ def get_addon_version_from_xml_file(addon_xml_path):
 
 def should_update(addon):
     log("\033[1;32m%s\033[0m" % addon["name"])
-    if force_global_update:
+    if __force_global_update:
         log("Force updating all addons due to force_global_update=True")
         return True
     if addon.get("force_update", False):
         log("Force updating addon due to addon setting force_update=True")
         return True
     if not addon.get("update", True):
-        log("Skipping automatic update as update property is disabled\n")
-        return False
+        if os.path.exists(addon["folder"]) and os.path.exists(addon["xmlfile"]):
+            log("Skipping automatic update as update property is disabled", LogLevel.WARN)
+            return False
+        else:
+            log("Update property is set to false, but addon seems to be missing, so force updating it", LogLevel.WARN)
+            return True
+    if not os.path.exists(addon["folder"]):
+        log("No local version found. Adding addon", LogLevel.WARN)
+        return True
+
+    addon["version"] = __get_addon_version_from_xml_file(addon["xmlfile"])
+    if not addon.get("version"):
+        log("Unable to detect addon local version. Updating addon.")
+        return True
 
     log("Checking for addon new versions")
-    addon["version"] = get_addon_version_from_xml_file(addon["xmlfile"])
-    addon["new_version"] = get_remote_addon_version_string(addon)
+    addon["new_version"] = __get_remote_addon_version_string(addon)
 
     if addon.get("version") is None and addon.get("new_version") is None:
         log("Unable to detect local and remote addon versions. Updating addon anyway.")
@@ -112,11 +151,11 @@ def should_update(addon):
         log("\033[1;32mRemote version for addon %s is different than local. Updating addon!\033[0m" % addon["name"])
         return True
 
-    log("\033[0;31mNo new version available!\033[0m\n")
+    log("No new version available!")
     return False
 
 
-def build_download_url(addon):
+def __build_download_url(addon):
     """
     Build addon zip url given the provider - github or gitlab
     """
@@ -136,38 +175,46 @@ def build_download_url(addon):
 
 
 def download(addon):
-    url = addon.get('url')
-    if url is None:
-        url = build_download_url(addon)
-    local_file = download_from_url(url, addon["folder"])
-    if not local_file:
-        local_file = download_from_url(url, addon["folder"])
-    return local_file
+    try:
+        url = addon.get('url')
+        if url is None:
+            url = __build_download_url(addon)
+        addon["temp_file"] = __download_from_url(url, get_temp_folder())
+        if not addon.get("temp_file"):
+            addon["temp_file"] = __download_from_url(url, get_temp_folder())
+        return True
+    except Exception as er:
+        log(er)
+        return False
 
 
-def download_from_url(url, temp_folder):
-    file_name = None
+def __download_from_url(url, temp_folder):
+    """
+    Downloads zip from URL and returns the absolute path to the downloaded local file
+    """
+    file_path = None
     log("Downloading zip from url %s" % url)
     try:
         r = requests.get(url, verify=False, timeout=30, headers={
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/121.0.0.0 Safari/537.36'})
         if r.status_code == 200:
-            file_name = os.path.join(temp_folder, url.split('/')[-1])
-            log("Downloading: %s" % file_name)
-            with open(file_name, "wb") as code:
+            file_path = os.path.join(temp_folder, url.split('/')[-1])
+            log("Downloading: %s" % file_path)
+            with open(file_path, "wb") as code:
                 code.write(r.content)
 
     except Exception as er:
         log(er)
 
-    return file_name
+    log("Saved file locally %s" % file_path)
+    return file_path
 
 
-def resolve_addon_xml_folder(extract_folder):
+def __get_addon_folder_path(extract_folder):
     """
-    Function that provides the absolute path of the extracted addon folder containing the addon.xml
-    It is required as some addon are nested into a separate folder
+    Provides the absolute path to the extracted addon folder containing the addon.xml
+    It is required as some addons reside in nested folders
     """
     for folder in os.listdir(extract_folder):
         if folder.startswith(".") or folder.startswith("_"):
@@ -180,64 +227,72 @@ def resolve_addon_xml_folder(extract_folder):
             return absolute_folder_path
 
 
-def get_temp_addon_extract_folder(addon_temp_file):
+def __get_extracted_folder(addon_temp_file):
     temp_file_name = os.path.splitext(addon_temp_file)[0]
     return os.path.join(get_temp_folder(), temp_file_name)
 
 
-def extract_addon_archive_to_folder(temp_addon_file, temp_addon_extract_folder):
+def __extract(addon):
     """
     Extract the addon archive to a separate folder, so we can easier find the addon.xml
     This is necessary because some addon ZIP file names are different from the addon name
     """
-    log("Extracting addon to temp folder %s" % temp_addon_extract_folder)
-    zipfile.ZipFile(temp_addon_file).extractall(temp_addon_extract_folder)
+    addon["work_folder"] = __get_extracted_folder(addon["temp_file"])
+    zipfile.ZipFile(addon["temp_file"]).extractall(addon["work_folder"])
+    addon["temp_folder"] = __get_addon_folder_path(addon["work_folder"])
+    log("Extracted addon to temp folder %s" % addon["temp_folder"])
 
-    return resolve_addon_xml_folder(temp_addon_extract_folder)
 
-
-def create_new_addon_file_name(addon_name, addon_version):
+def __generate_new_addon_file_name(addon_name, addon_version):
     return '%s-%s.zip' % (addon_name, addon_version)
 
 
-def delete_temp_files(temp_addon_file):
+def try_delete_folder(folder):
     try:
-        log("Deleting addon temp files")
-        shutil.rmtree(get_temp_addon_extract_folder(temp_addon_file))
-        os.unlink(temp_addon_file)
-    except:
-        pass
-
-
-def delete_folder(folder):
-    try:
-        log("Deleting addon temp folder %s" % folder)
-        shutil.rmtree(folder)
+        log("Deleting folder %s" % folder, LogLevel.DEBUG)
+        if os.path.exists(folder):
+            shutil.rmtree(folder)
     except Exception as er:
         log(er)
 
 
-def extract_addon_content(addon_name, addon_temp_file):
-    """
-    Extracts addon and renames it as per the version in addon.xml
-    @returns: A the path to the addon's addon.xml
-    """
-    addon_extract_folder = get_temp_addon_extract_folder(addon_temp_file)
-    folder_containing_addon_xml = extract_addon_archive_to_folder(addon_temp_file, addon_extract_folder)
-    return folder_containing_addon_xml
+def __generate_new_archive_filename(addon):
+    if not addon.get("new_version"):
+        addon["new_version"] = __get_addon_version_from_xml_file(os.path.join(addon["temp_folder"], "addon.xml"))
+    return __generate_new_addon_file_name(addon["name"], addon["new_version"])
 
 
-def copy_file(source_file, destination_file):
-    dst_folder = os.path.dirname(destination_file)
+def update(addon):
+    try:
+        __extract(addon)
+        backup_folder = addon["folder"] + __backup_folder_suffix
+        renamed_addon_archive_filename = __generate_new_archive_filename(addon)
 
-    if not os.path.exists(dst_folder):
-        log("Creating addon folder as it does not exist %s" % dst_folder)
-        os.makedirs(dst_folder)
-    if os.path.isfile(source_file):
-        shutil.copy(source_file, destination_file)
+        try_delete_folder(backup_folder)
+        if os.path.exists(addon["folder"]):
+            shutil.move(addon["folder"], backup_folder)
+        try:
+            shutil.move(addon["temp_folder"], addon["folder"])
+            shutil.move(addon['temp_file'], os.path.join(addon["folder"], renamed_addon_archive_filename))
+        except Exception as er:
+            log("Error during addon copy operations: %s" % er)
+            if os.path.exists(backup_folder) and not os.path.exists(addon["folder"]):
+                log("Restoring addon backup")
+                shutil.move(backup_folder, addon["folder"])
+
+        try_delete_folder(backup_folder)
+        try_delete_folder(addon["work_folder"])
+
+        log("Updated addon \033[1;32m to version %s\033[0m " % (addon.get("new_version")))
+        addon["update_time"] = time.strftime("%d.%m.%Y")
+
+        return True
+    except Exception as er:
+        log(er)
+        return False
 
 
-def is_orphan(addon_name, addons):
+def __is_orphan(addon_name, addons):
     for addon in addons:
         if addon_name == addon["name"]:
             return False
@@ -247,47 +302,49 @@ def is_orphan(addon_name, addons):
 def delete_orphan_addon_folders(addons):
     log("Checking for orphan folders to delete")
     count = 0
-    addon_folders = [f for f in os.listdir(repo_folder) if
-                     os.path.isdir(os.path.join(repo_folder, f)) and not f.startswith(".") and not f.startswith("_")]
+    addon_folders = [f for f in os.listdir(__repo_folder) if
+                     os.path.isdir(os.path.join(__repo_folder, f)) and not f.startswith(".") and not f.startswith("_")]
     for addon_folder in addon_folders:
-        if is_orphan(addon_folder, addons):
+        if addon_folder.endswith(__backup_folder_suffix) or __is_orphan(addon_folder, addons):
             log("Deleting \033[0;31m%s\033[0m" % addon_folder)
-            shutil.rmtree(os.path.join(repo_folder, addon_folder))
+            shutil.rmtree(os.path.join(__repo_folder, addon_folder))
             count += 1
     return count
 
 
-def get_xml_content(path):
+def __get_xml_content(path):
     try:
         return etree.parse(path).getroot()
     except Exception as e:
-        log("Excluding %s due to error: %s" % (path, e))
+        log("Excluding %s due to error: %s" % (path, e), LogLevel.ERROR)
         return None
 
 
-def generate_addonsxml(addons):
+def generate_addons_xml_file(addons):
     """
     Iterate through all addons in the repository and copy each addon.xml to the repository addons.xml
     """
     addons_xml_content = etree.Element("addons")
     for addon in addons:
-        addon_xml_content = get_xml_content(addon["xmlfile"])
+        addon_xml_content = __get_xml_content(addon["xmlfile"])
+        if not addon_xml_content:
+            continue
         addon_id = addon_xml_content.get('id')
         if addon["name"] != addon_id:
             raise Exception("ERROR addon name/id mismatch %s/%s" % (addon["name"], addon_id))
         if addon_xml_content:
             addons_xml_content.append(addon_xml_content)
-    etree.ElementTree(addons_xml_content).write(os.path.join(repo_folder, "addons.xml"), encoding="utf8")
+    etree.ElementTree(addons_xml_content).write(os.path.join(__repo_folder, "addons.xml"), encoding="utf8")
     log("Generated addons.xml")
 
 
 def generate_md5_file():
     try:
         md5sum = hashlib.md5()
-        md5sum.update(open(os.path.join(repo_folder, "addons.xml"), "r", encoding="utf8").read().encode('utf-8'))
+        md5sum.update(open(os.path.join(__repo_folder, "addons.xml"), "r", encoding="utf8").read().encode('utf-8'))
         newmd5sum = md5sum.hexdigest()
         log("new md5 sum: %s" % newmd5sum)
-        with open(os.path.join(repo_folder, "addons.xml.md5"), "w", encoding="utf8") as file:
+        with open(os.path.join(__repo_folder, "addons.xml.md5"), "w", encoding="utf8") as file:
             file.write(newmd5sum)
     except Exception as e:
         log("An error occurred creating addons.xml.md5 file: %s" % e)
@@ -315,7 +372,3 @@ def update_readme(updated_addons):
                 updated_addon["name"], updated_addon.get("new_version"), updated_addon.get("update_time"))
             print(text)
             file_handle.write(text)
-
-
-def log(msg):
-    print("%s | %s" % (time.strftime("%d.%m.%Y %H:%M:%S"), msg))

@@ -1,0 +1,24 @@
+mutation playChannel($input: PlayChannelInput!) {
+  playChannel(input: $input) {
+    playbackInfo {
+      sessionId
+      url
+      channel {
+        id
+        kind
+        __typename
+      }
+      heartbeat {
+        ... on HttpHeartbeat {
+          url
+          interval
+          includeAuthHeaders
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}

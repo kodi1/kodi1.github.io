@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="32001">Account details</string>
+  <string id="32011">Username</string>
+  <string id="32012">Password</string>
+  <string id="32013">Debug mode</string>
+	<string id="30203">Expired subscription </string>
+	<string id="30204">Your subscription expires on: </string>
+	<string id="30205">You are not logged in! </string>
+	<string id="30206">Game has not started yet</string>
+	<string id="30209">Highlights, goals, videos (No subscription needed)</string>
+	<string id="30210">Live!</string>
+	<string id="30211">Next page...</string>
+	<string id="32014">Engine</string>
+</strings>
+ 

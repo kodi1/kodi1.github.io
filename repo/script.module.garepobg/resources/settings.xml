@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General -->
+    <category label="30300">
+      <setting label="Enable"type="bool"   id="ga" default="true"/>
+      <setting label="Dbg"   type="bool"   id="dbg"default="false"/>
+      <setting label=""      type="text"   id="uid" visible="false" default=""/>
+      <setting label=""      type="bool"   id="firstrun" visible="false" default="true"/>
+    </category>
+</settings>

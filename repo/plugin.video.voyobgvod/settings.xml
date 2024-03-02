@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Данни за абонамент">
+        <setting label="Потребител" type="text"   id="username" default="" />
+        <setting label="Парола" type="text"   id="password" option="hidden" default="" />
+    </category>
+    <category label="EPG">
+        <setting label="enable" type="bool" id="useEPG" default="false"/>
+        <setting label="URL" type="text"   id="epgURL" default="https://epg.cloudns.org/dl.php" />
+        <setting label="offset" type="slider" id="epgOffset" subsetting="true" default="0" range="-11,1,11" option="int" />
+    </category>
+    <category label="TV Channels cache">
+        <setting label="enable" type="bool" id="cacheTV" default="false"/>
+    </category>
+</settings>

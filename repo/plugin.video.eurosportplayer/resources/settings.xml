@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30030">
+		<setting id="username2" type="text" label="30031" default="" />
+		<setting id="password2" type="text" option="hidden" label="30032" enable="!eq(-1,)" default="" />
+		<setting id="streamselection" type="labelenum" label="30020" values="mss|hls|dash" default="hls"/>
+	</category>
+    <category label="30010">
+        <setting label="cookie" type="text" id="cookie" default="AMCV_9AE0...619035_15=1" visible="true"/>
+    </category>
+</settings>
+

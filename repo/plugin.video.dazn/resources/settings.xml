@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+        <setting label="30001" type="bool" id="save_login" default="false"/>
+        <setting label="30002" type="action" id="logout" action="RunPlugin(plugin://plugin.video.dazn/?mode=logout)" option="close"/>
+        <setting label="country" type="text" id="country" default="" visible="false"/>
+        <setting label="language" type="text" id="language" default="en" visible="false"/>
+        <setting label="device_id" type="text" id="device_id" default="" visible="false"/>
+        <setting label="viewer_id" type="text" id="viewer_id" default="" visible="false"/>
+        <setting label="portability" type="text" id="portability" default="" visible="false"/>
+        <setting label="token" type="text" id="token" default="" visible="false"/>
+        <setting label="api_endpoint_rail" type="text" id="api_endpoint_rail" default="" visible="false"/>
+        <setting label="api_endpoint_rails" type="text" id="api_endpoint_rails" default="" visible="false"/>
+        <setting label="api_endpoint_epg" type="text" id="api_endpoint_epg" default="" visible="false"/>
+        <setting label="api_endpoint_event" type="text" id="api_endpoint_event" default="" visible="false"/>
+        <setting label="api_endpoint_playback" type="text" id="api_endpoint_playback" default="" visible="false"/>
+        <setting label="api_endpoint_signin" type="text" id="api_endpoint_signin" default="" visible="false"/>
+        <setting label="api_endpoint_signout" type="text" id="api_endpoint_signout" default="" visible="false"/>
+        <setting label="api_endpoint_refresh_access_token" type="text" id="api_endpoint_refresh_access_token" default="" visible="false"/>
+        <setting label="api_endpoint_userprofile" type="text" id="api_endpoint_userprofile" default="" visible="false"/>
+        <setting label="api_endpoint_resource_strings" type="text" id="api_endpoint_resource_strings" default="" visible="false"/>
+        <setting label="api_endpoint_devices" type="text" id="api_endpoint_devices" default="" visible="false"/>
+        <setting label="startup" type="bool" id="startup" default="true" visible="false"/>
+        <setting label="email" type="text" id="email" default="" visible="false"/>
+        <setting label="password" type="text" id="password" default="" visible="false"/>
+        <setting label="max_registrable_devices" type="text" id="max_registrable_devices" default="" visible="false"/>
+        <setting label="entitlements" type="text" id="entitlements" default="" visible="false"/>
+    </category>
+    <category label="30010">
+        <setting label="30011" type="bool" id="force_view" default="false"/>
+        <setting label="30012" type="select" id="content" enable="eq(-1,true)" values="videos|movies|tvshows|episodes|musicvideos" default="videos"/>
+        <setting label="30013" type="number" id="view_id" enable="eq(-2,true)" default="55"/>
+        <setting label="30014" type="number" id="view_id_videos" enable="eq(-3,true)" default="55"/>
+        <setting label="30015" type="number" id="view_id_epg" enable="eq(-4,true)" default="55"/>
+    </category>
+    <category label="30020">
+        <setting label="30021" type="action" id="is_settings" action="RunPlugin(plugin://plugin.video.dazn/?mode=is_settings)" option="close"/>
+        <setting label="30022" type="number" id="max_bw" default="0"/>
+        <setting label="30023" type="bool" id="select_cdn" default="false"/>
+        <setting label="30024" type="text" id="preferred_cdn" enable="false" default=""/>
+    </category>
+</settings>

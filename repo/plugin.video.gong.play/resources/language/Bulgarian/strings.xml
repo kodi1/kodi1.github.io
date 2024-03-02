@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="32001">Потребителски данни</string>
+  <string id="32011">Потребител</string>
+  <string id="32012">Парола</string>
+  <string id="32013">Дебъг режим</string>
+  <string id="30203">Изтекъл абонамент </string>
+  <string id="30204">Абонаментът Ви изтича на </string>
+  <string id="30205">Не сте вписани в системата! </string>
+  <string id="30206">Срещата не е започнала</string>
+	<string id="30209">Репортажи, голове, клипове (Не изисква абонамент)</string>
+	<string id="30210">На живо!</string>
+	<string id="30211">Следваща страница...</string>
+	<string id="32014">Engine</string>
+</strings>
+ 

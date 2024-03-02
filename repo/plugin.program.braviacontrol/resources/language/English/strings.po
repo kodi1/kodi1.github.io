@@ -1,0 +1,43 @@
+# Kodi Media Center language file
+# Addon Name: braviacontrol
+# Addon id: plugin.program.braviacontrol
+# Addon Provider: kodi1
+msgid ""
+msgstr ""
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#settings labels
+
+msgctxt "#30300"
+msgid "General"
+""
+
+msgctxt "#30301"
+msgid "Host"
+""
+
+msgctxt "#30302"
+msgid "PIN"
+""
+
+msgctxt "#30303"
+msgid "MAC"
+""
+
+msgctxt "#30304"
+msgid "Script"
+""
+
+msgctxt "#30305"
+msgid "Run script"
+""
+
+msgctxt "#30306"
+msgid "WOL"
+""

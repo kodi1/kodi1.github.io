@@ -1,0 +1,6 @@
+mutation stopPlayback($input: StopPlaybackInput!) {
+  stopPlayback(input: $input) {
+    success
+    __typename
+  }
+}

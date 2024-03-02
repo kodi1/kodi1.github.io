@@ -1,0 +1,31 @@
+mutation catchupEvent($input: CatchupEventInput!) {
+  catchupEvent(input: $input) {
+    playbackInfo {
+      url
+      streamStart
+      streamEnd
+      sessionId
+      event {
+        id
+        startOverTVBeforeTime
+        startOverTVAfterTime
+        channel {
+          id
+          __typename
+        }
+        __typename
+      }
+      heartbeat {
+        ... on HttpHeartbeat {
+          url
+          interval
+          includeAuthHeaders
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}

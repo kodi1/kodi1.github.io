@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Login information">
+        <setting id="username" type="text" label="e-mail" default="" />
+        <setting id="password" type="text" option="hidden" label="password" enable="!eq(-1,)" default="" />
+        <setting id="quality" type="labelenum" label="quality" values="high|moderate|low" default="high" />
+        <setting id="index_tz" type="enum" label="timezone" default="12" values="GMT-11|GMT-10|GMT-9|GMT-8 (Los Angeles)|GMT-7|GMT-6 (Chicago)|GMT-5 (New York)|GMT-4|GMT-3|GMT-2|GMT-1|GMT (London)|GMT+1 (CET/Europe)|GMT+2 (Bulgaria)|GMT+3 (Moscow)|GMT+4|GMT+5|GMT+6|GMT+7 (Hanoi)|GMT+8 (Beijing)|GMT+9 (Tokyo)|GMT+10|GMT+11 (Sydney)|GMT+12" />
+    </category>
+    <category label="Other settings">
+        <setting id="hide_babytv" type="bool" label="Hide BabyTV" default="false"/>
+    </category>
+</settings>

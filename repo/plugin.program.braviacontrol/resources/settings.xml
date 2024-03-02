@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General -->
+    <category label="30300">
+      <setting label="30301" type="text"   id="host" default=""/>
+      <setting label="30302" type="text"   id="pin" option="hidden" default="0000"/>
+      <setting label="30303" type="text"   id="mac" default="11:22:33:44:55:66"/>
+      <setting label="30304" type="text"   id="run" default=""/>
+      <setting label="30305" type="action" action="RunScript(plugin.program.braviacontrol, EXEC)"/>
+      <setting label="30306" type="action" action="RunScript(plugin.program.braviacontrol, WOL)"/>
+      <setting label=""      type="bool"   id="firstrun" visible="false" default="true"/>
+    </category>
+</settings>

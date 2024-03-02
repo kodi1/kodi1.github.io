@@ -1,0 +1,458 @@
+# Kodi Media Center language file
+# Addon Name: Multi Weather
+# Addon id: weather.multi
+# Addon Provider: ronie
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi add-ons\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-04-11 22:13+0000\n"
+"Last-Translator: Nao3Line Prez <n.yazawa6932@gmail.com>\n"
+"Language-Team: Indonesian <https://kodi.weblate.cloud/projects/kodi-add-ons-weather/weather-multi/id_id/>\n"
+"Language: id_id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.11.2\n"
+
+msgctxt "Addon Summary"
+msgid "Weather forecast from several providers"
+msgstr "Prakiraan cuaca dari beberapa penyedia"
+
+msgctxt "Addon Description"
+msgid "Weather forecast provided by Yahoo, Weatherbit and Openweathermap"
+msgstr "Prakiraan cuaca disediakan oleh Yahoo, Weatherbit dan Openweathermap"
+
+msgctxt "#32101"
+msgid "Location setup"
+msgstr "Penyiapan lokasi"
+
+msgctxt "#32102"
+msgid "Additional"
+msgstr "Tambahan"
+
+msgctxt "#32103"
+msgid "Maps"
+msgstr "Peta"
+
+msgctxt "#32104"
+msgid "Logging"
+msgstr "Pencatatan"
+
+msgctxt "#32110"
+msgid "API key"
+msgstr "Kunci API"
+
+msgctxt "#32111"
+msgid "Location 1"
+msgstr "Lokasi 1"
+
+msgctxt "#32112"
+msgid "Location 2"
+msgstr "Lokasi 2"
+
+msgctxt "#32113"
+msgid "Location 3"
+msgstr "Lokasi 3"
+
+msgctxt "#32114"
+msgid "Location 4"
+msgstr "Lokasi 4"
+
+msgctxt "#32115"
+msgid "Location 5"
+msgstr "Lokasi 5"
+
+msgctxt "#32121"
+msgid "Show lat/lon when searching locations"
+msgstr "Tampilkan lintang/bujur saat mencari lokasi"
+
+msgctxt "#32125"
+msgid "Download additional weather data"
+msgstr "Unduh data cuaca tambahan"
+
+msgctxt "#32128"
+msgid "Map zoom level"
+msgstr "Tingkat zoom peta"
+
+msgctxt "#32129"
+msgid "Enable logging"
+msgstr "Aktifkan pencatatan"
+
+msgctxt "#32130"
+msgid "Download weather maps"
+msgstr "Unduh peta cuaca"
+
+msgctxt "#32131"
+msgid "To get additional weather data, get an api key at: https://weatherbit.io/"
+msgstr "Untuk mendapatkan data cuaca tambahan, dapatkan kunci api di: https://weatherbit.io/"
+
+msgctxt "#32135"
+msgid "To use maps, get an api key at: http://openweathermap.org/appid"
+msgstr "Untuk menggunakan peta, dapatkan kunci api di: http://openweathermap.org/appid"
+
+msgctxt "#32201"
+msgid "Thunderstorm with light rain"
+msgstr "Badai petir disertai hujan ringan"
+
+msgctxt "#32202"
+msgid "Thunderstorm with rain"
+msgstr "Badai petir dengan hujan"
+
+msgctxt "#32203"
+msgid "Thunderstorm with heavy rain"
+msgstr "Badai petir dengan hujan lebat"
+
+msgctxt "#32204"
+msgid "Thunderstorm with light drizzle"
+msgstr "Badai petir dengan gerimis ringan"
+
+msgctxt "#32205"
+msgid "Thunderstorm with drizzle"
+msgstr "Badai petir dengan gerimis"
+
+msgctxt "#32206"
+msgid "Thunderstorm with heavy drizzle"
+msgstr "Badai petir dengan gerimis lebat"
+
+msgctxt "#32207"
+msgid "Thunderstorm with Hail"
+msgstr "Badai petir dengan Hujan Es"
+
+msgctxt "#32208"
+msgid "Light Drizzle"
+msgstr "Gerimis Ringan"
+
+msgctxt "#32209"
+msgid "Drizzle"
+msgstr "Gerimis"
+
+msgctxt "#32210"
+msgid "Heavy Drizzle"
+msgstr "Gerimis Lebat"
+
+msgctxt "#32211"
+msgid "Light Rain"
+msgstr "Hujan Ringan"
+
+msgctxt "#32212"
+msgid "Moderate Rain"
+msgstr "Hujan Sedang"
+
+msgctxt "#32213"
+msgid "Heavy Rain"
+msgstr "Hujan Deras"
+
+msgctxt "#32214"
+msgid "Freezing rain"
+msgstr "Hujan beku"
+
+msgctxt "#32215"
+msgid "Light shower rain"
+msgstr "Hujan rintik-rintik"
+
+msgctxt "#32216"
+msgid "Shower rain"
+msgstr "Hujan"
+
+msgctxt "#32217"
+msgid "Heavy shower rain"
+msgstr "Hujan deras"
+
+msgctxt "#32218"
+msgid "Light snow"
+msgstr "Salju ringan"
+
+msgctxt "#32219"
+msgid "Snow"
+msgstr "Salju"
+
+msgctxt "#32220"
+msgid "Heavy snow"
+msgstr "Salju tebal"
+
+msgctxt "#32221"
+msgid "Mix snow/rain"
+msgstr "Campur salju/hujan"
+
+msgctxt "#32222"
+msgid "Sleet"
+msgstr "Hujan es"
+
+msgctxt "#32223"
+msgid "Heavy sleet"
+msgstr "Hujan es lebat"
+
+msgctxt "#32224"
+msgid "Snow shower"
+msgstr "Salju"
+
+msgctxt "#32225"
+msgid "Heavy snow shower"
+msgstr "Salju lebat"
+
+msgctxt "#32226"
+msgid "Flurries"
+msgstr "Tiba-tiba"
+
+msgctxt "#32227"
+msgid "Mist"
+msgstr "Kabut"
+
+msgctxt "#32228"
+msgid "Smoke"
+msgstr "Asap"
+
+msgctxt "#32229"
+msgid "Haze"
+msgstr "Kabut"
+
+msgctxt "#32230"
+msgid "Sand/dust"
+msgstr "Pasir/debu"
+
+msgctxt "#32231"
+msgid "Fog"
+msgstr "Kabut"
+
+msgctxt "#32232"
+msgid "Freezing fog"
+msgstr "Kabut dingin"
+
+msgctxt "#32233"
+msgid "Clear sky"
+msgstr "Cerah"
+
+msgctxt "#32234"
+msgid "Few clouds"
+msgstr "Sebagian Berawan"
+
+msgctxt "#32235"
+msgid "Scattered clouds"
+msgstr "Berawan"
+
+msgctxt "#32236"
+msgid "Broken clouds"
+msgstr "Berawan mencar"
+
+msgctxt "#32237"
+msgid "Overcast clouds"
+msgstr "Mendung"
+
+msgctxt "#32238"
+msgid "Unknown Precipitation"
+msgstr "Curah Hujan Tidak Diketahui"
+
+msgctxt "#32251"
+msgid "Tornado"
+msgstr "Angin topan"
+
+msgctxt "#32252"
+msgid "Tropical Storm"
+msgstr "Badai tropis"
+
+msgctxt "#32253"
+msgid "Hurricane"
+msgstr "Badai"
+
+msgctxt "#32254"
+msgid "Severe Thunderstorms"
+msgstr "Badai Petir Parah"
+
+msgctxt "#32255"
+msgid "Thunderstorms"
+msgstr "badai petir"
+
+msgctxt "#32256"
+msgid "Mixed Rain and Snow"
+msgstr "Campuran Hujan dan Salju"
+
+msgctxt "#32257"
+msgid "Mixed Rain and Sleet"
+msgstr "Campuran Hujan dan Es"
+
+msgctxt "#32258"
+msgid "Mixed Snow and Sleet"
+msgstr "Campuran Salju dan Hujan es"
+
+msgctxt "#32259"
+msgid "Freezing Drizzle"
+msgstr "Gerimis Dingin"
+
+msgctxt "#32260"
+msgid "Drizzle"
+msgstr "Gerimis"
+
+msgctxt "#32261"
+msgid "Freezing Rain"
+msgstr "Hujan mengigil"
+
+msgctxt "#32262"
+msgid "Showers"
+msgstr "Gerimis"
+
+msgctxt "#32263"
+msgid "Rain"
+msgstr "Hujan"
+
+msgctxt "#32264"
+msgid "Snow Flurries"
+msgstr "Salju Mendadak"
+
+msgctxt "#32265"
+msgid "Light Snow Showers"
+msgstr "Salju ringan"
+
+msgctxt "#32266"
+msgid "Blowing Snow"
+msgstr "Salju berhembus"
+
+msgctxt "#32267"
+msgid "Snow"
+msgstr "Salju"
+
+msgctxt "#32268"
+msgid "Hail"
+msgstr "Hujan es"
+
+msgctxt "#32269"
+msgid "Sleet"
+msgstr "Hujan es"
+
+msgctxt "#32270"
+msgid "Dust"
+msgstr "Debu"
+
+msgctxt "#32271"
+msgid "Foggy"
+msgstr "Berkabut"
+
+msgctxt "#32272"
+msgid "Haze"
+msgstr "Kabut"
+
+msgctxt "#32273"
+msgid "Smoky"
+msgstr "Berasap"
+
+msgctxt "#32274"
+msgid "Blustery"
+msgstr "Kencang"
+
+msgctxt "#32275"
+msgid "Windy"
+msgstr "Berangin"
+
+msgctxt "#32276"
+msgid "Cold"
+msgstr "Dingin"
+
+msgctxt "#32277"
+msgid "Cloudy"
+msgstr "Berawan"
+
+msgctxt "#32278"
+msgid "Mostly Cloudy"
+msgstr "Sebagian Besar Berawan"
+
+msgctxt "#32279"
+msgid "Partly Cloudy"
+msgstr "Sebagian Berawan"
+
+msgctxt "#32280"
+msgid "Clear"
+msgstr "Cerah"
+
+msgctxt "#32281"
+msgid "Sunny"
+msgstr "Cerah"
+
+msgctxt "#32282"
+msgid "Fair"
+msgstr "Sedang"
+
+msgctxt "#32283"
+msgid "Mixed Rain and Hail"
+msgstr "Campuran Hujan dan Hujan es"
+
+msgctxt "#32284"
+msgid "Hot"
+msgstr "Panas"
+
+msgctxt "#32285"
+msgid "Isolated Thunderstorms"
+msgstr "Badai Petir Terisolasi"
+
+msgctxt "#32286"
+msgid "Scattered Thunderstorms"
+msgstr "Badai Petir Merata"
+
+msgctxt "#32287"
+msgid "Scattered Showers"
+msgstr "Hujan Merata"
+
+msgctxt "#32288"
+msgid "Heavy Rain"
+msgstr "Hujan Deras"
+
+msgctxt "#32289"
+msgid "Scattered Snow Showers"
+msgstr "Hujan Salju Merata"
+
+msgctxt "#32290"
+msgid "Heavy Snow"
+msgstr "Salju Lebat"
+
+msgctxt "#32291"
+msgid "Blizzard"
+msgstr "Badai salju"
+
+msgctxt "#32292"
+msgid "Not Available"
+msgstr "Tdk Tersedia"
+
+msgctxt "#32293"
+msgid "Scattered Showers"
+msgstr "Hujan merata"
+
+msgctxt "#32294"
+msgid "Scattered Snow Showers"
+msgstr "Hujan Salju Merata"
+
+msgctxt "#32295"
+msgid "Scattered Thundershowers"
+msgstr "Hujan Petir Merata"
+
+msgctxt "#32300"
+msgid "New Moon"
+msgstr "Bulan Baru"
+
+msgctxt "#32301"
+msgid "Waxing Crescent"
+msgstr "Sabit Awal"
+
+msgctxt "#32302"
+msgid "First Quarter"
+msgstr "Babak Pertama"
+
+msgctxt "#32303"
+msgid "Waxing Gibbous"
+msgstr "Cembung Awal"
+
+msgctxt "#32304"
+msgid "Full Moon"
+msgstr "Purnama"
+
+msgctxt "#32305"
+msgid "Waning Gibbous"
+msgstr "Cembung Akhir"
+
+msgctxt "#32306"
+msgid "Last Quarter"
+msgstr "Babak Terakhir"
+
+msgctxt "#32307"
+msgid "Waning Crescent"
+msgstr "Sabit Akhir"

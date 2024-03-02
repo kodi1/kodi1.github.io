@@ -1,0 +1,23 @@
+query getSetupSteps {
+  me {
+    id
+    household {
+      id
+      profiles {
+        id
+        items {
+          id
+          name
+          kind
+          protection
+          pincode
+          __typename
+        }
+        __typename
+      }
+      maxNumberOfUnmanagedDevices
+      __typename
+    }
+    __typename
+  }
+}

@@ -1,0 +1,109 @@
+query channelGuide($channelId: ID!, $startDate: Date!, $timeslotDurations: [Int]!, $thumbnailHeight: Int!, $channelLogoWidth: Int!, $channelLogoHeight: Int!, $channelLogoFlavour: ImageFlavour, $shortDescriptionMaxLength: Int!, $backgroundHeight: Int!, $backgroundWidth: Int!) {
+  channel(id: $channelId) {
+    ...cacheInfoFragment
+    title
+    userInfo {
+      ...cacheInfoFragment
+      subscribed
+      __typename
+    }
+    logo(width: $channelLogoWidth, height: $channelLogoHeight, flavour: $channelLogoFlavour) {
+      ...imageFragment
+      __typename
+    }
+    events: eventBlocks(start: $startDate, blockDurations: $timeslotDurations) {
+      ...cacheInfoFragment
+      itemCount
+      items {
+        ...itemData
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+
+fragment itemData on Event {
+  ...cacheInfoFragment
+  title
+  start
+  end
+  parentalRating {
+    ...cacheInfoFragment
+    rank
+    adult
+    __typename
+  }
+  thumbnail(height: $thumbnailHeight) {
+    ...cacheInfoFragment
+    url
+    __typename
+  }
+  backgroundImage(width: $backgroundWidth, height: $backgroundHeight) {
+    ...imageFragment
+    __typename
+  }
+  eventEntitlements: entitlements {
+    restartTV
+    catchupTV
+    catchupTVAvailableUntil
+    __typename
+  }
+  eventMetadata: metadata {
+    ...metadataExtendedFragment
+    __typename
+  }
+  __typename
+}
+
+fragment cacheInfoFragment on Cacheable {
+  __typename
+  id
+  expiry
+}
+
+fragment imageFragment on Image {
+  ...cacheInfoFragment
+  url
+  width
+  height
+  __typename
+}
+
+fragment metadataExtendedFragment on Metadata {
+  ...cacheInfoFragment
+  title
+  originalTitle
+  shortDescription(maxLength: $shortDescriptionMaxLength)
+  country
+  year
+  fullDescription
+  genre {
+    ...cacheInfoFragment
+    title
+    __typename
+  }
+  seriesInfo {
+    ...cacheInfoFragment
+    title
+    __typename
+  }
+  episodeInfo {
+    ...cacheInfoFragment
+    number
+    title
+    season
+    __typename
+  }
+  actors
+  directors
+  ratings {
+    ...cacheInfoFragment
+    value
+    name
+    __typename
+  }
+  __typename
+}
+

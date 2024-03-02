@@ -1,0 +1,51 @@
+query home($profileId: ID!, $firstFolders: Int!, $foldersAfterCursor: String) {
+  homeRows(profileId: $profileId) {
+    ...ContentFolderListFragment
+    __typename
+  }
+}
+
+fragment ContentFolderListFragment on ContentFolderList {
+  id
+  expiry
+  folders(first: $firstFolders, after: $foldersAfterCursor) {
+    pageInfo {
+      ...pageInfoFragment
+      __typename
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ...ContentFolderFragment
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment cacheInfoFragment on Cacheable {
+  __typename
+  id
+  expiry
+}
+
+fragment pageInfoFragment on PageInfo {
+  hasNextPage
+  hasPreviousPage
+  startCursor
+  endCursor
+  __typename
+}
+
+fragment ContentFolderFragment on ContentFolder {
+  ...cacheInfoFragment
+  refreshAt
+  title
+  kind
+  __typename
+}
+

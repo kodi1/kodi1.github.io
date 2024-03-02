@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General -->
+    <category label="30300">
+      <setting label="30301" type="slider"     id="delay" default="1" range="1,1,60" option="int"/>
+      <setting label="30302" type="bool"       id="dbg" default="false"/>
+      <setting label="30303" type="text"       id="svr_activate" default=""/>
+      <setting label="30304" type="text"       id="svr_deactivate" default=""/>
+      <setting label="30305" type="bool"       id="if_play" default="false"/>
+      <setting label="30306" type="slider"     id="play_delay" default="15" range="1,1,180" option="int"  visible="eq(-1,true)"/>
+      <setting label="30307" type="bool"       id="if_active" default="true"/>
+      <setting label="30308" type="lsep"/>
+      <setting label="30309" type="text"       id="svr_activate_i" default=""/>
+      <setting label="30310" type="text"       id="svr_deactivate_i" default=""/>
+      <setting label="30311" type="bool"       id="if_play_i" default="false"/>
+      <setting label="30312" type="slider"     id="play_delay_i" default="15" range="1,1,60" option="int"  visible="eq(-1,true)"/>
+      <setting label="30313" type="bool"       id="if_active_i" default="true"/>
+      <setting label="30314" type="text"       id="svr_activate_instant" default=""/>
+      <setting label="30315" type="text"       id="svr_deactivate_instant" default=""/>
+    </category>
+</settings>

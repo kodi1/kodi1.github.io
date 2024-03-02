@@ -1,0 +1,6 @@
+mutation keepAlive {
+  keepSessionAlive {
+    sessionTimeout
+    __typename
+  }
+}

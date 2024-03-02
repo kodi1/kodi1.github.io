@@ -1,0 +1,7 @@
+mutation createDevice($input: CreateDeviceInput!) {
+    createDevice(input: $input) {
+        success
+        reauthenticate
+        __typename
+      }
+}

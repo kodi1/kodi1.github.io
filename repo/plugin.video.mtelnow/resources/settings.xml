@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<!-- User Entries -->
+	<category label="1000">
+        <setting id="sep1" label="1000" type="lsep"/>
+        <setting id="settings_username" label="E-mail" type="text" default=""/>
+        <setting id="settings_password" label="Password" type="text" default="" option="hidden" enable="!eq(-1,)"/>
+        <setting id="settings_max_bandwidth" label="Max. Bandwidth (Bit/s)" type="number" default=""/>
+        <setting id="settings_adult" label="Adult" type="bool" default="true"/>
+    </category>
+    <category id="expert" label="Expert">
+        <setting id="sep2" label="Expert" type="lsep"><level>3</level></setting>
+        <setting id="play_prefix_enabled" label="Използване на междинен сървър" type="bool" default="false"><level>3</level></setting>
+        <setting id="play_prefix" label="Междинен сървър" type="text" default=""><level>3</level></setting>
+    </category>
+</settings>

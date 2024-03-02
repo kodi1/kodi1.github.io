@@ -1,0 +1,12 @@
+query getInitialChannelLists {
+  initialChannelList {
+    ...cacheInfoFragment
+    __typename
+  }
+}
+
+fragment cacheInfoFragment on Cacheable {
+  __typename
+  id
+  expiry
+}

@@ -1,0 +1,314 @@
+query getFolderById($id: ID!, $profileId: ID!, $firstItems: Int, $itemsAfterCursor: String, $lastItems: Int, $itemsBeforeCursor: String, $thumbnailHeight: Int!, $channelLogoWidth: Int!, $channelLogoHeight: Int!, $channelLogoFlavour: ImageFlavour, $backgroundWidth: Int!, $backgroundHeight: Int!) {
+  contentFolder(id: $id) {
+    ...ContentFolderFragment
+    __typename
+  }
+}
+
+fragment ContentFolderFragment on ContentFolder {
+  ...cacheInfoFragment
+  refreshAt
+  title
+  kind
+  firstItems: items(first: $firstItems, after: $itemsAfterCursor) {
+    totalCount
+    pageInfo {
+      ...pageInfoFragment
+      __typename
+    }
+    edges {
+      cursor
+      node {
+        ...ContentItemFragment
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  lastItems: items(last: $lastItems, before: $itemsBeforeCursor) {
+    totalCount
+    pageInfo {
+      ...pageInfoFragment
+      __typename
+    }
+    edges {
+      cursor
+      node {
+        ...ContentItemFragment
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment cacheInfoFragment on Cacheable {
+  __typename
+  id
+  expiry
+}
+
+fragment pageInfoFragment on PageInfo {
+  hasNextPage
+  hasPreviousPage
+  startCursor
+  endCursor
+  __typename
+}
+
+fragment ContentItemFragment on ContentItem {
+  ... on VODFolder {
+    ...cacheInfoFragment
+    title
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    __typename
+  }
+  ... on VODAsset {
+    ...cacheInfoFragment
+    title
+    duration
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    backgroundImage(width: $backgroundWidth, height: $backgroundHeight) {
+      ...imageFragment
+      __typename
+    }
+    parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    metadata {
+      ...cacheInfoFragment
+      seriesInfo {
+        ...cacheInfoFragment
+        title
+        __typename
+      }
+      episodeInfo {
+        ...cacheInfoFragment
+        number
+        title
+        season
+        __typename
+      }
+      __typename
+    }
+    entitlements {
+      ...cacheInfoFragment
+      itemCount
+      items {
+        id
+        playbackAvailableUntil
+        __typename
+      }
+      __typename
+    }
+    personalInfo(profileId: $profileId) {
+      ...cacheInfoFragment
+      bookmark {
+        ...cacheInfoFragment
+        position
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on VODProduct {
+    ...cacheInfoFragment
+    title
+    fullDescription
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    backgroundImage(width: $backgroundWidth, height: $backgroundHeight) {
+      ...imageFragment
+      __typename
+    }
+    actors
+    directors
+    productParentalRating: parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    __typename
+  }
+  ... on VODSeries {
+    ...cacheInfoFragment
+    title
+    episodeCount
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    __typename
+  }
+  ... on Series {
+    ...cacheInfoFragment
+    title
+    subtitle
+    episodeCount
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    channel {
+      ...cacheInfoFragment
+      logo(width: $channelLogoWidth, height: $channelLogoHeight, flavour: $channelLogoFlavour) {
+        ...imageFragment
+        __typename
+      }
+      personalInfo(profileId: $profileId) {
+        ...cacheInfoFragment
+        blocked
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on NetworkRecording {
+    ...cacheInfoFragment
+    start
+    end
+    status
+    personalRecordingInfo: personalInfo(profileId: $profileId) {
+      bookmark {
+        ...cacheInfoFragment
+        position
+        __typename
+      }
+      __typename
+    }
+    channel {
+      ...cacheInfoFragment
+      logo(width: $channelLogoWidth, height: $channelLogoHeight, flavour: $channelLogoFlavour) {
+        ...imageFragment
+        __typename
+      }
+      personalInfo(profileId: $profileId) {
+        ...cacheInfoFragment
+        blocked
+        __typename
+      }
+      __typename
+    }
+    event {
+      ...cacheInfoFragment
+      title
+      start
+      end
+      thumbnail(height: $thumbnailHeight) {
+        ...imageFragment
+        __typename
+      }
+      parentalRating {
+        ...parentalRatingFragment
+        __typename
+      }
+      eventEntitlements: entitlements {
+        catchupTV
+        restartTV
+        catchupTVAvailableUntil
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on Event {
+    ...cacheInfoFragment
+    title
+    start
+    end
+    startOverTVBeforeTime
+    startOverTVAfterTime
+    thumbnail(height: $thumbnailHeight) {
+      ...imageFragment
+      __typename
+    }
+    parentalRating {
+      ...parentalRatingFragment
+      __typename
+    }
+    eventEntitlements: entitlements {
+      catchupTV
+      restartTV
+      catchupTVAvailableUntil
+      __typename
+    }
+    personalEventInfo: personalInfo(profileId: $profileId) {
+      ...cacheInfoFragment
+      recordings(kindFilter: NETWORK) {
+        ... on NetworkRecording {
+          id
+          status
+          start
+          end
+          __typename
+        }
+        __typename
+      }
+      bookmark {
+        ...cacheInfoFragment
+        position
+        __typename
+      }
+      __typename
+    }
+    channel {
+      ...cacheInfoFragment
+      logo(width: $channelLogoWidth, height: $channelLogoHeight, flavour: $channelLogoFlavour) {
+        ...imageFragment
+        __typename
+      }
+      personalInfo(profileId: $profileId) {
+        ...cacheInfoFragment
+        blocked
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment imageFragment on Image {
+  ...cacheInfoFragment
+  url
+  width
+  height
+  __typename
+}
+
+fragment parentalRatingFragment on ParentalRating {
+  ...cacheInfoFragment
+  title
+  description
+  rank
+  adult
+  __typename
+}
+

@@ -1,0 +1,79 @@
+# Kodi Media Center language file
+# Addon Name: screensaver hooks
+# Addon id: service.screensaver.hooks
+# Addon Provider: kodi1
+msgid ""
+msgstr ""
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#settings labels
+
+msgctxt "#30300"
+msgid "General"
+""
+
+msgctxt "#30301"
+msgid "Delay on Activate"
+""
+
+msgctxt "#30302"
+msgid "Dbg"
+""
+
+msgctxt "#30303"
+msgid "On Activate"
+""
+
+msgctxt "#30304"
+msgid "On Deactivate"
+""
+
+msgctxt "#30305"
+msgid "Extend Delay if Play"
+""
+
+msgctxt "#30306"
+msgid "Extended Dealy"
+""
+
+msgctxt "#30307"
+msgid "Deactivate only if already Activated"
+""
+
+msgctxt "#30308"
+msgid "Execute addon [addonid, paramter(s)]</string"
+""
+
+msgctxt "#30309"
+msgid "On Activate"
+""
+
+msgctxt "#30310"
+msgid "On Deactivate"
+""
+
+msgctxt "#30311"
+msgid "Extend Delay if Play"
+""
+
+msgctxt "#30312"
+msgid "Extended Dealy"
+""
+
+msgctxt "#30313"
+msgid "Deactivate only if already Activated"
+""
+
+msgctxt "#30314"
+msgid "Instantly Activate"
+""
+
+msgctxt "#30315"
+msgid "Instantly Deactivate"
+""

@@ -1,0 +1,69 @@
+# Kodi Media Center language file
+# Addon Name: Eurosport Player
+# Addon id: plugin.video.eurosportplayer
+# Addon Provider: MRLB
+
+msgid ""
+msgstr ""
+
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30010"
+msgid "View"
+msgstr ""
+
+msgctxt "#30030"
+msgid "View"
+msgstr "Allgemein"
+
+msgctxt "#30031"
+msgid "Username"
+msgstr ""
+
+msgctxt "#30032"
+msgid "Password"
+msgstr ""
+
+msgctxt "#30100"
+msgid "TV channels"
+msgstr "TV channels"
+
+msgctxt "#30101"
+msgid "Bonus channels"
+msgstr "Bonus channels"
+
+msgctxt "#30102"
+msgid "Archive"
+msgstr "Archive"
+
+msgctxt "#30103"
+msgid "Schedule"
+msgstr "Schedule"
+
+msgctxt "#30104"
+msgid "Next liveevents today"
+msgstr "Nächste Liveevents today"
+
+msgctxt "#30105"
+msgid "today"
+msgstr "today"
+
+msgctxt "#30106"
+msgid " time"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Stream has not started yet or is already finished"
+msgstr "Stream has not started yet or is already finished"
+
+msgctxt "#30108"
+msgid "Error - stream selection does not exist"
+msgstr "Error - stream selection does not exist"
+
+msgctxt "#30020"
+msgid "Stream selection"
+msgstr "Stream selection"
