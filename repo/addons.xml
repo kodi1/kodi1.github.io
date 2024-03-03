@@ -302,14 +302,14 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   	<forum>https://kodibg.org/forum/</forum>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.5" provider-name="HarryDoubleG">
+</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.8" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.beautifulsoup4" version="4.3.2" />
     <import addon="script.module.html5lib" version="0.999.0" />
     <import addon="script.module.garepobg" version="0.1.4" />
     <import addon="script.module.requests" />
-    <import addon="script.module.kodibgcommon" version="1.0.0" />
+    <import addon="script.module.kodibgcommon" version="1.0.10" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -317,13 +317,20 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <language>bg</language>
-    <summary>Summary for "Btv Plus"</summary>
-    <description>Description for "Btv Plus"</description>
+    <summary lang="en">This Kodi Add-on provides a minimal interface for btvplus.bg</summary>
+	<summary lang="bg">Kodi приставка за гледане на видео съдържание от сайта btvplus.bg</summary>
+    <description lang="en">This Kodi Add-on provides a minimal interface for btvplus.bg</description>
+    <description lang="bg">Приставка за гледане на видео съдържание от сайта btvplus.bg</description>
     <forum>https://kodibg.org/forum/thread-145.html</forum>
     <website>https://github.com/harrygg/plugin.video.btvplus</website>
 	<assets>
 		<icon>resources/icon.png</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<fanart>screenshot/screenshot-01.jpg</fanart>
 	</assets>
+	<news>v2.0.6 (01/02/2024)
+      [fix] Оправено е извличането на видео потоците. 
+    </news>
   </extension>
 </addon><addon id="plugin.video.gong.play" name="Gong Play" version="1.5.5" provider-name="HarryGG">
   <requires>

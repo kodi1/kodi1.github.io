@@ -55,7 +55,7 @@ def get_episodes(url):
     for item in items:
         try:
             title = item.find(class_="title").get_text().rstrip().lstrip()
-            list_item = {"title": title, "url": item.find("a")['href'], "logo": "https://" + item.find("img")['src']}
+            list_item = {"title": title, "url": item.find("a")['href'], "logo": item.find("img")['src']}
             log(list_item, 1)
             episodes.append(list_item)
         except Exception as er:
@@ -79,8 +79,10 @@ def show_episodes(episodes):
     for episode in episodes:
         if episode['title'] != next_page_title:
             url = make_url({"action": "play_stream", "url": episode["url"], "title": episode["title"]})
-            add_listitem_unresolved(episode.get("title"), url, iconImage=episode.get("logo"),
-                                    thumbnailImage=episode.get("logo"))
+            li = xbmcgui.ListItem(episode.get("title"))
+            li.setProperty("IsPlayable", 'True')  
+            li.setArt({"thumb": episode.get("logo"), "icon":episode.get("logo"), "fanart":episode.get("logo")})
+            xbmcplugin.addDirectoryItem(get_addon_handle(), url, li, False)
         else:
             url = make_url({"action": "show_episodes", "url": episode["url"]})
             add_listitem_folder(episode["title"], url)
@@ -170,9 +172,9 @@ id = params.get("id")
 url = params.get("url")
 title = params.get("title")
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
-view_mode = 500
 host = "https://btvplus.bg/"
 next_page_title = 'Следваща страница'
+view_mode = 500
 
 if not action:
     show_categories()
@@ -237,5 +239,7 @@ elif action == 'search':
         if searchText != '':
             show_episodes(get_episodes('search/?q=%s' % searchText))
 
+
 xbmcplugin.endOfDirectory(get_addon_handle())
+xbmcplugin.setContent(get_addon_handle(), 'movies')
 xbmc.executebuiltin("Container.SetViewMode(%s)" % view_mode)
