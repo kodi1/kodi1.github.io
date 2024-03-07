@@ -118,7 +118,7 @@
      <fanart>resources/fanart.jpg</fanart>
 	</assets>
   </extension>
-</addon><addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.0" provider-name="sailor">
+</addon><addon id="plugin.audio.radiobrowser" name="Radio-Browser.info" version="1.3.1" provider-name="sailor, radopas">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -143,6 +143,10 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
     <website>https://www.radio-browser.info</website>
     <source>https://github.com/segler-alex/kodi-radio-browser</source>
     <email>segler_alex@web.de</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon><addon id="repository.majide" name="Majide Add-on repository" version="0.20.6" provider-name="Majide">
 	<extension point="xbmc.addon.repository" name="Majide Add-on repository">

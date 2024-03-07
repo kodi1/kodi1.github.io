@@ -57,7 +57,7 @@ msgid "Remove Station"
 msgstr "Sender entfernen"
 
 msgctxt "#32010"
-msgid "Add Station"
+msgid "Add to My stations"
 msgstr "Sender hinzufügen"
 
 msgctxt "#32011"

@@ -2,7 +2,7 @@
   {"owner":"MRLB", "name":"plugin.video.eurosportplayer", "provider":"github", "repo_name": "kodi-eurosportplayer"},
   {"owner":"Arias800", "name":"plugin.video.vikir", "provider":"github"},
   {"owner":"lukavia", "name":"plugin.video.mtelnow", "provider":"github"},
-  {"owner":"gazer22", "name":"plugin.audio.radiobrowser", "provider":"github", "repo_name": "kodi-radio-browser"},
+  {"owner":"radopas", "name":"plugin.audio.radiobrowser", "provider":"github", "repo_name": "kodi-radio-browser"},
   {"owner":"majide", "name":"repository.majide", "url":"https://andromeda.eu.org/xbmc/repository.majide-0.20.6.zip", "update": false},
   {"owner":"ronie", "name":"weather.multi", "provider":"gitlab"},
   {"owner":"martinstz", "name":"repository.mar33", "url":"https://martinstz.com/repo/repository.mar33-3.3.33.zip", "remote_xml_url": "https://martinstz.com/repo/addon.xml", "update": false},

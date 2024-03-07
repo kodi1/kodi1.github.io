@@ -1,6 +1,6 @@
 import sys
-import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
+import urllib.request
+import urllib.error
 import urllib.parse
 import xbmcgui
 import xbmcplugin
@@ -8,6 +8,10 @@ import xbmcaddon
 import xbmcvfs
 import json
 import base64
+import xbmc
+import socket
+import random
+
 
 addonID = 'plugin.audio.radiobrowser'
 addon = xbmcaddon.Addon(id=addonID)
@@ -18,14 +22,12 @@ args = urllib.parse.parse_qs(sys.argv[2][1:])
 
 xbmcplugin.setContent(addon_handle, 'songs')
 
-my_stations = {}
+my_stations = dict()
 profile = xbmcvfs.translatePath(addon.getAddonInfo('profile'))
 mystations_path = profile+'/mystations.json'
 
-import socket
-import random
 
-def get_radiobrowser_base_urls():
+def get_radiobrowser_base_urls() -> list:
     """
     Get all base urls of all currently available radiobrowser servers
 
@@ -53,15 +55,15 @@ def get_radiobrowser_base_urls():
     xbmc.log("Found hosts: " + ",".join(hosts))
     return list(["https://" + x for x in hosts])
 
-def LANGUAGE(id):
+def LANGUAGE(id: int) -> str:
     # return id
     # return "undefined"
-    return addon.getLocalizedString(id).encode('utf-8')
+    return addon.getLocalizedString(id)
 
-def build_url(query):
+def build_url(query: dict) -> str:
     return base_url + '?' + urllib.parse.urlencode(query)
 
-def addLink(stationuuid, name, url, favicon, bitrate):
+def addLink(stationuuid: str, name: str, url: str, favicon: str, bitrate: str):
     li = xbmcgui.ListItem(name)
     li.setArt({'icon':favicon})
     li.setProperty('IsPlayable', 'true')
@@ -103,7 +105,7 @@ def downloadFile(uri, param):
     response.close()
     return data
 
-def downloadApiFile(path, param):
+def downloadApiFile(path: str, param):
     """
     Download file with relative url from a random api server.
     Retry with other api servers if failed.
@@ -116,35 +118,35 @@ def downloadApiFile(path, param):
     i = 0
     for server_base in servers:
         xbmc.log('Random server: ' + server_base + ' Try: ' + str(i))
-        uri = server_base + path
+        uri = server_base + urllib.parse.quote(path)
 
         try:
             data = downloadFile(uri, param)
             return data
         except Exception as e:
-            xbmc.log("Unable to download from api url: " + uri, xbmc.LOGERROR)
+            xbmc.log("Unable to download from api url: " + uri + "->" + e.__str__(), xbmc.LOGERROR)
             pass
         i += 1
-    return {}
+    return ""
 
-def addPlayableLink(data):
+def addPlayableLink(data: str):
     dataDecoded = json.loads(data)
     for station in dataDecoded:
         addLink(station['stationuuid'], station['name'], station['url'], station['favicon'], station['bitrate'])
 
-def readFile(filepath):
+def readFile(filepath: str):
     with open(filepath, 'r') as read_file:
         return json.load(read_file)
 
-def writeFile(filepath, data):
+def writeFile(filepath: str, data):
     with open(filepath, 'w') as write_file:
         return json.dump(data, write_file)
 
-def addToMyStations(stationuuid, name, url, favicon, bitrate):
+def addToMyStations(stationuuid: str, name: str, url: str, favicon: str, bitrate: str):
     my_stations[stationuuid] = {'stationuuid': stationuuid, 'name': name, 'url': url, 'bitrate': bitrate, 'favicon': favicon}
     writeFile(mystations_path, my_stations)
 
-def delFromMyStations(stationuuid):
+def delFromMyStations(stationuuid: str):
     if stationuuid in my_stations:
         del my_stations[stationuuid]
         writeFile(mystations_path, my_stations)
@@ -161,7 +163,21 @@ else:
 
 mode = args.get('mode', None)
 
+
+def process_search_params(input: str) -> dict:
+    #when search has more than one word they don't search inner words with wildcards, so add % to make sure every word is wildcarded
+    input_with_wildcards = input.replace(" ", "% ");
+    parameters = {"limit":20, "hidebroken": True, "order":"clickcount", "reverse": True, "name": input_with_wildcards}
+    return parameters
+
 if mode is None:
+    if len(my_stations) > 0:
+        # if there is any elements in My stations, then put the list on top, else it is at the end
+        localUrl = build_url({'mode': 'mystations'})
+        li = xbmcgui.ListItem(LANGUAGE(32008))
+        li.setArt({"icon": 'DefaultFolder.png'})
+        xbmcplugin.addDirectoryItem(handle=addon_handle, url=localUrl, listitem=li, isFolder=True)
+
     localUrl = build_url({'mode': 'stations', 'url': '/json/stations/topclick/100'})
     li = xbmcgui.ListItem(LANGUAGE(32000))
     li.setArt({'icon':'DefaultFolder.png'})
@@ -197,10 +213,11 @@ if mode is None:
     li.setArt({'icon':'DefaultFolder.png'})    
     xbmcplugin.addDirectoryItem(handle=addon_handle, url=localUrl, listitem=li, isFolder=True)
 
-    localUrl = build_url({'mode': 'mystations'})
-    li = xbmcgui.ListItem(LANGUAGE(32008))
-    li.setArt({'icon':'DefaultFolder.png'})    
-    xbmcplugin.addDirectoryItem(handle=addon_handle, url=localUrl, listitem=li, isFolder=True)
+    if len(my_stations) == 0:
+        localUrl = build_url({'mode': 'mystations'})
+        li = xbmcgui.ListItem(LANGUAGE(32008))
+        li.setArt({'icon':'DefaultFolder.png'})
+        xbmcplugin.addDirectoryItem(handle=addon_handle, url=localUrl, listitem=li, isFolder=True)
 
     xbmcplugin.endOfDirectory(addon_handle)
 
@@ -216,7 +233,7 @@ elif mode[0] == 'tags':
                 li.setArt({'icon':'DefaultFolder.png'})
                 xbmcplugin.addDirectoryItem(handle=addon_handle, url=localUrl, listitem=li, isFolder=True)
             except Exception as e:
-                xbmc.err(e)
+                xbmc.log(e.__str__(), xbmc.LOGERROR)
                 pass
 
     xbmcplugin.endOfDirectory(addon_handle)
@@ -284,7 +301,7 @@ elif mode[0] == 'stations':
 
 elif mode[0] == 'play':
     stationuuid = args['stationuuid'][0]
-    data = downloadApiFile('/json/url/' + str(stationuuid),None)
+    data = downloadApiFile('/json/url/' + str(stationuuid), None)
     dataDecoded = json.loads(data)
     uri = dataDecoded['url']
     xbmcplugin.setResolvedUrl(addon_handle, True, xbmcgui.ListItem(path=uri))
@@ -293,8 +310,10 @@ elif mode[0] == 'search':
     dialog = xbmcgui.Dialog()
     d = dialog.input(LANGUAGE(32011), type=xbmcgui.INPUT_ALPHANUM)
 
-    url = '/json/stations/byname/'+d
-    data = downloadApiFile(url, None)
+    search_params = process_search_params(d)
+
+    url = '/json/stations/search'
+    data = downloadApiFile(url, search_params)
     addPlayableLink(data)
 
     xbmcplugin.endOfDirectory(addon_handle)
