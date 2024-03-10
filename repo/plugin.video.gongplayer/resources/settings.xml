@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Общи">
+		<setting type="bool" id="debug" label="Включи разширен лог" default="false" />
+	</category>
+</settings>

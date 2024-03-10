@@ -1,5 +1,36 @@
 <?xml version='1.0' encoding='utf8'?>
-<addons><addon id="plugin.video.eurosportplayer" version="13.2.2+matrix.0" name="Eurosport Player" provider-name="MRLB">
+<addons><addon id="plugin.video.gongplayer" name="Gong Player" version="1.0.0" provider-name="HarryDoubleG">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.beautifulsoup4" version="4.8.2" />
+    <import addon="script.module.html5lib" version="1.0.1" />
+    <import addon="script.module.requests" version="2.25.1" />
+    <import addon="script.module.kodibgcommon" version="1.0.11" />
+    <import addon="inputstream.adaptive" version="20.3.1" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>bg</language>
+    <summary lang="en">This Kodi Add-on provides a minimal interface for watching video content from gong.bg/player</summary>
+	<summary lang="bg">Kodi приставка за гледане на видео съдържание от сайта gong.bg/player</summary>
+    <description lang="en">This Kodi Add-on provides a minimal interface for watching video content from gong.bg/player</description>
+    <description lang="bg">Приставка за гледане на видео съдържание от сайта gong.bg/player</description>
+    <forum>https://kodibg.org/forum/thread-145.html</forum>
+    <website>https://github.com/harrygg/plugin.video.gongplayer</website>
+	<assets>
+		<icon>resources/icon.png</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<fanart>screenshot/screenshot-01.jpg</fanart>
+	</assets>
+	<news>v0.0.1 (10/03/2024)
+      [done] Първа работеща версия!
+    </news>
+  </extension>
+  <reuselanguageinvoker>true</reuselanguageinvoker>
+</addon><addon id="plugin.video.eurosportplayer" version="13.2.2+matrix.0" name="Eurosport Player" provider-name="MRLB">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.inputstreamhelper" version="0.5.2" />
