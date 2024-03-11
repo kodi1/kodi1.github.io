@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.gongplayer" name="Gong Player" version="1.0.0" provider-name="HarryDoubleG">
+<addon id="plugin.video.gongplayer" name="Gong Player" version="1.0.1" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.beautifulsoup4" version="4.8.2"/>
     <import addon="script.module.html5lib" version="1.0.1"/>
     <import addon="script.module.requests" version="2.25.1"/>
     <import addon="script.module.kodibgcommon" version="1.0.11"/>
-    <import addon="inputstream.adaptive" version="20.3.1"/>
+    <import addon="inputstream.adaptive" version="19.0.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -25,7 +25,9 @@
 		<fanart>resources/fanart.jpg</fanart>
 		<fanart>screenshot/screenshot-01.jpg</fanart>
 	</assets>
-	<news>v0.0.1 (10/03/2024)
+	<news>v1.0.1 (11/03/2024)
+      [done] Добавена поддръжка за Коди 19! Минимум inputstream.adaptive 19.0.7
+	  v1.0.0 (10/03/2024)
       [done] Първа работеща версия!
     </news>
   </extension>

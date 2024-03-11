@@ -1,5 +1,5 @@
 [
-  {"owner":"harrygg", "name":"plugin.video.gongplayer", "provider":"github", "force_update": true},
+  {"owner":"harrygg", "name":"plugin.video.gongplayer", "provider":"github", "force_update": false},
   {"owner":"MRLB", "name":"plugin.video.eurosportplayer", "provider":"github", "repo_name": "kodi-eurosportplayer"},
   {"owner":"Arias800", "name":"plugin.video.vikir", "provider":"github"},
   {"owner":"lukavia", "name":"plugin.video.mtelnow", "provider":"github"},
