@@ -390,7 +390,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   	<website>http://kodibg.org/</website>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.8" provider-name="HarryDoubleG">
+</addon><addon id="plugin.video.free.bgtvs" name="[COLOR white]БГ[/COLOR] [COLOR green]Тиви[/COLOR] [COLOR red]Радио[/COLOR]" version="4.0.9" provider-name="HarryDoubleG">
   <requires>
   	<import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.garepobg" version="0.1.5" />
@@ -418,10 +418,12 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
 		<screenshot>resources/screenshot-02.jpg</screenshot>
 		<screenshot>resources/screenshot-03.jpg</screenshot>
 	</assets>
-	<news>v4.0.7 (01/02/2024)
-      [new] Оправено е извличането на видео потока за канал БНТ
+	<news>
+      [new]v4.0.9 Добавена е експерименталната опция на Коди reuselanguageinvoker, с която добавката трябва да работи по-бързо
+      [new]v4.0.4 (04/03/2024)  Оправено е извличането на видео потока за канал БНТ
     </news>
   </extension>
+  <reuselanguageinvoker>true</reuselanguageinvoker>
 </addon><addon id="plugin.video.voyobg" name="Voyo Player (Само ТВ Канали и Спорт)" version="1.0.2" provider-name="HarryDoubleG, stanislav-m">
   <requires>
   	<import addon="xbmc.python" version="2.14.0" />

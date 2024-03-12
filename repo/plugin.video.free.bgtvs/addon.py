@@ -1,23 +1,24 @@
 # -*- coding: utf-8 -*-
-import sys
-from  xbmcplugin import setContent, endOfDirectory
-from resources.lib.helper import *
-from kodibgcommon.utils import get_params
+
+from xbmcplugin import setContent, endOfDirectory
+from resources.lib.dataprovider import try_db_update, show_categories, show_channels, show_streams, play_channel, update_db
+from kodibgcommon.utils import get_params, get_addon_handle
 
 params = get_params()
 action = params.get("action")
-id = params.get("id")
+itemid = params.get("id")
 
-if action == None: 
-  show_categories()
+if action is None:
+    try_db_update()
+    show_categories()
 elif action == 'show_channels':
-  show_channels(id)
+    show_channels(itemid)
 elif action == 'show_streams':
-  show_streams(id)
+    show_streams(itemid)
 elif action == 'update_tvdb':
-  update_tvdb()
+    update_db()
 else:
-  play_channel(id)
+    play_channel(itemid)
 
-setContent(int(sys.argv[1]), 'movies')
-endOfDirectory(int(sys.argv[1]))
+setContent(get_addon_handle(), 'movies')
+endOfDirectory(get_addon_handle())

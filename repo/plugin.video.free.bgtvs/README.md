@@ -1,6 +1,15 @@
-# plugin.video.free.bgtvs
+<img align="right" src="https://raw.githubusercontent.com/harrygg/plugin.video.free.bgtvs/master/resources/icon.png" alt="Addon logo">
 
-Kodi addon for watching Bulgarian TV channels. 
-The addon only provides access to official TV streams that are publicly available and free to watch.
+# Коди добавка за гледане на безплатни български телевизии и радио станции
 
-Install the addon from the offical Kodi BG repo, or manually from a zip file (download it from here). 
+> Добавката не е официална нито е одобрена или насърчена от самите компании собственици на телевизионните/радио канали. Видео потоците се извличат от официалните сайтове на телевзиите и са свободно достъпни в интернет. Добавката не предоставя достъп до съдържание, което не е свободно достъпно.
+
+## Възможности
+
+* Преглед на телевизионните или радио канали по категории
+* Възпроизвеждане на видео/радио потоци на живо
+
+## Инсталация
+
+* Автоматично, през хранилището [BG Addons](https://kodi1.github.io/)
+* Ръчно, като свалите зипа (и инсталирате предварително всички зависимости)
