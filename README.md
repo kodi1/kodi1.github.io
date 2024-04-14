@@ -1,1 +1,1 @@
-plugin.video.free.bgtvs | updated to 4.0.9 on 12.03.2024 
+plugin.video.mtelnow | updated to 2.2.17 on 14.04.2024 
