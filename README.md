@@ -1,1 +1,1 @@
-plugin.video.mtelnow | updated to 2.2.17 on 14.04.2024 
+plugin.video.mtelnow | updated to 2.2.18 on 01.05.2024 

@@ -250,7 +250,7 @@ def PlayChannel(args):
     if playback_session_id:
         try:
             variables = {"input": {"sessionId": playback_session_id}}
-            client.execute(open(resources_path + '/stopPlayback.graphql').read(), variables=variables)
+            client.execute(open(resources_path + '/stopPlayback.graphql').read(), variables=variables, show_errors=False)
         except Exception as e:
             xbmc.log(str(e), xbmc.LOGDEBUG)
     try:
@@ -269,7 +269,7 @@ def catchupEvent(args):
     if playback_session_id:
         try:
             variables = {"input": {"sessionId": playback_session_id}}
-            client.execute(open(resources_path + '/stopPlayback.graphql').read(), variables=variables)
+            client.execute(open(resources_path + '/stopPlayback.graphql').read(), variables=variables, show_errors=False)
         except Exception as e:
             xbmc.log(str(e), xbmc.LOGDEBUG)
 

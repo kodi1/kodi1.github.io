@@ -89,13 +89,13 @@ class my_gqlc(GraphQLClient):
         self.endpoint = 'https://web.a1xploretv.bg:8443/sdsmiddleware/Mtel/graphql/4.0'
         self.headers = headers
         self.session = session
-    def execute(self, query, variables=None):
+    def execute(self, query, variables=None, show_errors=True):
         debug(self.headers)
         debug(query.partition('\n')[0])
         res = self._send(query, variables, self.headers)
         debug(res)
         self.session.cookies.save(ignore_discard=True)
-        if 'errors' in res:
+        if 'errors' in res and show_errors:
             for error in res['errors']:
                 xbmcgui.Dialog().notification('Грешка', ensure_str(error['message']), xbmcgui.NOTIFICATION_ERROR)
                 raise Exception(ensure_str(error['message']))
