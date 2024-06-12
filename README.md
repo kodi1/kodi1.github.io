@@ -1,1 +1,1 @@
-plugin.video.mtelnow | updated to 2.2.18 on 01.05.2024 
+weather.multi | updated to 0.0.27 on 12.06.2024 

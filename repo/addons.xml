@@ -219,7 +219,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="weather.multi" name="Multi Weather" version="0.0.25" provider-name="ronie">
+</addon><addon id="weather.multi" name="Multi Weather" version="0.0.27" provider-name="ronie">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.openweathermap.maps" version="1.0.4" />
@@ -238,6 +238,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
+		<lifecyclestate type="broken" lang="en_GB">Yahoo no longer provides weather data to new users</lifecyclestate>
 		<news>- fix yahoo weather again</news>
 	</extension>
 </addon><addon id="repository.mar33" name="Mar33 Repository" version="3.3.33" provider-name="MartinStZ">
