@@ -207,11 +207,20 @@ class voyo_plugin:
     def list_categories(self):
         xbmcplugin.setPluginCategory(_handle, 'Voyobg')
         xbmcplugin.setContent(_handle, 'videos')
-        categories = self.voyo.sections()
+        #categories = self.voyo.sections()
+        categories = [
+            { 'url' : '/tv-radio/', 'name' : 'Телевизия'},
+            { 'url' : '/more/', 'name' : 'Предавания'},
+            { 'url' : '/series/', 'name' : 'Сериали'},
+            { 'url' : '/films/', 'name' : 'Филми'},
+            { 'url' : '/kids/', 'name' : 'За децата'},
+            { 'url' : '/concerts/', 'name' : 'Концерти'},
+            { 'url' : '/sport/', 'name' : 'Спорт'}
+        ]
         for cat in categories:
             link = cat['url']
             name = cat['name']
-            desciption  = cat['description']
+            desciption  = 'Voyo'
             if tv_only:
                 if cat['url'] != '/tv-radio/':
                     continue
@@ -385,13 +394,13 @@ class voyo_plugin:
                 img = cont['logo']
                 epg_str, img, name = self.get_channel_epg(name, img)
                 self.list_item(name, link, img, epg_str, product_id, action_str)
-            for cont in content['liveRadios']:
-                link = cont['url'] 
-                product_id = link[14:][0:5]
-                name = cont['name'] 
-                img = cont['logo']
-                epg_str, img, name = self.get_channel_epg(name, img)
-                self.list_item(name, link, img, epg_str, product_id, action_str)
+            #for cont in content['liveRadios']:
+            #    link = cont['url'] 
+            #    product_id = link[14:][0:5]
+            #    name = cont['name'] 
+            #    img = cont['logo']
+            #    epg_str, img, name = self.get_channel_epg(name, img)
+            #    self.list_item(name, link, img, epg_str, product_id, action_str)
         else:
             action_str = 'listing_sections'
             categories = {
