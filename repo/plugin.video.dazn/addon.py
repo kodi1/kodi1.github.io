@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+from json import loads as json_loads
 from six.moves.urllib.parse import parse_qs
 
 import sys
@@ -26,12 +27,12 @@ parser = Parser(plugin)
 
 
 def router(args):
+    plugin.log("args = {0}".format(args))
     mode = args.get('mode', ['rails'])[0]
     title = args.get('title', [''])[0]
     id_ = args.get('id', ['home'])[0]
     params = args.get('params', [''])[0]
     verify_age = True if args.get('verify_age', [''])[0] == 'True' else False
-    plugin.log("params = {0}".format(params))
     if mode == 'rails':
         parser.rails_items(client.rails(id_, params), id_)
     elif 'rail' in mode:
@@ -44,7 +45,8 @@ def router(args):
     elif mode == 'play':
         parser.playback(client.playback(id_, plugin.youth_protection_pin(verify_age)))
     elif 'play_context' in mode:
-        parser.playback(client.playback(id_, plugin.youth_protection_pin(verify_age)), title, mode)
+        art = json_loads(args.get('art', [''])[0].replace('\'', '"'))
+        parser.playback(client.playback(id_, plugin.youth_protection_pin(verify_age)), title, art, mode)
     elif mode == 'logout':
         if plugin.logout():
             credential.clear_credentials()

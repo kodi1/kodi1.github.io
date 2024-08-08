@@ -124,7 +124,7 @@ class Client:
         self.PARAMS['Manufacturer'] = 'unknown'
         self.PARAMS['PlayReadyInitiator'] = 'false'
         self.PARAMS['MtaLanguageCode'] = self.LANGUAGE
-        self.PARAMS['AppVersion'] = '9.38.0'
+        self.PARAMS['AppVersion'] = '9.41.0-hotfix.1.645'
         self.PARAMS['capabilities'] = 'mta'
         return self.request(self.PLAYBACK)
 
@@ -181,7 +181,7 @@ class Client:
         credentials = self.credential.get_credentials()
         if credentials:
             self.HEADERS['User-Agent'] = self.plugin.get_user_agent()
-            self.HEADERS['x-dazn-ua'] = '{} {}'.format(self.plugin.get_user_agent(), 'signin/4.26.1.34 hyper/0.8.4 (web; production; de)')
+            self.HEADERS['x-dazn-ua'] = '{} {}'.format(self.plugin.get_user_agent(), 'signin/4.40.3.81 hyper/0.14.0 (web; production; de)')
             self.POST_DATA = {
                 'Email': credentials['email'],
                 'Password': credentials['password'],
@@ -214,7 +214,6 @@ class Client:
     def refreshToken(self):
         self.HEADERS['authorization'] = 'Bearer ' + self.TOKEN
         self.HEADERS['User-Agent'] = self.plugin.get_user_agent()
-        self.HEADERS['x-dazn-ua'] = '{} {}'.format(self.plugin.get_user_agent(), 'signin/4.26.1.34 hyper/0.8.4 (web; production; de)')
         self.POST_DATA = {
             'DeviceId': self.DEVICE_ID
         }
