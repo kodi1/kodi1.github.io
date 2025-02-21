@@ -1,0 +1,59 @@
+# Addon id: plugin.program.bgplaylist
+msgid ""
+msgstr ""
+
+msgctxt "#30010"
+msgid "Отдалечен"
+msgstr "Remote"
+
+msgctxt "#30011"
+msgid "Локален"
+msgstr "Local"
+
+msgctxt "#30012"
+msgid "Предефиниран"
+msgstr "Predefined"
+
+msgctxt "#30013"
+msgid "Локален"
+msgstr "Local"
+
+msgctxt "#31000"
+msgid "Други"
+msgstr "Other"
+
+msgctxt "#32000"
+msgid "Плейлистата НЕ съдържа канали!"
+msgstr "The playlist has no channels!"
+
+msgctxt "#32001"
+msgid "Плейлистата НЕ беше записана успешно!"
+msgstr "The playlist was not saved!"
+
+msgctxt "#32002"
+msgid "Настройване на AlarmClock. Следващото изпълнение е след %s часа"
+msgstr "Setting AlarmClock. Next execution scheduled for %s hours"
+
+msgctxt "#32003"
+msgid "Успех!"
+msgstr "Success!"
+
+msgctxt "#32004"
+msgid "Автоматично генериране на плейлиста"
+msgstr "Automatic playlist generation"
+
+msgctxt "#32005"
+msgid "Грешка!"
+msgstr "Error!"
+
+msgctxt "#32006"
+msgid "PVR backend стартира на порт %s"
+msgstr "PVR backend started on port %s"
+
+msgctxt "#32007"
+msgid "Настройване на следващо генериране на плейлиста след %s минути"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Не е намерен поток за канал %s"
+msgstr ""

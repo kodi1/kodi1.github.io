@@ -1,0 +1,59 @@
+# Addon id: plugin.program.bgplaylist
+msgid ""
+msgstr ""
+
+msgctxt "#30010"
+msgid "Local"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Remote"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Predefined"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Local"
+msgstr ""
+
+msgctxt "#31000"
+msgid "Others"
+msgstr ""
+
+msgctxt "#32000"
+msgid "The playlist has NO channels!"
+msgstr ""
+
+msgctxt "#32001"
+msgid "The playlist was NOT saved!"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Setting AlarmClock. Next run is after %s hours"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Success!"
+msgstr "Success!"
+
+msgctxt "#32004"
+msgid "Automatic playlist generation"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Error!"
+msgstr ""
+
+msgctxt "#32006"
+msgid "PVR backend started on port %s"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Scheduling next run after %s minutes"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Stream not found for channel %s"
+msgstr ""

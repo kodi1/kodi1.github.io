@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General -->
+    <category label="Плейлиста">
+      <setting label="" type="bool" id="firstrun" visible="false" default="true"/>
+      <setting label="УРЛ до плейлистата" id="url" type="text" default="http://cdn.tivi.bg/m/"/>
+      <setting label="MAC адрес на устройството" id="mac" type="text" default=""/>
+      <setting type="sep"/>
+      <setting label="Запази плейлистата в друга директория" type="bool"   id="copy_playlist" default="false"/>
+      <setting label="Път до директорията" type="folder" id="copy_to_folder" default="" option="writeable" visible="eq(-1,true)"/>
+      <setting type="sep"/>
+      <setting label="Генерирай плейлиста на всеки N часа" type="slider" id="run_on_interval" default="12" range="1,1,24" option="int"/>
+    </category>
+    <category label="Подредба">
+      <setting label="Път до шаблон с подредба на канали" type="file"  id="template_file" default="resources/order.txt" />
+      <setting label="Скрий каналите с времево отместване" type="bool"   id="hide_timeshifted" default="false"/>
+      <setting label="Използвай имена на групи от доставчик" type="bool"   id="groups_from_progider" default="false"/>
+      <setting label="При няколко версии на канал, добави:"  id="preferred_quality" type="labelenum" values="Всички|HD|SD|LQ"  default="Всички" />
+      <setting label="Премахни канали от следните категории:" type="lsep"/>
+      <setting label="Турски" type="bool" id="hide_turkish" default="false" visible="eq(-3,false)" />
+      <setting label="Руски" type="bool" id="hide_russian" default="false" visible="eq(-4,false)" />
+      <setting label="Сръбски" type="bool" id="hide_serbian" default="false" visible="eq(-5,false)" />
+      <setting label="Английски" type="bool" id="hide_english" default="false" visible="eq(-6,false)" />
+      <setting label="Немски" type="bool" id="hide_german" default="false" visible="eq(-7,false)" />
+      <setting label="Френски" type="bool" id="hide_french" default="false" visible="eq(-8,false)" />
+      <setting label="Холандски" type="bool" id="hide_holland" default="false" visible="eq(-9,false)" />
+      <setting label="Италиански" type="bool" id="hide_italian" default="false" visible="eq(-10,false)" />
+      <setting label="Новини" type="bool" id="hide_news" default="false" visible="eq(-11,false)" />
+      <setting label="Детски" type="bool" id="hide_children" default="false" visible="eq(-12,false)" />
+      <setting label="Тематични" type="bool" id="hide_theme" default="false" visible="eq(-13,false)" />
+      <setting label="Възрастни" type="bool" id="hide_xxx" default="false" visible="eq(-14,false)" />
+      <setting label="Филми" type="bool" id="hide_movies" default="false" visible="eq(-15,false)" />
+      <setting label="Музикални" type="bool" id="hide_music" default="false" visible="eq(-16,false)" />
+      <setting label="Документални" type="bool" id="hide_docs" default="false" visible="eq(-17,false)" />
+      <setting label="Спортни" type="bool" id="hide_sports" default="false" visible="eq(-18,false)" />
+      <setting label="Гръцки" type="bool" id="hide_greek" default="false" visible="eq(-19,false)" />
+      <setting label="Български" type="bool" id="hide_bulgarian" default="false" visible="eq(-20,false)" />
+      <setting label="Азиатски" type="bool" id="hide_asia" default="false" visible="eq(-21,false)" />
+      <setting label="Румънски" type="bool" id="hide_roman" default="false" visible="eq(-22,false)" />
+      <setting label="Information" type="bool" id="hide_information_pr" default="false" visible="eq(-23,true)" />
+      <setting label="Cinema" type="bool" id="hide_movies_pr" default="false" visible="eq(-24,true)" />
+      <setting label="News" type="bool" id="hide_news_pr" default="false" visible="eq(-25,true)" />
+      <setting label="Documentary" type="bool" id="hide_docs_pr" default="false" visible="eq(-26,true)" />
+      <setting label="Sports" type="bool" id="hide_sports_pr" default="false" visible="eq(-27,true)" />
+      <setting label="Entertainments" type="bool" id="hide_entertainments_pr" default="false" visible="eq(-28,true)" />
+      <setting label="Russian" type="bool" id="hide_russian_pr" default="false" visible="eq(-29,true)" />
+      <setting label="Music" type="bool" id="hide_music_pr" default="false" visible="eq(-30,true)" />
+      <setting label="Children's" type="bool" id="hide_children_pr" default="false" visible="eq(-31,true)" />
+      <setting label="For adults" type="bool" id="hide_xxx_pr" default="false" visible="eq(-32,true)" />
+      <setting label="Free web tv" type="bool" id="hide_free_pr" default="false" visible="eq(-33,true)" />
+      <setting label="Culture" type="bool" id="hide_culture_pr" default="false" visible="eq(-34,true)" />
+      <setting label="Romanian" type="bool" id="hide_roman_pr" default="false" visible="eq(-35,true)" />
+      <setting label="Greek" type="bool" id="hide_greek_pr" default="false" visible="eq(-36,true)" />
+      <setting label="Други" type="bool" id="hide_others" default="false" visible="eq(-37,false)" />
+      <!-- Go back  -->
+    </category>
+    <category label="Експертни">
+      <setting type="sep"/>
+      <setting label="Разреши свързване на всички мрежови интерфейси:" type="bool" id="bind_all" default="false" />
+      <setting label="Порт на бекенда:" type="text" id="port" default="18910" />
+      <setting label="Използвано IP на видео потоците в плейлистата:" type="text" id="stream_ip" default="127.0.0.1" />
+    </category>
+    <category label="Други">
+      <!-- <setting label="Обедини с друга плейлиста:" type="bool" id="append_playlist" default="false"/> -->
+      <!-- <setting label="M3U файл с другата плейлиста:" id="appended_playlist_path" type="file" values="" mask="*.m3u" visible="eq(-1,true)" /> -->
+      <!-- <setting label="Добавяне" type="enum"   id="append" values="Преди основната|След основната"  default="0" visible="eq(-2,true)" /> -->
+      <setting type="sep"/>
+      <setting label="Експортирай имената на каналите от плейлистата" type="bool" id="export_names" default="false"/>
+      <setting label="Път до директорията за експортиране" type="folder" id="export_to_folder" default="" option="writeable" visible="eq(-1,true)"/>
+      <setting type="sep"/>
+      <setting label="Разширен журнал (Дебъг лог):" type="bool"   id="debug" default="false"/>
+    </category>
+</settings>

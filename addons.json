@@ -18,6 +18,7 @@
   {"owner":"kodi1", "name":"script.module.garepobg", "provider":"github"},
   {"owner":"harrygg", "name":"plugin.video.vivatvgo", "provider":"github"},
   {"owner":"harrygg", "name":"plugin.video.btvplus", "provider":"github"},
+  {"owner":"harrygg", "name":"plugin.program.tvbgpvr.backend", "provider":"github"},
   {"owner":"harrygg", "name":"plugin.video.gong.play", "provider":"github"},
   {"owner":"harrygg", "name":"plugin.video.free.bgtvs", "provider":"github"},
   {"owner":"harrygg", "name":"plugin.program.freebgtvs", "provider":"github", "enabled": false},
