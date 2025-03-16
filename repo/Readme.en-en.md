@@ -1,8 +1,8 @@
 
 
 # BG Addons Kodi Addon Repository 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./Readme.md)
-[![bg](https://img.shields.io/badge/lang-bg--bg-green.svg)](./Readme.bg-bg.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./Readme.bg-bg.md)
+[![bg](https://img.shields.io/badge/lang-bg--bg-green.svg)](./Readme.md)
 
 This is a non-commercial addon repository for [Kodi mediacenter](https://kodi.tv) 
 maintained by [Kodi-BG communicty ](https://kodibg.org/forum/) .
