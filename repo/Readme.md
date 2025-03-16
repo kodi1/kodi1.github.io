@@ -1,6 +1,6 @@
 # BG Addons Хранилище за добавки за Kodi
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./Readme.en-en.md)
 [![bg](https://img.shields.io/badge/lang-bg--bg-green.svg)](./Readme.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./Readme.en-en.md)
 
 Това е хранилище с некомерсиална цел за [Kodi](https://kodi.tv) 
 поддържано от общността на [Kodi-BG форум](https://kodibg.org/forum/) .
