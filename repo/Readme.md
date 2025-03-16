@@ -37,7 +37,7 @@ Kodi setup and install from there.
 Enjoy!
 
 <pre>
-  <a href="repo.bg.plugins.zip">repo.bg.plugins-1.0.2.zip</a>   
+  <a id="download_link" href="repo.bg.plugins-1.0.2.zip">repo.bg.plugins-1.0.2.zip</a>   
 </pre>
 
 ## License
