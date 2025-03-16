@@ -1,4 +1,4 @@
-# BG Addons Kodi Addon Repository 
+# BG Addons Хранилище за добавки за Kodi
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./Readme.md)
 [![bg](https://img.shields.io/badge/lang-bg--bg-green.svg)](./Readme.bg-bg.md)
 
@@ -8,37 +8,31 @@
 
 ## Как да инсталираме това хранилище в Коди
 
-There are several options how you can do it. The universal way, which 
-should work on any platform, is to configure a new source in the 
-File Manager of your Kodi setup. The steps are below:
+Най-лесният начин да инсталирате това хранилище е като добавете нов източник в диспечера на файлове на Kodi:
 
-1. Navigate to the **System** menu and click on **File Manager**
-2. Select **Add source**. 
-3. Click on **None** and add the path **https://kodi1.github.io/repo/**. 
-   Please ensure you entered the correct path.
-5. Enter a name for this media source - "BG Addons Kodi Repo"
-6. Click **OK** to save your changes
-7. Press Esc to exit **File Manager** and open **Add-ons** menu.
-8. Click **Install from zip file** (your Kodi may give you security warning, just ignore)
-   and then select "BG Addons Kodi Repo". Navigate to the folder 
-   **matrix**, or 
-   **leia**,
-9. You will see a zip file - for example **repo.bg.plugins-1.0.2.zip**. Click on it
-   and install.
+1. Натиснете иконата за меню **Настойки** и след него **Диспечер на файлове**
+2. Изберете **Добавяне на източник**. 
+3. Изберете **<Без>** и добавете следният адрес **https://kodi1.github.io/repo/**. 
+   Уверете се, че адреса е въведен без грешки.
+5. Въведете име на медийния източник - "BG Addons Kodi Repo"
+6. Натиснете **Добре** за да запазите промените
+7. Натиснете Esc за да излезете от **Диспечера на файлове** и отидете в меню **Добавки**.
+8. Натиснете **Инсталиране на добавка от .zip файл**
+9. Изберете източник "BG Addons Kodi Repo".
+9. Ще видиете връзка до **repo.bg.plugins-1.0.2.zip**. Натиснете върху нея и после "Инсталирай".
    
-After this, BG Addons Addon repository will be added to the list of available repositories
-in your Kodi setup.
+След това, хранилището "BG Addons" ще бъде добавено към списъка на налични хранилища в Kodi.
 
-If you want to shortcut these steps, you may also download the zip file directly 
-from any browser using the links above, place it in the Home folder of your
-Kodi setup and install from there.
+Друг начин за инсталация е да свалите ръчно зип файла и после да го инсталирате ръчно:
+1. Отидете в меню **Добавки** -> **Инсталиране на добавка от .zip файл**
+2. Навигирайте до мястото на което сте запазили .zip файла на хранилището и инсталирайте.
 
-Enjoy!
+Успех!
 
 <pre>
   <a id="download_link" href="repo.bg.plugins-1.0.2.zip">repo.bg.plugins-1.0.2.zip</a>   
 </pre>
 
-## License
+## Лиценз
 
 [GPL v.3](http://www.gnu.org/copyleft/gpl.html)
