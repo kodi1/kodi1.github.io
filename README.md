@@ -36,7 +36,7 @@ Enjoy!
 
 Folders:
 <pre>
-  <img src="icons/folder.gif" alt="[DIR]" width="20" height="22"/> <a href="repo/">repo/</a> 
+ <a href="repo/">repo/</a> 
 </pre>
 
 ## License
