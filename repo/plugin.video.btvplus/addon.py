@@ -100,7 +100,8 @@ def get_stream(url):
     item = {"url": None, "logo": None}
     # log(text, 1)
     title = soup.title.get_text()
-    m = re.compile("url:\s*'(.+?)'").findall(text)
+    # looking for something like this var videoUrl = '/lbin/v3/btvplus/product_player.php?product_id=64874&product_parent_id=54557&type_id=100';
+    m = re.compile("var videoUrl = '(.*?)';").findall(text)
     if len(m) > 0:
         player_url = url = urllib.parse.urljoin(host, m[0])
         log("Opening player url " + player_url, 1)
@@ -108,11 +109,14 @@ def get_stream(url):
         req.add_header("Referer", url)
         req.add_header("User-agent", "Chrome")
         text = urllib.request.urlopen(req).read().decode('utf-8')
-        m = re.compile("(http.+?m3u8)").findall(text)
+
+        m = re.compile("src\s*:\s*\'(http.+?m3u8)").findall(text)
         if len(m) > 0:
             item["url"] = m[0].replace("\/", "/")
             log("resolved stream: %s" % item["url"], 0)
-
+        else:
+            log("No m3u stream found in response: ", 4)
+            log(text, 4)
         # m = re.compile('poster[:\s\'"]+(http.*jpg)').findall(text)
         # if len(m) > 0:
         #   item["logo"] = m[0]
