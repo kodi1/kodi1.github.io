@@ -11,7 +11,7 @@ for addon in addons:
         else:
             failed_addons_count += 1
 
-update_last_update_time()
+# update_last_update_time()
 deleted_folders_count = delete_orphan_addon_folders(addons)
 
 if len(updated_addons) == 0 and deleted_folders_count == 0:
@@ -20,7 +20,7 @@ if len(updated_addons) == 0 and deleted_folders_count == 0:
 else:
     generate_addons_xml_file(addons)
     generate_md5_file()
-    update_readme(updated_addons)
+    #update_readme(updated_addons)
 
 if failed_addons_count > 0:
     log("Some addons failed to update. Check the log for details!. Leaving temp folder intact %s" % get_temp_folder())

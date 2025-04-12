@@ -354,16 +354,18 @@ def generate_md5_file():
 
 
 def update_last_update_time():
-    text = None
-    with open("index.html", "r", encoding="utf8") as f:
-        text = f.read()
-    with open("index.html", "w", encoding="utf8") as f:
-        last_update_time = time.strftime("%H:%M:%S - %d.%m.%Y")
-        last_update_text = ">Last update: %s<" % last_update_time
-        text = re.sub('>Last update: (.*?)<', last_update_text, text)
-        f.write(text)
-        log("Updated last update time: %s" % last_update_time)
-
+    try:
+        text = None
+        with open("index.html", "r", encoding="utf8") as f:
+            text = f.read()
+        with open("index.html", "w", encoding="utf8") as f:
+            last_update_time = time.strftime("%H:%M:%S - %d.%m.%Y")
+            last_update_text = ">Last update: %s<" % last_update_time
+            text = re.sub('>Last update: (.*?)<', last_update_text, text)
+            f.write(text)
+            log("Updated last update time: %s" % last_update_time)
+    except Exception as er:
+        print(er)
 
 def update_readme(updated_addons):
     log("Updating README.md")
