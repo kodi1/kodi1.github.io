@@ -340,7 +340,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
   	<forum>https://kodibg.org/forum/</forum>
   	<email>harrygg@gmail.com</email>
   </extension>
-</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.8" provider-name="HarryDoubleG">
+</addon><addon id="plugin.video.btvplus" name="Btv Plus" version="2.0.9" provider-name="HarryDoubleG">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.beautifulsoup4" version="4.3.2" />
