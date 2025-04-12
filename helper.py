@@ -325,6 +325,7 @@ def generate_addons_xml_file(addons):
     """
     Iterate through all addons in the repository and copy each addon.xml to the repository addons.xml
     """
+    print("Generating addons.xml")
     addons_xml_content = etree.Element("addons")
     for addon in addons:
         addon_xml_content = __get_xml_content(addon["xmlfile"])
