@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Sweet TV">
+        <setting label="General:" type="lsep"/>
+        <setting id="playerType" type="select" label="Player type" values="ISA|ffmpeg" default="ISA" />
+        <setting id="countryCode" type="text" label="Country code" default="hu" />
+    </category>
+    <category label="Replay">
+        <setting label="Replay settings:" type="lsep"/>
+        <setting id="reverse_order" type="select" label="Order by" values="Newest|Oldest" default="Newest" />
+    </category>
+	<category label="M3U list creator">
+        <setting label="M3U List (File Name and Destination Directory)" type="lsep"/>
+        <setting label="M3U filename" type="text" id="name_m3u" default="iptv.m3u8"/>
+        <setting label="EPG filename" type="text" id="name_epg" default="epg.xml"/>
+        <setting label="Directory path" type="folder" id="path_m3u" source="auto" option="writeable"/>
+		<setting type="action" action="RunPlugin(plugin://plugin.video.sweettv/listM3U)" label="Create M3U and EPG list" option="close"/>
+	</category>
+    <category label="Account">
+        <setting type="action" action="RunPlugin(plugin://plugin.video.sweettv/logout)" label="Logout" option="close"/>
+    </category>
+    <setting id="logged" value="" default="false"/>
+    <setting id="refresh_token" value="" default=""/>
+    <setting id="uuid" value="" default=""/>
+    <setting id="bearer" value="" default=""/>
+</settings>

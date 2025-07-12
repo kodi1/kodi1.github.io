@@ -43,5 +43,6 @@
   {"owner":"zinobg", "name":"plugin.video.bgtvon", "provider":"github"},
   {"owner":"stanislav-m", "name":"plugin.video.voyobgvod", "provider":"github"},
   {"owner":"batvani", "name":"plugin.video.bntbg", "provider":"github"},
-  {"owner":"herrnst", "name":"plugin.video.dazn", "provider":"github"}
+  {"owner":"herrnst", "name":"plugin.video.dazn", "provider":"github"},
+  {"owner":"david-hazi", "name":"plugin.video.sweettv", "provider":"github"}	
 ]
