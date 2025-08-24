@@ -2,7 +2,7 @@
 
 git pull
 source .venv/bin/activate
-python update_repo.py
+python3 update_repo.py
 deactivate
 git status
 git add -A

@@ -128,6 +128,7 @@ def get_stream(url):
     return item
 
 
+
 def update(name, location, crash=None):
     try:
         lu = settings.last_update
@@ -149,6 +150,9 @@ def update(name, location, crash=None):
 
 
 def show_categories():
+
+    url = make_url({"url": "https://btvplus.bg/live/", "action": "play_live"})
+    add_listitem_unresolved("bTV на живо", url)
     items = [
         {'title': 'Последни предавания', "url": "search/?type=100", "action": "show_episodes"},
         {'title': 'Предавания', "url": "predavaniya", "action": "show_products"},
@@ -163,12 +167,30 @@ def show_categories():
         url = make_url({"url": item['url'], "action": item['action']})
         add_listitem_folder(item['title'], url)
 
-    url = make_url({"url": "https://btvplus.bg/live/", "action": "play_stream"})
-    add_listitem_unresolved("bTV на живо", url)
 
     update('browse', 'Categories')
-    view_mode = 50
 
+def get_token():
+    headers = {
+        'User-Agent': user_agent,
+        'authority': 'btvplus.bg',
+        'accept': 'text/html, application/xhtml+xml, application/xml, application/json, text/plain, */*',
+        'dnt': '1',
+        'origin': host,
+        'Connection': 'keep-alive',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        'referer': host,
+        'accept-language': 'bg-BG,bg;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip'
+    }
+
+    res = requests.get('https://dai-api.bweb.bg:3000/get-token', headers=headers)
+    # log(res, 4)
+    json_obj = res.json()
+    log("Got token: %s" % json_obj['access_token'], 4)
+    return json_obj['access_token']
 
 params = get_params()
 action = params.get("action")
@@ -201,37 +223,34 @@ elif action == 'play_stream':
         add_listitem_resolved_url(title, stream)
 
 
-# elif action == 'play_live':
-#   stream = get_stream("https://btvplus.bg/live/")["url"]
-#   log('Extracted stream %s ' % stream, 0)
-#   if stream:
-#     add_listitem_resolved_url(title, stream)
-# if settings.btv_username == '' or settings.btv_password == '':
-#   notify_error('Липсва потребителско име и парола за bTV')
-
-# body = { "username": settings.btv_username, "password": settings.btv_password }
-# headers = {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}
-# s = requests.session()
-#
-# r = s.post(base64.b64decode('aHR0cHM6Ly9idHZwbHVzLmJnL2xiaW4vc29jaWFsL2xvZ2luLnBocA=='), headers=headers, data=body)
-# log(r.text, 0)
-#
-# if r.json()["resp"] != "success":
-#   log("Unable to login to btv.bg", 4)
-# else:
-#   url = base64.b64decode('aHR0cHM6Ly9idHZwbHVzLmJnL2xiaW4vdjMvYnR2cGx1cy9wbGF5ZXJfY29uZmlnLnBocD9tZWRpYV9pZD0yMTEwMzgzNjI1Jl89JXM=').decode('utf-8')
-#   log(url, 0)
-#   url = url % str(time.time() * 100)
-#   r = s.get(url, headers=headers)
-#   m = re.compile('(http.*\.m3u.*?)[\s\'"\\\\]+[\s\'"\\\\]+').findall(r.text)
-#   if len(m) > 0:
-#     stream = m[0].replace('\/', '/')
-#     if not stream.startswith('http'):
-#       stream = 'https:' + stream
-#     log('Извлечен видео поток %s' % stream, 2)
-#     add_listitem_resolved_url('bTV на живо', stream)
-#   else:
-#     log("No match for playlist url found", 4)
+elif action == 'play_live':
+    headers = {
+        'User-Agent': user_agent,
+        'Accept': '*/*',
+        'Content-Type': 'application/json',
+        'DNT': '1',
+        'Origin': host,
+        'Connection': 'keep-alive',
+        'Sec-Fetch-Site': 'cross-site',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Dest': 'empty',
+        'Referer': host,
+        'Accept-Language': 'bg-BG,bg;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip',
+        'Authorization': 'Bearer ' + get_token()
+    }
+    payload = {
+        'live_config': 'projects/239117298520/locations/europe-west1/liveConfigs/btv-rmt-dai',
+        'gam_settings': {
+            'stream_id': '951fbecc-7c18-4a8d-b55e-ef84956ab3b1:GRQ'
+        }
+    }
+    res = requests.post(
+        'https://videostitcher.googleapis.com/v1/projects/239117298520/locations/europe-west1/liveSessions',
+        json=payload, headers=headers)
+    json_obj = res.json()
+    log("resolved stream: %s" % json_obj['playUri'], 0)
+    add_listitem_resolved_url("bTV на живо", json_obj['playUri'])
 
 elif action == 'search':
 
