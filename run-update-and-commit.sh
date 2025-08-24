@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git pull
-source .venv/Scripts/activate
+source .venv/bin/activate
 python update_repo.py
 deactivate
 git status
