@@ -425,6 +425,14 @@ msgctxt "#32295"
 msgid "Scattered Thundershowers"
 msgstr "Rozptýlené bouřky"
 
+msgctxt "#32296"
+msgid "Mostly Sunny"
+msgstr ""
+
+msgctxt "#32297"
+msgid "Mostly Clear"
+msgstr ""
+
 msgctxt "#32300"
 msgid "New Moon"
 msgstr "Nov"

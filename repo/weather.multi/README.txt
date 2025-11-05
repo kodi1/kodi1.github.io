@@ -16,7 +16,6 @@ Current.Temperature
 Current.Wind
 Current.WindDirection
 Current.Humidity
-Current.FeelsLike
 Current.DewPoint
 Current.UVIndex
 Current.ConditionIcon      (eg. '28.png')
@@ -53,7 +52,6 @@ Forecast.City
 Forecast.Country
 Forecast.Latitude
 Forecast.Longitude
-Forecast.Updated           (date and time the forecast was retrieved by yahoo)
 
 
 CURRENT
@@ -78,20 +76,15 @@ HOURLY [1-24]
 -------------
 Hourly.IsFetched
 Hourly.%i.Time             (eg. '12:00')
-Hourly.%i.LongDate
-Hourly.%i.ShortDate
+Hourly.%i.ShortDate        (Today, Tomorrow)
 Hourly.%i.Outlook          (eg. 'Very heavy rain')
 Hourly.%i.OutlookIcon
 Hourly.%i.FanartCode
 Hourly.%i.Temperature
-Hourly.%i.FeelsLike
-Hourly.%i.Humidity
-Hourly.%i.Precipitation    (probability of precipitation)
+Hourly.%i.Precipitation    (total amount of rain and snow)
+Hourly.%i.Probability      (probability of precipitation)
 Hourly.%i.WindSpeed
 Hourly.%i.WindDirection    (eg. 'SSW')
-Hourly.%i.WindDegree       (eg. '220°')
-Hourly.%i.DewPoint
-
 
 
 DAILY [1-10] (Yahoo)
@@ -99,8 +92,8 @@ DAILY [1-10] (Yahoo)
 Daily.IsFetched
 Daily.%i.LongDay           (eg. 'Monday')
 Daily.%i.ShortDay          (eg. 'Mon')
-Daily.%i.LongDate          (eg. '1 January')
-Daily.%i.ShortDate         (eg. '1 Jan')
+Daily.%i.LongDate          (eg. '1')
+Daily.%i.ShortDate         (eg. '1')
 Daily.%i.Outlook           (eg. 'Mostly Cloudy')
 Daily.%i.OutlookIcon
 Daily.%i.FanartCode
