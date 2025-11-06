@@ -81,10 +81,10 @@ class MAIN():
         locationurl = ADDON.getSettingString('loc%s_url' % mode)
         locationlat = ADDON.getSettingNumber('loc%s_lat' % mode)
         locationlon = ADDON.getSettingNumber('loc%s_lon' % mode)
-        if (locationurl == -1) and (mode != '1'):
+        if (locationurl == '') and (mode != '1'):
             log('trying location 1 instead')
             location = ADDON.getSettingString('loc1_name')
-            locationurl = ADDON.getSettingInt('loc1_url')
+            locationurl = ADDON.getSettingString('loc1_url')
             locationlat = ADDON.getSettingNumber('loc1_lat')
             locationlon = ADDON.getSettingNumber('loc1_lon')
         return location, locationurl, locationlat, locationlon
@@ -127,11 +127,29 @@ class MAIN():
                 retry += 1
                 log('weather download failed')
         data = data.replace('\\','')
+        soup = BeautifulSoup(data, 'html.parser')
+        card = soup.find(id="summary-card")
+        town = card.find('h1').get_text()
+        weatherinfo = card.find_all('p')
+        country = weatherinfo[0].get_text()
+        temperature = weatherinfo[1].get_text().rstrip('°')
+        realfeel = weatherinfo[2].get_text().lstrip('RealFeel® ').rstrip('°')
+        hightemp = weatherinfo[4].get_text().rstrip('°')
+        lowtemp = weatherinfo[5].get_text().rstrip('°')
+        sunrise = weatherinfo[6].get_text()
+        sunset = weatherinfo[7].get_text()
+        outlook = card.find('svg').get('aria-label')
         weatherdata = {}
-        matchcode = re.search(',"currentLocation":(.*?),"loggedIn"', data, flags=re.DOTALL)
-        if matchcode:
-            matchdata = matchcode.group(1)
-            weatherdata['location'] = json.loads(matchdata)
+        weatherdata['location'] = {}
+        weatherdata['location']['town'] = town
+        weatherdata['location']['country'] = country
+        weatherdata['location']['temperature'] = int(temperature)
+        weatherdata['location']['realfeel'] = int(realfeel)
+        weatherdata['location']['hightemp'] = int(hightemp)
+        weatherdata['location']['lowtemp'] = int(lowtemp)
+        weatherdata['location']['sunrise'] = sunrise
+        weatherdata['location']['sunset'] = sunset
+        weatherdata['location']['outlook'] = outlook
         matchcode = re.search('dailyForecasts":(.*?)}]]]}]', data, flags=re.DOTALL)
         if matchcode:
             matchdata = matchcode.group(1)
@@ -140,18 +158,6 @@ class MAIN():
         if matchcode:
             matchdata = matchcode.group(1)
             weatherdata['conditions'] = json.loads(matchdata)
-        matchcode = re.search('">RealFeel® (.*?)°</p>', data, flags=re.DOTALL)
-        if matchcode:
-            matchdata = matchcode.group(1)
-            weatherdata['location']['conditions']['realfeel'] = json.loads(matchdata)
-        matchcode = re.search('Sunrise">.*?1">(.*?)</p>', data, flags=re.DOTALL)
-        if matchcode:
-            matchdata = matchcode.group(1)
-            weatherdata['location']['conditions']['sunrise'] = matchdata
-        matchcode = re.search('Sunset">.*?1">(.*?)</p>', data, flags=re.DOTALL)
-        if matchcode:
-            matchdata = matchcode.group(1)
-            weatherdata['location']['conditions']['sunset'] = matchdata
         log('yahoo forecast data: %s' % weatherdata)
         if not weatherdata:
             self.clear_props()

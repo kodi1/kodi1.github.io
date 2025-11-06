@@ -327,9 +327,9 @@ def convert_datetime(stamp, inpt, outpt, form):
         if stamp == 'Now':
             return stamp
         elif stamp == 'Midnight':
-            stamp = '12:00 PM'
-        elif stamp == 'Noon':
             stamp = '12:00 AM'
+        elif stamp == 'Noon':
+            stamp = '12:00 PM'
         if TIMEFORMAT != '/':
             return stamp
         else:
