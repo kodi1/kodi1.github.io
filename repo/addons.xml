@@ -219,7 +219,7 @@ Vermisst du deine Lieblingsstation? Kein problem: geh auf www.radio-browser.info
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="weather.multi" name="Multi Weather" version="1.0.1" provider-name="ronie">
+</addon><addon id="weather.multi" name="Multi Weather" version="1.0.2" provider-name="ronie">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.openweathermap.maps" version="1.0.4" />

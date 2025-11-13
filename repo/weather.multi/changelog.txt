@@ -1,3 +1,12 @@
+v1.0.2
+- more fixes
+
+v1.0.1
+- fixes
+
+v1.0.0
+- new version
+
 v0.0.27
 - disable cookie expiration
 - Yahoo no longer provides weather data to new users

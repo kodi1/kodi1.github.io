@@ -154,7 +154,7 @@ MOONPHASE = { "new moon": LANGUAGE(32300),
               "waxing gibbous": LANGUAGE(32303),
               "full moon": LANGUAGE(32304),
               "waning gibbous": LANGUAGE(32305),
-              "last quarter": LANGUAGE(32306),
+              "third quarter": LANGUAGE(32306),
               "waning crescent": LANGUAGE(32307)}
 
 # convert yahoo forecast strings to icon codes
@@ -203,6 +203,7 @@ CONDITION = {"Tornado": LANGUAGE(32251),
             "Scattered Showers": LANGUAGE(32293),
             "Scattered Snow Showers": LANGUAGE(32294),
             "Scattered Thundershowers": LANGUAGE(32295),
+            "Flurries": LANGUAGE(32264), # snow flurries
             "Mostly Sunny": LANGUAGE(32296), # fair day
             "Mostly Clear": LANGUAGE(32297)} # fair night
 
@@ -254,6 +255,7 @@ OUTLOOK = {"Tornado": "0",
            "Scattered Showers": "45",
            "Scattered Snow Showers": "46",
            "Scattered Thundershowers": "47",
+           "Flurries": "13", # snow flurries
            "Mostly Sunny": "34", # fair day
            "Mostly Clear": "33"} # fair night
 
