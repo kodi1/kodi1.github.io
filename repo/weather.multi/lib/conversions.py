@@ -205,7 +205,9 @@ CONDITION = {"Tornado": LANGUAGE(32251),
             "Scattered Thundershowers": LANGUAGE(32295),
             "Flurries": LANGUAGE(32264), # snow flurries
             "Mostly Sunny": LANGUAGE(32296), # fair day
-            "Mostly Clear": LANGUAGE(32297)} # fair night
+            "Mostly Clear": LANGUAGE(32297), # fair night
+            "Rain And Snow": LANGUAGE(32269), # sleet
+            "Fog": LANGUAGE(32271)} # foggy
 
 OUTLOOK = {"Tornado": "0",
            "Tropical Storm": "1",
@@ -257,7 +259,9 @@ OUTLOOK = {"Tornado": "0",
            "Scattered Thundershowers": "47",
            "Flurries": "13", # snow flurries
            "Mostly Sunny": "34", # fair day
-           "Mostly Clear": "33"} # fair night
+           "Mostly Clear": "33", # fair night
+           "Rain And Snow": "18", # sleet
+           "Fog": "20"} # foggy
 
 # convert weatherbit.io forecast codes to localized strings
 FORECAST = { '200': LANGUAGE(32201),

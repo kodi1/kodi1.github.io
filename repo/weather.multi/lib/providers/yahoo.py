@@ -10,8 +10,14 @@ class Weather():
         set_property('Current.Location'            , '%s, %s' % (data['location']['town'],data['location']['country']))
         set_property('Current.Condition'           , data['location']['outlook'])
         set_property('Current.Temperature'         , convert_temp(data['location']['temperature'], 'F', 'C'))
-        set_property('Current.UVIndex'             , str(data['conditions']['conditions']['uv']['value']))
-        set_property('Current.AirQuality'          , data['conditions']['conditions']['airQuality']['value'] + ' UAQI')
+        if  data['conditions']['conditions']['uv']:
+            set_property('Current.UVIndex'             , str(data['conditions']['conditions']['uv']['value']))
+        else:
+            set_property('Current.UVIndex'              , '')
+        if  data['conditions']['conditions']['airQuality']:
+            set_property('Current.AirQuality'          , data['conditions']['conditions']['airQuality']['value'] + ' UAQI')
+        else:
+            set_property('Current.AirQuality'              , '')
         if  data['conditions']['conditions']['pollen']:
             set_property('Current.Pollen'              , data['conditions']['conditions']['pollen']['value'])
         else:
