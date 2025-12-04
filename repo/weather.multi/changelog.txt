@@ -1,3 +1,6 @@
+v1.0.6
+- add new condition strings to language file
+
 v1.0.5
 - more fixes
 

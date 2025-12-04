@@ -203,12 +203,12 @@ CONDITION = {"Tornado": LANGUAGE(32251),
             "Scattered Showers": LANGUAGE(32293),
             "Scattered Snow Showers": LANGUAGE(32294),
             "Scattered Thundershowers": LANGUAGE(32295),
-            "Flurries": LANGUAGE(32264), # snow flurries
-            "Mostly Sunny": LANGUAGE(32296), # fair day
-            "Mostly Clear": LANGUAGE(32297), # fair night
-            "Rain And Snow": LANGUAGE(32269), # sleet
-            "Fog": LANGUAGE(32271), # foggy
-            "Frigid": LANGUAGE(32276)} # cold
+            "Flurries": LANGUAGE(32245), # snow flurries
+            "Mostly Sunny": LANGUAGE(32246), # fair day
+            "Mostly Clear": LANGUAGE(32247), # fair night
+            "Rain And Snow": LANGUAGE(32248), # sleet
+            "Fog": LANGUAGE(32249), # foggy
+            "Frigid": LANGUAGE(32250)} # cold
 
 OUTLOOK = {"Tornado": "0",
            "Tropical Storm": "1",
