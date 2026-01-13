@@ -88,7 +88,7 @@ Hourly.%i.WindSpeed
 Hourly.%i.WindDirection        (eg. 'SSW')
 
 
-DAILY [1-10] (Yahoo)
+DAILY [1-8] (Yahoo)
 ------------
 Daily.IsFetched
 Daily.%i.LongDay               (eg. 'Monday')
