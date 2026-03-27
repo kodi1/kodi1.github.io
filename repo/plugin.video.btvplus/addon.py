@@ -4,7 +4,7 @@ import re
 import time
 import base64
 import urllib.request, urllib.error, urllib.parse
-import xbmcgui
+import xbmc, xbmcgui
 import requests
 from bs4 import BeautifulSoup
 from kodibgcommon.logging import *
@@ -17,16 +17,17 @@ from page_scraper import PageScraper
 
 def show_episodes(episodes):
     for episode in episodes:
-        if episode['title'] != next_page_title:
+        if episode['title'] != next_page_title and episode.get("playable"):
             url = make_url({"action": "play_stream", "url": episode["path"], "title": episode["title"]})
             li = xbmcgui.ListItem(episode.get("title"))
             li.setProperty("IsPlayable", 'True')
             li.setArt({"thumb": episode.get("logo"), "icon": episode.get("logo"), "fanart": episode.get("logo")})
+            li.setInfo("video", {"plot":  episode.get("plot")})
             xbmcplugin.addDirectoryItem(get_addon_handle(), url, li, False)
         else:
-            url = make_url({"action": "show_episodes", "url": episode["path"]})
+            url = make_url({"action": "show_episodes", "url": episode["path"], "post": episode.get("post")})
             add_listitem_folder(episode["title"], url)
-
+        log("Log item with url: %s" % url)
 
 def update(name, location, crash=None):
     try:
@@ -89,8 +90,9 @@ title = params.get("title")
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
 host = "https://btvplus.bg/"
 scraper = PageScraper(log, host)
+send_post = params.get("post", "False") == "True"
 next_page_title = 'Следваща страница'
-view_mode = 500
+view_mode = 50
 
 if not action:
     show_categories()
@@ -101,10 +103,15 @@ elif action == 'show_products':
 
     for product in products:
         url = make_url({"action": "show_episodes", "url": product["path"]})
-        add_listitem_folder(product["title"], url, iconImage=product["logo"], thumbnailImage=product["logo"])
+        # add_listitem_folder(product["title"], url, iconImage=product["logo"], thumbnailImage=product["logo"], plot="da")
+        li = xbmcgui.ListItem(product["title"])
+        li.setArt({'thumb': product.get("logo"), 'logo': product.get("logo"), 'icon': product.get("logo")})
+        li.setInfo(type="Video", infoLabels={'Title': title, 'Plot': product.get("plot")})
+        xbmcplugin.addDirectoryItem(get_addon_handle(), url, li, True)
 
 elif action == 'show_episodes':
-    show_episodes(scraper.get_items(url))
+    show_episodes(scraper.get_items(url, send_post))
+    view_mode = 50
 
 elif action == 'play_stream':
     stream = scraper.get_stream(url)["url"]
