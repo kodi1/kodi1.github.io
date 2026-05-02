@@ -1,3 +1,6 @@
+v1.1.1
+- attempt to fix day/night versions of the current condition icon
+
 v1.1.0
 - update for release
 
