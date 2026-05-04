@@ -24,22 +24,22 @@ class Weather():
             set_property('Current.Pollen'              , '')
         if data['location']['outlook'] in ['Mostly Cloudy', 'Partly Cloudy', 'Fair']:
             # yahoo does not tell if this current icon refers to day or nighttime, nor does it provide the current local time of the location
-            # so first figure out the current time from the hourly forcasts. the first item is always 'now', which isn't helpful so skip it
-            if len(data['forecasts'][0]['conditionsForecasts']) > 1: # make sure there's at least two items left in the hourly forcast for today
+            # so first figure out the current time from the hourly forecasts. the first item is always 'now', which isn't helpful so skip it
+            if len(data['forecasts'][0]['conditionsForecasts']) > 1: # make sure there's at least two items left in the hourly forecast for today
                 for item in data['forecasts'][0]['conditionsForecasts']:
-                    if item['time'] == 'Now':
+                    if item['time'] == 'Now' or item['text'] == 'Sunrise' or item['text'] == 'Sunset':
                         continue
                     approxtime  = item['time'] # time of the 'next' hour
-                    print(approxtime)
                     if approxtime == 'Midnight':
                         approxtime = '12 PM'
                     elif approxtime == 'Noon':
                         approxtime = '12 AM'
                     break
             else:
-                for item in data['forecasts'][1]['conditionsForecasts']: # at +/- 11PM we have only 'now' in the hourly forcast, so look at the next day
+                for item in data['forecasts'][1]['conditionsForecasts']: # at +/- 11PM we have only 'now' in the hourly forecast, so look at the next day
+                    if item['text'] == 'Sunrise' or item['text'] == 'Sunset':
+                        continue
                     approxtime  = item['time'] # time of the 'next' hour
-                    print(approxtime)
                     if approxtime == 'Midnight':
                         approxtime = '12 PM'
                     elif approxtime == 'Noon':
