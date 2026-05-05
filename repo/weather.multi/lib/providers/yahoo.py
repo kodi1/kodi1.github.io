@@ -31,9 +31,9 @@ class Weather():
                         continue
                     approxtime  = item['time'] # time of the 'next' hour
                     if approxtime == 'Midnight':
-                        approxtime = '12 PM'
-                    elif approxtime == 'Noon':
                         approxtime = '12 AM'
+                    elif approxtime == 'Noon':
+                        approxtime = '12 PM'
                     break
             else:
                 for item in data['forecasts'][1]['conditionsForecasts']: # at +/- 11PM we have only 'now' in the hourly forecast, so look at the next day
@@ -41,9 +41,9 @@ class Weather():
                         continue
                     approxtime  = item['time'] # time of the 'next' hour
                     if approxtime == 'Midnight':
-                        approxtime = '12 PM'
-                    elif approxtime == 'Noon':
                         approxtime = '12 AM'
+                    elif approxtime == 'Noon':
+                        approxtime = '12 PM'
                     break
             approxhour = time.strptime(approxtime, '%I %p')
             currenthour = approxhour.tm_hour - 1 # substract 1 hour to get the 'current' hour
