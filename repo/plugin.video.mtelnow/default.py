@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 #Библиотеки, които използват python и Kodi в тази приставка
 import sys
-__all__ = ['PY2']
-PY2 = sys.version_info[0] == 2
 
-from lib.six.moves import urllib
+from six.moves import urllib
 import xbmc, xbmcplugin, xbmcgui, xbmcaddon
 import base64
 import inputstreamhelper
@@ -29,9 +27,6 @@ def build_url(query):
 
 if not username or not password or not xbmcaddon.Addon():
     xbmcaddon.Addon().openSettings()
-
-#Инициализация
-__all__ = ['PY2']
 
 # Аутентикация
 reauth = False
@@ -339,19 +334,13 @@ def playPath(path, title = "", plot="", StartOffset=0):
     if is_helper.check_inputstream():
         li = xbmcgui.ListItem(path=path)
         li.setMimeType('application/xml+dash')
-        if PY2:
-            li.setProperty('inputstreamaddon', is_helper.inputstream_addon)
-        else:
-            li.setProperty('inputstream', is_helper.inputstream_addon)
+        li.setProperty('inputstream', is_helper.inputstream_addon)
         li.setProperty('inputstream.adaptive.manifest_type', PROTOCOL)
         li.setProperty('StartOffset', str(StartOffset))
         li.setProperty('inputstream.adaptive.license_type', DRM)
         if max_bandwidth:
           li.setProperty('inputstream.adaptive.max_bandwidth', max_bandwidth)
-        if PY2:
-          device_hash = base64.b64encode(device_id)
-        else:
-          device_hash = base64.b64encode(device_id.encode()).decode()
+        device_hash = base64.b64encode(device_id.encode()).decode()
         dt_custom_data = 'https://wvps.a1xploretv.bg:8063/?deviceId=' + device_hash
         li.setProperty('inputstream.adaptive.license_key', dt_custom_data + '||R{SSM}|')
         #li.setMimeType('application/dash+xml')

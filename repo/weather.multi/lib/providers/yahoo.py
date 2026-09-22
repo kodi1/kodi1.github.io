@@ -87,6 +87,7 @@ class Weather():
         set_property('Today.Sunrise'               , convert_datetime(data['location']['sunrise'], 'ampm', None, None))
         set_property('Today.Sunset'                , convert_datetime(data['location']['sunset'], 'ampm', None, None))
         set_property('Today.Moonphase'             , MOONPHASE[data['conditions']['conditions']['moon']['title'].lower()])
+        set_property('Today.MoonphaseIcon'         , data['conditions']['conditions']['moon']['icon'])
         set_property('Today.IsFetched'             , 'true')
     #hourly - extended
         skip = []

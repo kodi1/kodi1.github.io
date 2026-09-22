@@ -5,10 +5,10 @@ import uuid
 import datetime, time, pytz
 import json
 from lib.graphqlclient import GraphQLClient
-from lib.six.moves import urllib
-from lib.six import ensure_str
+from six.moves import urllib
+from six import ensure_str
 import requests
-from lib.six.moves.http_cookiejar import LWPCookieJar
+from six.moves.http_cookiejar import LWPCookieJar
 
 def debug(obj):
     xbmc.log(json.dumps(obj, indent=2), xbmc.LOGDEBUG)

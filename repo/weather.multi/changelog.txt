@@ -1,3 +1,12 @@
+v1.1.7
+- language update
+
+v1.1.6
+- language update
+
+v1.1.5
+- add Today.MoonphaseIcon infolabel
+
 v1.1.4
 - fix the fix the fix the fix
 
