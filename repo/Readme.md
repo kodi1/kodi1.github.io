@@ -1,1 +1,0 @@
-<a href="https://github.com/kodi1/kodi1.github.io/releases/latest/download/repo.bg.plugins.zip">repo.bg.plugins.zip</a>   
