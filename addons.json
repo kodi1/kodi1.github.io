@@ -44,5 +44,6 @@
   {"owner":"stanislav-m", "name":"plugin.video.voyobgvod", "provider":"github"},
   {"owner":"batvani", "name":"plugin.video.bntbg", "provider":"github"},
   {"owner":"herrnst", "name":"plugin.video.dazn", "provider":"github"},
-  {"owner":"david-hazi", "name":"plugin.video.sweettv", "provider":"github"}	
+  {"owner":"david-hazi", "name":"plugin.video.sweettv", "provider":"github"},
+  {"owner":"dexe-kodi-addons", "name":"plugin.video.eonvod", "provider":"github"}
 ]

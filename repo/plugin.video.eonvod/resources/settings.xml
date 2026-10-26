@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings version="1">
+  <section id="plugin.video.eonvod">
+    <category id="general" label="30000">
+      <group id="1" label="30010">
+        <setting id="sync_frequency" type="string" label="30011">
+          <level>0</level>
+          <default>manual</default>
+          <constraints>
+            <options>
+              <option label="30012">manual</option>
+              <option label="30013">startup</option>
+              <option label="30014">daily</option>
+              <option label="30015">weekly</option>
+            </options>
+          </constraints>
+          <control type="list" format="string" />
+        </setting>
+      </group>
+      <group id="2" label="30020">
+        <setting id="metadata_language" type="string" label="30021">
+          <level>0</level>
+          <default>eng</default>
+          <constraints>
+            <options>
+              <option label="30022">eng</option>
+              <option label="30023">srp</option>
+              <option label="30025">bos</option>
+              <option label="30036">mne</option>
+              <option label="30026">hrv</option>
+              <option label="30027">slv</option>
+              <option label="30028">mac</option>
+              <option label="30024">bul</option>
+              <option label="30029">gre</option>
+            </options>
+          </constraints>
+          <control type="list" format="string" />
+        </setting>
+        <setting id="sort_mode" type="integer" label="30030">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30031">0</option> <!-- Recently added -->
+              <option label="30032">1</option> <!-- By name -->
+              <option label="30033">2</option> <!-- Best rated -->
+              <option label="30034">3</option> <!-- Newest titles -->
+              <option label="30035">4</option> <!-- Oldest titles -->
+            </options>
+          </constraints>
+          <control type="list" format="integer" />
+        </setting>
+        <setting id="page_size" type="integer" label="30040">
+          <level>0</level>
+          <default>50</default>
+          <constraints>
+            <minimum>5</minimum>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="edit" format="integer" />
+        </setting>
+        <setting id="max_age_rating" type="integer" label="30045" help="30046">
+          <level>0</level>
+          <default>18</default>
+          <constraints>
+            <options>
+              <option label="30050">18</option>
+              <option label="30051">16</option>
+              <option label="30052">15</option>
+              <option label="30053">14</option>
+              <option label="30054">13</option>
+              <option label="30055">12</option>
+              <option label="30056">10</option>
+              <option label="30057">9</option>
+              <option label="30058">7</option>
+              <option label="30059">6</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="hideunsubscribed" type="boolean" label="30065">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+      </group>
+      <group id="3" label="30070">
+        <setting id="usecustomuseragent" type="boolean" label="30071">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
+        <setting id="customuseragent" type="string" label="30072">
+          <level>0</level>
+          <default></default>
+          <dependencies>
+            <dependency type="visible" setting="usecustomuseragent" operator="is">true</dependency>
+          </dependencies>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>

@@ -1,0 +1,36 @@
+v1.2.2
+- Fixed: nothing loaded on Windows systems with unreadable certificates in the Windows certificate store (sync and catalogue now work)
+- Fixed: faster browsing - the catalogue code is now bytecode-cached instead of recompiled on every folder
+- Added: DRM-protected titles now check for Widevine before playback and offer to install it via InputStream Helper instead of failing silently
+- Added: a clear message when EON refuses a DRM licence for a title (previously a generic playback error)
+- Added: Account information now shows whether the Widevine CDM is installed
+- Improved: error log now records the server's reason when a stream is refused, for easier support
+
+v1.2.1
+- Persist deviceNumber from the token exchange (v2/devices providers, e.g. Vivacom); no change for others
+
+v1.2.0
+- Provider resolution follows pvr.eon's rebuilt provider list, and keeps
+  reading older pvr.eon installs by their original index meanings.
+- Metadata language can now be set to any of the languages EON supports.
+- Small fixes.
+
+v1.1.0
+- Provider resolution now follows pvr.eon exactly, so accounts on Telemach,
+  NetTV Plus, EON Hrvatska, Vivacom and Nova reach their own host.
+- Page ids per portal, so the Telemach and Vivacom portal is browsable.
+- A sync that returns nothing no longer replaces the stored catalogue.
+- Tools stays reachable when the first sync fails.
+- Fixed the back history after an empty Favourites folder.
+
+v1.0.0
+- First stable release.
+- Browses EON On Demand content from the API.
+- Uses the same account, session and device data as pvr.eon.
+- Movies, series, kids, documentaries, TV shows.
+- Caches the catalogue locally for faster browsing.
+- Manual and scheduled sync, with progress shown in the corner when scheduled.
+- Filters unsubscribed content when configured to do so.
+- Age rating filter, with children's titles exempt.
+- Resume playback, watched marks, favourites and search history.
+- Plays through inputstream.adaptive, with Widevine where required.

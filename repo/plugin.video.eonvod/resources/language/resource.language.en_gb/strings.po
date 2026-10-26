@@ -1,0 +1,184 @@
+# Kodi Media Center language file
+# Addon Name: EON On Demand
+# Addon id: plugin.video.eonvod
+# Addon Provider: dEXE
+
+msgid ""
+msgstr ""
+
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_gb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgctxt "#30000"
+msgid "General"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Synchronisation"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Sync frequency"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Manual only"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Every Kodi start"
+msgstr ""
+
+msgctxt "#30014"
+msgid "Daily"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Weekly"
+msgstr ""
+
+msgctxt "#30020"
+msgid "Content"
+msgstr ""
+
+msgctxt "#30021"
+msgid "Metadata language"
+msgstr ""
+
+msgctxt "#30022"
+msgid "English"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Serbian"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Bulgarian"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Serbian (BA)"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Croatian"
+msgstr ""
+
+msgctxt "#30027"
+msgid "Slovenian"
+msgstr ""
+
+msgctxt "#30028"
+msgid "Macedonian"
+msgstr ""
+
+msgctxt "#30029"
+msgid "Greek"
+msgstr ""
+
+msgctxt "#30036"
+msgid "Serbian (ME)"
+msgstr ""
+
+msgctxt "#30030"
+msgid "Sort titles by"
+msgstr ""
+
+msgctxt "#30031"
+msgid "Recently added"
+msgstr ""
+
+msgctxt "#30032"
+msgid "By name"
+msgstr ""
+
+msgctxt "#30033"
+msgid "Best rated"
+msgstr ""
+
+msgctxt "#30034"
+msgid "Newest titles"
+msgstr ""
+
+msgctxt "#30035"
+msgid "Oldest titles"
+msgstr ""
+
+msgctxt "#30040"
+msgid "Titles per page"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Age limit"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Titles rated above this will not play. Unrated titles are blocked too, except in Kids and at PG-18."
+msgstr ""
+
+msgctxt "#30050"
+msgid "PG-18"
+msgstr ""
+
+msgctxt "#30051"
+msgid "PG-16"
+msgstr ""
+
+msgctxt "#30052"
+msgid "PG-15"
+msgstr ""
+
+msgctxt "#30053"
+msgid "PG-14"
+msgstr ""
+
+msgctxt "#30054"
+msgid "PG-13"
+msgstr ""
+
+msgctxt "#30055"
+msgid "PG-12"
+msgstr ""
+
+msgctxt "#30056"
+msgid "PG-10"
+msgstr ""
+
+msgctxt "#30057"
+msgid "PG-9"
+msgstr ""
+
+msgctxt "#30058"
+msgid "PG-7"
+msgstr ""
+
+msgctxt "#30059"
+msgid "PG-6"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Hide unsubscribed VOD items"
+msgstr ""
+
+msgctxt "#30070"
+msgid "Streaming"
+msgstr ""
+
+msgctxt "#30071"
+msgid "Use custom User-Agent"
+msgstr ""
+
+msgctxt "#30072"
+msgid "Custom User-Agent"
+msgstr ""

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.eonvod" version="1.2.2" name="EON On Demand" provider-name="dEXE">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="pvr.eon" version="20.0.0"/>
+    <import addon="inputstream.adaptive" optional="true"/>
+    <import addon="inputstream.ffmpegdirect" optional="true"/>
+    <import addon="script.module.inputstreamhelper" version="0.8.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Browse and play EON On Demand</summary>
+    <description lang="en_GB">Browses the video on demand catalogue of the EON TV streaming platform (eon.tv) and plays films and series in Kodi.[CR][CR]Uses the account, device and stream credentials already held by [B]pvr.eon[/B]. The VOD plugin does not store independent EON credentials and does not create a second EON device or session.[CR][CR]Install and configure [B]pvr.eon[/B] first, then open Live TV once so it can log in and save the session.</description>
+    <disclaimer lang="en_GB">Unofficial add-on. Not affiliated with, endorsed by or supported by United Group, SBB, Telemach, Vivacom, Nova or any related company. A valid EON subscription is required. No content is provided or hosted by this add-on.</disclaimer>
+    <platform>linux android-armv7 android-aarch64 osx-arm64 osx-x86_64 windows-x86_64</platform>
+    <language>en sr bs hr sl mk bg el</language>
+    <license>GPL-3.0-or-later</license>
+    <news>[B]Features[/B][CR][CR]- Browses EON On Demand content from the API.[CR]- Uses the same account, session and device data as pvr.eon.[CR]- Movies, Series, Kids, Documentaries, TV shows.[CR]- Caches the catalogue locally for faster browsing.[CR]- Manual and scheduled sync, with progress shown in the corner when scheduled.[CR]- Filters unsubscribed content when configured to do so.[CR]- Age rating filter, with children's titles exempt.[CR]- Resume playback, watched marks, favourites and search history.[CR]- Plays through inputstream.adaptive, with Widevine where required.</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/media/screenshots/screenshot-01.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
